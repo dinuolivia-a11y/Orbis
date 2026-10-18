@@ -200,6 +200,16 @@ p{margin:0}
 .dive.amazon .intro{color:#0b1a12}
 .dive.madagascar{--accent:#f4b26a;background:#b9dfe4}
 .dive.madagascar .intro{color:#10221a}
+.dive.himalaya{--accent:#cfe3ff;background:#0d2a4a}
+.dive.tianshan{--accent:#d8e9b8;background:#1b2f4f}
+.dive.andes{--accent:#f0c987;background:#22324f}
+.dive.newzealand{--accent:#a6e6b8;background:#2b4d6e}
+.dive.tundra{--accent:#9fd3ff;background:#9db6cc}
+.dive.tundra .intro{color:#0f1f2b}
+.dive.antarctica{--accent:#9fd3ff;background:#7fa6c8}
+.dive.antarctica .intro{color:#0b1a28}
+.dive.sahara{--accent:#ffc982;background:#f2c98a}
+.dive.sahara .intro{color:#2a1608}
 .zone-head{display:grid;gap:8px;padding:22px 0 18px;border-top:1px solid rgba(255,255,255,.28);max-width:62ch}
 .zone-head .range{font-family:var(--mono);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-variant-numeric:tabular-nums}
 .zone-head h2{font-family:var(--display);font-weight:500;font-size:clamp(2rem,5vw,3.2rem);line-height:1}
@@ -685,6 +695,7 @@ const EXO = [
    ========================================================= */
 const OCEAN_STYLE = "Shot like a real deep-sea ROV documentary frame: lit by soft white submersible lights against pitch-black water, faint particles of marine snow drifting, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people, no equipment visible.";
 const SURFACE_STYLE = "Real underwater wildlife documentary photography, natural sunlight in clear open-ocean water, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.";
+const WATER_STYLE = "Real underwater wildlife documentary photography in cold natural light, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people, no divers.";
 const FOREST_STYLE = "Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.";
 
 const DIVES = {
@@ -961,8 +972,487 @@ const DIVES = {
         prompt: "Photorealistic night wildlife photograph of a Malagasy giant jumping rat (Hypogeomys antimena) at the entrance of its burrow in dry deciduous forest in western Madagascar: rabbit-sized rodent with coarse grey-brown fur, pale underside, long upright ears, large dark eyes, long whiskers, strong hind legs, a dark tail, red-brown soil and dry leaves around the burrow.", style: "forest" }
     ]
   },
+  himalaya: {
+    axis: "altitude", start: -8849, end: -2000, px: 0.075, minGap: 70, maxGap: 480, motes: "snow",
+    gauge: [{ l: { it: "Altitudine", en: "Altitude" }, k: "alt" }, { l: { it: "Ossigeno", en: "Oxygen" }, k: "oxy" }, { l: { it: "Fascia", en: "Belt" }, k: "zone" }],
+    where: { it: "Himalaya · il tetto del mondo", en: "Himalayas · the roof of the world" },
+    eyebrow: { it: "Himalaya", en: "Himalayas" },
+    title: { it: "Le montagne <em>dell’Himalaya</em>", en: "The mountains <em>of the Himalayas</em>" },
+    lead: { it: "Dalla cima dell’Everest, a 8.849 m, giù fino alle foreste di rododendri. Più sali, meno aria c’è: lo strumento mostra l’altitudine e quanto ossigeno trovi rispetto al livello del mare.", en: "From the summit of Everest, 8,849 m up, down to the rhododendron forests. The higher you go, the thinner the air: the gauge shows the altitude and how much oxygen there is compared with sea level." },
+    cue: { it: "Scorri per scendere", en: "Scroll to descend" },
+    note: { it: "Queste creature vivono in valli e versanti diversi della catena: qui le trovi all’altitudine in cui si incontrano.", en: "These creatures live in different valleys and slopes of the range: here you meet them at the altitude where they are found." },
+    stops: [[-8849, "#0d2a4a"], [-7000, "#5b7fa6"], [-5500, "#aebfcd"], [-4500, "#8f9c80"], [-3500, "#5f7a52"], [-2500, "#2f4a33"], [-2000, "#1e3324"]],
+    zones: [
+      { from: -8849, to: -7000, name: { it: "Le cime", en: "The summits" }, range: { it: "7.000–8.849 m", en: "7,000–8,849 m" }, text: { it: "Sopra gli 8.000 metri l’aria ha circa un terzo dell’ossigeno che respiriamo al mare: gli alpinisti la chiamano «zona della morte». Qui non vive nessun animale, solo vento, roccia e ghiaccio.", en: "Above 8,000 metres the air holds about a third of the oxygen we breathe at sea level: climbers call it the “death zone”. No animal lives here, only wind, rock and ice." } },
+      { from: -7000, to: -5500, name: { it: "Roccia e ghiaccio", en: "Rock and ice" }, range: { it: "5.500–7.000 m", en: "5,500–7,000 m" }, text: { it: "Quasi niente piante. Gli unici abitanti sono piccolissimi e mangiano quello che il vento porta su dalle valli.", en: "Almost no plants. The only residents are tiny, and they eat what the wind carries up from the valleys." } },
+      { from: -5500, to: -4000, name: { it: "Le praterie d’alta quota", en: "High-altitude grasslands" }, range: { it: "4.000–5.500 m", en: "4,000–5,500 m" }, text: { it: "Erba corta, cuscinetti di fiori e pietraie. È il regno del leopardo delle nevi e delle sue prede.", en: "Short grass, cushion flowers and scree. The realm of the snow leopard and its prey." } },
+      { from: -4000, to: -3000, name: { it: "Arbusti e pareti", en: "Shrubs and crags" }, range: { it: "3.000–4.000 m", en: "3,000–4,000 m" }, text: { it: "Rododendri nani, ginepri e pareti ripidissime, dove gli zoccoli devono essere molto sicuri.", en: "Dwarf rhododendrons, junipers and very steep cliffs, where hooves must be sure-footed." } },
+      { from: -3000, to: -2000, name: { it: "Le foreste di montagna", en: "The mountain forests" }, range: { it: "2.000–3.000 m", en: "2,000–3,000 m" }, text: { it: "Querce, abeti, bambù e rododendri alti come alberi, spesso avvolti nella nebbia.", en: "Oaks, firs, bamboo and rhododendrons as tall as trees, often wrapped in mist." } }
+    ],
+    marks: [
+      { d: -8849, text: { it: "La cima dell’Everest, la montagna più alta della Terra", en: "The summit of Everest, the highest mountain on Earth" } },
+      { d: -5364, text: { it: "Il campo base dell’Everest, sul versante del Nepal", en: "Everest Base Camp, on the Nepal side" } },
+      { d: -4000, text: { it: "Più o meno qui finiscono gli alberi: più in alto fa troppo freddo e c’è troppo vento", en: "Roughly here the trees stop: higher up it is too cold and too windy" } }
+    ],
+    endTitle: { it: "Il tetto del mondo", en: "The roof of the world" },
+    endText: { it: "L’Himalaya è nato quando l’India si è scontrata con l’Asia, circa 50 milioni di anni fa, e cresce ancora di qualche millimetro ogni anno. I suoi ghiacciai danno acqua a quasi due miliardi di persone, ma si stanno sciogliendo sempre più in fretta.", en: "The Himalayas formed when India crashed into Asia about 50 million years ago, and they are still rising by a few millimetres every year. Their glaciers supply water to nearly two billion people, but they are melting faster and faster." },
+    creatures: [
+      { id: "jumpspider", d: -6700, h: 220, name: { it: "Ragno saltatore dell’Himalaya", en: "Himalayan jumping spider" }, sci: "Euophrys omnisuperstes",
+        range: { it: "fino a 6.700 m, sull’Everest", en: "up to 6,700 m, on Everest" }, size: { it: "pochi millimetri", en: "a few millimetres" },
+        text: { it: "Forse l’animale che vive più in alto sulla Terra. Si nasconde tra le rocce e caccia gli insetti che il vento porta su dalle valli: a quell’altezza non c’è quasi nient’altro da mangiare.", en: "Possibly the highest-living animal on Earth. It hides among the rocks and hunts the insects the wind carries up from the valleys: at that height there is almost nothing else to eat." },
+        fact: { it: "Il suo nome scientifico, omnisuperstes, in latino vuol dire «che sta sopra a tutti».", en: "Its scientific name, omnisuperstes, means “standing above everything” in Latin." },
+        prompt: "Photorealistic extreme macro photograph of a Himalayan jumping spider (Euophrys omnisuperstes), a tiny dark grey-black hairy jumping spider a few millimetres long with large forward-facing front eyes, crouching on frost-covered grey rock at 6,700 m on Mount Everest, snowy Himalayan peaks softly blurred behind.", style: "forest" },
+      { id: "lammergeier", d: -5600, h: 25, name: { it: "Gipeto", en: "Bearded vulture" }, sci: "Gypaetus barbatus",
+        range: { it: "pareti rocciose, di solito tra 2.000 e 5.000 m", en: "cliffs, usually between 2,000 and 5,000 m" }, size: { it: "apertura alare fino a 2,8 m", en: "wingspan up to 2.8 m" },
+        text: { it: "Un enorme avvoltoio che si nutre quasi solo di ossa. Quelle troppo grandi le porta in volo e le lascia cadere sulle rocce per romperle, poi inghiotte i pezzi e il midollo: il suo stomaco è così acido che riesce a digerirle.", en: "A huge vulture that eats almost nothing but bones. It carries bones that are too big into the air and drops them onto rocks to break them, then swallows the pieces and the marrow: its stomach is so acidic that it digests them." },
+        fact: { it: "Le piume del petto sono arancioni perché fa il bagno nel fango ricco di ferro: è come se si truccasse.", en: "Its chest feathers are orange because it bathes in iron-rich mud: a kind of make-up." },
+        prompt: "Photorealistic wildlife photograph of a bearded vulture (Gypaetus barbatus) gliding close to the camera along a Himalayan cliff, filling most of the frame: very long narrow pointed wings and a long wedge-shaped tail, dark slate-grey upperparts, rusty-orange head, neck and underparts, a black mask and a tuft of black bristles under the bill like a beard, pale eyes with a red ring, snowy peaks behind.", style: "forest" },
+      { id: "snowcock", d: -4900, h: 35, name: { it: "Tetraogallo dell’Himalaya", en: "Himalayan snowcock" }, sci: "Tetraogallus himalayensis",
+        range: { it: "pendii erbosi e pietraie, di solito tra 3.500 e 5.500 m", en: "grassy slopes and scree, usually between 3,500 and 5,500 m" }, size: { it: "circa 60 cm, fino a 3 kg", en: "about 60 cm, up to 3 kg" },
+        text: { it: "Una grossa pernice grigia che passa la giornata a camminare in salita mangiando radici e germogli. Quando ha paura non scappa verso l’alto: si lancia giù dal pendio in un lungo volo planato.", en: "A big grey partridge that spends the day walking uphill, eating roots and shoots. When frightened it doesn’t run upwards: it launches itself downhill in a long glide." },
+        fact: { it: "Il suo richiamo, un fischio lungo e malinconico, è uno dei suoni tipici delle montagne più alte.", en: "Its call, a long mournful whistle, is one of the typical sounds of the highest mountains." },
+        prompt: "Photorealistic wildlife photograph of a Himalayan snowcock (Tetraogallus himalayensis) walking on a high-altitude scree slope at 5,000 m: a large plump grey partridge with fine grey barring, white face and throat bordered by chestnut stripes that form a collar, chestnut and white streaks on the flanks, yellowish bill and legs, snowy peaks behind.", style: "forest" },
+      { id: "sandfox", d: -4700, h: 30, name: { it: "Volpe del Tibet", en: "Tibetan sand fox" }, sci: "Vulpes ferrilata",
+        range: { it: "altopiano del Tibet e versante nord dell’Himalaya, 3.500–5.200 m", en: "Tibetan Plateau and northern Himalayas, 3,500–5,200 m" }, size: { it: "corpo 50–70 cm, coda circa 25 cm", en: "body 50–70 cm, tail about 25 cm" },
+        text: { it: "Ha la testa quasi quadrata e gli occhi stretti, che le danno sempre un’aria seria. Caccia soprattutto i pika, e a volte segue gli orsi bruni mentre scavano: quando un pika scappa dalla tana, la volpe lo prende.", en: "Its head is almost square and its eyes narrow, so it always looks rather serious. It hunts mostly pikas, and sometimes follows brown bears as they dig: when a pika bolts from its burrow, the fox catches it." },
+        fact: { it: "Vive dove l’aria ha circa metà dell’ossigeno che c’è al livello del mare e dove d’inverno si scende sotto i -30 °C.", en: "It lives where the air has about half the oxygen found at sea level and where winter drops below -30 °C." },
+        prompt: "Photorealistic wildlife photograph of a Tibetan sand fox (Vulpes ferrilata) sitting on the high Tibetan steppe at 4,700 m: a small fox with a strikingly square, broad head, narrow slit-like eyes that give it a serious expression, short ears, tawny-orange back and muzzle, grey flanks, a thick bushy tail with a white tip, dry short grass and distant snowy Himalayan peaks.", style: "forest" },
+      { id: "snowleopard", d: -4500, h: 210, name: { it: "Leopardo delle nevi", en: "Snow leopard" }, sci: "Panthera uncia",
+        range: { it: "pietraie e pareti tra 3.000 e 5.500 m", en: "scree and cliffs between 3,000 and 5,500 m" }, size: { it: "corpo circa 1,1 m, coda quasi 1 m", en: "body about 1.1 m, tail almost 1 m" },
+        text: { it: "Il suo pelo grigio-fumo macchiato di rosette lo rende quasi invisibile tra le rocce. Ha zampe larghe e pelose che fanno da racchette da neve e una coda lunghissima, che usa per stare in equilibrio e come sciarpa quando dorme.", en: "Its smoky-grey coat with rosettes makes it almost invisible among the rocks. It has broad furry paws that work like snowshoes and a very long tail, which it uses for balance and as a scarf when it sleeps." },
+        fact: { it: "A differenza di leoni e tigri non sa ruggire: soffia, miagola e fa uno sbuffo amichevole.", en: "Unlike lions and tigers it can’t roar: it hisses, mews and makes a friendly puffing chuff." },
+        prompt: "Photorealistic wildlife photograph of a snow leopard (Panthera uncia) resting on a snowy Himalayan rock ledge: thick smoky-grey fur with dark rosettes, pale green-grey eyes, a very long thick tail wrapped around its body, broad furry paws, jagged snowy peaks behind.", style: "forest" },
+      { id: "himbear", d: -4300, h: 30, name: { it: "Orso bruno dell’Himalaya", en: "Himalayan brown bear" }, sci: "Ursus arctos isabellinus",
+        range: { it: "praterie alpine sopra i 3.000 m", en: "alpine meadows above 3,000 m" }, size: { it: "fino a 2,2 m in piedi", en: "up to 2.2 m standing" },
+        text: { it: "Un orso dal pelo color sabbia o rossiccio che vive sopra il limite degli alberi. D’estate scava in cerca di marmotte, radici e insetti, e d’inverno dorme in una tana per mesi.", en: "A bear with sandy or reddish fur that lives above the treeline. In summer it digs for marmots, roots and insects, and in winter it sleeps in a den for months." },
+        fact: { it: "Nel 2017 alcuni scienziati hanno analizzato il DNA di presunti resti dello «yeti»: molti erano di orsi come lui.", en: "In 2017 scientists analysed the DNA of supposed “yeti” remains: many turned out to come from bears like this one." },
+        prompt: "Photorealistic wildlife photograph of a Himalayan brown bear (Ursus arctos isabellinus) walking across an alpine scree slope at 4,300 m: a large bear with pale sandy to reddish-brown shaggy fur, a lighter face, small rounded ears, a shoulder hump, snowy peaks behind.", style: "forest" },
+      { id: "roylepika", d: -4100, h: 28, name: { it: "Pika di Royle", en: "Royle’s pika" }, sci: "Ochotona roylei",
+        range: { it: "pietraie e muretti di sassi sopra i 2.400 m", en: "scree and stone walls above 2,400 m" }, size: { it: "circa 18 cm, senza coda visibile", en: "about 18 cm, no visible tail" },
+        text: { it: "Sembra un piccolo criceto, ma è un parente dei conigli. Vive tra le pietraie e, se vede un pericolo, lancia un fischio acuto per avvisare i vicini, poi sparisce tra i sassi.", en: "It looks like a little hamster but is a relative of rabbits. It lives among the scree and, if it spots danger, gives a sharp whistle to warn its neighbours before vanishing between the stones." },
+        fact: { it: "Sulle montagne dell’Asia i pika sono così importanti che volpi, gatti selvatici, rapaci e orsi dipendono da loro per mangiare.", en: "In Asia’s mountains pikas are so important that foxes, wild cats, birds of prey and bears depend on them for food." },
+        prompt: "Photorealistic wildlife photograph of a Royle's pika (Ochotona roylei) peeking out between grey granite boulders on a Himalayan scree slope: a small round rabbit relative about 18 cm long with no visible tail, short rounded ears, rich rufous-brown head and shoulders fading to grey-brown on the back, dark eyes, long whiskers.", style: "forest" },
+      { id: "tahr", d: -3600, h: 20, name: { it: "Tahr dell’Himalaya", en: "Himalayan tahr" }, sci: "Hemitragus jemlahicus",
+        range: { it: "pareti ripide tra 2.500 e 5.000 m", en: "steep cliffs between 2,500 and 5,000 m" }, size: { it: "alto circa 1 m alla spalla", en: "about 1 m at the shoulder" },
+        text: { it: "Un parente selvatico delle capre che si arrampica su pareti quasi verticali. I maschi hanno una lunga criniera rossiccia che li ripara dal freddo e li fa sembrare più grossi durante le sfide.", en: "A wild relative of goats that climbs almost vertical cliffs. Males have a long reddish mane that keeps out the cold and makes them look bigger during contests." },
+        fact: { it: "I suoi zoccoli hanno un cuscinetto morbido al centro, che fa presa sulla roccia come la suola di una scarpa da arrampicata.", en: "Its hooves have a soft rubbery pad in the middle that grips rock like the sole of a climbing shoe." },
+        prompt: "Photorealistic wildlife photograph of a male Himalayan tahr (Hemitragus jemlahicus) standing on a steep rocky cliff at 3,600 m: a stocky wild goat with a thick shaggy reddish-brown coat and a long flowing mane over the neck and shoulders, short curved horns that sweep backwards close to the head, misty mountains behind.", style: "forest" },
+      { id: "monal", d: -3300, h: 170, name: { it: "Monal dell’Himalaya", en: "Himalayan monal" }, sci: "Lophophorus impejanus",
+        range: { it: "boschi aperti e prati tra 2.400 e 4.500 m", en: "open woods and meadows between 2,400 and 4,500 m" }, size: { it: "circa 70 cm", en: "about 70 cm" },
+        text: { it: "Il maschio sembra fatto di metallo colorato: verde, viola, blu e rame che cambiano con la luce, e sulla testa un ciuffo di piume a forma di cucchiaino. Con il becco robusto scava nella terra per cercare radici e larve.", en: "The male looks as if made of coloured metal: green, purple, blue and copper that shift with the light, plus a crest of spoon-tipped feathers on its head. It digs in the soil with its strong bill for roots and grubs." },
+        fact: { it: "È l’uccello nazionale del Nepal.", en: "It is the national bird of Nepal." },
+        prompt: "Photorealistic wildlife photograph of a male Himalayan monal (Lophophorus impejanus) on an alpine meadow at 3,300 m: iridescent metallic green head with a crest of spatula-tipped feathers, coppery-bronze neck, shining purple-blue back, black underparts, a cinnamon-rufous tail, bare blue skin around the eye, snowy peaks behind.", style: "forest" },
+      { id: "flyingsquirrel", d: -3200, h: 215, name: { it: "Scoiattolo volante lanoso", en: "Woolly flying squirrel" }, sci: "Eupetaurus cinereus",
+        range: { it: "grotte e pareti rocciose del nord del Pakistan", en: "caves and cliffs of northern Pakistan" }, size: { it: "corpo circa 50 cm, coda circa 40 cm", en: "body about 50 cm, tail about 40 cm" },
+        text: { it: "Uno dei mammiferi più misteriosi del mondo: per circa 70 anni nessuno ne ha visto uno vivo, finché è stato ritrovato nel 1994. Vive tra grotte e pareti di roccia e, aprendo una membrana tra le zampe, plana da una roccia all’altra.", en: "One of the world’s most mysterious mammals: for about 70 years nobody saw a living one, until it was found again in 1994. It lives among caves and cliffs and glides from rock to rock by spreading a membrane between its legs." },
+        fact: { it: "Si nutre di aghi di pino, uno dei cibi più poveri che ci siano: pochissimi animali riescono a vivere solo di quello.", en: "It feeds on pine needles, one of the poorest foods there is: very few animals can live on that alone." },
+        prompt: "Photorealistic night wildlife photograph of a woolly flying squirrel (Eupetaurus cinereus) clinging to a steep rock face near a cave entrance in the mountains of northern Pakistan: a large squirrel with very thick, soft woolly blue-grey fur, a pale face, a long bushy grey tail, furry soles, the gliding membrane folded along its sides, lit softly by moonlight.", style: "forest" },
+      { id: "tragopan", d: -3000, h: 355, name: { it: "Tragopan satiro", en: "Satyr tragopan" }, sci: "Tragopan satyra",
+        range: { it: "foreste di rododendri e bambù tra 2.400 e 4.200 m", en: "rhododendron and bamboo forests between 2,400 and 4,200 m" }, size: { it: "circa 70 cm", en: "about 70 cm" },
+        text: { it: "Il maschio è rosso fuoco con tanti puntini bianchi. In primavera, per farsi notare dalle femmine, gonfia sulla gola un bavaglio blu e fa spuntare sulla testa due cornini blu di pelle.", en: "The male is fiery red covered in small white spots. In spring, to impress females, it inflates a blue bib on its throat and raises two little blue horns of skin on its head." },
+        fact: { it: "Per il resto dell’anno bavaglio e cornini restano nascosti, ripiegati sotto le piume.", en: "For the rest of the year the bib and horns stay hidden, folded under the feathers." },
+        prompt: "Photorealistic wildlife photograph of a male satyr tragopan (Tragopan satyra) in a misty Himalayan rhododendron forest at 3,000 m: deep crimson-red plumage covered in small white black-edged spots, black head with a red-orange crest, bare bright blue facial skin, flowering pink rhododendrons around.", style: "forest" },
+      { id: "redpanda", d: -2700, h: 18, name: { it: "Panda rosso", en: "Red panda" }, sci: "Ailurus fulgens",
+        range: { it: "foreste con bambù tra 2.200 e 4.800 m", en: "bamboo forests between 2,200 and 4,800 m" }, size: { it: "corpo circa 60 cm, coda circa 45 cm", en: "body about 60 cm, tail about 45 cm" },
+        text: { it: "Passa quasi tutta la vita sugli alberi e mangia soprattutto foglie di bambù. Per tenerle ferme usa un «falso pollice», un osso del polso che sporge come un dito in più.", en: "It spends almost its whole life in the trees and eats mostly bamboo leaves. To hold them it uses a “false thumb”, a wrist bone that sticks out like an extra finger." },
+        fact: { it: "È stato descritto dagli scienziati più di 40 anni prima del panda gigante: il primo «panda» è lui.", en: "Scientists described it more than 40 years before the giant panda: it was the first “panda”." },
+        prompt: "Photorealistic wildlife photograph of a red panda (Ailurus fulgens) on a mossy branch in a misty Himalayan bamboo forest: rich rusty-red fur, white face markings with reddish tear stripes, white-edged ears, black legs and belly, a long bushy tail ringed in red and buff.", style: "forest" }
+    ]
+  },
+  newzealand: {
+    axis: "altitude", start: -2500, end: 150, px: 0.22, minGap: 70, maxGap: 460,
+    gauge: [{ l: { it: "Altitudine", en: "Altitude" }, k: "alt" }, { l: { it: "Ossigeno", en: "Oxygen" }, k: "oxy" }, { l: { it: "Ambiente", en: "Habitat" }, k: "zone" }],
+    where: { it: "Nuova Zelanda · Aotearoa", en: "New Zealand · Aotearoa" },
+    eyebrow: { it: "Nuova Zelanda", en: "New Zealand" },
+    title: { it: "Le isole <em>degli uccelli</em>", en: "The islands <em>of birds</em>" },
+    lead: { it: "Dalle Alpi del Sud fino al mare. Per milioni di anni qui non ci sono stati mammiferi di terra, a parte i pipistrelli, e gli uccelli hanno preso il loro posto. Lo strumento mostra l’altitudine e l’ossigeno.", en: "From the Southern Alps down to the sea. For millions of years there were no land mammals here apart from bats, and birds took their place. The gauge shows the altitude and the oxygen." },
+    cue: { it: "Scorri per scendere", en: "Scroll to descend" },
+    note: { it: "Queste creature vivono in posti diversi delle due isole principali e delle isolette protette: qui le trovi all’altitudine in cui si incontrano.", en: "These creatures live in different parts of the two main islands and the protected islets: here you meet them at the altitude where they are found." },
+    stops: [[-2500, "#2b4d6e"], [-1600, "#6f8f86"], [-1100, "#8a9a5a"], [-700, "#2f5a36"], [-200, "#2c4a35"], [-1, "#c9b98a"], [10, "#2a6f8f"], [150, "#0f3550"]],
+    zones: [
+      { from: -2500, to: -1200, name: { it: "Le Alpi del Sud", en: "The Southern Alps" }, range: { it: "1.200–2.500 m", en: "1,200–2,500 m" }, text: { it: "Rocce, neve e praterie di erba a ciuffi chiamata tussock. Qui vive l’unico pappagallo di montagna del mondo.", en: "Rock, snow and tussock grassland. The world’s only mountain parrot lives here." } },
+      { from: -1200, to: -200, name: { it: "Foreste e fiumi", en: "Forests and rivers" }, range: { it: "200–1.200 m", en: "200–1,200 m" }, text: { it: "Foreste antiche di faggi australi e grandi fiumi a canali intrecciati, che scendono dalle montagne su letti di ghiaia.", en: "Ancient southern beech forests and wide braided rivers that run down from the mountains over beds of gravel." } },
+      { from: -200, to: 0, name: { it: "La costa e le isole", en: "The coast and islands" }, range: { it: "0–200 m", en: "0–200 m" }, text: { it: "Spiagge, dune e isolette senza ratti né gatti, dove si sono salvate le specie più rare.", en: "Beaches, dunes and islets free of rats and cats, where the rarest species have survived." } },
+      { from: 0, to: 150, name: { it: "Il mare", en: "The sea" }, range: { it: "0–150 m sotto il mare", en: "0–150 m below the sea" }, text: { it: "Acque fredde e ricche di pesci, dove vanno a caccia i pinguini.", en: "Cold waters full of fish, where penguins go hunting." } }
+    ],
+    marks: [{ d: 0, text: { it: "Il livello del mare", en: "Sea level" } }],
+    endTitle: { it: "Un mondo senza mammiferi", en: "A world without mammals" },
+    endText: { it: "Per circa 80 milioni di anni la Nuova Zelanda è rimasta isolata, e i suoi animali non hanno mai conosciuto predatori come gatti, ratti ed ermellini. Quando gli umani li hanno portati, molte specie sono quasi scomparse. Oggi il paese vuole eliminare ratti, ermellini e opossum entro il 2050.", en: "For about 80 million years New Zealand was isolated, and its animals never met predators such as cats, rats and stoats. When people brought them, many species nearly vanished. Today the country aims to get rid of rats, stoats and possums by 2050." },
+    creatures: [
+      { id: "kea", d: -1600, h: 90, name: { it: "Kea", en: "Kea" }, sci: "Nestor notabilis",
+        range: { it: "montagne dell’Isola del Sud, 600–2.000 m", en: "mountains of the South Island, 600–2,000 m" }, size: { it: "circa 48 cm", en: "about 48 cm" },
+        text: { it: "L’unico pappagallo al mondo che vive in alta montagna, tra la neve. È curiosissimo e intelligente: risolve rompicapi, gioca con i sassi e con la neve, e smonta tutto quello che trova, anche le guarnizioni delle auto.", en: "The world’s only parrot that lives high in the mountains, among the snow. It is very curious and clever: it solves puzzles, plays with stones and snow, and takes apart everything it finds, even the rubber seals of cars." },
+        fact: { it: "Sotto le ali verde oliva nasconde piume arancioni brillanti, che si vedono solo quando vola.", en: "Under its olive-green wings it hides bright orange feathers that show only when it flies." },
+        prompt: "Photorealistic wildlife photograph of a kea (Nestor notabilis) on a snowy alpine rock in the Southern Alps of New Zealand: a large olive-green parrot with dark-edged feathers, a long narrow curved grey upper bill, and bright orange-red feathers under the wings showing as it lifts one wing, snowy mountains behind.", style: "forest" },
+      { id: "takahe", d: -1100, h: 230, name: { it: "Takahē", en: "Takahē" }, sci: "Porphyrio hochstetteri",
+        range: { it: "praterie di montagna del Fiordland e alcuni santuari", en: "mountain grasslands of Fiordland and a few sanctuaries" }, size: { it: "circa 63 cm, fino a 3 kg", en: "about 63 cm, up to 3 kg" },
+        text: { it: "Un grande uccello che non sa volare, blu e verde con un enorme becco rosso. Alla fine dell’Ottocento si pensava fosse estinto, ma nel 1948 un medico ne ritrovò alcuni sulle Murchison Mountains. Oggi sono circa 500.", en: "A large flightless bird, blue and green with a huge red bill. By the end of the 1800s it was thought to be extinct, but in 1948 a doctor found some in the Murchison Mountains. Today there are about 500." },
+        fact: { it: "Mangia la base tenera dei ciuffi d’erba: la tira su con il becco e la tiene ferma con una zampa, come un panino.", en: "It eats the tender base of tussock grass: it pulls it up with its bill and holds it with one foot, like a sandwich." },
+        prompt: "Photorealistic wildlife photograph of a takahē (Porphyrio hochstetteri) walking through golden alpine tussock grassland in Fiordland: a large, stout flightless bird with deep indigo-blue head, neck and breast, olive-green and teal back and wings, a massive bright red bill with a red frontal shield, strong red legs.", style: "forest" },
+      { id: "kaka", d: -700, h: 15, name: { it: "Kākā", en: "Kākā" }, sci: "Nestor meridionalis",
+        range: { it: "foreste di pianura e di collina", en: "lowland and hill forests" }, size: { it: "circa 45 cm", en: "about 45 cm" },
+        text: { it: "Un pappagallo di foresta, parente del kea, che vive in alto sugli alberi. La sua lingua finisce con un piccolo pennello, perfetto per leccare il nettare dei fiori.", en: "A forest parrot, related to the kea, that lives high in the trees. Its tongue ends in a little brush, perfect for licking nectar from flowers." },
+        fact: { it: "Con il becco robusto stacca la corteccia per trovare le larve nascoste nel legno.", en: "With its strong bill it strips bark to find grubs hidden in the wood." },
+        prompt: "Photorealistic wildlife photograph of a kākā (Nestor meridionalis) perched on a mossy branch in a New Zealand beech forest: a stocky olive-brown forest parrot with darker scalloping, a pale grey-white crown, crimson-red feathers on the rump and under the wings, a strong curved grey bill.", style: "forest" },
+      { id: "kaki", d: -500, h: 330, name: { it: "Cavaliere nero (kakī)", en: "Black stilt (kakī)" }, sci: "Himantopus novaezelandiae",
+        range: { it: "fiumi intrecciati del Mackenzie Basin, Isola del Sud", en: "braided rivers of the Mackenzie Basin, South Island" }, size: { it: "circa 40 cm", en: "about 40 cm" },
+        text: { it: "Uno dei trampolieri più rari del mondo: in natura ne vivono meno di 200 adulti. Da adulto è tutto nero, con zampe rosa lunghissime, e cerca larve di insetti tra i sassi dei fiumi.", en: "One of the rarest wading birds in the world: fewer than 200 adults live in the wild. Adults are all black, with very long pink legs, and search for insect larvae among the river stones." },
+        fact: { it: "Ogni anno ne vengono allevati alcuni in voliera e poi liberati lungo i fiumi, per aiutare la specie a non sparire.", en: "Every year some are raised in aviaries and then released along the rivers, to help the species survive." },
+        prompt: "Photorealistic wildlife photograph of a black stilt (kakī, Himantopus novaezelandiae) wading in a shallow braided river in New Zealand's Mackenzie Basin: an elegant wading bird with entirely glossy black plumage, very long thin pink legs and a long fine straight black bill, grey river stones and pale water around.", style: "forest" },
+      { id: "kakapo", d: -400, h: 85, name: { it: "Kākāpō", en: "Kākāpō" }, sci: "Strigops habroptilus",
+        range: { it: "isole protette nel sud del paese", en: "protected islands in the south of the country" }, size: { it: "circa 60 cm, fino a 4 kg", en: "about 60 cm, up to 4 kg" },
+        text: { it: "Il pappagallo più pesante del mondo, e l’unico che non sa volare. Vive di notte e, quando ha paura, resta immobile: un trucco che funzionava contro le aquile, ma non contro gatti e ratti. Nel 1995 ne restavano 51; nel 2026, dopo un anno record di nascite, sono 325.", en: "The world’s heaviest parrot, and the only one that can’t fly. It is active at night and freezes when frightened: a trick that worked against eagles but not against cats and rats. In 1995 only 51 were left; in 2026, after a record breeding year, there are 325." },
+        fact: { it: "Ogni kākāpō ha un nome, e chi li protegge li conosce tutti, uno per uno.", en: "Every kākāpō has a name, and the people who protect them know each one." },
+        prompt: "Photorealistic night wildlife photograph of a kākāpō (Strigops habroptilus) standing on the forest floor of a New Zealand island: a large plump flightless parrot with moss-green feathers finely mottled with black and yellow, an owl-like face disc of fine whiskery feathers, a pale grey-ivory bill, strong grey feet, ferns around.", style: "forest" },
+      { id: "shorttailbat", d: -300, h: 25, name: { it: "Pipistrello dalla coda corta", en: "Lesser short-tailed bat" }, sci: "Mystacina tuberculata",
+        range: { it: "foreste antiche", en: "ancient forests" }, size: { it: "circa 6 cm, 15 g", en: "about 6 cm, 15 g" },
+        text: { it: "I pipistrelli sono gli unici mammiferi di terra nati in Nuova Zelanda. Questo è speciale: ripiega le ali come braccia e corre sul suolo della foresta, frugando tra le foglie per cercare insetti, frutti e nettare.", en: "Bats are New Zealand’s only native land mammals. This one is special: it folds its wings like arms and scurries across the forest floor, rummaging through the leaves for insects, fruit and nectar." },
+        fact: { it: "Impollina il Dactylanthus, una pianta che fiorisce proprio a livello del suolo: è uno dei pochi animali che raggiunge i suoi fiori.", en: "It pollinates Dactylanthus, a plant that flowers right at ground level: it is one of the few animals that reach its flowers." },
+        prompt: "Photorealistic night wildlife photograph of a New Zealand lesser short-tailed bat (Mystacina tuberculata) scurrying on all fours across the leaf litter of an ancient forest floor: a small velvety grey-brown bat with its wings tightly folded like arms, short ears, a short tail, dark eyes.", style: "forest" },
+      { id: "tuatara", d: -40, h: 95, name: { it: "Tuatara", en: "Tuatara" }, sci: "Sphenodon punctatus",
+        range: { it: "isolette al largo della costa", en: "offshore islets" }, size: { it: "fino a 60 cm", en: "up to 60 cm" },
+        text: { it: "Sembra una lucertola, ma non lo è: è l’ultimo superstite di un gruppo di rettili che viveva già al tempo dei primi dinosauri. Spesso abita nelle tane degli uccelli marini, cresce lentissimo e può superare i 100 anni.", en: "It looks like a lizard but isn’t one: it is the last survivor of a group of reptiles that already lived in the time of the first dinosaurs. It often lives in seabird burrows, grows very slowly and can live past 100." },
+        fact: { it: "I piccoli hanno sulla testa un «terzo occhio» coperto di pelle e sensibile alla luce, che con gli anni sparisce sotto le squame.", en: "Hatchlings have a light-sensitive “third eye” on top of the head, covered by skin, which disappears under scales as they grow." },
+        prompt: "Photorealistic night wildlife photograph of a tuatara (Sphenodon punctatus) on a lichen-covered rock outside a burrow on a New Zealand island: a stout reptile like a large lizard, olive-grey skin with tiny pale spots, a crest of soft white spines along the neck and back, large dark eyes, strong clawed feet.", style: "forest" },
+      { id: "fairytern", d: -4, h: 200, name: { it: "Fraticello fata (tara iti)", en: "Fairy tern (tara iti)" }, sci: "Sternula nereis davisae",
+        range: { it: "quattro spiagge tra Auckland e Northland", en: "four beaches between Auckland and Northland" }, size: { it: "circa 25 cm", en: "about 25 cm" },
+        text: { it: "L’uccello più raro che nidifica in Nuova Zelanda: ne restano meno di 40 adulti, e solo una decina di femmine depone le uova. Fa il nido in una semplice buca nella sabbia, e volontari e guardiani lo proteggono giorno e notte.", en: "New Zealand’s rarest breeding bird: fewer than 40 adults are left, and only about ten females lay eggs. It nests in a simple scrape in the sand, and volunteers and rangers guard it day and night." },
+        fact: { it: "Il suo nome maori, tara iti, vuol dire «piccola sterna».", en: "Its Māori name, tara iti, means “little tern”." },
+        prompt: "Photorealistic wildlife photograph of a New Zealand fairy tern (tara iti, Sternula nereis davisae) flying low over calm sea water near a sandy beach: a tiny pale grey and white tern with a neat black cap, a white forehead, a bright orange-yellow bill and orange legs, slender pointed wings.", style: "forest" },
+      { id: "hoiho", d: 80, h: 50, name: { it: "Pinguino dagli occhi gialli (hoiho)", en: "Yellow-eyed penguin (hoiho)" }, sci: "Megadyptes antipodes",
+        range: { it: "coste del sud-est e isole subantartiche", en: "south-east coasts and subantarctic islands" }, size: { it: "circa 65 cm", en: "about 65 cm" },
+        text: { it: "Uno dei pinguini più rari del mondo. Fa il nido nascosto tra la vegetazione della costa, lontano dagli altri, e va a pescare in mare tuffandosi spesso fino al fondale, a più di 100 metri.", en: "One of the rarest penguins in the world. It nests hidden in coastal vegetation, away from the others, and goes fishing at sea, often diving right down to the seabed, more than 100 metres deep." },
+        fact: { it: "Il suo nome maori, hoiho, vuol dire «quello che grida forte».", en: "Its Māori name, hoiho, means “noise shouter”." },
+        prompt: "Photorealistic wildlife photograph of a yellow-eyed penguin (hoiho, Megadyptes antipodes) standing on rocks at the edge of coastal forest in southern New Zealand: a medium-sized penguin with a pale yellow band running from the yellow eyes around the back of the head, a pale yellowish crown, slate-blue back, white belly and a pinkish bill.", style: "forest" }
+    ]
+  },
+  tundra: {
+    axis: "ground", start: -30, end: 1.5, px: 14, minGap: 70, maxGap: 420, motes: "snow",
+    below: { it: "sotto la neve", en: "under the snow" }, zeroLabel: { it: "0 m · neve", en: "0 m · snow" },
+    temps: [[-30, -35], [-0.01, -32], [0.05, -22], [0.3, -7], [0.5, -5], [0.6, -9], [1.5, -12]],
+    gauge: [{ l: { it: "Altezza", en: "Height" }, k: "height" }, { l: { it: "Temperatura (inverno)", en: "Temperature (winter)" }, k: "temp" }, { l: { it: "Strato", en: "Layer" }, k: "zone" }],
+    where: { it: "Tundra artica · Canada e Groenlandia", en: "Arctic tundra · Canada and Greenland" },
+    eyebrow: { it: "Tundra artica", en: "Arctic tundra" },
+    title: { it: "La tundra <em>artica</em>", en: "The Arctic <em>tundra</em>" },
+    lead: { it: "Dal cielo dove caccia la civetta delle nevi fino alle gallerie sotto la neve e al suolo che non si scioglie mai. Lo strumento mostra l’altezza e la temperatura in pieno inverno.", en: "From the sky where the snowy owl hunts down to the tunnels under the snow and the ground that never thaws. The gauge shows the height and the temperature in the depths of winter." },
+    cue: { it: "Scorri per scendere", en: "Scroll to descend" },
+    note: { it: "D’inverno qui il sole non sorge per settimane, e d’estate non tramonta mai. Queste creature vivono in parti diverse dell’Artico: qui le trovi all’altezza in cui si incontrano.", en: "In winter the sun doesn’t rise here for weeks, and in summer it never sets. These creatures live in different parts of the Arctic: here you meet them at the height where they are found." },
+    stops: [[-30, "#9db6cc"], [-3, "#c6d4e0"], [-0.01, "#e4ecf2"], [0, "#d8e3eb"], [0.5, "#a7bccc"], [0.6, "#4b4a45"], [1.5, "#2a2622"]],
+    zones: [
+      { from: -30, to: -3, name: { it: "Il cielo artico", en: "The Arctic sky" }, range: { it: "3–30 m", en: "3–30 m" }, text: { it: "Aria gelida e vento. In inverno il sole non sorge per settimane; in estate splende anche a mezzanotte.", en: "Freezing air and wind. In winter the sun doesn’t rise for weeks; in summer it shines even at midnight." } },
+      { from: -3, to: 0, name: { it: "Sopra la neve", en: "On the snow" }, range: { it: "0–3 m", en: "0–3 m" }, text: { it: "Una pianura senza alberi, coperta di neve per gran parte dell’anno. Qui chi non è ben coperto non sopravvive.", en: "A treeless plain covered in snow for most of the year. Here, only the well wrapped-up survive." } },
+      { from: 0, to: 0.5, name: { it: "Sotto la neve", en: "Under the snow" }, range: { it: "nella neve", en: "in the snow" }, text: { it: "Tra il suolo e la neve resta uno spazio dove la temperatura non scende molto sotto lo zero: d’inverno è il rifugio dei più piccoli.", en: "Between the ground and the snow there is a space where it stays just below freezing: in winter it is the refuge of the smallest animals." } },
+      { from: 0.5, to: 1.5, name: { it: "Il suolo ghiacciato", en: "The frozen ground" }, range: { it: "sotto terra", en: "underground" }, text: { it: "Sotto un sottile strato di terra c’è il permafrost, terreno ghiacciato da migliaia di anni.", en: "Under a thin layer of soil lies the permafrost, ground that has been frozen for thousands of years." } }
+    ],
+    marks: [{ d: 0.5, text: { it: "Qui comincia la terra: più sotto c’è il permafrost, che non si scioglie nemmeno d’estate", en: "The soil starts here: deeper down is the permafrost, which doesn’t thaw even in summer" } }],
+    endTitle: { it: "Il grande Nord", en: "The far North" },
+    endText: { it: "L’Artico si sta scaldando circa quattro volte più in fretta del resto del pianeta. La neve arriva più tardi e se ne va prima, e il permafrost comincia a sciogliersi: per gli animali che hai incontrato, il mondo sta cambiando sotto le zampe.", en: "The Arctic is warming about four times faster than the rest of the planet. Snow arrives later and leaves earlier, and the permafrost is starting to thaw: for the animals you have met, the world is changing under their feet." },
+    creatures: [
+      { id: "ivorygull", d: -18, h: 205, name: { it: "Gabbiano d’avorio", en: "Ivory gull" }, sci: "Pagophila eburnea",
+        range: { it: "ghiaccio marino dell’Alto Artico", en: "sea ice of the High Arctic" }, size: { it: "circa 43 cm", en: "about 43 cm" },
+        text: { it: "Un gabbiano tutto bianco, con zampe nere, che vive vicino al ghiaccio marino più a nord del mondo. D’inverno segue gli orsi polari per mangiare gli avanzi delle loro prede.", en: "An all-white gull with black legs that lives by the sea ice in the far north of the world. In winter it follows polar bears to eat the leftovers of their prey." },
+        fact: { it: "Passa tutto l’anno nell’Artico, anche durante la lunga notte polare, ai bordi del ghiaccio.", en: "It spends the whole year in the Arctic, even through the long polar night, at the edge of the ice." },
+        prompt: "Photorealistic wildlife photograph of an adult ivory gull (Pagophila eburnea) standing on Arctic sea ice: a medium-sized gull with completely pure white plumage, short black legs, dark eyes, and a short blue-grey bill with a yellow tip, broken pack ice and grey sea behind.", style: "forest" },
+      { id: "snowyowl", d: -10, h: 45, name: { it: "Civetta delle nevi", en: "Snowy owl" }, sci: "Bubo scandiacus",
+        range: { it: "tundra di tutto l’Artico", en: "tundra across the Arctic" }, size: { it: "fino a 70 cm, ali di 1,5 m", en: "up to 70 cm, 1.5 m wings" },
+        text: { it: "Una grande civetta bianca che caccia anche di giorno, perché d’estate al Nord il sole non tramonta. Mangia soprattutto lemming: in un anno una sola civetta può catturarne più di mille.", en: "A large white owl that also hunts by day, because in the northern summer the sun never sets. It eats mostly lemmings: one owl can catch more than a thousand in a year." },
+        fact: { it: "I maschi diventano sempre più bianchi con l’età, mentre le femmine restano macchiate di scuro.", en: "Males get whiter with age, while females stay spotted with dark bars." },
+        prompt: "Photorealistic wildlife photograph of a female snowy owl (Bubo scandiacus) perched on a snowy hummock in the Arctic tundra: a large white owl with dense dark brown bars across the body and wings, a round head without ear tufts, bright yellow eyes, feet covered in thick white feathers.", style: "forest" },
+      { id: "muskox", d: -1.4, h: 25, name: { it: "Bue muschiato", en: "Muskox" }, sci: "Ovibos moschatus",
+        range: { it: "tundra del Canada e della Groenlandia", en: "tundra of Canada and Greenland" }, size: { it: "circa 1,4 m alla spalla, fino a 400 kg", en: "about 1.4 m at the shoulder, up to 400 kg" },
+        text: { it: "Un animale dell’era glaciale arrivato fino a noi. Il suo sottopelo, chiamato qiviut, è molto più caldo della lana di pecora. Quando arrivano i lupi, il branco si mette in cerchio con le corna verso l’esterno e i piccoli al centro.", en: "An Ice Age animal that has survived to our time. Its underwool, called qiviut, is far warmer than sheep’s wool. When wolves come, the herd forms a circle with horns facing out and the young in the middle." },
+        fact: { it: "Nonostante il nome, non è un bue: è più parente delle capre e delle pecore.", en: "Despite its name it isn’t an ox: it is more closely related to goats and sheep." },
+        prompt: "Photorealistic wildlife photograph of a muskox (Ovibos moschatus) standing in snowy Arctic tundra: a large stocky animal with very long dark brown shaggy hair hanging almost to the ground, a pale saddle on the back, broad horns that meet in a heavy boss on the forehead and curve down then up into sharp points, light-coloured legs.", style: "forest" },
+      { id: "arcticwolf", d: -0.9, h: 210, name: { it: "Lupo artico", en: "Arctic wolf" }, sci: "Canis lupus arctos",
+        range: { it: "isole dell’Artico canadese e Groenlandia", en: "Canadian Arctic islands and Greenland" }, size: { it: "alto circa 70 cm alla spalla", en: "about 70 cm at the shoulder" },
+        text: { it: "Un lupo dal pelo quasi bianco che vive così a nord da incontrare pochissimi esseri umani. Caccia buoi muschiati e lepri artiche, e d’inverno sopporta mesi di buio e temperature fino a -50 °C.", en: "A wolf with almost white fur that lives so far north it meets very few people. It hunts muskoxen and Arctic hares, and in winter endures months of darkness and temperatures down to -50 °C." },
+        fact: { it: "Ha orecchie e muso più corti degli altri lupi: così disperde meno calore.", en: "Its ears and muzzle are shorter than other wolves’: that way it loses less heat." },
+        prompt: "Photorealistic wildlife photograph of an Arctic wolf (Canis lupus arctos) standing on snowy tundra on Ellesmere Island: a large wolf with thick, almost pure white fur, short rounded ears, a short muzzle, amber eyes, a bushy tail, grey winter light.", style: "forest" },
+      { id: "arctichare", d: -0.5, h: 215, name: { it: "Lepre artica", en: "Arctic hare" }, sci: "Lepus arcticus",
+        range: { it: "Artico canadese e Groenlandia", en: "Canadian Arctic and Greenland" }, size: { it: "circa 60 cm, fino a 5 kg", en: "about 60 cm, up to 5 kg" },
+        text: { it: "D’inverno è bianca come la neve. Ha orecchie più corte delle altre lepri, per non perdere calore, e quando scappa corre sulle zampe posteriori come un canguro, fino a 60 km/h.", en: "In winter it is as white as snow. Its ears are shorter than other hares’, to save heat, and when it flees it runs on its hind legs like a kangaroo, at up to 60 km/h." },
+        fact: { it: "A volte si radunano in gruppi di centinaia di lepri: un’enorme macchia bianca che si muove insieme sulla neve.", en: "Sometimes they gather in groups of hundreds: a huge white patch moving together across the snow." },
+        prompt: "Photorealistic wildlife photograph of an Arctic hare (Lepus arcticus) sitting on wind-packed snow in the Canadian Arctic: thick pure white winter fur, short ears with black tips, long powerful hind feet, dark eyes, soft grey Arctic light.", style: "forest" },
+      { id: "arcticfox", d: -0.4, h: 205, name: { it: "Volpe artica", en: "Arctic fox" }, sci: "Vulpes lagopus",
+        range: { it: "tutto l’Artico", en: "the whole Arctic" }, size: { it: "circa 55 cm più 30 cm di coda", en: "about 55 cm plus a 30 cm tail" },
+        text: { it: "Ha una delle pellicce più calde di tutti i mammiferi e sopporta anche -50 °C. Sente i lemming che camminano sotto la neve, poi salta in alto e si tuffa a muso in giù per prenderli.", en: "It has one of the warmest coats of any mammal and copes even with -50 °C. It hears lemmings moving under the snow, then leaps high and dives in nose-first to catch them." },
+        fact: { it: "In estate la sua pelliccia diventa marrone e grigia, per confondersi con la tundra senza neve.", en: "In summer its coat turns brown and grey, to blend in with the snow-free tundra." },
+        prompt: "Photorealistic wildlife photograph of an Arctic fox (Vulpes lagopus) in its thick white winter coat standing on snowy tundra: a small fox with a short rounded muzzle, small rounded ears, dense fluffy white fur, furry paws, a very bushy white tail, dark eyes.", style: "forest" },
+      { id: "ptarmigan", d: -0.3, h: 40, name: { it: "Pernice bianca", en: "Rock ptarmigan" }, sci: "Lagopus muta",
+        range: { it: "tundra dell’Artico e alte montagne, anche le Alpi", en: "Arctic tundra and high mountains, including the Alps" }, size: { it: "circa 35 cm", en: "about 35 cm" },
+        text: { it: "D’inverno diventa tutta bianca e ha le zampe coperte di piume, che fanno da racchette da neve e da calzini. Di notte si scava una buca nella neve per dormire al riparo dal vento.", en: "In winter it turns all white and its feet are covered in feathers that work as snowshoes and socks. At night it digs a hole in the snow to sleep out of the wind." },
+        fact: { it: "Vive anche sulle Alpi italiane, sopra i 2.000 metri: è uno degli animali dell’era glaciale rimasti sulle nostre montagne.", en: "It also lives in the Italian Alps above 2,000 metres: one of the Ice Age animals still found on our mountains." },
+        prompt: "Photorealistic wildlife photograph of a male rock ptarmigan (Lagopus muta) in white winter plumage standing on snow in the Arctic tundra: a plump grouse-like bird completely white except a black stripe from the bill through the eye, black outer tail feathers, a small red comb above the eye, feet thickly covered in white feathers.", style: "forest" },
+      { id: "snowbunting", d: -0.2, h: 30, name: { it: "Zigolo delle nevi", en: "Snow bunting" }, sci: "Plectrophenax nivalis",
+        range: { it: "tundra e coste rocciose dell’Artico", en: "Arctic tundra and rocky coasts" }, size: { it: "circa 16 cm", en: "about 16 cm" },
+        text: { it: "Un piccolo uccello che nidifica più a nord di quasi tutti gli altri uccelli canori. I maschi arrivano nella tundra in primavera quando è ancora tutto innevato, settimane prima delle femmine, per conquistare i posti migliori tra le rocce.", en: "A small bird that nests further north than almost any other songbird. Males arrive on the tundra in spring while everything is still snowy, weeks before the females, to claim the best spots among the rocks." },
+        fact: { it: "Fa il nido nelle fessure delle rocce, dove le uova sono al riparo dal vento gelido.", en: "It nests in crevices in the rocks, where the eggs are sheltered from the icy wind." },
+        prompt: "Photorealistic wildlife photograph of a male snow bunting (Plectrophenax nivalis) in breeding plumage perched on a lichen-covered rock in the Arctic tundra in spring: a small sparrow-sized bird with an all-white head and underparts with no eye stripe or mask, a solid black back, black wingtips and large white wing panels, a short black conical bill, patches of melting snow around.", style: "forest" },
+      { id: "lemming", d: 0.25, h: 210, name: { it: "Lemming dal collare", en: "Northern collared lemming" }, sci: "Dicrostonyx groenlandicus",
+        range: { it: "tundra del Canada e della Groenlandia", en: "tundra of Canada and Greenland" }, size: { it: "circa 14 cm", en: "about 14 cm" },
+        text: { it: "L’unico roditore che d’inverno diventa bianco. Passa i mesi più freddi in gallerie sotto la neve, dove resta poco sotto lo zero anche quando fuori ci sono -30 °C, e lì sotto continua a mangiare e perfino a fare i piccoli.", en: "The only rodent that turns white in winter. It spends the coldest months in tunnels under the snow, where it stays just below freezing even when it’s -30 °C outside, and there it keeps eating and even has babies." },
+        fact: { it: "D’inverno gli crescono unghie doppie, come piccole pale, sulle zampe davanti: servono a scavare nella neve dura.", en: "In winter it grows double claws like little shovels on its front feet, for digging through hard snow." },
+        prompt: "Photorealistic wildlife photograph of a northern collared lemming (Dicrostonyx groenlandicus) in its white winter coat at the entrance of a tunnel in the snow: a small round rodent about 14 cm long with dense pure white fur, tiny ears hidden in the fur, small dark eyes, a very short tail, enlarged forked claws on the front feet.", style: "forest" },
+      { id: "groundsquirrel", d: 1, h: 32, at: { it: "Nella tana, sotto terra", en: "In its burrow, underground" }, name: { it: "Citello artico", en: "Arctic ground squirrel" }, sci: "Urocitellus parryii",
+        range: { it: "tundra dell’Alaska e del Canada", en: "tundra of Alaska and Canada" }, size: { it: "circa 40 cm con la coda", en: "about 40 cm with the tail" },
+        text: { it: "Va in letargo per sette o otto mesi in una tana scavata nel suolo gelato. Durante il letargo la temperatura del suo corpo scende fino a quasi -3 °C: è il mammifero che resiste al corpo più freddo che si conosca.", en: "It hibernates for seven or eight months in a burrow dug into the frozen ground. During hibernation its body temperature drops to almost -3 °C: the coldest body of any mammal known." },
+        fact: { it: "Ogni due o tre settimane si «sveglia» per meno di un giorno e si riscalda, poi torna a dormire.", en: "Every two or three weeks it “wakes up” for less than a day and warms up, then goes back to sleep." },
+        prompt: "Photorealistic wildlife photograph of an Arctic ground squirrel (Urocitellus parryii) standing upright on its hind legs beside its burrow on the summer tundra: a stout squirrel with tawny-grey fur flecked with white spots on the back, a buff face, short ears and a short tail, low reddish tundra plants around.", style: "forest" }
+    ]
+  },
+  antarctica: {
+    axis: "ground", start: -50, end: 600, px: 0.9, minGap: 70, maxGap: 460, motes: "snow",
+    below: { it: "sotto il mare", en: "below the sea" }, zeroLabel: { it: "0 m · ghiaccio", en: "0 m · ice" },
+    gauge: [{ l: { it: "Altezza / profondità", en: "Height / depth" }, k: "height" }, { l: { it: "Sole che arriva", en: "Sunlight" }, k: "ice" }, { l: { it: "Strato", en: "Layer" }, k: "zone" }],
+    where: { it: "Antartide · Mare di Ross", en: "Antarctica · Ross Sea" },
+    eyebrow: { it: "Antartide", en: "Antarctica" },
+    title: { it: "I ghiacci <em>dell’Antartide</em>", en: "The ice <em>of Antarctica</em>" },
+    lead: { it: "Dal cielo sopra il ghiaccio marino fino a 600 metri sotto il mare, dove l’acqua è a quasi -2 °C. Lo strumento mostra l’altezza o la profondità e quanta luce del sole arriva.", en: "From the sky above the sea ice down to 600 metres below the sea, where the water is nearly -2 °C. The gauge shows the height or depth and how much sunlight gets through." },
+    cue: { it: "Scorri per scendere", en: "Scroll to descend" },
+    note: { it: "Gli animali dell’Antartide vivono quasi tutti vicino al mare, perché l’interno del continente è un deserto di ghiaccio. Qui li trovi all’altezza o alla profondità in cui si incontrano.", en: "Almost all of Antarctica’s animals live near the sea, because the inside of the continent is a desert of ice. Here you meet them at the height or depth where they are found." },
+    stops: [[-50, "#7fa6c8"], [-1, "#cfe1ee"], [0, "#e9f2f8"], [2, "#bcd6e6"], [2.5, "#2f6f99"], [60, "#1d4f75"], [250, "#0c2e4d"], [600, "#04121f"]],
+    zones: [
+      { from: -50, to: 0, name: { it: "Sopra il ghiaccio", en: "Above the ice" }, range: { it: "0–50 m", en: "0–50 m" }, text: { it: "Venti fortissimi e temperature che d’inverno scendono sotto i -40 °C. Pochi uccelli resistono quassù tutto l’anno.", en: "Fierce winds and temperatures that drop below -40 °C in winter. Few birds can last here all year." } },
+      { from: 0, to: 2, name: { it: "Il ghiaccio marino", en: "The sea ice" }, range: { it: "uno o due metri", en: "one or two metres" }, text: { it: "D’inverno il mare gela per milioni di chilometri quadrati, e il continente sembra raddoppiare. Sotto il ghiaccio crescono alghe che danno da mangiare a tutto il resto.", en: "In winter the sea freezes over millions of square kilometres, and the continent seems to double in size. Algae grow under the ice and feed everything else." } },
+      { from: 2, to: 200, name: { it: "Sotto il ghiaccio", en: "Under the ice" }, range: { it: "2–200 m", en: "2–200 m" }, text: { it: "Acqua a quasi -2 °C, che non gela solo perché è salata. È piena di krill e di pesci che hanno una specie di antigelo nel sangue.", en: "Water at nearly -2 °C that stays liquid only because it is salty. It is full of krill and of fish with a kind of antifreeze in their blood." } },
+      { from: 200, to: 600, name: { it: "Il mare profondo", en: "The deep sea" }, range: { it: "200–600 m", en: "200–600 m" }, text: { it: "Buio quasi completo. Qui scendono a cacciare le foche e vivono pesci con il sangue trasparente.", en: "Almost complete darkness. Seals dive down here to hunt, and fish with see-through blood live here." } }
+    ],
+    marks: [
+      { d: 0, text: { it: "Il livello del mare: il ghiaccio marino galleggia, spesso uno o due metri", en: "Sea level: the sea ice floats, one or two metres thick" } },
+      { d: 3, text: { it: "L’acqua sotto il ghiaccio è a circa -1,9 °C", en: "The water under the ice is about -1.9 °C" } }
+    ],
+    endTitle: { it: "Il continente bianco", en: "The white continent" },
+    endText: { it: "L’Antartide contiene circa il 70% di tutta l’acqua dolce del pianeta, chiusa nel ghiaccio. Nessun paese la possiede: dal 1959 un trattato la protegge come terra di pace e di scienza.", en: "Antarctica holds about 70% of all the planet’s fresh water, locked up in ice. No country owns it: since 1959 a treaty has protected it as a land of peace and science." },
+    creatures: [
+      { id: "snowpetrel", d: -35, h: 205, name: { it: "Petrello delle nevi", en: "Snow petrel" }, sci: "Pagodroma nivea",
+        range: { it: "coste e montagne dell’Antartide", en: "coasts and mountains of Antarctica" }, size: { it: "circa 35 cm, ali di 80 cm", en: "about 35 cm, 80 cm wings" },
+        text: { it: "Uno dei soli tre uccelli che nidificano anche nell’interno dell’Antartide, su montagne che spuntano dal ghiaccio a centinaia di chilometri dal mare. È tutto bianco, con occhi e becco neri.", en: "One of only three birds that breed deep inside Antarctica, on mountains poking out of the ice hundreds of kilometres from the sea. It is all white, with black eyes and bill." },
+        fact: { it: "Per difendersi sputa un olio dello stomaco che puzza moltissimo; con il tempo intorno ai nidi quest’olio forma strati di cera vecchi di migliaia di anni.", en: "To defend itself it spits a foul-smelling stomach oil; over time this oil builds up around nests in waxy layers thousands of years old." },
+        prompt: "Photorealistic wildlife photograph of a snow petrel (Pagodroma nivea) flying over Antarctic pack ice: a small seabird with completely pure white plumage, a short black bill, small black eyes and dark grey-black feet, slender pointed wings, icebergs behind.", style: "forest" },
+      { id: "skua", d: -20, h: 30, name: { it: "Stercorario di McCormick", en: "South polar skua" }, sci: "Stercorarius maccormicki",
+        range: { it: "coste dell’Antartide", en: "coasts of Antarctica" }, size: { it: "circa 53 cm, ali di 1,3 m", en: "about 53 cm, 1.3 m wings" },
+        text: { it: "Un grosso uccello marino bruno e prepotente, che ruba il cibo ad altri uccelli e mangia uova e pulcini di pinguino. Difende il nido con picchiate rapidissime contro chiunque si avvicini.", en: "A big, bullying brown seabird that steals food from other birds and eats penguin eggs and chicks. It defends its nest by dive-bombing anyone who comes close." },
+        fact: { it: "È stato avvistato perfino al Polo Sud, a più di mille chilometri dal mare.", en: "It has even been seen at the South Pole, more than a thousand kilometres from the sea." },
+        prompt: "Photorealistic wildlife photograph of a south polar skua (Stercorarius maccormicki) standing on snow near an Antarctic penguin colony: a large, heavily built seabird with uniform grey-brown plumage, a paler golden-streaked nape, a strong hooked black bill, black legs and webbed feet.", style: "forest" },
+      { id: "emperor", d: -1.1, h: 45, name: { it: "Pinguino imperatore", en: "Emperor penguin" }, sci: "Aptenodytes forsteri",
+        range: { it: "ghiaccio marino intorno all’Antartide", en: "sea ice around Antarctica" }, size: { it: "fino a 1,2 m, oltre 30 kg", en: "up to 1.2 m, over 30 kg" },
+        text: { it: "Il pinguino più grande del mondo, e l’unico che fa le uova nel pieno dell’inverno antartico. Per circa due mesi i maschi tengono l’uovo sulle zampe, sotto una piega di pelle calda, senza mangiare, stretti l’uno all’altro contro venti a -40 °C.", en: "The world’s largest penguin, and the only one that lays eggs in the depths of the Antarctic winter. For about two months the males keep the egg on their feet, under a warm fold of skin, without eating, huddled together against winds at -40 °C." },
+        fact: { it: "Può tuffarsi a più di 500 metri di profondità e restare sott’acqua più di 20 minuti.", en: "It can dive more than 500 metres deep and stay underwater for over 20 minutes." },
+        prompt: "Photorealistic wildlife photograph of an adult emperor penguin (Aptenodytes forsteri) standing tall on Antarctic sea ice: a large penguin with a black head and back, a white belly with a pale yellow wash on the upper breast, bright golden-orange ear patches, an orange-pink stripe on the lower bill, flat white ice and grey sky.", style: "forest" },
+      { id: "adelie", d: -0.7, h: 215, name: { it: "Pinguino di Adelia", en: "Adélie penguin" }, sci: "Pygoscelis adeliae",
+        range: { it: "coste di tutta l’Antartide", en: "coasts all around Antarctica" }, size: { it: "circa 70 cm", en: "about 70 cm" },
+        text: { it: "Un pinguino di media grandezza, tutto nero e bianco, con un anello bianco intorno agli occhi. Costruisce il nido con i sassolini, e a volte li ruba dal nido dei vicini quando non guardano.", en: "A medium-sized black-and-white penguin with a white ring around each eye. It builds its nest out of pebbles, and sometimes steals them from the neighbours’ nests when they aren’t looking." },
+        fact: { it: "Prende il nome da Adèle, la moglie dell’esploratore francese Dumont d’Urville.", en: "It is named after Adèle, the wife of the French explorer Dumont d’Urville." },
+        prompt: "Photorealistic wildlife photograph of an Adélie penguin (Pygoscelis adeliae) standing on snowy pebbles at an Antarctic colony: a black-and-white penguin about 70 cm tall with an all-black head, a striking white ring around each eye, a short black bill partly covered by feathers, a white belly, pink feet.", style: "forest" },
+      { id: "midge", d: -0.02, h: 95, at: { it: "A terra, sulla Penisola antartica", en: "On land, on the Antarctic Peninsula" }, name: { it: "Moscerino antartico", en: "Antarctic midge" }, sci: "Belgica antarctica",
+        range: { it: "muschi e licheni della Penisola antartica", en: "mosses and lichens of the Antarctic Peninsula" }, size: { it: "2–6 mm", en: "2–6 mm" },
+        text: { it: "Il più grande animale che vive solo sulla terraferma dell’Antartide è questo moscerino senza ali, lungo pochi millimetri. Le larve sopportano di gelare e di seccarsi, e vivono due anni nel muschio prima di diventare adulte per pochi giorni.", en: "The largest animal living only on Antarctica’s land is this wingless midge, a few millimetres long. Its larvae can survive being frozen and dried out, and live for two years in the moss before becoming adults for just a few days." },
+        fact: { it: "Ha uno dei DNA più piccoli di tutti gli insetti conosciuti.", en: "It has one of the smallest genomes of any known insect." },
+        prompt: "Photorealistic extreme macro photograph of an Antarctic midge (Belgica antarctica), a tiny wingless black fly only a few millimetres long with six slender legs and short antennae, crawling on green moss and orange lichen among rocks on the Antarctic Peninsula, a few snow crystals around.", style: "forest" },
+      { id: "krill", d: 40, h: 10, name: { it: "Krill antartico", en: "Antarctic krill" }, sci: "Euphausia superba",
+        range: { it: "mari intorno all’Antartide, di solito nei primi 200 m", en: "seas around Antarctica, usually in the top 200 m" }, size: { it: "circa 6 cm", en: "about 6 cm" },
+        text: { it: "Un piccolo crostaceo trasparente, simile a un gamberetto, che vive in sciami enormi. È il cibo di balene, foche, pinguini e pesci: senza di lui la vita dell’Antartide crollerebbe.", en: "A small see-through crustacean, like a shrimp, that lives in enormous swarms. It feeds whales, seals, penguins and fish: without it, Antarctic life would collapse." },
+        fact: { it: "Il krill si illumina: ha piccoli organi che fanno una luce verde-azzurra.", en: "Krill can glow: it has small organs that give off a blue-green light." },
+        prompt: "Photorealistic underwater macro photograph of an Antarctic krill (Euphausia superba) swimming in cold blue Southern Ocean water: a transparent shrimp-like crustacean about 6 cm long with reddish-orange pigment spots, large black eyes, long antennae, feathery swimming legs and a green gut, tiny particles in the water.", style: "water" },
+      { id: "crabeater", d: 60, h: 30, name: { it: "Foca cancrivora", en: "Crabeater seal" }, sci: "Lobodon carcinophaga",
+        range: { it: "ghiaccio marino galleggiante", en: "drifting pack ice" }, size: { it: "circa 2,3 m, 200 kg", en: "about 2.3 m, 200 kg" },
+        text: { it: "Forse il mammifero di grossa taglia più numeroso della Terra dopo l’uomo: ce ne sono milioni. Nonostante il nome non mangia granchi ma krill, che filtra dall’acqua con denti pieni di punte, come un colino.", en: "Perhaps the most numerous large mammal on Earth after humans: there are millions. Despite its name it doesn’t eat crabs but krill, which it sieves from the water with spiky teeth like a strainer." },
+        fact: { it: "Molte hanno lunghe cicatrici sul corpo: sono i segni degli attacchi delle foche leopardo, subiti da giovani.", en: "Many have long scars on their bodies: marks of leopard seal attacks from when they were young." },
+        prompt: "Photorealistic wildlife photograph of a crabeater seal (Lobodon carcinophaga) lying on an Antarctic ice floe: a slender seal with a long, pointed, dog-like snout, silvery to pale blond-brown fur with faint darker blotches on the sides, long parallel scars on its flanks, dark eyes, broken pack ice and dark sea behind.", style: "forest" },
+      { id: "silverfish", d: 130, h: 200, name: { it: "Pesce argento antartico", en: "Antarctic silverfish" }, sci: "Pleuragramma antarctica",
+        range: { it: "sotto il ghiaccio marino e in mare aperto", en: "under the sea ice and in open water" }, size: { it: "fino a 25 cm", en: "up to 25 cm" },
+        text: { it: "Il pesce più comune dell’Antartide e uno dei cibi preferiti di foche e pinguini. Non ha la vescica natatoria: per galleggiare accumula nel corpo goccioline di grasso.", en: "The most common fish in Antarctica and a favourite food of seals and penguins. It has no swim bladder: to float it stores little droplets of fat in its body." },
+        fact: { it: "Depone le uova proprio sotto il ghiaccio marino, tra i cristalli di ghiaccio che si formano nell’acqua.", en: "It lays its eggs right under the sea ice, among the ice crystals that form in the water." },
+        prompt: "Photorealistic underwater photograph of an Antarctic silverfish (Pleuragramma antarctica) swimming just below the underside of the sea ice: a slender silvery semi-translucent fish about 20 cm long with large eyes, a forked tail, the white crystalline ice ceiling above and dim blue water below.", style: "water" },
+      { id: "weddell", d: 300, h: 215, name: { it: "Foca di Weddell", en: "Weddell seal" }, sci: "Leptonychotes weddellii",
+        range: { it: "ghiaccio fisso vicino alla costa", en: "fast ice near the coast" }, size: { it: "fino a 3 m, 500 kg", en: "up to 3 m, 500 kg" },
+        text: { it: "Il mammifero che vive più a sud sulla Terra. Passa l’inverno sotto il ghiaccio e respira da buchi che tiene aperti raschiando il ghiaccio con i denti. Può scendere fino a circa 600 metri e trattenere il respiro per più di un’ora.", en: "The southernmost mammal on Earth. It spends winter under the ice and breathes through holes it keeps open by scraping the ice with its teeth. It can dive to about 600 metres and hold its breath for over an hour." },
+        fact: { it: "Sott’acqua comunica con canti che sembrano suoni di un film di fantascienza.", en: "Underwater it communicates with songs that sound like a science-fiction film." },
+        prompt: "Photorealistic wildlife photograph of a Weddell seal (Leptonychotes weddellii) resting on fast ice near a breathing hole in Antarctica: a large plump seal with a small rounded head, a short muzzle with whiskers that gives a gentle smiling face, dark grey fur covered with silvery-white spots and blotches, large dark eyes.", style: "forest" },
+      { id: "icefish", d: 450, h: 190, name: { it: "Pesce ghiaccio", en: "Blackfin icefish" }, sci: "Chaenocephalus aceratus",
+        range: { it: "fondali dei mari antartici", en: "seabed of Antarctic seas" }, size: { it: "fino a 70 cm", en: "up to 70 cm" },
+        text: { it: "Fa parte dell’unica famiglia di vertebrati con il sangue senza emoglobina: invece che rosso è quasi trasparente. Riesce a vivere lo stesso perché l’acqua gelida contiene tanto ossigeno, e il suo cuore grande pompa moltissimo sangue.", en: "It belongs to the only family of vertebrates whose blood has no haemoglobin: instead of red it is almost see-through. It survives because icy water holds a lot of oxygen, and its big heart pumps a great deal of blood." },
+        fact: { it: "Nel sangue ha anche un antigelo naturale, che impedisce ai cristalli di ghiaccio di formarsi nel suo corpo.", en: "Its blood also contains a natural antifreeze that stops ice crystals forming in its body." },
+        prompt: "Photorealistic deep underwater photograph of a blackfin icefish (Chaenocephalus aceratus) resting on the sandy seafloor of the Southern Ocean: a long pale fish with a large flat crocodile-like snout, translucent ghostly white-grey skin with darker bands, big eyes, large dark fins, no red colour anywhere because its blood has no haemoglobin, dim blue light.", style: "ocean" }
+    ]
+  },
+  tianshan: {
+    axis: "altitude", start: -7439, end: -1500, px: 0.08, minGap: 70, maxGap: 480, motes: "snow",
+    gauge: [{ l: { it: "Altitudine", en: "Altitude" }, k: "alt" }, { l: { it: "Ossigeno", en: "Oxygen" }, k: "oxy" }, { l: { it: "Fascia", en: "Belt" }, k: "zone" }],
+    where: { it: "Tian Shan · le Montagne Celesti", en: "Tian Shan · the Celestial Mountains" },
+    eyebrow: { it: "Tian Shan", en: "Tian Shan" },
+    title: { it: "Le Montagne <em>Celesti</em>", en: "The Celestial <em>Mountains</em>" },
+    lead: { it: "Tian Shan in cinese vuol dire «Montagne Celesti». Dalla vetta più alta, a 7.439 m, scendi tra ghiacciai, pietraie e praterie fino ai boschi di abeti. Lo strumento mostra l’altitudine e quanto ossigeno c’è.", en: "Tian Shan means “Celestial Mountains” in Chinese. From the highest peak, at 7,439 m, descend through glaciers, scree and meadows down to the spruce forests. The gauge shows the altitude and how much oxygen there is." },
+    cue: { it: "Scorri per scendere", en: "Scroll to descend" },
+    note: { it: "Questa catena attraversa Cina, Kazakistan e Kirghizistan, e molte delle sue creature non vivono da nessun’altra parte: qui le trovi all’altitudine in cui si incontrano.", en: "This range crosses China, Kazakhstan and Kyrgyzstan, and many of its creatures live nowhere else: here you meet them at the altitude where they are found." },
+    stops: [[-7439, "#1b2f4f"], [-5000, "#7f97b0"], [-4000, "#a3afb2"], [-3200, "#8f9a76"], [-2400, "#5a7a4c"], [-1500, "#2c4a30"]],
+    zones: [
+      { from: -7439, to: -4500, name: { it: "Ghiacciai e vette", en: "Glaciers and peaks" }, range: { it: "4.500–7.439 m", en: "4,500–7,439 m" }, text: { it: "I ghiacciai del Tian Shan danno acqua a decine di milioni di persone nelle pianure ai suoi piedi.", en: "The Tian Shan’s glaciers supply water to tens of millions of people in the plains below." } },
+      { from: -4500, to: -3200, name: { it: "Pietraie e pareti", en: "Scree and cliffs" }, range: { it: "3.200–4.500 m", en: "3,200–4,500 m" }, text: { it: "Massi, pareti di roccia e pochi cuscinetti di piante. Qui si nascondono gli animali più rari della catena.", en: "Boulders, rock walls and a few cushion plants. The rarest animals of the range hide here." } },
+      { from: -3200, to: -2400, name: { it: "Praterie alpine", en: "Alpine meadows" }, range: { it: "2.400–3.200 m", en: "2,400–3,200 m" }, text: { it: "D’estate i prati si riempiono di fiori, di farfalle e di animali al pascolo.", en: "In summer the meadows fill with flowers, butterflies and grazing animals." } },
+      { from: -2400, to: -1500, name: { it: "Boschi di abete", en: "Spruce forests" }, range: { it: "1.500–2.400 m", en: "1,500–2,400 m" }, text: { it: "Foreste di abete di Schrenk, alberi stretti e appuntiti che lasciano scivolare via la neve.", en: "Forests of Schrenk’s spruce, narrow pointed trees that let the snow slide off." } }
+    ],
+    marks: [{ d: -7439, text: { it: "Jengish Chokusu, la cima più alta del Tian Shan", en: "Jengish Chokusu, the highest peak of the Tian Shan" } }],
+    endTitle: { it: "Le Montagne Celesti", en: "The Celestial Mountains" },
+    endText: { it: "Nel 2013 il Tian Shan dello Xinjiang è diventato Patrimonio dell’Umanità UNESCO per la sua natura. Molte delle sue creature sono state scoperte solo negli ultimi decenni, e di alcune si sa ancora pochissimo.", en: "In 2013 the Xinjiang Tian Shan became a UNESCO World Heritage Site for its nature. Many of its creatures were discovered only in recent decades, and little is known about some of them." },
+    creatures: [
+      { id: "mtnfinch", d: -4300, h: 340, name: { it: "Fringuello alpino di Brandt", en: "Brandt’s mountain finch" }, sci: "Leucosticte brandti",
+        range: { it: "pietraie e ghiacciai, fino a oltre 5.000 m", en: "scree and glaciers, up to over 5,000 m" }, size: { it: "circa 18 cm", en: "about 18 cm" },
+        text: { it: "Uno degli uccelli che nidificano più in alto al mondo, vicino al limite delle nevi. Ha il corpo grigio-bruno, la testa scura e le ali con riflessi rosa, e d’inverno scende solo un po’ più in basso.", en: "One of the highest-nesting birds in the world, close to the snow line. It has a grey-brown body, a dark head and pink-tinged wings, and in winter it moves only a little lower down." },
+        fact: { it: "Cerca semi e insetti ai bordi dei ghiacciai e dei nevai che si sciolgono.", en: "It looks for seeds and insects at the edges of melting glaciers and snowfields." },
+        prompt: "Photorealistic wildlife photograph of a Brandt's mountain finch (Leucosticte brandti) perched on a rock beside a melting snowfield at 4,500 m in the Tian Shan: a stocky finch with a sooty blackish face and crown, ash-grey brown body, a rosy-pink flush on the wings and rump, a short conical bill, snowy peaks behind.", style: "forest" },
+      { id: "pardosa", d: -3800, h: 30, name: { it: "Ragno lupo di Temreshev", en: "Temreshev’s wolf spider" }, sci: "Pardosa temreshevi",
+        range: { it: "pietraie oltre i 3.600 m, Kazakistan", en: "scree above 3,600 m, Kazakhstan" }, size: { it: "meno di 1 cm", en: "under 1 cm" },
+        text: { it: "Un ragno lupo descritto solo nel 2022, trovato tra le pietraie del Tian Shan oltre i 3.600 metri. I ragni lupo non fanno ragnatele: cacciano correndo, e le femmine portano il sacco delle uova attaccato al corpo.", en: "A wolf spider described only in 2022, found among the Tian Shan screes above 3,600 metres. Wolf spiders don’t spin webs: they hunt by running, and females carry their egg sac attached to their body." },
+        fact: { it: "Quando le uova si schiudono, i piccoli ragni salgono sulla schiena della mamma e viaggiano con lei per qualche giorno.", en: "When the eggs hatch, the baby spiders climb onto their mother’s back and ride with her for a few days." },
+        prompt: "Photorealistic macro photograph of a high-mountain wolf spider (Pardosa temreshevi) on grey scree at 3,800 m in the Tian Shan mountains: a small hairy wolf spider less than 1 cm long, mottled brown and grey camouflage pattern, long banded legs, eight dark eyes with two large ones in front, a female carrying a round silk egg sac attached to the tip of her abdomen.", style: "forest" },
+      { id: "ilipika", d: -3500, h: 15, name: { it: "Pika dell’Ili", en: "Ili pika" }, sci: "Ochotona iliensis",
+        range: { it: "pareti rocciose tra 2.800 e 4.100 m, Xinjiang (Cina)", en: "rock faces between 2,800 and 4,100 m, Xinjiang (China)" }, size: { it: "circa 20 cm, 250 g", en: "about 20 cm, 250 g" },
+        text: { it: "Scoperto solo nel 1983, è uno dei mammiferi più rari della Terra: ne restano meno di mille. Ha grandi orecchie e macchie color ruggine sulla testa e sul collo, e vive tra le fessure delle pareti di roccia.", en: "Discovered only in 1983, it is one of the rarest mammals on Earth: fewer than a thousand are left. It has big ears and rust-coloured patches on its head and neck, and lives in the cracks of rock walls." },
+        fact: { it: "Il suo scopritore, Li Weidong, lo cerca da decenni: in più di 30 anni ne sono stati avvistati appena 29.", en: "Its discoverer, Li Weidong, has searched for it for decades: in more than 30 years only 29 have been seen." },
+        prompt: "Photorealistic wildlife photograph of an Ili pika (Ochotona iliensis) on a lichen-covered rock ledge at 3,500 m in the Tian Shan of Xinjiang: a round, rabbit-like animal about 20 cm long with no visible tail, large rounded ears, soft grey fur with bright rusty-red patches on the forehead, crown and sides of the neck, dark eyes, a small downturned mouth.", style: "forest" },
+      { id: "apollo", d: -3000, h: 0, name: { it: "Apollo del Tian Shan", en: "Tian Shan Apollo" }, sci: "Parnassius tianschanicus",
+        range: { it: "prati e pendii sassosi, tra 1.200 e 4.200 m", en: "meadows and stony slopes, 1,200–4,200 m" }, size: { it: "apertura alare 6–8 cm", en: "wingspan 6–8 cm" },
+        text: { it: "Una farfalla bianca con macchie nere e occhi rossi sulle ali, parente della farfalla Apollo delle Alpi. Vola solo nella breve estate di montagna, e il bruco si nutre di piante grasse che crescono tra le rocce.", en: "A white butterfly with black spots and red eyespots on its wings, a relative of the Apollo butterfly of the Alps. It flies only in the short mountain summer, and its caterpillar feeds on succulent plants growing among the rocks." },
+        fact: { it: "Le sue ali sono così sottili che in alcuni punti sono quasi trasparenti, come carta velina.", en: "Its wings are so thin that in places they are almost see-through, like tissue paper." },
+        prompt: "Photorealistic macro photograph of a Tian Shan Apollo butterfly (Parnassius tianschanicus) resting with open wings on a purple mountain flower: white wings with black spots, semi-transparent grey edges, and two round bright red eyespots ringed in black on each hind wing, a hairy black body, rocky alpine meadow at 3,000 m blurred behind.", style: "forest" },
+      { id: "molevole", d: -2900, h: 25, at: { it: "Sotto terra, intorno ai 2.900 m", en: "Underground, at about 2,900 m" }, name: { it: "Talpa-arvicola dell’Alai", en: "Alai mole vole" }, sci: "Ellobius alaicus",
+        range: { it: "praterie dei monti Alai, Kirghizistan, al confine sud del Tian Shan", en: "grasslands of the Alai Mountains, Kyrgyzstan, at the southern edge of the Tian Shan" }, size: { it: "circa 12 cm", en: "about 12 cm" },
+        text: { it: "Un roditore che vive quasi sempre sotto terra e scava gallerie con i denti davanti, lunghi e sporgenti, invece che con le zampe. Non ha orecchie esterne e ha occhi piccolissimi. Gli scienziati ne sanno ancora pochissimo.", en: "A rodent that lives almost always underground and digs tunnels with its long, protruding front teeth instead of its paws. It has no outer ears and tiny eyes. Scientists still know very little about it." },
+        fact: { it: "Per non mangiare la terra mentre scava, può chiudere le labbra dietro ai denti.", en: "So as not to swallow soil while digging, it can close its lips behind its teeth." },
+        prompt: "Photorealistic wildlife photograph of an Alai mole vole (Ellobius alaicus) poking its head out of a burrow in an alpine meadow in Kyrgyzstan: a small cylindrical underground rodent about 12 cm long with soft dense grey-brown fur, no visible external ears, tiny eyes, and long protruding pale yellow front teeth that it digs with, loose soil around.", style: "forest" },
+      { id: "tsquirrel", d: -2500, h: 40, name: { it: "Citello del Tian Shan", en: "Tian Shan ground squirrel" }, sci: "Spermophilus nilkaensis",
+        range: { it: "pascoli dello Xinjiang, del Kazakistan e del Kirghizistan", en: "pastures of Xinjiang, Kazakhstan and Kyrgyzstan" }, size: { it: "circa 20 cm più 6 cm di coda", en: "about 20 cm plus a 6 cm tail" },
+        text: { it: "Vive in colonie nei pascoli di montagna, in gallerie con tante uscite vicine. Spesso sta dritto sulle zampe posteriori come una sentinella e fischia per avvisare gli altri del pericolo.", en: "It lives in colonies in mountain pastures, in tunnels with many nearby exits. It often stands upright on its hind legs like a sentry and whistles to warn the others of danger." },
+        fact: { it: "Va in letargo per circa sei mesi all’anno, da settembre fino alla primavera.", en: "It hibernates for about six months a year, from September until spring." },
+        prompt: "Photorealistic wildlife photograph of a Tian Shan ground squirrel (Spermophilus nilkaensis) standing upright like a sentinel next to its burrow in a mountain pasture: a plump ground squirrel about 20 cm long with greyish-yellow brown fur, a pale belly, small ears, a short tail with a dark band and a pale tip, green grass and rocky slopes behind.", style: "forest" },
+      { id: "birchmouse", d: -2000, h: 45, name: { it: "Sicista del Tian Shan", en: "Tien Shan birch mouse" }, sci: "Sicista tianschanica",
+        range: { it: "boschi di abete e prati di montagna", en: "spruce woods and mountain meadows" }, size: { it: "circa 7 cm più 10 cm di coda", en: "about 7 cm plus a 10 cm tail" },
+        text: { it: "Un topolino minuscolo con una striscia nera lungo la schiena e una coda più lunga del corpo, che usa per aggrapparsi agli steli d’erba. D’inverno va in letargo per più di metà dell’anno.", en: "A tiny mouse with a black stripe down its back and a tail longer than its body, which it uses to hold on to grass stems. In winter it hibernates for more than half the year." },
+        fact: { it: "Le sicista sono parenti dei gerboa, i topolini del deserto che saltano come canguri.", en: "Birch mice are relatives of jerboas, the desert rodents that hop like kangaroos." },
+        prompt: "Photorealistic wildlife photograph of a Tien Shan birch mouse (Sicista tianschanica) climbing a grass stem in a mountain meadow at the edge of a spruce forest: a tiny mouse about 7 cm long with yellowish-brown fur, a distinct thin black stripe running down the middle of its back, small rounded ears, and a very long thin tail longer than its body wrapped around the stem.", style: "forest" }
+    ]
+  },
+  andes: {
+    axis: "altitude", start: -6961, end: -1500, px: 0.08, minGap: 70, maxGap: 480, motes: "snow",
+    gauge: [{ l: { it: "Altitudine", en: "Altitude" }, k: "alt" }, { l: { it: "Ossigeno", en: "Oxygen" }, k: "oxy" }, { l: { it: "Fascia", en: "Belt" }, k: "zone" }],
+    where: { it: "Ande · la catena più lunga del mondo", en: "Andes · the longest range in the world" },
+    eyebrow: { it: "Ande", en: "Andes" },
+    title: { it: "Le montagne <em>delle Ande</em>", en: "The mountains <em>of the Andes</em>" },
+    lead: { it: "La catena di montagne più lunga del mondo, circa 7.000 km dal Venezuela alla Patagonia. Dalla vetta più alta, a 6.961 m, scendi tra vulcani, altipiani e foreste nelle nuvole. Lo strumento mostra l’altitudine e l’ossigeno.", en: "The longest mountain range in the world, about 7,000 km from Venezuela to Patagonia. From the highest peak, at 6,961 m, descend through volcanoes, high plateaus and cloud forests. The gauge shows the altitude and the oxygen." },
+    cue: { it: "Scorri per scendere", en: "Scroll to descend" },
+    note: { it: "Queste creature vivono in paesi diversi lungo la catena, dal Perù al Cile e all’Argentina: qui le trovi all’altitudine in cui si incontrano.", en: "These creatures live in different countries along the range, from Peru to Chile and Argentina: here you meet them at the altitude where they are found." },
+    stops: [[-6961, "#22324f"], [-5500, "#8d9cb0"], [-4500, "#b3a585"], [-3500, "#9c9a6a"], [-2500, "#4f7a4f"], [-1500, "#1f4a33"]],
+    zones: [
+      { from: -6961, to: -5200, name: { it: "Vulcani e ghiacciai", en: "Volcanoes and glaciers" }, range: { it: "5.200–6.961 m", en: "5,200–6,961 m" }, text: { it: "Tra le cime più alte ci sono vulcani di oltre 6.000 metri. L’aria è secchissima e c’è meno della metà dell’ossigeno che c’è al mare.", en: "Among the highest peaks are volcanoes over 6,000 metres tall. The air is extremely dry and holds less than half the oxygen found at sea level." } },
+      { from: -5200, to: -3800, name: { it: "La puna", en: "The puna" }, range: { it: "3.800–5.200 m", en: "3,800–5,200 m" }, text: { it: "Un altopiano freddo e ventoso di erbe dure, lagune salate e rocce, dove di notte gela quasi sempre.", en: "A cold, windy plateau of tough grasses, salty lagoons and rocks, where it freezes almost every night." } },
+      { from: -3800, to: -2500, name: { it: "Valli e laghi d’alta quota", en: "High valleys and lakes" }, range: { it: "2.500–3.800 m", en: "2,500–3,800 m" }, text: { it: "Valli coltivate da migliaia di anni e grandi laghi, come il Titicaca, a 3.812 metri.", en: "Valleys farmed for thousands of years and large lakes, like Titicaca at 3,812 metres." } },
+      { from: -2500, to: -1500, name: { it: "La foresta delle nuvole", en: "The cloud forest" }, range: { it: "1.500–2.500 m", en: "1,500–2,500 m" }, text: { it: "Sui versanti verso l’Amazzonia le nuvole si fermano contro le montagne: alberi coperti di muschi, orchidee e bromelie.", en: "On the slopes facing the Amazon, clouds stall against the mountains: trees covered in moss, orchids and bromeliads." } }
+    ],
+    marks: [
+      { d: -6961, text: { it: "L’Aconcagua, la montagna più alta delle Americhe", en: "Aconcagua, the highest mountain in the Americas" } },
+      { d: -3812, text: { it: "Il lago Titicaca, uno dei laghi navigabili più alti del mondo", en: "Lake Titicaca, one of the highest navigable lakes in the world" } }
+    ],
+    endTitle: { it: "La spina dorsale del Sud America", en: "The backbone of South America" },
+    endText: { it: "Le Ande sono nate e crescono ancora perché la placca dell’oceano Pacifico scivola sotto il Sud America: per questo qui ci sono tanti vulcani e terremoti. Dai loro ghiacciai dipende l’acqua di milioni di persone.", en: "The Andes formed, and are still rising, because the Pacific plate slides under South America: that’s why there are so many volcanoes and earthquakes here. Millions of people depend on their glaciers for water." },
+    creatures: [
+      { id: "leafmouse", d: -6739, h: 30, name: { it: "Topo dalle orecchie a foglia", en: "Leaf-eared mouse" }, sci: "Phyllotis vaccarum",
+        range: { it: "deserti d’alta quota di Cile e Argentina, fino a 6.739 m", en: "high deserts of Chile and Argentina, up to 6,739 m" }, size: { it: "circa 12 cm più la coda", en: "about 12 cm plus the tail" },
+        text: { it: "Il mammifero trovato più in alto sulla Terra. Nel 2020 un gruppo di scienziati ne ha catturato uno vivo proprio sulla cima del vulcano Llullaillaco, a 6.739 metri, dove non c’è quasi niente da mangiare. Su altre cime vicine sono state trovate anche delle mummie di questi topolini.", en: "The highest mammal ever found on Earth. In 2020 a team of scientists caught a live one right on the summit of the Llullaillaco volcano, at 6,739 metres, where there is almost nothing to eat. Mummies of these little mice were also found on other nearby summits." },
+        fact: { it: "Nessuno sa ancora bene perché salga così in alto: è uno dei misteri di cui si occupano gli scienziati.", en: "Nobody knows yet why it climbs so high: it is one of the mysteries scientists are working on." },
+        prompt: "Photorealistic wildlife photograph of a leaf-eared mouse (Phyllotis vaccarum) on volcanic rocks near the summit of an Andean volcano above 6,000 m: a small mouse with soft greyish-brown and sandy fur, a pale belly, very large rounded leaf-like ears, big dark eyes, long whiskers, a long tail, barren snowy volcanic slopes and deep blue sky behind.", style: "forest" },
+      { id: "condor", d: -5000, h: 10, name: { it: "Condor delle Ande", en: "Andean condor" }, sci: "Vultur gryphus",
+        range: { it: "Ande, dal Venezuela alla Terra del Fuoco", en: "Andes, from Venezuela to Tierra del Fuego" }, size: { it: "ali fino a 3,3 m, circa 15 kg", en: "wings up to 3.3 m, about 15 kg" },
+        text: { it: "Uno degli uccelli volanti più pesanti del mondo, con ali larghe più di 3 metri. Quasi non sbatte le ali: plana sulle correnti d’aria calda che salgono dalle montagne.", en: "One of the heaviest flying birds in the world, with wings more than 3 metres across. It hardly ever flaps: it glides on the warm air currents rising from the mountains." },
+        fact: { it: "Uno studio del 2020 ha seguito un condor che ha volato per più di 5 ore e 170 km senza sbattere le ali nemmeno una volta.", en: "A 2020 study followed a condor that flew for more than 5 hours and 170 km without flapping its wings once." },
+        prompt: "Photorealistic wildlife photograph of a male Andean condor (Vultur gryphus) perched on a high rocky crag in the Andes: a huge black vulture with large white panels on the wings, a fluffy white neck ruff, a bare wrinkled reddish-grey head with a fleshy comb on top, a hooked pale bill, snowy peaks and clouds behind.", style: "forest" },
+      { id: "liolaemus", d: -4800, h: 35, name: { it: "Lucertola di Arequipa", en: "Arequipa lizard" }, sci: "Liolaemus archipensis",
+        range: { it: "puna di Arequipa, Perù, oltre i 4.800 m", en: "puna of Arequipa, Peru, above 4,800 m" }, size: { it: "6–8 cm", en: "6–8 cm" },
+        text: { it: "Una lucertola annunciata dagli scienziati proprio a ottobre 2026. Vive oltre i 4.800 metri, dove di notte gela quasi sempre, e di giorno si scalda al sole sulle rocce per riuscire a muoversi.", en: "A lizard announced by scientists in October 2026. It lives above 4,800 metres, where it freezes almost every night, and by day it warms up in the sun on the rocks so that it can move." },
+        fact: { it: "Le femmine hanno macchie quadrate sul dorso; i maschi hanno macchie oblique e squame bianche che li mimetizzano tra le rocce.", en: "Females have square spots on their backs; males have slanted spots and white scales that camouflage them among the rocks." },
+        prompt: "Photorealistic wildlife photograph of a small Andean lizard (Liolaemus archipensis) about 7 cm long basking on a lichen-covered rock in the high puna of Arequipa, Peru, above 4,800 m: rough keeled grey-brown scales, a male with slanted dark spots and scattered white scales along the back, dry yellow tufted grass behind.", style: "forest" },
+      { id: "andeancat", d: -4300, h: 210, name: { it: "Gatto delle Ande", en: "Andean mountain cat" }, sci: "Leopardus jacobita",
+        range: { it: "puna e pietraie, di solito sopra i 3.500 m", en: "puna and scree, usually above 3,500 m" }, size: { it: "circa 60 cm più 45 cm di coda", en: "about 60 cm plus a 45 cm tail" },
+        text: { it: "Uno dei felini più rari e meno conosciuti del mondo: ne restano forse meno di 1.400 adulti. Ha il pelo grigio-argento con macchie rossicce e una coda grossissima ad anelli, che lo aiuta a stare in equilibrio sulle rocce.", en: "One of the rarest and least known cats in the world: perhaps fewer than 1,400 adults are left. It has silver-grey fur with reddish spots and a very thick ringed tail that helps it balance on the rocks." },
+        fact: { it: "Il popolo aymara lo considera sacro e lo chiama titi.", en: "The Aymara people consider it sacred and call it titi." },
+        prompt: "Photorealistic wildlife photograph of an Andean mountain cat (Leopardus jacobita) on a rocky slope in the high puna at 4,300 m: a small wild cat with thick silver-grey fur marked with rusty-orange to brown spots and stripes, a pale face, and a very long, thick, bushy tail with broad dark rings, dry tufted grass and snowy Andes behind.", style: "forest" },
+      { id: "vicuna", d: -4200, h: 30, name: { it: "Vigogna", en: "Vicuña" }, sci: "Vicugna vicugna",
+        range: { it: "puna tra 3.200 e 4.800 m", en: "puna between 3,200 and 4,800 m" }, size: { it: "alta circa 90 cm alla spalla", en: "about 90 cm at the shoulder" },
+        text: { it: "La parente selvatica dell’alpaca, snella ed elegante. Ha una delle lane più fini del mondo, e per questo un tempo solo i re inca potevano vestirsene.", en: "The wild relative of the alpaca, slender and elegant. It has one of the finest wools in the world, which is why once only Inca kings were allowed to wear it." },
+        fact: { it: "Negli anni Sessanta ne restavano pochi migliaia; grazie alla protezione oggi sono centinaia di migliaia.", en: "In the 1960s only a few thousand were left; thanks to protection there are now hundreds of thousands." },
+        prompt: "Photorealistic wildlife photograph of a vicuña (Vicugna vicugna) standing in the golden grass of the high Andean puna at 4,200 m: a slender, graceful wild camelid with a long neck, bright cinnamon-tan woolly coat on the back, a long white bib on the chest and white belly, a small head with alert ears, snowy volcanoes behind.", style: "forest" },
+      { id: "titicacafrog", d: -3812, h: 90, at: { it: "Sul fondo del lago Titicaca, a 3.812 m", en: "On the bottom of Lake Titicaca, at 3,812 m" }, name: { it: "Rana del Titicaca", en: "Titicaca water frog" }, sci: "Telmatobius culeus",
+        range: { it: "lago Titicaca, tra Perù e Bolivia", en: "Lake Titicaca, between Peru and Bolivia" }, size: { it: "corpo fino a circa 15 cm", en: "body up to about 15 cm" },
+        text: { it: "Una grande rana che non esce quasi mai dall’acqua. Ha la pelle piena di pieghe larghe e flosce: più pelle vuol dire più superficie per prendere l’ossigeno direttamente dall’acqua gelida del lago.", en: "A large frog that hardly ever leaves the water. Its skin hangs in loose, baggy folds: more skin means more surface to take oxygen straight from the lake’s cold water." },
+        fact: { it: "Se l’acqua ha poco ossigeno, fa su e giù con il corpo per muovere l’acqua tra le sue pieghe.", en: "When the water is low in oxygen, it bobs up and down to move water across its folds." },
+        prompt: "Photorealistic underwater photograph of a Titicaca water frog (Telmatobius culeus) resting on the muddy bottom of Lake Titicaca: a large aquatic frog with olive-brown to grey mottled skin hanging in very loose, baggy folds along its body and legs, small eyes on top of the head, cold clear lake water with green aquatic plants.", style: "water" },
+      { id: "specbear", d: -2200, h: 20, name: { it: "Orso dagli occhiali", en: "Spectacled bear" }, sci: "Tremarctos ornatus",
+        range: { it: "foreste delle nuvole e praterie andine", en: "cloud forests and Andean grasslands" }, size: { it: "fino a 1,8 m in piedi", en: "up to 1.8 m standing" },
+        text: { it: "L’unico orso del Sud America. Ha disegni color crema intorno agli occhi, diversi in ogni orso come le impronte digitali. Si arrampica benissimo e costruisce piattaforme di rami sugli alberi per mangiare e riposare.", en: "South America’s only bear. It has cream-coloured markings around its eyes, different in every bear like fingerprints. It is an excellent climber and builds platforms of branches in the trees to eat and rest." },
+        fact: { it: "È l’orso che ha ispirato Paddington, l’orsetto arrivato a Londra «dal Perù più profondo».", en: "It is the bear that inspired Paddington, who came to London “from darkest Peru”." },
+        prompt: "Photorealistic wildlife photograph of a spectacled bear (Tremarctos ornatus) on a mossy rock in an Andean cloud forest: a medium-sized bear with shaggy black fur and distinctive cream-coloured markings around the eyes and across the muzzle and chest, small round ears, misty trees covered in moss and bromeliads.", style: "forest" }
+    ]
+  },
+  sahara: {
+    axis: "ground", start: -2.5, end: 2, px: 100, minGap: 70, maxGap: 420, motes: "dust",
+    below: { it: "sotto la sabbia", en: "under the sand" }, zeroLabel: { it: "0 m · sabbia", en: "0 m · sand" },
+    temps: [[-2.5, 45], [-0.3, 50], [-0.01, 62], [0, 70], [0.05, 55], [0.15, 42], [0.4, 33], [1, 30], [2, 28]],
+    gauge: [{ l: { it: "Altezza", en: "Height" }, k: "height" }, { l: { it: "Temperatura", en: "Temperature" }, k: "temp" }, { l: { it: "Strato", en: "Layer" }, k: "zone" }],
+    where: { it: "Sahara · il deserto caldo più grande", en: "Sahara · the largest hot desert" },
+    eyebrow: { it: "Sahara", en: "Sahara" },
+    title: { it: "Le sabbie <em>del Sahara</em>", en: "The sands <em>of the Sahara</em>" },
+    lead: { it: "Il deserto caldo più grande del mondo, grande quasi come gli Stati Uniti. Scendi dall’aria rovente fin sotto la sabbia, dove si nascondono molti animali. Lo strumento mostra l’altezza e la temperatura in un pomeriggio d’estate.", en: "The largest hot desert in the world, almost as big as the United States. Go down from the scorching air to below the sand, where many animals hide. The gauge shows the height and the temperature on a summer afternoon." },
+    cue: { it: "Scorri per scendere", en: "Scroll to descend" },
+    note: { it: "Di giorno la sabbia può superare i 70 °C, di notte può fare freddo: quasi tutti gli animali escono al tramonto o di notte.", en: "By day the sand can go above 70 °C and at night it can get cold: almost all the animals come out at dusk or at night." },
+    stops: [[-2.5, "#f2c98a"], [-0.01, "#e9b46a"], [0, "#d99a4e"], [0.3, "#b5773a"], [1, "#8a5528"], [2, "#5c3518"]],
+    zones: [
+      { from: -2.5, to: 0, name: { it: "Sopra la sabbia", en: "Above the sand" }, range: { it: "0–2,5 m", en: "0–2.5 m" }, text: { it: "Aria rovente, sole a picco e niente ombra. Chi esce di giorno deve avere un trucco contro il caldo.", en: "Scorching air, blazing sun and no shade. Anyone out by day needs a trick against the heat." } },
+      { from: 0, to: 0.4, name: { it: "Nella sabbia", en: "In the sand" }, range: { it: "pochi centimetri", en: "a few centimetres" }, text: { it: "Bastano pochi centimetri: sotto la superficie bollente la sabbia è già molto più fresca.", en: "Just a few centimetres are enough: under the burning surface the sand is already much cooler." } },
+      { from: 0.4, to: 2, name: { it: "Le tane", en: "The burrows" }, range: { it: "sotto terra", en: "underground" }, text: { it: "Tane profonde, dove la temperatura resta quasi uguale giorno e notte. Qui si passa il giorno a dormire.", en: "Deep burrows, where the temperature stays almost the same day and night. This is where the day is spent sleeping." } }
+    ],
+    marks: [{ d: 0, text: { it: "La superficie della sabbia: d’estate può superare i 70 °C", en: "The surface of the sand: in summer it can go above 70 °C" } }],
+    endTitle: { it: "Il mare di sabbia", en: "The sea of sand" },
+    endText: { it: "Il Sahara non è sempre stato un deserto: fino a circa 5.000 anni fa era verde, con laghi, ippopotami e giraffe, come raccontano le pitture sulle rocce. Oggi molti dei suoi grandi animali, come l’addax, sono quasi scomparsi a causa della caccia.", en: "The Sahara hasn’t always been a desert: until about 5,000 years ago it was green, with lakes, hippos and giraffes, as rock paintings show. Today many of its large animals, such as the addax, have almost vanished because of hunting." },
+    creatures: [
+      { id: "addax", d: -1.05, h: 35, name: { it: "Addax", en: "Addax" }, sci: "Addax nasomaculatus",
+        range: { it: "pianure di sabbia, oggi quasi solo in Niger", en: "sandy plains, today almost only in Niger" }, size: { it: "alto circa 1 m alla spalla", en: "about 1 m at the shoulder" },
+        text: { it: "Un’antilope bianca con lunghe corna a spirale, adatta come nessun’altra al deserto: può vivere quasi senza bere, perché prende l’acqua dalle piante che mangia. D’estate il suo pelo diventa quasi bianco e riflette il sole.", en: "A white antelope with long spiralled horns, adapted to the desert like no other: it can live almost without drinking, getting water from the plants it eats. In summer its coat turns almost white and reflects the sun." },
+        fact: { it: "È una delle antilopi più rare della Terra: in natura ne restano forse meno di 100.", en: "It is one of the rarest antelopes on Earth: perhaps fewer than 100 are left in the wild." },
+        prompt: "Photorealistic wildlife photograph of an addax (Addax nasomaculatus) walking across Saharan sand dunes: a pale antelope with a white summer coat, long slender horns twisted in two or three spiral turns, a brown forelock tuft on the forehead and a white X-shaped mark across the face, broad splayed hooves, golden dunes behind.", style: "forest" },
+      { id: "sandcat", d: -0.3, h: 35, name: { it: "Gatto delle sabbie", en: "Sand cat" }, sci: "Felis margarita",
+        range: { it: "deserti di sabbia del Sahara e dell’Arabia", en: "sandy deserts of the Sahara and Arabia" }, size: { it: "circa 45 cm più 30 cm di coda", en: "about 45 cm plus a 30 cm tail" },
+        text: { it: "Un gattino del deserto dal muso largo, che di giorno dorme in una tana e caccia di notte. Sotto le zampe ha un fitto tappeto di pelo che lo protegge dalla sabbia rovente e non lascia quasi impronte.", en: "A broad-faced little desert cat that sleeps in a burrow by day and hunts at night. The soles of its feet are covered in thick fur that protects it from the scorching sand and leaves almost no footprints." },
+        fact: { it: "Può vivere quasi senza bere: l’acqua che gli serve la prende dalle prede che mangia.", en: "It can live almost without drinking: it gets the water it needs from the prey it eats." },
+        prompt: "Photorealistic night wildlife photograph of a sand cat (Felis margarita) walking on a sand dune under a starry sky: a small stocky wild cat with pale sandy fur, a broad flat head, large low-set ears, faint dark bars on the legs, a black-tipped tail with a few dark rings, thick fur on the soles of its paws.", style: "forest" },
+      { id: "fennec", d: -0.2, h: 38, name: { it: "Fennec", en: "Fennec fox" }, sci: "Vulpes zerda",
+        range: { it: "deserti di sabbia del Nord Africa", en: "sandy deserts of North Africa" }, size: { it: "circa 37 cm più 20 cm di coda, poco più di 1 kg", en: "about 37 cm plus a 20 cm tail, just over 1 kg" },
+        text: { it: "La volpe più piccola del mondo, con le orecchie più grandi rispetto al corpo. Le orecchie servono a sentire gli insetti che si muovono sotto la sabbia e a disperdere il calore, come radiatori.", en: "The smallest fox in the world, with the biggest ears for its size. Its ears help it hear insects moving under the sand and get rid of heat, like radiators." },
+        fact: { it: "Scava tane lunghe e piene di gallerie, che a volte si collegano a quelle di altre famiglie.", en: "It digs long burrows full of tunnels, which sometimes connect to those of other families." },
+        prompt: "Photorealistic wildlife photograph of a fennec fox (Vulpes zerda) standing on a Saharan sand dune at sunset: a tiny fox with cream-coloured fur, enormous upright ears much larger than its head, big dark eyes, a black-tipped bushy tail, furry paws, rippled dunes behind.", style: "forest" },
+      { id: "silverant", d: -0.01, h: 40, name: { it: "Formica argentata del Sahara", en: "Saharan silver ant" }, sci: "Cataglyphis bombycina",
+        range: { it: "dune del Sahara", en: "Saharan dunes" }, size: { it: "circa 1 cm", en: "about 1 cm" },
+        text: { it: "Esce dal nido proprio nell’ora più calda, quando la sabbia supera i 60 °C e i suoi predatori sono nascosti. Ha peli argentati a forma di prisma che riflettono la luce del sole e la tengono fresca.", en: "It leaves its nest at the very hottest time of day, when the sand is above 60 °C and its predators are hiding. It has silvery, prism-shaped hairs that reflect sunlight and keep it cool." },
+        fact: { it: "È una delle formiche più veloci del mondo: quasi 1 metro al secondo, più di 100 volte la lunghezza del suo corpo.", en: "It is one of the fastest ants in the world: nearly 1 metre a second, more than 100 times its body length." },
+        prompt: "Photorealistic extreme macro photograph of a Saharan silver ant (Cataglyphis bombycina) running across hot golden sand: a slender long-legged ant about 1 cm long covered in shiny silvery hairs that reflect the sunlight like metal, a slim waist, long antennae, heat shimmer over the sand.", style: "forest" },
+      { id: "hornedviper", d: 0.03, h: 35, name: { it: "Vipera cornuta", en: "Saharan horned viper" }, sci: "Cerastes cerastes",
+        range: { it: "deserti del Nord Africa e del Medio Oriente", en: "deserts of North Africa and the Middle East" }, size: { it: "di solito 30–60 cm", en: "usually 30–60 cm" },
+        text: { it: "Ha due piccole corna sopra gli occhi. Si nasconde scuotendo il corpo finché affonda nella sabbia, lasciando fuori solo gli occhi, e aspetta le prede. Si sposta di lato, a onde, toccando la sabbia rovente il meno possibile.", en: "It has two little horns above its eyes. It hides by shuffling its body until it sinks into the sand, leaving only its eyes showing, and waits for prey. It moves sideways in waves, touching the scorching sand as little as possible." },
+        fact: { it: "È velenosa: come tutti i serpenti del deserto, va ammirata solo da lontano.", en: "It is venomous: like all desert snakes, it should only be admired from a distance." },
+        prompt: "Photorealistic wildlife photograph of a Saharan horned viper (Cerastes cerastes) partly buried in pale desert sand with only its head and eyes showing: a sandy-beige viper with faint darker blotches, vertical pupils, and a single small pointed horn-like scale rising above each eye, sidewinding tracks in the sand nearby.", style: "forest" },
+      { id: "sandfish", d: 0.12, h: 40, name: { it: "Pesce delle sabbie", en: "Sandfish" }, sci: "Scincus scincus",
+        range: { it: "dune di sabbia del Nord Africa", en: "sand dunes of North Africa" }, size: { it: "circa 20 cm", en: "about 20 cm" },
+        text: { it: "Non è un pesce ma una lucertola, che «nuota» dentro la sabbia ondeggiando il corpo come un pesce nell’acqua. Ha il muso a forma di pala, le squame lisce e lucide, e si tuffa nella sabbia appena sente un pericolo.", en: "It isn’t a fish but a lizard that “swims” through the sand, wriggling its body like a fish in water. It has a shovel-shaped snout and smooth, shiny scales, and dives into the sand at the first sign of danger." },
+        fact: { it: "Riesce a respirare sotto la sabbia senza che nemmeno un granello gli entri nei polmoni.", en: "It can breathe under the sand without a single grain getting into its lungs." },
+        prompt: "Photorealistic wildlife photograph of a sandfish skink (Scincus scincus) half-buried as it dives head-first into fine golden Saharan sand: a stout lizard about 20 cm long with a wedge-shaped shovel-like snout, very smooth glossy scales, sandy-yellow body with dark brownish crossbands, short legs with fringed toes.", style: "forest" },
+      { id: "jerboa", d: 0.8, h: 35, at: { it: "Nella tana, sotto la sabbia", en: "In its burrow, under the sand" }, name: { it: "Gerboa egiziano minore", en: "Lesser Egyptian jerboa" }, sci: "Jaculus jaculus",
+        range: { it: "deserti del Nord Africa e del Medio Oriente", en: "deserts of North Africa and the Middle East" }, size: { it: "circa 10 cm più 18 cm di coda", en: "about 10 cm plus an 18 cm tail" },
+        text: { it: "Un topolino del deserto che salta sulle lunghe zampe posteriori come un canguro, fino a quasi 3 metri in un solo balzo. Di giorno dorme in una tana e ne chiude l’ingresso con la sabbia per tenere fuori il caldo.", en: "A little desert rodent that hops on its long hind legs like a kangaroo, up to nearly 3 metres in a single leap. By day it sleeps in a burrow and blocks the entrance with sand to keep the heat out." },
+        fact: { it: "Usa la coda lunghissima, con un ciuffo bianco e nero in fondo, per stare in equilibrio mentre salta.", en: "It uses its very long tail, with a black-and-white tuft at the end, to keep its balance while jumping." },
+        prompt: "Photorealistic night wildlife photograph of a lesser Egyptian jerboa (Jaculus jaculus) leaping across moonlit desert sand: a small sandy-coloured rodent with a white belly, very long kangaroo-like hind legs, tiny front paws, big dark eyes, large ears, and a very long tail ending in a black-and-white tuft.", style: "forest" }
+    ]
+  },
 };
-const STYLE_OF = { ocean: OCEAN_STYLE, surface: SURFACE_STYLE, forest: FOREST_STYLE };
+const STYLE_OF = { ocean: OCEAN_STYLE, surface: SURFACE_STYLE, forest: FOREST_STYLE, water: WATER_STYLE };
 
 /* =========================================================
    CONTENT · DAILY CURIOSITIES  (go = where "Show me" leads)
@@ -1198,7 +1688,7 @@ const CUR_EARTH = [
 ];
 
 /* Images Olivia brings back get listed here: id → file path */
-const IMAGES = { ayeaye: "img/ayeaye.webp", fossa: "img/fossa.webp", giantrat: "img/giantrat.webp", mouselemur: "img/mouselemur.webp", paragehyra: "img/paragehyra.webp", pochard: "img/pochard.webp" };
+const IMAGES = { addax: "img/addax.webp", adelie: "img/adelie.webp", andeancat: "img/andeancat.webp", apollo: "img/apollo.webp", arcticfox: "img/arcticfox.webp", arctichare: "img/arctichare.webp", arcticwolf: "img/arcticwolf.webp", ayeaye: "img/ayeaye.webp", condor: "img/condor.webp", emperor: "img/emperor.webp", fairytern: "img/fairytern.webp", fennec: "img/fennec.webp", fossa: "img/fossa.webp", giantrat: "img/giantrat.webp", groundsquirrel: "img/groundsquirrel.webp", himbear: "img/himbear.webp", hoiho: "img/hoiho.webp", ilipika: "img/ilipika.webp", ivorygull: "img/ivorygull.webp", jumpspider: "img/jumpspider.webp", kaka: "img/kaka.webp", kakapo: "img/kakapo.webp", kaki: "img/kaki.webp", kea: "img/kea.webp", krill: "img/krill.webp", leafmouse: "img/leafmouse.webp", lemming: "img/lemming.webp", liolaemus: "img/liolaemus.webp", molevole: "img/molevole.webp", monal: "img/monal.webp", mouselemur: "img/mouselemur.webp", muskox: "img/muskox.webp", paragehyra: "img/paragehyra.webp", pardosa: "img/pardosa.webp", pochard: "img/pochard.webp", ptarmigan: "img/ptarmigan.webp", redpanda: "img/redpanda.webp", roylepika: "img/roylepika.webp", sandcat: "img/sandcat.webp", shorttailbat: "img/shorttailbat.webp", silverant: "img/silverant.webp", silverfish: "img/silverfish.webp", skua: "img/skua.webp", snowcock: "img/snowcock.webp", snowleopard: "img/snowleopard.webp", snowpetrel: "img/snowpetrel.webp", snowyowl: "img/snowyowl.webp", specbear: "img/specbear.webp", tahr: "img/tahr.webp", takahe: "img/takahe.webp", tragopan: "img/tragopan.webp", tsquirrel: "img/tsquirrel.webp", tuatara: "img/tuatara.webp", vicuna: "img/vicuna.webp", weddell: "img/weddell.webp" };
 
 /* =========================================================
    EARTH HOTSPOTS
@@ -1208,18 +1698,19 @@ const HOTSPOTS = [
   { id: "amazon", lat: -3.4, lon: -62.2, active: true, color: 0xbfe08f, name: { it: "Amazzonia", en: "Amazon" } },
   { id: "madagascar", lat: -19.4, lon: 46.8, active: true, color: 0xf2a65a, name: { it: "Madagascar", en: "Madagascar" } },
   { id: "reef", lat: -18.3, lon: 147.7, name: { it: "Barriera Corallina", en: "Great Barrier Reef" } },
-  { id: "himalaya", lat: 28.0, lon: 86.9, name: { it: "Himalaya", en: "Himalayas" } },
-  { id: "andes", lat: -13.5, lon: -72.0, name: { it: "Ande", en: "Andes" } },
+  { id: "himalaya", lat: 28.0, lon: 86.9, active: true, color: 0xdfe8f2, name: { it: "Himalaya", en: "Himalayas" } },
+  { id: "andes", lat: -13.5, lon: -72.0, active: true, color: 0xe8c48a, name: { it: "Ande", en: "Andes" } },
   { id: "atacama", lat: -23.6, lon: -69.6, name: { it: "Atacama", en: "Atacama" } },
-  { id: "sahara", lat: 23, lon: 12, name: { it: "Sahara", en: "Sahara" } },
+  { id: "sahara", lat: 23, lon: 12, active: true, color: 0xf3c57a, name: { it: "Sahara", en: "Sahara" } },
   { id: "namib", lat: -24.6, lon: 15.3, name: { it: "Namib", en: "Namib" } },
-  { id: "tianshan", lat: 42.3, lon: 80.0, name: { it: "Tian Shan", en: "Tian Shan" } },
+  { id: "tianshan", lat: 42.3, lon: 80.0, active: true, color: 0xc9d9a8, name: { it: "Tian Shan", en: "Tian Shan" } },
   { id: "appalachians", lat: 35.6, lon: -83.5, name: { it: "Appalachi", en: "Appalachians" } },
-  { id: "tundra", lat: 64.0, lon: -138.0, name: { it: "Tundra", en: "Tundra" } },
+  { id: "tundra", lat: 70.0, lon: -100.0, active: true, color: 0xe6f0f7, name: { it: "Tundra artica", en: "Arctic tundra" } },
   { id: "glaciers", lat: -49.3, lon: -73.1, name: { it: "Ghiacciai", en: "Glaciers" } },
   { id: "ghats", lat: 10.5, lon: 76.9, name: { it: "Ghati occidentali", en: "Western Ghats" } },
   { id: "ethiopia", lat: 13.2, lon: 38.1, name: { it: "Altopiano etiope", en: "Ethiopian Highlands" } },
-  { id: "newzealand", lat: -43.5, lon: 170.5, name: { it: "Nuova Zelanda", en: "New Zealand" } }
+  { id: "newzealand", lat: -43.5, lon: 170.5, active: true, color: 0x9fe0b0, name: { it: "Nuova Zelanda", en: "New Zealand" } },
+  { id: "antarctica", lat: -77.0, lon: 166.0, active: true, color: 0xbfe3ff, name: { it: "Antartide", en: "Antarctica" } }
 ];
 const DIVE_PANEL = {
   ocean: { kicker: { it: "Discesa · 0–10.935 m", en: "Descent · 0–10,935 m" }, title: { it: "L’oceano profondo", en: "The deep ocean" },
@@ -1227,7 +1718,21 @@ const DIVE_PANEL = {
   amazon: { kicker: { it: "Discesa · da 88 m a sotto terra", en: "Descent · from 88 m to underground" }, title: { it: "La foresta amazzonica", en: "The Amazon rainforest" },
     text: { it: "Parti dalla cima degli alberi più alti e scendi strato dopo strato fino alle gallerie sotto il suolo, incontrando {n} creature e funghi poco conosciuti.", en: "Start at the tops of the tallest trees and descend layer by layer to the tunnels beneath the soil, meeting {n} little-known creatures and fungi." } },
   madagascar: { kicker: { it: "Discesa · da 30 m a sotto terra", en: "Descent · from 30 m to underground" }, title: { it: "Le foreste del Madagascar", en: "The forests of Madagascar" },
-    text: { it: "Parti dalla chioma della foresta pluviale e scendi fino alle tane scavate nella terra rossa, incontrando {n} creature che vivono solo su quest’isola.", en: "Start in the rainforest canopy and descend to burrows dug in the red earth, meeting {n} creatures that live only on this island." } }
+    text: { it: "Parti dalla chioma della foresta pluviale e scendi fino alle tane scavate nella terra rossa, incontrando {n} creature che vivono solo su quest’isola.", en: "Start in the rainforest canopy and descend to burrows dug in the red earth, meeting {n} creatures that live only on this island." } },
+  himalaya: { kicker: { it: "Discesa · da 8.849 a 2.000 m", en: "Descent · from 8,849 to 2,000 m" }, title: { it: "Le montagne dell’Himalaya", en: "The mountains of the Himalayas" },
+    text: { it: "Parti dalla cima dell’Everest e scendi fino alle foreste di rododendri, guardando l’ossigeno che aumenta e incontrando {n} creature che vivono più in alto di tutte.", en: "Start at the summit of Everest and descend to the rhododendron forests, watching the oxygen rise and meeting {n} creatures that live higher than any others." } },
+  newzealand: { kicker: { it: "Discesa · dalle Alpi del Sud al mare", en: "Descent · from the Southern Alps to the sea" }, title: { it: "Le isole degli uccelli", en: "The islands of birds" },
+    text: { it: "Scendi dalle montagne innevate fino alle spiagge e al mare, incontrando {n} creature uniche al mondo, molte delle quali salvate per un soffio.", en: "Descend from the snowy mountains to the beaches and the sea, meeting {n} creatures found nowhere else, many of them saved just in time." } },
+  tundra: { kicker: { it: "Discesa · dal cielo al suolo ghiacciato", en: "Descent · from the sky to the frozen ground" }, title: { it: "La tundra artica", en: "The Arctic tundra" },
+    text: { it: "Scendi dal cielo artico fino alle gallerie sotto la neve e al permafrost, incontrando {n} creature che resistono al grande freddo.", en: "Descend from the Arctic sky to the tunnels under the snow and the permafrost, meeting {n} creatures that survive the great cold." } },
+  antarctica: { kicker: { it: "Discesa · da 50 m d’altezza a 600 m sotto il mare", en: "Descent · from 50 m up to 600 m below the sea" }, title: { it: "I ghiacci dell’Antartide", en: "The ice of Antarctica" },
+    text: { it: "Scendi dal cielo sopra il ghiaccio marino fino al buio del mare gelido, incontrando {n} creature del continente più freddo della Terra.", en: "Descend from the sky above the sea ice into the dark of the freezing sea, meeting {n} creatures of the coldest continent on Earth." } },
+  tianshan: { kicker: { it: "Discesa · da 7.439 a 1.500 m", en: "Descent · from 7,439 to 1,500 m" }, title: { it: "Le Montagne Celesti", en: "The Celestial Mountains" },
+    text: { it: "Scendi dalle vette del Tian Shan fino ai boschi di abeti, incontrando {n} creature rarissime, alcune scoperte solo da pochi anni.", en: "Descend from the peaks of the Tian Shan to the spruce forests, meeting {n} very rare creatures, some discovered only a few years ago." } },
+  andes: { kicker: { it: "Discesa · da 6.961 a 1.500 m", en: "Descent · from 6,961 to 1,500 m" }, title: { it: "Le montagne delle Ande", en: "The mountains of the Andes" },
+    text: { it: "Scendi dalle cime dei vulcani fino alla foresta delle nuvole, incontrando {n} creature, dal mammifero che vive più in alto del mondo all’unico orso del Sud America.", en: "Descend from the volcano summits to the cloud forest, meeting {n} creatures, from the world’s highest-living mammal to South America’s only bear." } },
+  sahara: { kicker: { it: "Discesa · dall’aria rovente alle tane", en: "Descent · from scorching air to the burrows" }, title: { it: "Le sabbie del Sahara", en: "The sands of the Sahara" },
+    text: { it: "Scendi dall’aria rovente fin sotto la sabbia, guardando la temperatura che cambia e incontrando {n} creature con un trucco per non cuocersi.", en: "Go down from the scorching air to below the sand, watching the temperature change and meeting {n} creatures with a trick for not getting cooked." } }
 };
 
 /* =========================================================
@@ -1930,6 +2435,19 @@ function collapsePanel(on) {
   const f = $(on ? "pbar-info" : "panel-x"); if (f) f.focus({ preventScroll: true });
 }
 function openExoPanel(e) { openPanel({ type: "exo", id: e.id }); }
+// Rough boxes around the places that have a descent, so a tap on that land opens them.
+function regionAt(lat, lon, water) {
+  if (lat < -62) return "antarctica";
+  if (water !== false) return null;
+  if (lat > -18 && lat < 5 && lon > -81 && lon < -74.5) return "andes";
+  if (lat > -40 && lat <= -18 && lon > -76 && lon < -64) return "andes";
+  if (lat > 26 && lat < 36.5 && lon > 72 && lon < 97.5) return "himalaya";
+  if (lat > 39 && lat < 46 && lon > 68 && lon < 92) return "tianshan";
+  if (lat > -48 && lat < -33.5 && lon > 165 && lon < 179.5) return "newzealand";
+  if (lat > 14 && lat < 33 && lon > -17 && lon < 34) return "sahara";
+  if (lat > 60 && lat < 84 && lon > -170 && lon < -10) return "tundra";
+  return null;
+}
 function openHotspot(id, extra) { openPanel({ type: "dive", id, extra }); }
 
 /* =========================================================
@@ -1969,6 +2487,7 @@ canvas.addEventListener("pointerup", (e) => {
     const inMadagascar = lat > -26 && lat < -11.5 && lon > 43 && lon < 51;
     const coords = `${fmt(Math.abs(lat), 1)}° ${lat >= 0 ? "N" : "S"}, ${fmt(Math.abs(lon), 1)}° ${lon >= 0 ? "E" : (LANG === "it" ? "O" : "W")}`;
     if (inMadagascar && water === false) openHotspot("madagascar", LANG === "it" ? `Hai toccato il Madagascar a ${coords}.` : `You touched Madagascar at ${coords}.`);
+    else if (regionAt(lat, lon, water)) { const r = regionAt(lat, lon, water), h = HOTSPOTS.find((x) => x.id === r); openHotspot(r, LANG === "it" ? `Hai toccato ${t(h.name)} a ${coords}.` : `You touched ${t(h.name)} at ${coords}.`); }
     else if (inAmazon && water === false) openHotspot("amazon", LANG === "it" ? `Hai toccato l’Amazzonia a ${coords}.` : `You touched the Amazon at ${coords}.`);
     else if (water) openHotspot("ocean", (LANG === "it" ? `Hai toccato l’oceano a ${coords}. La discesa è ambientata nel Pacifico, sopra la Fossa delle Marianne, dove l’oceano è più profondo.` : `You touched the ocean at ${coords}. The descent is set in the Pacific above the Mariana Trench, where the ocean is deepest.`));
     else toast(t(UI.landSoon));
@@ -1981,17 +2500,34 @@ function toast(msg) { const T = $("toast"); T.textContent = msg; T.hidden = fals
    DESCENT
    ========================================================= */
 let dive = null;
-const DIVE_HASH = { ocean: "oceano", amazon: "amazzonia", madagascar: "madagascar" };
+const DIVE_HASH = { ocean: "oceano", amazon: "amazzonia", madagascar: "madagascar", himalaya: "himalaya", newzealand: "nuova-zelanda", tundra: "tundra", antarctica: "antartide", tianshan: "tian-shan", andes: "ande", sahara: "sahara" };
 const diveEl = $("dive"), track = $("dive-track"), gauge = $("gauge");
 // Tap a creature's picture to see it full screen.
 track.addEventListener("click", (e) => { const im = e.target.closest(".creature figure img"); if (im) openPhoto(im.src, im.alt); });
 function imgFor(id) { const p = IMAGES[id]; return p ? (window.ORBIS_IMG && window.ORBIS_IMG[p]) || p : null; }
 function zoneOf(cfg, d) { return cfg.zones.find((z) => d >= z.from && d < z.to) || cfg.zones[cfg.zones.length - 1]; }
+const num = (v) => fmt(v, v < 10 && Math.abs(v - Math.round(v)) > 0.04 ? (v < 1 && Math.abs(v * 10 - Math.round(v * 10)) > 0.04 ? 2 : 1) : 0);
 function dLabel(kind, d) {
+  const cfg = DIVES[kind];
   if (kind === "ocean") return `${fmt(Math.round(d))} m`;
-  if (d < 0) return `${fmt(Math.round(-d))} m`;
-  if (d === 0) return LANG === "it" ? "0 m · suolo" : "0 m · ground";
-  return LANG === "it" ? `${fmt(Math.round(d))} m sotto terra` : `${fmt(Math.round(d))} m underground`;
+  if (cfg.axis === "altitude") return d <= 0 ? `${fmt(Math.round(-d))} m` : (LANG === "it" ? `${fmt(Math.round(d))} m sotto il mare` : `${fmt(Math.round(d))} m below the sea`);
+  if (d < 0) return `${num(-d)} m`;
+  if (d === 0) return cfg.zeroLabel ? t(cfg.zeroLabel) : (LANG === "it" ? "0 m · suolo" : "0 m · ground");
+  return `${num(d)} m ${t(cfg.below || { it: "sotto terra", en: "underground" })}`;
+}
+// Values shown in the gauge of the newer descents (mountains, poles, desert).
+function gaugeValue(cfg, k, d) {
+  if (k === "alt") return d <= 0 ? `${fmt(Math.round(-d))} m` : `−${fmt(Math.round(d))} m`;
+  if (k === "oxy") return d >= 0 ? "100%" : `≈ ${Math.round(100 * Math.exp(d / 7990))}%`;
+  if (k === "height") return d < 0 ? `${num(-d)} m` : d < 0.005 ? "0 m" : `−${num(d)} m`;
+  if (k === "zone") return t(zoneOf(cfg, d).name);
+  if (k === "temp") {
+    const T = cfg.temps; let v = T[0][1];
+    for (let i = 1; i < T.length; i++) if (d <= T[i][0]) { const [a, va] = T[i - 1], [b, vb] = T[i]; v = va + (vb - va) * Math.max(0, Math.min(1, (d - a) / (b - a))); break; } else v = T[i][1];
+    return `≈ ${fmt(Math.round(v))} °C`;
+  }
+  if (k === "ice") { const L = d <= 0 ? 100 : d <= 2 ? 100 * Math.pow(0.05, d / 2) : 5 * Math.exp(-(d - 2) / 30); return L >= 1 ? `≈ ${fmt(Math.round(L))}%` : L >= 0.01 ? "< 1%" : "0%"; }
+  return "";
 }
 function buildDive(kind) {
   const cfg = DIVES[kind];
@@ -2038,7 +2574,7 @@ function buildGauge(kind) {
   const cfg = DIVES[kind];
   const total = cfg.end - cfg.start;
   const bands = cfg.zones.map((z) => { const a = (z.from - cfg.start) / total * 100, b = (z.to - cfg.start) / total * 100; return `<i style="top:${a}%;height:${b - a}%;background:${colorAt(cfg, (z.from + z.to) / 2)}"></i>`; }).join("");
-  const rows = kind === "ocean"
+  const rows = cfg.gauge ? cfg.gauge.map((r, i) => `<div class="g"><span class="gl">${esc(t(r.l))}</span><span class="gv${r.k === "zone" ? " small" : ""}" id="g${i + 1}"></span></div>`).join("") : kind === "ocean"
     ? `<div class="g"><span class="gl">${esc(t(UI.gauge.depth))}</span><span class="gv" id="g1">0 m</span></div><div class="g"><span class="gl">${esc(t(UI.gauge.pressure))}</span><span class="gv" id="g2">1 atm</span></div><div class="g"><span class="gl">${esc(t(UI.gauge.light))}</span><span class="gv small" id="g3"></span></div>`
     : `<div class="g"><span class="gl">${esc(t(UI.gauge.height))}</span><span class="gv" id="g1">88 m</span></div><div class="g"><span class="gl">${esc(t(UI.gauge.sun))}</span><span class="gv" id="g2">100%</span></div><div class="g"><span class="gl">${esc(t(UI.gauge.layer))}</span><span class="gv small" id="g3"></span></div>`;
   gauge.innerHTML = `<div class="gwrap"><div class="mini" aria-hidden="true">${bands}<span class="pos" id="gpos"></span></div><div class="gcol">${rows}</div></div>`;
@@ -2073,7 +2609,8 @@ function onDiveScroll() {
   const d = depthAtScroll(); currentD = d; const cfg = dive.cfg;
   diveEl.style.backgroundColor = colorAt(cfg, d);
   const g1 = $("g1"), g2 = $("g2"), g3 = $("g3");
-  if (dive.kind === "ocean") {
+  if (cfg.gauge) cfg.gauge.forEach((r, i) => { const el = $("g" + (i + 1)); if (el) el.textContent = gaugeValue(cfg, r.k, d); });
+  else if (dive.kind === "ocean") {
     g1.textContent = `${fmt(Math.round(d))} m`;
     g2.innerHTML = `${fmt(Math.round(1 + d / 10.06))}<small>atm</small>`;
     g3.textContent = oceanLight(d);
@@ -2106,7 +2643,9 @@ function startMotes() {
       if (kind === "ocean") {
         if (m.bio && d > 300) { a = 0.25 + 0.55 * Math.max(0, Math.sin(now / 600 + m.ph * 3)); col = `rgba(102,226,216,${a * Math.min(1, (d - 300) / 700)})`; }
         else { a = 0.18 + m.s * 0.12; col = `rgba(230,240,255,${a})`; }
-      } else { a = d < 0 ? 0.2 + m.s * 0.1 : 0.12; col = d < -20 ? `rgba(255,250,220,${a})` : `rgba(210,230,170,${a})`; }
+      } else if (dive.cfg.motes === "snow") { a = 0.35 + m.s * 0.15; col = `rgba(255,255,255,${a})`; }
+      else if (dive.cfg.motes === "dust") { a = 0.18 + m.s * 0.1; col = `rgba(250,225,180,${a})`; }
+      else { a = d < 0 ? 0.2 + m.s * 0.1 : 0.12; col = d < -20 ? `rgba(255,250,220,${a})` : `rgba(210,230,170,${a})`; }
       mctx.fillStyle = col; mctx.beginPath(); mctx.arc(m.x, m.y, m.s, 0, 6.283); mctx.fill();
     }
     moteRaf = requestAnimationFrame(step);
@@ -2130,7 +2669,7 @@ $("dive-back").onclick = closeDive;
    LAB & CREDITS
    ========================================================= */
 function renderLab() {
-  const groups = [["ocean", { it: "Oceano", en: "Ocean" }], ["amazon", { it: "Amazzonia", en: "Amazon" }], ["madagascar", { it: "Madagascar", en: "Madagascar" }]];
+  const groups = [["ocean", { it: "Oceano", en: "Ocean" }], ["amazon", { it: "Amazzonia", en: "Amazon" }], ...Object.keys(DIVES).filter((k) => k !== "ocean" && k !== "amazon").map((k) => [k, DIVES[k].eyebrow])];
   const total = groups.reduce((n, [k]) => n + DIVES[k].creatures.length, 0), done = Object.keys(IMAGES).length;
   let html = `<div class="top"><h1>${esc(t(UI.lab))}</h1><button type="button" class="cta ghost" id="lab-close">${esc(t(UI.close))}</button></div>
   <p class="lead">${esc(t({ it: `Qui trovi un prompt per ogni creatura, scritto per ottenere un’immagine fedele all’animale vero. Immagini pronte: ${done} su ${total}.`, en: `Here is one prompt per creature, written to get a picture true to the real animal. Images ready: ${done} of ${total}.` }))}</p>

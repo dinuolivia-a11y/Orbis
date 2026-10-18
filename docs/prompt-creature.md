@@ -5,7 +5,7 @@ Copialo in Grok o ChatGPT, genera l'immagine in formato quadrato e mandala a Cla
 
 Nome file consigliato: `<id>.jpg` (l'id è scritto sotto il nome di ogni creatura).
 
-## Oceano (17)
+## Oceano Pacifico (17)
 
 ### Drago blu · *Glaucus atlanticus*
 - id: `glaucus`
@@ -143,7 +143,7 @@ Photorealistic deep-sea photograph of a xenophyophore, a giant single-celled org
 Photorealistic deep-sea macro photograph of Hirondellea gigas, a hadal amphipod a few centimetres long: a curved, laterally flattened, shrimp-like segmented body, semi-translucent milky white to pale pink, many small legs, short antennae, several of them swarming over the soft sediment at the very bottom of the Mariana Trench. Shot like a real deep-sea ROV documentary frame: lit by soft white submersible lights against pitch-black water, faint particles of marine snow drifting, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people, no equipment visible.
 ```
 
-## Amazzonia (12)
+## Foresta amazzonica (12)
 
 ### Aquila arpia · *Harpia harpyja*
 - id: `harpy`
@@ -321,4 +321,514 @@ Photorealistic wildlife photograph of a Madagascar pochard (Aythya innotata), a 
 
 ```
 Photorealistic night wildlife photograph of a Malagasy giant jumping rat (Hypogeomys antimena) at the entrance of its burrow in dry deciduous forest in western Madagascar: rabbit-sized rodent with coarse grey-brown fur, pale underside, long upright ears, large dark eyes, long whiskers, strong hind legs, a dark tail, red-brown soil and dry leaves around the burrow. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+## Himalaya (12)
+
+### Ragno saltatore dell’Himalaya · *Euophrys omnisuperstes*
+- id: `jumpspider`
+- dove: fino a 6.700 m, sull’Everest · dimensioni: pochi millimetri
+
+```
+Photorealistic extreme macro photograph of a Himalayan jumping spider (Euophrys omnisuperstes), a tiny dark grey-black hairy jumping spider a few millimetres long with large forward-facing front eyes, crouching on frost-covered grey rock at 6,700 m on Mount Everest, snowy Himalayan peaks softly blurred behind. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Gipeto · *Gypaetus barbatus*
+- id: `lammergeier`
+- dove: pareti rocciose, di solito tra 2.000 e 5.000 m · dimensioni: apertura alare fino a 2,8 m
+
+```
+Photorealistic wildlife photograph of a bearded vulture (Gypaetus barbatus) gliding close to the camera along a Himalayan cliff, filling most of the frame: very long narrow pointed wings and a long wedge-shaped tail, dark slate-grey upperparts, rusty-orange head, neck and underparts, a black mask and a tuft of black bristles under the bill like a beard, pale eyes with a red ring, snowy peaks behind. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Tetraogallo dell’Himalaya · *Tetraogallus himalayensis*
+- id: `snowcock`
+- dove: pendii erbosi e pietraie, di solito tra 3.500 e 5.500 m · dimensioni: circa 60 cm, fino a 3 kg
+
+```
+Photorealistic wildlife photograph of a Himalayan snowcock (Tetraogallus himalayensis) walking on a high-altitude scree slope at 5,000 m: a large plump grey partridge with fine grey barring, white face and throat bordered by chestnut stripes that form a collar, chestnut and white streaks on the flanks, yellowish bill and legs, snowy peaks behind. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Volpe del Tibet · *Vulpes ferrilata*
+- id: `sandfox`
+- dove: altopiano del Tibet e versante nord dell’Himalaya, 3.500–5.200 m · dimensioni: corpo 50–70 cm, coda circa 25 cm
+
+```
+Photorealistic wildlife photograph of a Tibetan sand fox (Vulpes ferrilata) sitting on the high Tibetan steppe at 4,700 m: a small fox with a strikingly square, broad head, narrow slit-like eyes that give it a serious expression, short ears, tawny-orange back and muzzle, grey flanks, a thick bushy tail with a white tip, dry short grass and distant snowy Himalayan peaks. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Leopardo delle nevi · *Panthera uncia*
+- id: `snowleopard`
+- dove: pietraie e pareti tra 3.000 e 5.500 m · dimensioni: corpo circa 1,1 m, coda quasi 1 m
+
+```
+Photorealistic wildlife photograph of a snow leopard (Panthera uncia) resting on a snowy Himalayan rock ledge: thick smoky-grey fur with dark rosettes, pale green-grey eyes, a very long thick tail wrapped around its body, broad furry paws, jagged snowy peaks behind. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Orso bruno dell’Himalaya · *Ursus arctos isabellinus*
+- id: `himbear`
+- dove: praterie alpine sopra i 3.000 m · dimensioni: fino a 2,2 m in piedi
+
+```
+Photorealistic wildlife photograph of a Himalayan brown bear (Ursus arctos isabellinus) walking across an alpine scree slope at 4,300 m: a large bear with pale sandy to reddish-brown shaggy fur, a lighter face, small rounded ears, a shoulder hump, snowy peaks behind. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Pika di Royle · *Ochotona roylei*
+- id: `roylepika`
+- dove: pietraie e muretti di sassi sopra i 2.400 m · dimensioni: circa 18 cm, senza coda visibile
+
+```
+Photorealistic wildlife photograph of a Royle's pika (Ochotona roylei) peeking out between grey granite boulders on a Himalayan scree slope: a small round rabbit relative about 18 cm long with no visible tail, short rounded ears, rich rufous-brown head and shoulders fading to grey-brown on the back, dark eyes, long whiskers. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Tahr dell’Himalaya · *Hemitragus jemlahicus*
+- id: `tahr`
+- dove: pareti ripide tra 2.500 e 5.000 m · dimensioni: alto circa 1 m alla spalla
+
+```
+Photorealistic wildlife photograph of a male Himalayan tahr (Hemitragus jemlahicus) standing on a steep rocky cliff at 3,600 m: a stocky wild goat with a thick shaggy reddish-brown coat and a long flowing mane over the neck and shoulders, short curved horns that sweep backwards close to the head, misty mountains behind. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Monal dell’Himalaya · *Lophophorus impejanus*
+- id: `monal`
+- dove: boschi aperti e prati tra 2.400 e 4.500 m · dimensioni: circa 70 cm
+
+```
+Photorealistic wildlife photograph of a male Himalayan monal (Lophophorus impejanus) on an alpine meadow at 3,300 m: iridescent metallic green head with a crest of spatula-tipped feathers, coppery-bronze neck, shining purple-blue back, black underparts, a cinnamon-rufous tail, bare blue skin around the eye, snowy peaks behind. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Scoiattolo volante lanoso · *Eupetaurus cinereus*
+- id: `flyingsquirrel`
+- dove: grotte e pareti rocciose del nord del Pakistan · dimensioni: corpo circa 50 cm, coda circa 40 cm
+
+```
+Photorealistic night wildlife photograph of a woolly flying squirrel (Eupetaurus cinereus) clinging to a steep rock face near a cave entrance in the mountains of northern Pakistan: a large squirrel with very thick, soft woolly blue-grey fur, a pale face, a long bushy grey tail, furry soles, the gliding membrane folded along its sides, lit softly by moonlight. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Tragopan satiro · *Tragopan satyra*
+- id: `tragopan`
+- dove: foreste di rododendri e bambù tra 2.400 e 4.200 m · dimensioni: circa 70 cm
+
+```
+Photorealistic wildlife photograph of a male satyr tragopan (Tragopan satyra) in a misty Himalayan rhododendron forest at 3,000 m: deep crimson-red plumage covered in small white black-edged spots, black head with a red-orange crest, bare bright blue facial skin, flowering pink rhododendrons around. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Panda rosso · *Ailurus fulgens*
+- id: `redpanda`
+- dove: foreste con bambù tra 2.200 e 4.800 m · dimensioni: corpo circa 60 cm, coda circa 45 cm
+
+```
+Photorealistic wildlife photograph of a red panda (Ailurus fulgens) on a mossy branch in a misty Himalayan bamboo forest: rich rusty-red fur, white face markings with reddish tear stripes, white-edged ears, black legs and belly, a long bushy tail ringed in red and buff. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+## Nuova Zelanda (9)
+
+### Kea · *Nestor notabilis*
+- id: `kea`
+- dove: montagne dell’Isola del Sud, 600–2.000 m · dimensioni: circa 48 cm
+
+```
+Photorealistic wildlife photograph of a kea (Nestor notabilis) on a snowy alpine rock in the Southern Alps of New Zealand: a large olive-green parrot with dark-edged feathers, a long narrow curved grey upper bill, and bright orange-red feathers under the wings showing as it lifts one wing, snowy mountains behind. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Takahē · *Porphyrio hochstetteri*
+- id: `takahe`
+- dove: praterie di montagna del Fiordland e alcuni santuari · dimensioni: circa 63 cm, fino a 3 kg
+
+```
+Photorealistic wildlife photograph of a takahē (Porphyrio hochstetteri) walking through golden alpine tussock grassland in Fiordland: a large, stout flightless bird with deep indigo-blue head, neck and breast, olive-green and teal back and wings, a massive bright red bill with a red frontal shield, strong red legs. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Kākā · *Nestor meridionalis*
+- id: `kaka`
+- dove: foreste di pianura e di collina · dimensioni: circa 45 cm
+
+```
+Photorealistic wildlife photograph of a kākā (Nestor meridionalis) perched on a mossy branch in a New Zealand beech forest: a stocky olive-brown forest parrot with darker scalloping, a pale grey-white crown, crimson-red feathers on the rump and under the wings, a strong curved grey bill. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Cavaliere nero (kakī) · *Himantopus novaezelandiae*
+- id: `kaki`
+- dove: fiumi intrecciati del Mackenzie Basin, Isola del Sud · dimensioni: circa 40 cm
+
+```
+Photorealistic wildlife photograph of a black stilt (kakī, Himantopus novaezelandiae) wading in a shallow braided river in New Zealand's Mackenzie Basin: an elegant wading bird with entirely glossy black plumage, very long thin pink legs and a long fine straight black bill, grey river stones and pale water around. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Kākāpō · *Strigops habroptilus*
+- id: `kakapo`
+- dove: isole protette nel sud del paese · dimensioni: circa 60 cm, fino a 4 kg
+
+```
+Photorealistic night wildlife photograph of a kākāpō (Strigops habroptilus) standing on the forest floor of a New Zealand island: a large plump flightless parrot with moss-green feathers finely mottled with black and yellow, an owl-like face disc of fine whiskery feathers, a pale grey-ivory bill, strong grey feet, ferns around. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Pipistrello dalla coda corta · *Mystacina tuberculata*
+- id: `shorttailbat`
+- dove: foreste antiche · dimensioni: circa 6 cm, 15 g
+
+```
+Photorealistic night wildlife photograph of a New Zealand lesser short-tailed bat (Mystacina tuberculata) scurrying on all fours across the leaf litter of an ancient forest floor: a small velvety grey-brown bat with its wings tightly folded like arms, short ears, a short tail, dark eyes. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Tuatara · *Sphenodon punctatus*
+- id: `tuatara`
+- dove: isolette al largo della costa · dimensioni: fino a 60 cm
+
+```
+Photorealistic night wildlife photograph of a tuatara (Sphenodon punctatus) on a lichen-covered rock outside a burrow on a New Zealand island: a stout reptile like a large lizard, olive-grey skin with tiny pale spots, a crest of soft white spines along the neck and back, large dark eyes, strong clawed feet. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Fraticello fata (tara iti) · *Sternula nereis davisae*
+- id: `fairytern`
+- dove: quattro spiagge tra Auckland e Northland · dimensioni: circa 25 cm
+
+```
+Photorealistic wildlife photograph of a New Zealand fairy tern (tara iti, Sternula nereis davisae) flying low over calm sea water near a sandy beach: a tiny pale grey and white tern with a neat black cap, a white forehead, a bright orange-yellow bill and orange legs, slender pointed wings. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Pinguino dagli occhi gialli (hoiho) · *Megadyptes antipodes*
+- id: `hoiho`
+- dove: coste del sud-est e isole subantartiche · dimensioni: circa 65 cm
+
+```
+Photorealistic wildlife photograph of a yellow-eyed penguin (hoiho, Megadyptes antipodes) standing on rocks at the edge of coastal forest in southern New Zealand: a medium-sized penguin with a pale yellow band running from the yellow eyes around the back of the head, a pale yellowish crown, slate-blue back, white belly and a pinkish bill. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+## Tundra artica (10)
+
+### Gabbiano d’avorio · *Pagophila eburnea*
+- id: `ivorygull`
+- dove: ghiaccio marino dell’Alto Artico · dimensioni: circa 43 cm
+
+```
+Photorealistic wildlife photograph of an adult ivory gull (Pagophila eburnea) standing on Arctic sea ice: a medium-sized gull with completely pure white plumage, short black legs, dark eyes, and a short blue-grey bill with a yellow tip, broken pack ice and grey sea behind. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Civetta delle nevi · *Bubo scandiacus*
+- id: `snowyowl`
+- dove: tundra di tutto l’Artico · dimensioni: fino a 70 cm, ali di 1,5 m
+
+```
+Photorealistic wildlife photograph of a female snowy owl (Bubo scandiacus) perched on a snowy hummock in the Arctic tundra: a large white owl with dense dark brown bars across the body and wings, a round head without ear tufts, bright yellow eyes, feet covered in thick white feathers. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Bue muschiato · *Ovibos moschatus*
+- id: `muskox`
+- dove: tundra del Canada e della Groenlandia · dimensioni: circa 1,4 m alla spalla, fino a 400 kg
+
+```
+Photorealistic wildlife photograph of a muskox (Ovibos moschatus) standing in snowy Arctic tundra: a large stocky animal with very long dark brown shaggy hair hanging almost to the ground, a pale saddle on the back, broad horns that meet in a heavy boss on the forehead and curve down then up into sharp points, light-coloured legs. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Lupo artico · *Canis lupus arctos*
+- id: `arcticwolf`
+- dove: isole dell’Artico canadese e Groenlandia · dimensioni: alto circa 70 cm alla spalla
+
+```
+Photorealistic wildlife photograph of an Arctic wolf (Canis lupus arctos) standing on snowy tundra on Ellesmere Island: a large wolf with thick, almost pure white fur, short rounded ears, a short muzzle, amber eyes, a bushy tail, grey winter light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Lepre artica · *Lepus arcticus*
+- id: `arctichare`
+- dove: Artico canadese e Groenlandia · dimensioni: circa 60 cm, fino a 5 kg
+
+```
+Photorealistic wildlife photograph of an Arctic hare (Lepus arcticus) sitting on wind-packed snow in the Canadian Arctic: thick pure white winter fur, short ears with black tips, long powerful hind feet, dark eyes, soft grey Arctic light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Volpe artica · *Vulpes lagopus*
+- id: `arcticfox`
+- dove: tutto l’Artico · dimensioni: circa 55 cm più 30 cm di coda
+
+```
+Photorealistic wildlife photograph of an Arctic fox (Vulpes lagopus) in its thick white winter coat standing on snowy tundra: a small fox with a short rounded muzzle, small rounded ears, dense fluffy white fur, furry paws, a very bushy white tail, dark eyes. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Pernice bianca · *Lagopus muta*
+- id: `ptarmigan`
+- dove: tundra dell’Artico e alte montagne, anche le Alpi · dimensioni: circa 35 cm
+
+```
+Photorealistic wildlife photograph of a male rock ptarmigan (Lagopus muta) in white winter plumage standing on snow in the Arctic tundra: a plump grouse-like bird completely white except a black stripe from the bill through the eye, black outer tail feathers, a small red comb above the eye, feet thickly covered in white feathers. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Zigolo delle nevi · *Plectrophenax nivalis*
+- id: `snowbunting`
+- dove: tundra e coste rocciose dell’Artico · dimensioni: circa 16 cm
+
+```
+Photorealistic wildlife photograph of a male snow bunting (Plectrophenax nivalis) in breeding plumage perched on a lichen-covered rock in the Arctic tundra in spring: a small sparrow-sized bird with an all-white head and underparts with no eye stripe or mask, a solid black back, black wingtips and large white wing panels, a short black conical bill, patches of melting snow around. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Lemming dal collare · *Dicrostonyx groenlandicus*
+- id: `lemming`
+- dove: tundra del Canada e della Groenlandia · dimensioni: circa 14 cm
+
+```
+Photorealistic wildlife photograph of a northern collared lemming (Dicrostonyx groenlandicus) in its white winter coat at the entrance of a tunnel in the snow: a small round rodent about 14 cm long with dense pure white fur, tiny ears hidden in the fur, small dark eyes, a very short tail, enlarged forked claws on the front feet. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Citello artico · *Urocitellus parryii*
+- id: `groundsquirrel`
+- dove: tundra dell’Alaska e del Canada · dimensioni: circa 40 cm con la coda
+
+```
+Photorealistic wildlife photograph of an Arctic ground squirrel (Urocitellus parryii) standing upright on its hind legs beside its burrow on the summer tundra: a stout squirrel with tawny-grey fur flecked with white spots on the back, a buff face, short ears and a short tail, low reddish tundra plants around. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+## Antartide (10)
+
+### Petrello delle nevi · *Pagodroma nivea*
+- id: `snowpetrel`
+- dove: coste e montagne dell’Antartide · dimensioni: circa 35 cm, ali di 80 cm
+
+```
+Photorealistic wildlife photograph of a snow petrel (Pagodroma nivea) flying over Antarctic pack ice: a small seabird with completely pure white plumage, a short black bill, small black eyes and dark grey-black feet, slender pointed wings, icebergs behind. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Stercorario di McCormick · *Stercorarius maccormicki*
+- id: `skua`
+- dove: coste dell’Antartide · dimensioni: circa 53 cm, ali di 1,3 m
+
+```
+Photorealistic wildlife photograph of a south polar skua (Stercorarius maccormicki) standing on snow near an Antarctic penguin colony: a large, heavily built seabird with uniform grey-brown plumage, a paler golden-streaked nape, a strong hooked black bill, black legs and webbed feet. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Pinguino imperatore · *Aptenodytes forsteri*
+- id: `emperor`
+- dove: ghiaccio marino intorno all’Antartide · dimensioni: fino a 1,2 m, oltre 30 kg
+
+```
+Photorealistic wildlife photograph of an adult emperor penguin (Aptenodytes forsteri) standing tall on Antarctic sea ice: a large penguin with a black head and back, a white belly with a pale yellow wash on the upper breast, bright golden-orange ear patches, an orange-pink stripe on the lower bill, flat white ice and grey sky. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Pinguino di Adelia · *Pygoscelis adeliae*
+- id: `adelie`
+- dove: coste di tutta l’Antartide · dimensioni: circa 70 cm
+
+```
+Photorealistic wildlife photograph of an Adélie penguin (Pygoscelis adeliae) standing on snowy pebbles at an Antarctic colony: a black-and-white penguin about 70 cm tall with an all-black head, a striking white ring around each eye, a short black bill partly covered by feathers, a white belly, pink feet. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Moscerino antartico · *Belgica antarctica*
+- id: `midge`
+- dove: muschi e licheni della Penisola antartica · dimensioni: 2–6 mm
+
+```
+Photorealistic extreme macro photograph of an Antarctic midge (Belgica antarctica), a tiny wingless black fly only a few millimetres long with six slender legs and short antennae, crawling on green moss and orange lichen among rocks on the Antarctic Peninsula, a few snow crystals around. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Krill antartico · *Euphausia superba*
+- id: `krill`
+- dove: mari intorno all’Antartide, di solito nei primi 200 m · dimensioni: circa 6 cm
+
+```
+Photorealistic underwater macro photograph of an Antarctic krill (Euphausia superba) swimming in cold blue Southern Ocean water: a transparent shrimp-like crustacean about 6 cm long with reddish-orange pigment spots, large black eyes, long antennae, feathery swimming legs and a green gut, tiny particles in the water. Real underwater wildlife documentary photography in cold natural light, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people, no divers.
+```
+
+### Foca cancrivora · *Lobodon carcinophaga*
+- id: `crabeater`
+- dove: ghiaccio marino galleggiante · dimensioni: circa 2,3 m, 200 kg
+
+```
+Photorealistic wildlife photograph of a crabeater seal (Lobodon carcinophaga) lying on an Antarctic ice floe: a slender seal with a long, pointed, dog-like snout, silvery to pale blond-brown fur with faint darker blotches on the sides, long parallel scars on its flanks, dark eyes, broken pack ice and dark sea behind. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Pesce argento antartico · *Pleuragramma antarctica*
+- id: `silverfish`
+- dove: sotto il ghiaccio marino e in mare aperto · dimensioni: fino a 25 cm
+
+```
+Photorealistic underwater photograph of an Antarctic silverfish (Pleuragramma antarctica) swimming just below the underside of the sea ice: a slender silvery semi-translucent fish about 20 cm long with large eyes, a forked tail, the white crystalline ice ceiling above and dim blue water below. Real underwater wildlife documentary photography in cold natural light, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people, no divers.
+```
+
+### Foca di Weddell · *Leptonychotes weddellii*
+- id: `weddell`
+- dove: ghiaccio fisso vicino alla costa · dimensioni: fino a 3 m, 500 kg
+
+```
+Photorealistic wildlife photograph of a Weddell seal (Leptonychotes weddellii) resting on fast ice near a breathing hole in Antarctica: a large plump seal with a small rounded head, a short muzzle with whiskers that gives a gentle smiling face, dark grey fur covered with silvery-white spots and blotches, large dark eyes. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Pesce ghiaccio · *Chaenocephalus aceratus*
+- id: `icefish`
+- dove: fondali dei mari antartici · dimensioni: fino a 70 cm
+
+```
+Photorealistic deep underwater photograph of a blackfin icefish (Chaenocephalus aceratus) resting on the sandy seafloor of the Southern Ocean: a long pale fish with a large flat crocodile-like snout, translucent ghostly white-grey skin with darker bands, big eyes, large dark fins, no red colour anywhere because its blood has no haemoglobin, dim blue light. Shot like a real deep-sea ROV documentary frame: lit by soft white submersible lights against pitch-black water, faint particles of marine snow drifting, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people, no equipment visible.
+```
+
+## Tian Shan (7)
+
+### Fringuello alpino di Brandt · *Leucosticte brandti*
+- id: `mtnfinch`
+- dove: pietraie e ghiacciai, fino a oltre 5.000 m · dimensioni: circa 18 cm
+
+```
+Photorealistic wildlife photograph of a Brandt's mountain finch (Leucosticte brandti) perched on a rock beside a melting snowfield at 4,500 m in the Tian Shan: a stocky finch with a sooty blackish face and crown, ash-grey brown body, a rosy-pink flush on the wings and rump, a short conical bill, snowy peaks behind. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Ragno lupo di Temreshev · *Pardosa temreshevi*
+- id: `pardosa`
+- dove: pietraie oltre i 3.600 m, Kazakistan · dimensioni: meno di 1 cm
+
+```
+Photorealistic macro photograph of a high-mountain wolf spider (Pardosa temreshevi) on grey scree at 3,800 m in the Tian Shan mountains: a small hairy wolf spider less than 1 cm long, mottled brown and grey camouflage pattern, long banded legs, eight dark eyes with two large ones in front, a female carrying a round silk egg sac attached to the tip of her abdomen. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Pika dell’Ili · *Ochotona iliensis*
+- id: `ilipika`
+- dove: pareti rocciose tra 2.800 e 4.100 m, Xinjiang (Cina) · dimensioni: circa 20 cm, 250 g
+
+```
+Photorealistic wildlife photograph of an Ili pika (Ochotona iliensis) on a lichen-covered rock ledge at 3,500 m in the Tian Shan of Xinjiang: a round, rabbit-like animal about 20 cm long with no visible tail, large rounded ears, soft grey fur with bright rusty-red patches on the forehead, crown and sides of the neck, dark eyes, a small downturned mouth. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Apollo del Tian Shan · *Parnassius tianschanicus*
+- id: `apollo`
+- dove: prati e pendii sassosi, tra 1.200 e 4.200 m · dimensioni: apertura alare 6–8 cm
+
+```
+Photorealistic macro photograph of a Tian Shan Apollo butterfly (Parnassius tianschanicus) resting with open wings on a purple mountain flower: white wings with black spots, semi-transparent grey edges, and two round bright red eyespots ringed in black on each hind wing, a hairy black body, rocky alpine meadow at 3,000 m blurred behind. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Talpa-arvicola dell’Alai · *Ellobius alaicus*
+- id: `molevole`
+- dove: praterie dei monti Alai, Kirghizistan, al confine sud del Tian Shan · dimensioni: circa 12 cm
+
+```
+Photorealistic wildlife photograph of an Alai mole vole (Ellobius alaicus) poking its head out of a burrow in an alpine meadow in Kyrgyzstan: a small cylindrical underground rodent about 12 cm long with soft dense grey-brown fur, no visible external ears, tiny eyes, and long protruding pale yellow front teeth that it digs with, loose soil around. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Citello del Tian Shan · *Spermophilus nilkaensis*
+- id: `tsquirrel`
+- dove: pascoli dello Xinjiang, del Kazakistan e del Kirghizistan · dimensioni: circa 20 cm più 6 cm di coda
+
+```
+Photorealistic wildlife photograph of a Tian Shan ground squirrel (Spermophilus nilkaensis) standing upright like a sentinel next to its burrow in a mountain pasture: a plump ground squirrel about 20 cm long with greyish-yellow brown fur, a pale belly, small ears, a short tail with a dark band and a pale tip, green grass and rocky slopes behind. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Sicista del Tian Shan · *Sicista tianschanica*
+- id: `birchmouse`
+- dove: boschi di abete e prati di montagna · dimensioni: circa 7 cm più 10 cm di coda
+
+```
+Photorealistic wildlife photograph of a Tien Shan birch mouse (Sicista tianschanica) climbing a grass stem in a mountain meadow at the edge of a spruce forest: a tiny mouse about 7 cm long with yellowish-brown fur, a distinct thin black stripe running down the middle of its back, small rounded ears, and a very long thin tail longer than its body wrapped around the stem. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+## Ande (7)
+
+### Topo dalle orecchie a foglia · *Phyllotis vaccarum*
+- id: `leafmouse`
+- dove: deserti d’alta quota di Cile e Argentina, fino a 6.739 m · dimensioni: circa 12 cm più la coda
+
+```
+Photorealistic wildlife photograph of a leaf-eared mouse (Phyllotis vaccarum) on volcanic rocks near the summit of an Andean volcano above 6,000 m: a small mouse with soft greyish-brown and sandy fur, a pale belly, very large rounded leaf-like ears, big dark eyes, long whiskers, a long tail, barren snowy volcanic slopes and deep blue sky behind. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Condor delle Ande · *Vultur gryphus*
+- id: `condor`
+- dove: Ande, dal Venezuela alla Terra del Fuoco · dimensioni: ali fino a 3,3 m, circa 15 kg
+
+```
+Photorealistic wildlife photograph of a male Andean condor (Vultur gryphus) perched on a high rocky crag in the Andes: a huge black vulture with large white panels on the wings, a fluffy white neck ruff, a bare wrinkled reddish-grey head with a fleshy comb on top, a hooked pale bill, snowy peaks and clouds behind. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Lucertola di Arequipa · *Liolaemus archipensis*
+- id: `liolaemus`
+- dove: puna di Arequipa, Perù, oltre i 4.800 m · dimensioni: 6–8 cm
+
+```
+Photorealistic wildlife photograph of a small Andean lizard (Liolaemus archipensis) about 7 cm long basking on a lichen-covered rock in the high puna of Arequipa, Peru, above 4,800 m: rough keeled grey-brown scales, a male with slanted dark spots and scattered white scales along the back, dry yellow tufted grass behind. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Gatto delle Ande · *Leopardus jacobita*
+- id: `andeancat`
+- dove: puna e pietraie, di solito sopra i 3.500 m · dimensioni: circa 60 cm più 45 cm di coda
+
+```
+Photorealistic wildlife photograph of an Andean mountain cat (Leopardus jacobita) on a rocky slope in the high puna at 4,300 m: a small wild cat with thick silver-grey fur marked with rusty-orange to brown spots and stripes, a pale face, and a very long, thick, bushy tail with broad dark rings, dry tufted grass and snowy Andes behind. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Vigogna · *Vicugna vicugna*
+- id: `vicuna`
+- dove: puna tra 3.200 e 4.800 m · dimensioni: alta circa 90 cm alla spalla
+
+```
+Photorealistic wildlife photograph of a vicuña (Vicugna vicugna) standing in the golden grass of the high Andean puna at 4,200 m: a slender, graceful wild camelid with a long neck, bright cinnamon-tan woolly coat on the back, a long white bib on the chest and white belly, a small head with alert ears, snowy volcanoes behind. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Rana del Titicaca · *Telmatobius culeus*
+- id: `titicacafrog`
+- dove: lago Titicaca, tra Perù e Bolivia · dimensioni: corpo fino a circa 15 cm
+
+```
+Photorealistic underwater photograph of a Titicaca water frog (Telmatobius culeus) resting on the muddy bottom of Lake Titicaca: a large aquatic frog with olive-brown to grey mottled skin hanging in very loose, baggy folds along its body and legs, small eyes on top of the head, cold clear lake water with green aquatic plants. Real underwater wildlife documentary photography in cold natural light, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people, no divers.
+```
+
+### Orso dagli occhiali · *Tremarctos ornatus*
+- id: `specbear`
+- dove: foreste delle nuvole e praterie andine · dimensioni: fino a 1,8 m in piedi
+
+```
+Photorealistic wildlife photograph of a spectacled bear (Tremarctos ornatus) on a mossy rock in an Andean cloud forest: a medium-sized bear with shaggy black fur and distinctive cream-coloured markings around the eyes and across the muzzle and chest, small round ears, misty trees covered in moss and bromeliads. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+## Sahara (7)
+
+### Addax · *Addax nasomaculatus*
+- id: `addax`
+- dove: pianure di sabbia, oggi quasi solo in Niger · dimensioni: alto circa 1 m alla spalla
+
+```
+Photorealistic wildlife photograph of an addax (Addax nasomaculatus) walking across Saharan sand dunes: a pale antelope with a white summer coat, long slender horns twisted in two or three spiral turns, a brown forelock tuft on the forehead and a white X-shaped mark across the face, broad splayed hooves, golden dunes behind. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Gatto delle sabbie · *Felis margarita*
+- id: `sandcat`
+- dove: deserti di sabbia del Sahara e dell’Arabia · dimensioni: circa 45 cm più 30 cm di coda
+
+```
+Photorealistic night wildlife photograph of a sand cat (Felis margarita) walking on a sand dune under a starry sky: a small stocky wild cat with pale sandy fur, a broad flat head, large low-set ears, faint dark bars on the legs, a black-tipped tail with a few dark rings, thick fur on the soles of its paws. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Fennec · *Vulpes zerda*
+- id: `fennec`
+- dove: deserti di sabbia del Nord Africa · dimensioni: circa 37 cm più 20 cm di coda, poco più di 1 kg
+
+```
+Photorealistic wildlife photograph of a fennec fox (Vulpes zerda) standing on a Saharan sand dune at sunset: a tiny fox with cream-coloured fur, enormous upright ears much larger than its head, big dark eyes, a black-tipped bushy tail, furry paws, rippled dunes behind. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Formica argentata del Sahara · *Cataglyphis bombycina*
+- id: `silverant`
+- dove: dune del Sahara · dimensioni: circa 1 cm
+
+```
+Photorealistic extreme macro photograph of a Saharan silver ant (Cataglyphis bombycina) running across hot golden sand: a slender long-legged ant about 1 cm long covered in shiny silvery hairs that reflect the sunlight like metal, a slim waist, long antennae, heat shimmer over the sand. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Vipera cornuta · *Cerastes cerastes*
+- id: `hornedviper`
+- dove: deserti del Nord Africa e del Medio Oriente · dimensioni: di solito 30–60 cm
+
+```
+Photorealistic wildlife photograph of a Saharan horned viper (Cerastes cerastes) partly buried in pale desert sand with only its head and eyes showing: a sandy-beige viper with faint darker blotches, vertical pupils, and a single small pointed horn-like scale rising above each eye, sidewinding tracks in the sand nearby. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Pesce delle sabbie · *Scincus scincus*
+- id: `sandfish`
+- dove: dune di sabbia del Nord Africa · dimensioni: circa 20 cm
+
+```
+Photorealistic wildlife photograph of a sandfish skink (Scincus scincus) half-buried as it dives head-first into fine golden Saharan sand: a stout lizard about 20 cm long with a wedge-shaped shovel-like snout, very smooth glossy scales, sandy-yellow body with dark brownish crossbands, short legs with fringed toes. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Gerboa egiziano minore · *Jaculus jaculus*
+- id: `jerboa`
+- dove: deserti del Nord Africa e del Medio Oriente · dimensioni: circa 10 cm più 18 cm di coda
+
+```
+Photorealistic night wildlife photograph of a lesser Egyptian jerboa (Jaculus jaculus) leaping across moonlit desert sand: a small sandy-coloured rodent with a white belly, very long kangaroo-like hind legs, tiny front paws, big dark eyes, large ears, and a very long tail ending in a black-and-white tuft. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
 ```

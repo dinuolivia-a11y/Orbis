@@ -1,18 +1,18 @@
 # Per Grok · immagini per Orbis
 
-Ciao Grok! Queste sono le immagini che servono ancora per l'app Orbis di Olivia. I prompt li ha scritti Claude dopo aver verificato ogni specie.
+Ciao Grok! Queste sono le immagini che servono ancora per l'app Orbis di Olivia: 46 in tutto. I prompt li ha scritti Claude dopo aver verificato ogni specie.
 
 ## Come fare
 
 1. Per ogni creatura qui sotto genera **una** immagine usando **esattamente** il prompt scritto (in inglese), in formato quadrato 1:1.
 2. Carica ogni immagine nel repository GitHub **dinuolivia-a11y/RareAltitudeCreatures**, nella cartella **images/orbis/**, con il nome del file uguale all'**id** della creatura più `.jpg`. Per esempio `images/orbis/indri.jpg`, `images/orbis/glaucus.jpg`.
-3. Segui quest'ordine: prima le 4 del Madagascar da rifare, poi le 17 dell'oceano, poi le 12 dell'Amazzonia.
-4. Non cambiare i prompt e non riusare immagini vecchie: per le 4 del Madagascar le immagini precedenti avevano la specie sbagliata, e i prompt nuovi spiegano cosa deve vedersi.
+3. Segui l'ordine del file, una zona dopo l'altra.
+4. Non cambiare i prompt e non riusare immagini vecchie: alcune immagini precedenti avevano la specie sbagliata, e i prompt nuovi spiegano cosa deve vedersi.
 5. Carica ogni immagine appena è pronta, senza aspettare la fine. Alla fine scrivi a Olivia quante ne hai caricate.
 
-Claude controlla ogni immagine prima di metterla nell'app.
+Claude controlla ogni immagine prima di metterla nell'app. Questo file si aggiorna da solo: le creature che hanno già un'immagine giusta non ci sono più.
 
-## Madagascar · da rifare (4)
+## Madagascar (4)
 
 ### 1. Indri · *Indri indri*
 id: **indri** → file `images/orbis/indri.jpg`
@@ -165,86 +165,189 @@ Photorealistic deep-sea macro photograph of Hirondellea gigas, a hadal amphipod 
 
 ## Amazzonia (12)
 
-### 22. Il giardino delle formiche tagliafoglie · *Atta*
-id: **leafcutter** → file `images/orbis/leafcutter.jpg`
+### 22. Aquila arpia · *Harpia harpyja*
+id: **harpy** → file `images/orbis/harpy.jpg`
 
 ```
-Photorealistic macro photograph inside an underground chamber of a leafcutter ant nest (Atta): a large spongy greyish-white fungus garden made of chewed leaf fragments, tended by many reddish-brown leafcutter ants of different sizes, from tiny gardener workers to large-headed soldiers, some carrying small green leaf pieces, dark earthen walls. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+Photorealistic wildlife photograph of a harpy eagle (Harpia harpyja) perched on a high branch of a giant emergent rainforest tree above the Amazon canopy: slate-grey upper body, white chest with a black band across the upper breast, pale grey head with a double crest of feathers raised, black-barred white legs, massive yellow feet with huge black talons, piercing dark eyes, morning mist over the forest below. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
 ```
 
-### 23. Ceciliano anellato · *Siphonops annulatus*
-id: **caecilian** → file `images/orbis/caecilian.jpg`
-
-```
-Photorealistic wildlife photograph of a ringed caecilian (Siphonops annulatus), a legless burrowing amphibian about 35 cm long: smooth shiny dark blue-grey body marked with regular thin white rings, blunt rounded head with tiny eyes under the skin, emerging from dark moist soil among roots. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
-```
-
-### 24. Fungo delle formiche zombie · *Ophiocordyceps*
-id: **cordyceps** → file `images/orbis/cordyceps.jpg`
-
-```
-Photorealistic macro photograph of a zombie-ant fungus (Ophiocordyceps): a dead carpenter ant clamped by its mandibles to the underside vein of a green leaf in the rainforest understory, a thin pale tan fungal stalk with a small swollen tip growing out of the back of the ant's head, fine whitish fungal threads around its legs and joints, soft diffuse light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
-```
-
-### 25. Tarantola Golia · *Theraphosa blondi*
-id: **goliath** → file `images/orbis/goliath.jpg`
-
-```
-Photorealistic wildlife photograph of a Goliath birdeater tarantula (Theraphosa blondi) on the dark rainforest floor among fallen leaves at the entrance of its burrow: huge hairy spider with a leg span of about 28 cm, rich chestnut-brown body and legs covered with fine hairs, faint pale rings at the leg joints, low-angle view at night. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
-```
-
-### 26. Formica proiettile · *Paraponera clavata*
-id: **bulletant** → file `images/orbis/bulletant.jpg`
-
-```
-Photorealistic macro wildlife photograph of a bullet ant (Paraponera clavata), about 2.5 cm long, glossy reddish-black body, large head with strong mandibles, visible stinger at the tip of the abdomen, walking on the bark at the base of a rainforest tree. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
-```
-
-### 27. Fulgora testa d’arachide · *Fulgora laternaria*
-id: **fulgora** → file `images/orbis/fulgora.jpg`
-
-```
-Photorealistic macro wildlife photograph of a peanut-head bug (Fulgora laternaria) on a rainforest tree trunk, side view: a large hollow, inflated, peanut-shaped head projection with false eye markings and false teeth resembling a tiny alligator head, mottled brown, grey and cream forewings matching the bark, hind wings partly open showing large yellow-ringed eyespots, about 9 cm long. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
-```
-
-### 28. Rana di vetro · *Hyalinobatrachium*
-id: **glassfrog** → file `images/orbis/glassfrog.jpg`
-
-```
-Photorealistic macro photograph of a glass frog (Hyalinobatrachium, family Centrolenidae), about 2.5 cm, lime-green translucent back with tiny pale yellow dots, gold-flecked eyes, sitting on a broad green leaf above a forest stream; the leaf is lit from behind so the frog's transparent belly shows its red heart and internal organs as silhouettes. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
-```
-
-### 29. Hoatzin · *Opisthocomus hoazin*
-id: **hoatzin** → file `images/orbis/hoatzin.jpg`
-
-```
-Photorealistic wildlife photograph of a hoatzin (Opisthocomus hoazin) perched on a branch overhanging a calm Amazon river: pheasant-sized bird with a spiky rufous-brown crest, bare bright blue facial skin, maroon-red eyes, dark bronze-brown upper body with pale streaks, chestnut wings, buff chest, long dark tail. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
-```
-
-### 30. Falena del bradipo · *Cryptoses choloepi*
-id: **slothmoth** → file `images/orbis/slothmoth.jpg`
-
-```
-Photorealistic macro wildlife photograph of several tiny brownish-grey sloth moths (Cryptoses) resting and crawling in the shaggy, coarse, greenish-tinged fur of a brown-throated three-toed sloth hanging in the Amazon canopy, green algae tinting the fur, shallow depth of field. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
-```
-
-### 31. Uakari calvo · *Cacajao calvus*
-id: **uakari** → file `images/orbis/uakari.jpg`
-
-```
-Photorealistic wildlife photograph of a bald uakari monkey (Cacajao calvus) sitting on a branch in a flooded Amazon forest: a completely hairless bright crimson-red face and scalp, small amber eyes, long shaggy pale whitish-ginger fur, short stubby tail, flooded forest and dark water in the background. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
-```
-
-### 32. Kinkajou · *Potos flavus*
+### 23. Kinkajou · *Potos flavus*
 id: **kinkajou** → file `images/orbis/kinkajou.jpg`
 
 ```
 Photorealistic night wildlife photograph of a kinkajou (Potos flavus) in the rainforest canopy: golden-brown woolly fur, round head with large dark eyes and small rounded ears, short muzzle, long prehensile tail wrapped around a branch, reaching toward a flower with its long slender tongue, softly lit. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
 ```
 
-### 33. Aquila arpia · *Harpia harpyja*
-id: **harpy** → file `images/orbis/harpy.jpg`
+### 24. Uakari calvo · *Cacajao calvus*
+id: **uakari** → file `images/orbis/uakari.jpg`
 
 ```
-Photorealistic wildlife photograph of a harpy eagle (Harpia harpyja) perched on a high branch of a giant emergent rainforest tree above the Amazon canopy: slate-grey upper body, white chest with a black band across the upper breast, pale grey head with a double crest of feathers raised, black-barred white legs, massive yellow feet with huge black talons, piercing dark eyes, morning mist over the forest below. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+Photorealistic wildlife photograph of a bald uakari monkey (Cacajao calvus) sitting on a branch in a flooded Amazon forest: a completely hairless bright crimson-red face and scalp, small amber eyes, long shaggy pale whitish-ginger fur, short stubby tail, flooded forest and dark water in the background. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### 25. Falena del bradipo · *Cryptoses choloepi*
+id: **slothmoth** → file `images/orbis/slothmoth.jpg`
+
+```
+Photorealistic macro wildlife photograph of several tiny brownish-grey sloth moths (Cryptoses) resting and crawling in the shaggy, coarse, greenish-tinged fur of a brown-throated three-toed sloth hanging in the Amazon canopy, green algae tinting the fur, shallow depth of field. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### 26. Hoatzin · *Opisthocomus hoazin*
+id: **hoatzin** → file `images/orbis/hoatzin.jpg`
+
+```
+Photorealistic wildlife photograph of a hoatzin (Opisthocomus hoazin) perched on a branch overhanging a calm Amazon river: pheasant-sized bird with a spiky rufous-brown crest, bare bright blue facial skin, maroon-red eyes, dark bronze-brown upper body with pale streaks, chestnut wings, buff chest, long dark tail. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### 27. Rana di vetro · *Hyalinobatrachium*
+id: **glassfrog** → file `images/orbis/glassfrog.jpg`
+
+```
+Photorealistic macro photograph of a glass frog (Hyalinobatrachium, family Centrolenidae), about 2.5 cm, lime-green translucent back with tiny pale yellow dots, gold-flecked eyes, sitting on a broad green leaf above a forest stream; the leaf is lit from behind so the frog's transparent belly shows its red heart and internal organs as silhouettes. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### 28. Fulgora testa d’arachide · *Fulgora laternaria*
+id: **fulgora** → file `images/orbis/fulgora.jpg`
+
+```
+Photorealistic macro wildlife photograph of a peanut-head bug (Fulgora laternaria) on a rainforest tree trunk, side view: a large hollow, inflated, peanut-shaped head projection with false eye markings and false teeth resembling a tiny alligator head, mottled brown, grey and cream forewings matching the bark, hind wings partly open showing large yellow-ringed eyespots, about 9 cm long. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### 29. Formica proiettile · *Paraponera clavata*
+id: **bulletant** → file `images/orbis/bulletant.jpg`
+
+```
+Photorealistic macro wildlife photograph of a bullet ant (Paraponera clavata), about 2.5 cm long, glossy reddish-black body, large head with strong mandibles, visible stinger at the tip of the abdomen, walking on the bark at the base of a rainforest tree. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### 30. Tarantola Golia · *Theraphosa blondi*
+id: **goliath** → file `images/orbis/goliath.jpg`
+
+```
+Photorealistic wildlife photograph of a Goliath birdeater tarantula (Theraphosa blondi) on the dark rainforest floor among fallen leaves at the entrance of its burrow: huge hairy spider with a leg span of about 28 cm, rich chestnut-brown body and legs covered with fine hairs, faint pale rings at the leg joints, low-angle view at night. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### 31. Fungo delle formiche zombie · *Ophiocordyceps*
+id: **cordyceps** → file `images/orbis/cordyceps.jpg`
+
+```
+Photorealistic macro photograph of a zombie-ant fungus (Ophiocordyceps): a dead carpenter ant clamped by its mandibles to the underside vein of a green leaf in the rainforest understory, a thin pale tan fungal stalk with a small swollen tip growing out of the back of the ant's head, fine whitish fungal threads around its legs and joints, soft diffuse light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### 32. Ceciliano anellato · *Siphonops annulatus*
+id: **caecilian** → file `images/orbis/caecilian.jpg`
+
+```
+Photorealistic wildlife photograph of a ringed caecilian (Siphonops annulatus), a legless burrowing amphibian about 35 cm long: smooth shiny dark blue-grey body marked with regular thin white rings, blunt rounded head with tiny eyes under the skin, emerging from dark moist soil among roots. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### 33. Il giardino delle formiche tagliafoglie · *Atta*
+id: **leafcutter** → file `images/orbis/leafcutter.jpg`
+
+```
+Photorealistic macro photograph inside an underground chamber of a leafcutter ant nest (Atta): a large spongy greyish-white fungus garden made of chewed leaf fragments, tended by many reddish-brown leafcutter ants of different sizes, from tiny gardener workers to large-headed soldiers, some carrying small green leaf pieces, dark earthen walls. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+## Himalaya (3)
+
+### 34. Gipeto · *Gypaetus barbatus*
+id: **lammergeier** → file `images/orbis/lammergeier.jpg`
+
+```
+Photorealistic wildlife photograph of a bearded vulture (Gypaetus barbatus) gliding close to the camera along a Himalayan cliff, filling most of the frame: very long narrow pointed wings and a long wedge-shaped tail, dark slate-grey upperparts, rusty-orange head, neck and underparts, a black mask and a tuft of black bristles under the bill like a beard, pale eyes with a red ring, snowy peaks behind. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### 35. Volpe del Tibet · *Vulpes ferrilata*
+id: **sandfox** → file `images/orbis/sandfox.jpg`
+
+```
+Photorealistic wildlife photograph of a Tibetan sand fox (Vulpes ferrilata) sitting on the high Tibetan steppe at 4,700 m: a small fox with a strikingly square, broad head, narrow slit-like eyes that give it a serious expression, short ears, tawny-orange back and muzzle, grey flanks, a thick bushy tail with a white tip, dry short grass and distant snowy Himalayan peaks. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### 36. Scoiattolo volante lanoso · *Eupetaurus cinereus*
+id: **flyingsquirrel** → file `images/orbis/flyingsquirrel.jpg`
+
+```
+Photorealistic night wildlife photograph of a woolly flying squirrel (Eupetaurus cinereus) clinging to a steep rock face near a cave entrance in the mountains of northern Pakistan: a large squirrel with very thick, soft woolly blue-grey fur, a pale face, a long bushy grey tail, furry soles, the gliding membrane folded along its sides, lit softly by moonlight. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+## Tundra artica (1)
+
+### 37. Zigolo delle nevi · *Plectrophenax nivalis*
+id: **snowbunting** → file `images/orbis/snowbunting.jpg`
+
+```
+Photorealistic wildlife photograph of a male snow bunting (Plectrophenax nivalis) in breeding plumage perched on a lichen-covered rock in the Arctic tundra in spring: a small sparrow-sized bird with an all-white head and underparts with no eye stripe or mask, a solid black back, black wingtips and large white wing panels, a short black conical bill, patches of melting snow around. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+## Antartide (3)
+
+### 38. Moscerino antartico · *Belgica antarctica*
+id: **midge** → file `images/orbis/midge.jpg`
+
+```
+Photorealistic extreme macro photograph of an Antarctic midge (Belgica antarctica), a tiny wingless black fly only a few millimetres long with six slender legs and short antennae, crawling on green moss and orange lichen among rocks on the Antarctic Peninsula, a few snow crystals around. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### 39. Foca cancrivora · *Lobodon carcinophaga*
+id: **crabeater** → file `images/orbis/crabeater.jpg`
+
+```
+Photorealistic wildlife photograph of a crabeater seal (Lobodon carcinophaga) lying on an Antarctic ice floe: a slender seal with a long, pointed, dog-like snout, silvery to pale blond-brown fur with faint darker blotches on the sides, long parallel scars on its flanks, dark eyes, broken pack ice and dark sea behind. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### 40. Pesce ghiaccio · *Chaenocephalus aceratus*
+id: **icefish** → file `images/orbis/icefish.jpg`
+
+```
+Photorealistic deep underwater photograph of a blackfin icefish (Chaenocephalus aceratus) resting on the sandy seafloor of the Southern Ocean: a long pale fish with a large flat crocodile-like snout, translucent ghostly white-grey skin with darker bands, big eyes, large dark fins, no red colour anywhere because its blood has no haemoglobin, dim blue light. Shot like a real deep-sea ROV documentary frame: lit by soft white submersible lights against pitch-black water, faint particles of marine snow drifting, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people, no equipment visible.
+```
+
+## Tian Shan (2)
+
+### 41. Fringuello alpino di Brandt · *Leucosticte brandti*
+id: **mtnfinch** → file `images/orbis/mtnfinch.jpg`
+
+```
+Photorealistic wildlife photograph of a Brandt's mountain finch (Leucosticte brandti) perched on a rock beside a melting snowfield at 4,500 m in the Tian Shan: a stocky finch with a sooty blackish face and crown, ash-grey brown body, a rosy-pink flush on the wings and rump, a short conical bill, snowy peaks behind. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### 42. Sicista del Tian Shan · *Sicista tianschanica*
+id: **birchmouse** → file `images/orbis/birchmouse.jpg`
+
+```
+Photorealistic wildlife photograph of a Tien Shan birch mouse (Sicista tianschanica) climbing a grass stem in a mountain meadow at the edge of a spruce forest: a tiny mouse about 7 cm long with yellowish-brown fur, a distinct thin black stripe running down the middle of its back, small rounded ears, and a very long thin tail longer than its body wrapped around the stem. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+## Ande (1)
+
+### 43. Rana del Titicaca · *Telmatobius culeus*
+id: **titicacafrog** → file `images/orbis/titicacafrog.jpg`
+
+```
+Photorealistic underwater photograph of a Titicaca water frog (Telmatobius culeus) resting on the muddy bottom of Lake Titicaca: a large aquatic frog with olive-brown to grey mottled skin hanging in very loose, baggy folds along its body and legs, small eyes on top of the head, cold clear lake water with green aquatic plants. Real underwater wildlife documentary photography in cold natural light, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people, no divers.
+```
+
+## Sahara (3)
+
+### 44. Vipera cornuta · *Cerastes cerastes*
+id: **hornedviper** → file `images/orbis/hornedviper.jpg`
+
+```
+Photorealistic wildlife photograph of a Saharan horned viper (Cerastes cerastes) partly buried in pale desert sand with only its head and eyes showing: a sandy-beige viper with faint darker blotches, vertical pupils, and a single small pointed horn-like scale rising above each eye, sidewinding tracks in the sand nearby. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### 45. Pesce delle sabbie · *Scincus scincus*
+id: **sandfish** → file `images/orbis/sandfish.jpg`
+
+```
+Photorealistic wildlife photograph of a sandfish skink (Scincus scincus) half-buried as it dives head-first into fine golden Saharan sand: a stout lizard about 20 cm long with a wedge-shaped shovel-like snout, very smooth glossy scales, sandy-yellow body with dark brownish crossbands, short legs with fringed toes. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### 46. Gerboa egiziano minore · *Jaculus jaculus*
+id: **jerboa** → file `images/orbis/jerboa.jpg`
+
+```
+Photorealistic night wildlife photograph of a lesser Egyptian jerboa (Jaculus jaculus) leaping across moonlit desert sand: a small sandy-coloured rodent with a white belly, very long kangaroo-like hind legs, tiny front paws, big dark eyes, large ears, and a very long tail ending in a black-and-white tuft. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
 ```

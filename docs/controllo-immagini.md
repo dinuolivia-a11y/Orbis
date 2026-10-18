@@ -23,6 +23,20 @@ Ogni immagine è stata confrontata con i tratti veri della specie, presi dalle d
 
 Ho reso più precisi i prompt delle 4 creature da rifare, aggiungendo proprio i tratti che erano sbagliati. Li trovi in `prompt-creature.md` e nel Laboratorio immagini dell'app.
 
-## Altre zone
+## Le nuove zone
 
-Le altre 89 immagini sono per zone che Orbis non ha ancora: Tian Shan, Ande, Himalaya, Nuova Zelanda, deserti, tundra e ghiacci. Le controlleremo quando apriremo quelle zone, insieme alla verifica delle specie.
+Con le altre 89 immagini di Grok abbiamo aperto 7 nuovi luoghi sul globo. Le specie le ha verificate Claude, con le fonti, prima di scrivere le schede. Per i nomi generici, per esempio "un coleottero del Tian Shan" o "una rana delle Ande", non abbiamo usato nessuna immagine: non si può dire di che specie sia.
+
+| Zona | Inserite | Scartate o mancanti |
+|---|---|---|
+| Himalaya (12) | ragno saltatore (`g2Pqo`), tetraogallo (`W2pON`), leopardo delle nevi (`portraits/snow-leopard`), orso bruno (`bmSuT`), pika di Royle (`tODQ7`), tahr (`1EYA2`), monal (`7AeWN`), tragopan (`FZZUL`), panda rosso (`portraits/red-panda`) | gipeto: l'uccello è troppo piccolo e lontano (`orP7Z`). Volpe del Tibet: non ha la testa quadrata né la coda a punta bianca (`NWNmC`). Scoiattolo volante lanoso: non c'era. |
+| Nuova Zelanda (9) | kea (`VKNdZ`), takahē (`0WjCC`), kākā (`41nxb`), kākāpō (`portraits/kakapo`), pipistrello dalla coda corta (`CgvKY`), cavaliere nero (`W3gxT`), tuatara (`portraits/tuatara`), fraticello fata (`jZPw0`), pinguino dagli occhi gialli (`8vrR6`) | Tutte presenti. Le 3 rane sono generiche e non si sa di che specie siano. |
+| Tundra artica (10) | gabbiano d'avorio (`2YOQZ`), civetta delle nevi (`GVYo0`), bue muschiato (`YWHj6`), lupo artico (`8hrnr`), lepre artica (`A0M0y`), volpe artica (`6TagW`), pernice bianca (`Ae79f`), lemming (`HfTBH`), citello artico (`gUEf7`) | Zigolo delle nevi: ha una mascherina nera sugli occhi che quello vero non ha (`3aPO3`). Lemming `ZuTwp` scartato: gli è stato disegnato un collare nero, ma il "collare" del nome non è così. |
+| Antartide (10) | petrello delle nevi (`0kRrD`), stercorario (`9DSIk`), pinguino imperatore (`9LnW6`), pinguino di Adelia (`CqY0z`), krill (`giDPW`), pesce argento (`LJvXN`), foca di Weddell (`mMsXz`) | Foca cancrivora: muso tondo da foca comune, mentre quella vera lo ha lungo e appuntito (`BzLzz`). Pesce ghiaccio e moscerino antartico: non c'erano. |
+| Tian Shan (7) | pika dell'Ili (`portraits/ili-pika`), ragno lupo (`BfP7G`), Apollo del Tian Shan (`EIIKO`), talpa-arvicola (`3q8Ld`), citello (`SxyPZ`) | Sicista: nessun topolino con la striscia nera sul dorso (`4pdJO`, `jXcgL`). Fringuello alpino: non c'era. Coleotteri, falena e plecottero: generici. |
+| Ande (7) | topo dalle orecchie a foglia (`4pdJO`), condor (`MBd0a`), lucertola di Arequipa (`jzs3b`), gatto delle Ande (`portraits/andean-cat`), vigogna (`Cbe2F`), orso dagli occhiali (`6c3Xd`) | Rana del Titicaca: non c'era. |
+| Sahara (7) | addax (`FNsTz`), gatto delle sabbie (`RuzxK`), fennec (`tfTB3`), formica argentata (`KE2BV`) | Vipera cornuta, pesce delle sabbie e gerboa: non c'erano. |
+
+**Tenute da parte:** orice d'Arabia, diavolo spinoso, bilby, mostro di Gila, tartaruga del deserto, rana della pioggia, verme dei ghiacci, plecottero dei ghiacciai, lupo etiope, gelada, macaco dalla coda di leone. Sono di posti che sul globo non abbiamo ancora, e le useremo quando li apriremo.
+
+I prompt per tutte le immagini che mancano sono in `per-grok.md`.

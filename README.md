@@ -1,6 +1,6 @@
 # Orbis
 
-Un'app per esplorare l'universo e la Terra: il sistema solare in 3D, le galassie da vedere da vicino, i pianeti scoperti intorno ad altre stelle, e poi le discese verticali nell'oceano più profondo, nella foresta amazzonica e nelle foreste del Madagascar, incontrando creature che quasi nessuno conosce. Ogni giorno, due nuove curiosità sullo spazio e sulla Terra.
+Un'app per esplorare l'universo e la Terra: il sistema solare in 3D, le galassie da vedere da vicino, i pianeti scoperti intorno ad altre stelle, e poi le discese verticali in 10 luoghi della Terra, dall'oceano più profondo alla cima dell'Everest, incontrando 101 creature, molte delle quali quasi nessuno conosce. Ogni giorno, due nuove curiosità sullo spazio e sulla Terra.
 
 Idea di Olivia Dinu, costruita con Claude. Versione del 18 ottobre 2026.
 
@@ -31,13 +31,20 @@ Comandi:
 - **Sistema solare:** Sole, 8 pianeti e la Luna con le mappe reali basate sui dati NASA, e un cielo stellato più vivo.
 - **Galassie:** 12 galassie costruite stella per stella, da 1.400 a 70.000 stelle ciascuna, con bracci, polveri e nebulose. Tocchi una galassia e ci voli vicino, poi zoomi fin dentro. Nella scheda c'è la **foto vera** fatta da Hubble, Webb o dai telescopi ESO, da ingrandire a tutto schermo. Nella Via Lattea un segno mostra dove si trova il Sole.
 - **Esopianeti:** 13 pianeti, comprese le scoperte del 2026, con ricerca e filtri.
-- **Terra:** giorno e notte con le luci delle città, nuvole e atmosfera. 3 luoghi esplorabili e 13 segnati come "presto".
+- **Terra:** giorno e notte con le luci delle città, nuvole e atmosfera. 10 luoghi esplorabili e 7 segnati come "presto".
 - **Discese:**
   - Oceano: da 0 a 10.935 m, 17 creature.
   - Amazzonia: dagli 88,5 m dell'albero più alto fino a sotto terra, 12 creature.
   - Madagascar: dalla chioma della foresta pluviale alle tane nella terra rossa, 10 creature.
+  - Himalaya: dalla cima dell'Everest alle foreste di rododendri, con l'ossigeno che cambia, 12 creature.
+  - Nuova Zelanda: dalle Alpi del Sud al mare, 9 creature.
+  - Tundra artica: dal cielo alle gallerie sotto la neve, con la temperatura d'inverno, 10 creature.
+  - Antartide: dal cielo sopra il ghiaccio a 600 m sotto il mare, 10 creature.
+  - Tian Shan: dalle Montagne Celesti ai boschi di abeti, 7 creature.
+  - Ande: dal vulcano Llullaillaco alla foresta delle nuvole, 7 creature.
+  - Sahara: dall'aria rovente alle tane sotto la sabbia, con la temperatura, 7 creature.
 - **Curiosità del giorno:** 31 sullo spazio e 30 sulla Terra, ognuna con la spiegazione del perché. Si aprono da sole la prima volta di ogni giorno e da "Lo sapevi?" in basso a destra. "Mostramelo" porta nel punto dell'app di cui parla la curiosità.
-- **Laboratorio immagini:** un prompt per ognuna delle 39 creature.
+- **Laboratorio immagini:** un prompt per ognuna delle 101 creature, con lo stato «pronta» o «da fare».
 
 ## Come lavoriamo
 
@@ -71,8 +78,8 @@ Una zona alla volta, finita prima di passare alla successiva.
 
 ## Cosa manca ancora
 
-1. Le immagini delle creature: 6 su 39 sono pronte (Madagascar). Il controllo è in `docs/controllo-immagini.md`; per le altre c'è ancora una lettera provvisoria.
-2. I 13 luoghi segnati come "presto" sul globo, da verificare e aprire uno alla volta.
+1. Le immagini delle creature: 55 su 101 sono pronte. Il controllo è in `docs/controllo-immagini.md`. Le 46 che mancano sono in `docs/per-grok.md`, con i prompt; al loro posto per ora c'è una lettera provvisoria.
+2. I 7 luoghi ancora segnati come "presto" sul globo: Barriera Corallina, Atacama, Namib, Appalachi, Ghiacciai della Patagonia, Ghati occidentali e Altopiano etiope.
 3. La foto del giorno della NASA (APOD), quando l'app avrà un suo sito.
 4. Il Laboratorio immagini va tolto prima di pubblicare l'app.
 
