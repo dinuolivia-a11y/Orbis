@@ -49,7 +49,7 @@ p{margin:0}
 /* ---------- stage ---------- */
 #gl{position:fixed;inset:0;width:100%;height:100%;display:block;touch-action:none;background:var(--void)}
 #labels{position:fixed;inset:0;pointer-events:none;z-index:5;overflow:hidden}
-.lbl{position:absolute;left:0;top:0;pointer-events:auto;text-shadow:0 0 6px #000,0 0 2px #000;font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);opacity:.82;white-space:nowrap;padding:4px 8px;border-radius:999px;transition:opacity .2s,background .2s;will-change:transform}
+.lbl{position:absolute;left:0;top:0;pointer-events:none;text-shadow:0 0 6px #000,0 0 2px #000;font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);opacity:.82;white-space:nowrap;padding:4px 8px;border-radius:999px;transition:opacity .2s,background .2s;will-change:transform}
 .lbl:hover,.lbl:focus-visible{opacity:1;background:rgba(5,7,12,.6)}
 .lbl.dim{opacity:.45}
 .lbl.hot{display:flex;align-items:center;gap:8px;background:rgba(5,7,12,.55);border:1px solid var(--hair);opacity:.95}
@@ -71,7 +71,7 @@ p{margin:0}
 .lang button[aria-pressed="true"]{background:var(--ink);color:var(--void)}
 
 /* ---------- hint & corner ---------- */
-.hint{position:fixed;z-index:10;left:50%;transform:translateX(-50%);bottom:calc(20px + env(safe-area-inset-bottom,0px));max-width:min(560px,calc(100vw - 32px));text-align:center;font-size:.9rem;color:var(--mist);background:rgba(5,7,12,.6);border:1px solid var(--hair);border-radius:999px;padding:8px 16px;backdrop-filter:blur(8px);transition:opacity .3s}
+.hint{position:fixed;z-index:10;pointer-events:none;left:50%;transform:translateX(-50%);bottom:calc(20px + env(safe-area-inset-bottom,0px));max-width:min(560px,calc(100vw - 32px));text-align:center;font-size:.9rem;color:var(--mist);background:rgba(5,7,12,.6);border:1px solid var(--hair);border-radius:999px;padding:8px 16px;backdrop-filter:blur(8px);transition:opacity .3s}
 .hint.faded{opacity:0!important;pointer-events:none}
 .corner{position:fixed;z-index:10;left:max(16px,env(safe-area-inset-left,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));display:flex;gap:6px}
 .corner button{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mist);padding:6px 10px;border-radius:999px;border:1px solid var(--hair);background:rgba(5,7,12,.5)}
@@ -99,6 +99,19 @@ p{margin:0}
 .cta{align-self:flex-start;display:inline-flex;align-items:center;gap:10px;padding:11px 18px;border-radius:999px;background:var(--accent);color:var(--void);font-weight:700;font-size:.95rem;transition:transform .15s}
 .cta:hover{transform:translateX(3px)}
 .cta.ghost{background:none;color:var(--ink);border:1px solid var(--hair);font-weight:400}
+/* collapsed panel: the text hides, the view stays where it is */
+.pbar{display:none}
+.panel.collapsed{animation:none;padding:8px;gap:0;width:auto;max-width:min(460px,calc(100vw - 32px));overflow:visible}
+.panel.collapsed > *:not(.pbar){display:none}
+.panel.collapsed .pbar{display:flex;align-items:center;gap:8px}
+.pbar .nm{display:flex;flex-direction:column;align-items:flex-start;text-align:left;gap:2px;padding:2px 8px;min-width:0;flex:1}
+.pbar .nm .k{font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pbar .nm b{font-family:var(--display);font-weight:500;font-size:1.2rem;line-height:1.1;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pbar .info{display:inline-flex;align-items:center;gap:7px;padding:9px 14px;border-radius:999px;border:1px solid color-mix(in srgb,var(--accent) 45%,transparent);font-size:.86rem;color:var(--ink);white-space:nowrap;flex:none}
+.pbar .info::before{content:"i";display:grid;place-items:center;width:17px;height:17px;border-radius:50%;border:1px solid var(--accent);color:var(--accent);font-family:var(--display);font-style:italic;font-weight:700;font-size:.78rem;line-height:1}
+.pbar .home{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;border:1px solid var(--hair);color:var(--mist);flex:none}
+.pbar .home:hover,.pbar .info:hover{color:var(--ink);border-color:var(--ink)}
+.pbar .home svg{width:18px;height:18px}
 
 /* ---------- photos & lightbox ---------- */
 .photo{display:block;width:100%;padding:0;border:1px solid var(--hair);border-radius:12px;overflow:hidden;position:relative;background:#000;cursor:zoom-in}
@@ -118,6 +131,9 @@ p{margin:0}
 .cur-chip{position:fixed;z-index:12;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));display:flex;align-items:center;gap:8px;padding:9px 15px;border-radius:999px;background:rgba(5,7,12,.72);border:1px solid color-mix(in srgb,var(--sol) 55%,transparent);color:var(--ink);font-size:.86rem;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
 .cur-chip::before{content:"✦";color:var(--sol);font-size:.95rem}
 .cur-chip:hover{border-color:var(--sol)}
+.recenter{position:fixed;z-index:12;right:max(16px,env(safe-area-inset-right,0px));top:calc(var(--bar-h) + 10px + env(safe-area-inset-top,0px));display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(5,7,12,.72);border:1px solid var(--hair);color:var(--ink);font-size:.86rem;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);animation:rise .3s ease-out}
+.recenter:hover{border-color:var(--ink)}
+.recenter svg{width:17px;height:17px;flex:none}
 .cur{position:fixed;inset:0;z-index:72;background:rgba(2,3,6,.72);display:grid;place-items:center;padding:calc(16px + env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) calc(16px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
 .cur-card{position:relative;width:min(640px,100%);max-height:100%;overflow-y:auto;background:var(--glass-solid);border:1px solid var(--hair);border-radius:20px;padding:26px 26px 22px;display:flex;flex-direction:column;gap:16px;box-shadow:0 30px 80px rgba(0,0,0,.5);animation:rise .35s ease-out}
 .cur-card > *{flex-shrink:0}
@@ -240,6 +256,7 @@ p{margin:0}
   .dive-top .back{white-space:nowrap;padding:7px 12px;font-size:.85rem}
   .panel{left:0;right:0;bottom:0;top:auto;width:auto;max-height:54%;border-radius:20px 20px 0 0;border-bottom:0;padding:20px max(18px,env(safe-area-inset-right,0px)) calc(20px + env(safe-area-inset-bottom,0px)) max(18px,env(safe-area-inset-left,0px))}
   .panel h2{font-size:1.9rem}
+  .panel.collapsed{left:12px;right:12px;top:auto;bottom:calc(104px + env(safe-area-inset-bottom,0px));width:auto;max-width:none;border-radius:18px;border-bottom:1px solid var(--hair);padding:7px}
   .hint{border-radius:14px;font-size:.84rem}
   .exo-ui{left:0;right:0;top:calc(var(--bar-h) + env(safe-area-inset-top,0px));bottom:auto;width:auto;border-radius:0;border-left:0;border-right:0;padding:10px max(16px,env(safe-area-inset-right,0px)) 10px max(16px,env(safe-area-inset-left,0px));gap:8px}
   .exo-ui h2,.exo-ui .chips{display:none}
@@ -293,6 +310,10 @@ p{margin:0}
 /* ---------- install (PWA build only) ---------- */
 .corner #install{color:var(--sol);border-color:color-mix(in srgb,var(--sol) 55%,transparent)}
 .corner #install::before{content:"\2193  "}
+.update{position:fixed;z-index:72;left:50%;top:calc(var(--bar-h) + 8px + env(safe-area-inset-top,0px));transform:translateX(-50%);display:flex;align-items:center;gap:12px;padding:8px 8px 8px 16px;border-radius:999px;background:var(--glass-solid);border:1px solid color-mix(in srgb,var(--sol) 55%,transparent);box-shadow:0 10px 30px rgba(0,0,0,.45);font-size:.9rem;white-space:nowrap;animation:rise .35s ease-out}
+.update[hidden]{display:none!important}
+.update::before{content:"\2726";color:var(--sol)}
+.update button{padding:7px 14px;border-radius:999px;background:var(--sol);color:var(--void);font-weight:700;font-size:.85rem}
 .loading .appicon{width:104px;height:104px;border-radius:24px;box-shadow:0 14px 50px rgba(241,183,102,.16),0 0 0 1px rgba(255,255,255,.06)}
 .ios-sheet{position:fixed;inset:0;z-index:76;display:grid;align-items:end;justify-items:center;background:rgba(2,3,6,.6);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
 .ios-sheet[hidden]{display:none!important}
@@ -323,9 +344,11 @@ p{margin:0}
 
 <p class="hint" id="hint"></p>
 <div class="corner"><button type="button" id="install" hidden></button><button type="button" id="open-lab"></button><button type="button" id="open-credits"></button></div>
+<div class="update" id="update" hidden role="status"><span id="update-msg"></span><button type="button" id="update-go"></button></div>
 <section class="ios-sheet" id="ios-sheet" hidden role="dialog" aria-modal="true" aria-labelledby="ios-h"><div class="ios-card" id="ios-card"></div></section>
 
 <button type="button" class="cur-chip" id="cur-chip"></button>
+<button type="button" class="recenter" id="recenter" hidden></button>
 <aside class="panel" id="panel" hidden aria-live="polite"></aside>
 <section class="cur" id="cur" hidden role="dialog" aria-modal="true" aria-labelledby="cur-h"><div class="cur-card" id="cur-card"></div></section>
 <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true">
@@ -389,9 +412,9 @@ const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&l
 const UI = {
   nav: { solar: { it: "Sistema solare", en: "Solar system" }, earth: { it: "Terra", en: "Earth" }, galaxies: { it: "Galassie", en: "Galaxies" }, exo: { it: "Esopianeti", en: "Exoplanets" } },
   hint: {
-    solar: { it: "Tocca un pianeta per esplorarlo. Trascina per ruotare, pizzica o usa la rotella per lo zoom.", en: "Tap a planet to explore it. Drag to rotate, pinch or scroll to zoom." },
+    solar: { it: "Tocca un pianeta per esplorarlo. Trascina per spostarti, allarga le dita o usa la rotella per ingrandire nel punto che vuoi. Se ti fermi su un pianeta, la vista lo segue. Per ruotare usa due dita o il tasto destro.", en: "Tap a planet to explore it. Drag to move around, pinch or scroll to zoom in where you want. Stop on a planet and the view follows it. To rotate, use two fingers or the right mouse button." },
     earth: { it: "Tocca un luogo luminoso, come l’oceano, l’Amazzonia o il Madagascar, per scendere. Gira la Terra per vedere le luci delle città di notte.", en: "Tap a glowing place, like the ocean, the Amazon or Madagascar, to descend. Turn the Earth to see city lights at night." },
-    galaxies: { it: "Tocca una galassia per volarci vicino, poi pizzica o usa la rotella per entrare tra le sue stelle. Ogni anello è dieci volte più lontano del precedente.", en: "Tap a galaxy to fly up close, then pinch or scroll to dive in among its stars. Each ring is ten times farther than the one before." },
+    galaxies: { it: "Tocca una galassia per volarci vicino. Trascina per spostarti, allarga le dita o usa la rotella per ingrandire dove vuoi e arrivare fino alle altre galassie. Per ruotare usa due dita o il tasto destro. Ogni anello è dieci volte più lontano del precedente.", en: "Tap a galaxy to fly up close. Drag to move around, pinch or scroll to zoom in wherever you like and travel to other galaxies. To rotate, use two fingers or the right mouse button. Each ring is ten times farther than the one before." },
     exo: { it: "Scegli un pianeta dalla lista o cercalo per nome.", en: "Pick a planet from the list or search by name." }
   },
   lab: { it: "Laboratorio immagini", en: "Image lab" },
@@ -412,6 +435,8 @@ const UI = {
   fact: { it: "Lo sapevi?", en: "Did you know?" },
   exploreEarth: { it: "Esplora la Terra", en: "Explore the Earth" },
   overview: { it: "Torna alla vista d’insieme", en: "Back to the overview" },
+  showCard: { it: "Scheda", en: "Info" },
+  recenter: { it: "Vista d’insieme", en: "Overview" },
   startDive: { it: "Inizia la discesa", en: "Start the descent" },
   backEarth: { it: "Torna alla Terra", en: "Back to Earth" },
   backTop: { it: "Risali in cima", en: "Back to the top" },
@@ -1666,7 +1691,7 @@ function addLabel(view, cls, getPos, onClick, textFn, visibleFn) {
   const el = document.createElement(onClick ? "button" : "span");
   el.className = "lbl " + cls; if (onClick) { el.type = "button"; el.addEventListener("click", onClick); }
   labelsEl.appendChild(el);
-  const L = { el, view, getPos, textFn, visibleFn }; LABELS.push(L); return L;
+  const L = { el, view, getPos, onClick, textFn, visibleFn }; LABELS.push(L); return L;
 }
 for (const p of PLANETS) {
   if (p.id === "moon") continue;
@@ -1693,6 +1718,15 @@ for (const R of gal.rings) {
 }
 function refreshLabelText() { for (const L of LABELS) L.el.textContent = L.textFn(); }
 const _p = new THREE.Vector3();
+// Labels let every drag and pinch through to the scene; a tap on one is caught here.
+function labelAt(x, y) {
+  for (const L of LABELS) {
+    if (!L.onClick || L.el.hidden || L.view !== VIEW) continue;
+    const r = L.el.getBoundingClientRect();
+    if (x >= r.left - 6 && x <= r.right + 6 && y >= r.top - 6 && y <= r.bottom + 6) return L;
+  }
+  return null;
+}
 function updateLabels() {
   const w = innerWidth, h = innerHeight;
   for (const L of LABELS) {
@@ -1715,9 +1749,9 @@ let VIEW = "solar";
 let overlayOpen = null;
 let fly = null;
 const CAM = {
-  solar: { pos: new THREE.Vector3(0, 62, 128), target: new THREE.Vector3(0, 0, 0), min: 6, max: 600 },
+  solar: { pos: new THREE.Vector3(0, 62, 128), target: new THREE.Vector3(0, 0, 0), min: 0.8, max: 600 },
   earth: { pos: earth.camHome.clone(), target: new THREE.Vector3(0, 0, 0), min: 6.4, max: 40 },
-  galaxies: { pos: new THREE.Vector3(-118, 135, 44), target: new THREE.Vector3(0, 0, 0), min: 8, max: 700 },
+  galaxies: { pos: new THREE.Vector3(-118, 135, 44), target: new THREE.Vector3(0, 0, 0), min: 0.15, max: 700 },
   exo: { pos: new THREE.Vector3(0, 1.4, 16), target: new THREE.Vector3(0, 0, 0), min: 6, max: 45 }
 };
 let needsFit = false;
@@ -1733,13 +1767,32 @@ function fitPos(v) {
   if (v === "exo" && innerWidth <= 760) need = Math.max(need, FIT.exo * 1.2 / (0.17 * halfT * 2));
   return c.target.clone().add(dir.normalize().multiplyScalar(Math.min(c.max, Math.max(len, need))));
 }
-function setCamera(v) { const c = CAM[v]; camera.position.copy(fitPos(v)); controls.target.copy(c.target); controls.minDistance = c.min; controls.maxDistance = c.max; controls.update(); }
+function configureControls(v) {
+  // Solar system and galaxies move like a map: drag to travel, zoom where the finger or cursor is.
+  // Earth and exoplanets stay globes: drag to turn them.
+  const map = v === "solar" || v === "galaxies";
+  controls.enablePan = map; controls.screenSpacePanning = false; controls.zoomToCursor = map; controls.panSpeed = 1;
+  controls.mouseButtons = map ? { LEFT: THREE.MOUSE.PAN, MIDDLE: THREE.MOUSE.DOLLY, RIGHT: THREE.MOUSE.ROTATE } : { LEFT: THREE.MOUSE.ROTATE, MIDDLE: THREE.MOUSE.DOLLY, RIGHT: THREE.MOUSE.ROTATE };
+  controls.touches = map ? { ONE: THREE.TOUCH.PAN, TWO: THREE.TOUCH.DOLLY_ROTATE } : { ONE: THREE.TOUCH.ROTATE, TWO: THREE.TOUCH.DOLLY_ROTATE };
+}
+function setCamera(v) { const c = CAM[v]; configureControls(v); camera.position.copy(fitPos(v)); controls.target.copy(c.target); controls.minDistance = c.min; controls.maxDistance = c.max; controls.update(); }
+const vOff = { x: 0, y: 0, tx: 0, ty: 0 };
+let loopStarted = false;
+function setOff() { const W = innerWidth, H = innerHeight; if (Math.abs(vOff.x) > 0.5 || Math.abs(vOff.y) > 0.5) camera.setViewOffset(W, H, vOff.x, vOff.y, W, H); else camera.clearViewOffset(); }
+function stepOffset(dt) {
+  if (vOff.x === vOff.tx && vOff.y === vOff.ty) return;
+  const k = Math.min(1, dt * 7); vOff.x += (vOff.tx - vOff.x) * k; vOff.y += (vOff.ty - vOff.y) * k;
+  if (Math.abs(vOff.tx - vOff.x) < 0.5 && Math.abs(vOff.ty - vOff.y) < 0.5) { vOff.x = vOff.tx; vOff.y = vOff.ty; }
+  setOff();
+}
 function applyOffset() {
-  const W = innerWidth, H = innerHeight, narrow = W <= 760, open = !$("panel").hidden;
+  const W = innerWidth, H = innerHeight, narrow = W <= 760, P = $("panel"), collapsed = !P.hidden && P.classList.contains("collapsed"), open = !P.hidden && !collapsed;
   let x = 0, y = 0;
-  if (VIEW === "exo") { if (narrow) y = H * 0.07; else x = 40; }
+  if (VIEW === "exo") { if (narrow) y = collapsed ? -H * 0.02 : H * 0.07; else x = 40; }
   else if (open) { if (narrow) y = H * 0.24; else x = Math.min(200, W * 0.15); }
-  if (x || y) camera.setViewOffset(W, H, x, y, W, H); else camera.clearViewOffset();
+  vOff.tx = x; vOff.ty = y;
+  if (REDUCED || !loopStarted) { vOff.x = x; vOff.y = y; }
+  setOff();
 }
 function veil(fn) {
   const V = $("veil"); if (REDUCED) { fn(); return; }
@@ -1747,7 +1800,7 @@ function veil(fn) {
 }
 function setView(v, opts = {}) {
   const apply = () => {
-    VIEW = v; solar.follow = null; fly = null; document.body.className = "v-" + v;
+    VIEW = v; navMoved = false; solar.follow = null; fly = null; document.body.className = "v-" + v;
     closePanel(); setCamera(v);
     $("exo-ui").hidden = v !== "exo";
     if (v === "exo") { renderExoList(); if (!exo.current) setExo(EXO[0]); openExoPanel(exo.current); }
@@ -1770,7 +1823,42 @@ function selectPlanet(id) {
   controls.minDistance = p.r * 1.6;
   openPanel({ type: "planet", id });
 }
-function overview() { solar.follow = null; closePanel(); flyTo(fitPos("solar"), CAM.solar.target.clone(), 1.2); controls.minDistance = CAM.solar.min; }
+const _sv = new THREE.Vector3(), _sw = new THREE.Vector3();
+// Where the last gesture was aimed: the point under the wheel or between the two fingers. A drag aims at the middle of the view.
+let gestureFocus = null; const _ptrs = new Map();
+canvas.addEventListener("wheel", (e) => { gestureFocus = { x: e.clientX, y: e.clientY }; }, { passive: true });
+canvas.addEventListener("pointerdown", (e) => { _ptrs.set(e.pointerId, e); if (_ptrs.size === 1) gestureFocus = null; });
+canvas.addEventListener("pointermove", (e) => { if (!_ptrs.has(e.pointerId)) return; _ptrs.set(e.pointerId, e); if (_ptrs.size === 2) { const [a, b] = [..._ptrs.values()]; gestureFocus = { x: (a.clientX + b.clientX) / 2, y: (a.clientY + b.clientY) / 2 }; } });
+for (const ev of ["pointerup", "pointercancel"]) canvas.addEventListener(ev, (e) => { _ptrs.delete(e.pointerId); });
+function toScreen(v, out) { const p = _sw.copy(v).project(camera); out.x = (p.x + 1) / 2 * innerWidth; out.y = (1 - p.y) / 2 * innerHeight; out.z = p.z; return out; }
+function snapFollow() {
+  // After a drag or a zoom, if a planet sits where you were aiming, glide onto it and keep following it.
+  if (VIEW !== "solar" || fly) return;
+  const kPx = innerHeight / 2 / Math.tan(THREE.MathUtils.degToRad(camera.fov / 2)), near = 0.14 * Math.min(innerWidth, innerHeight);
+  const aim = gestureFocus || toScreen(controls.target, {}), sp = {};
+  let best = null, score = 1;
+  for (const id in solar.bodies) {
+    const b = solar.bodies[id], wp = solar.worldPos(id, _sv), px = b.p.r / Math.max(1e-3, camera.position.distanceTo(wp)) * kPx;
+    if (px < 4) continue;
+    toScreen(wp, sp); if (sp.z > 1) continue;
+    const d = Math.hypot(sp.x - aim.x, sp.y - aim.y), lim = Math.max(px * 1.6, near);
+    if (d / lim < score) { score = d / lim; best = id; }
+  }
+  if (best) {
+    if (!solar.follow || solar.follow.id !== best) solar.follow = { id: best, last: solar.worldPos(best, new THREE.Vector3()) };
+    solar.follow.center = true; controls.minDistance = solar.bodies[best].p.r * 1.8;
+  } else { solar.follow = null; controls.minDistance = CAM.solar.min; }
+}
+let snapT = null, interacting = false;
+controls.addEventListener("start", () => { interacting = true; clearTimeout(snapT); if (VIEW === "solar" || VIEW === "galaxies") { navMoved = true; updateRecenter(); } });
+controls.addEventListener("end", () => { interacting = false; clearTimeout(snapT); if (VIEW === "solar") snapT = setTimeout(snapFollow, 350); });
+function keepOutsidePlanets() {
+  for (const id in solar.bodies) {
+    const b = solar.bodies[id], wp = solar.worldPos(id, _sv), m = b.p.r * 1.2, d = camera.position.distanceTo(wp);
+    if (d < m) camera.position.copy(wp).add(_sw.copy(camera.position).sub(wp).normalize().multiplyScalar(m));
+  }
+}
+function overview() { navMoved = false; solar.follow = null; closePanel(); flyTo(fitPos("solar"), CAM.solar.target.clone(), 1.2); controls.minDistance = CAM.solar.min; }
 function selectGalaxy(id) {
   const G = GALAXIES.find((g) => g.id === id), spec = GAL3D[id], grp = gal.sprites[id];
   const target = grp.position.clone();
@@ -1779,16 +1867,29 @@ function selectGalaxy(id) {
   controls.minDistance = Math.max(0.15, spec.R * 0.05);
   openPanel({ type: "galaxy", id });
 }
-function galOverview() { closePanel(); flyTo(fitPos("galaxies"), new THREE.Vector3(), 1.3); controls.minDistance = CAM.galaxies.min; }
+function galOverview() { navMoved = false; closePanel(); flyTo(fitPos("galaxies"), new THREE.Vector3(), 1.3); controls.minDistance = CAM.galaxies.min; }
 
 /* =========================================================
    PANEL
    ========================================================= */
 let panelState = null;
+const ZOOM_OUT_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21M7.5 10.5h6"/></svg>';
+// "Overview" pill: appears once you have wandered off in the solar system or among the galaxies.
+let navMoved = false;
+function updateRecenter() { $("recenter").hidden = !((VIEW === "solar" || VIEW === "galaxies") && navMoved && $("panel").hidden && diveEl.hidden); }
+function resetView() { if (VIEW === "solar") overview(); else if (VIEW === "galaxies") galOverview(); else flyTo(fitPos(VIEW), CAM[VIEW].target.clone(), 1.0); }
+$("recenter").onclick = resetView;
 function statsHTML(stats) { return `<dl class="stats">${stats.map(([k, v]) => `<div><dt>${esc(t(k))}</dt><dd>${esc(t(v))}</dd></div>`).join("")}</dl>`; }
 function openPanel(state) {
   panelState = state; const P = $("panel"); let html = "";
-  const X = `<button type="button" class="x" id="panel-x" aria-label="${esc(t(UI.close))}">×</button>`;
+  let X = `<button type="button" class="x" id="panel-x" aria-label="${esc(t(UI.close))}">×</button>`;
+  if (state.type !== "dive") {
+    const it = state.type === "planet" ? PLANETS.find((q) => q.id === state.id) : state.type === "galaxy" ? GALAXIES.find((q) => q.id === state.id) : EXO.find((q) => q.id === state.id);
+    const nm = typeof it.name === "string" ? it.name : t(it.name);
+    const homeLabel = state.type === "planet" ? t(UI.overview) : state.type === "galaxy" ? t(UI.backMap) : "";
+    const home = homeLabel ? `<button type="button" class="home" id="pbar-home" aria-label="${esc(homeLabel)}" title="${esc(homeLabel)}">${ZOOM_OUT_SVG}</button>` : "";
+    X += `<div class="pbar"><button type="button" class="nm" id="pbar-name"><span class="k">${esc(t(it.kicker))}</span><b>${esc(nm)}</b></button><button type="button" class="info" id="pbar-info">${esc(t(UI.showCard))}</button>${home}</div>`;
+  }
   if (state.type === "planet") {
     const p = PLANETS.find((q) => q.id === state.id);
     html = `${X}<p class="kicker">${esc(t(p.kicker))}</p><h2>${esc(t(p.name))}</h2>${statsHTML(p.stats)}<p class="body">${esc(t(p.text))}</p><p class="fact"><strong>${esc(t(UI.fact))}</strong>${esc(t(p.fact))}</p>`;
@@ -1807,15 +1908,22 @@ function openPanel(state) {
     const D = DIVE_PANEL[state.id];
     html = `${X}<p class="kicker">${esc(t(D.kicker))}</p><h2>${esc(t(D.title))}</h2>${state.extra ? `<p class="note">${esc(state.extra)}</p>` : ""}<p class="body">${esc(t(D.text).replace("{n}", DIVES[state.id].creatures.length))}</p><button type="button" class="cta" id="panel-cta">${esc(t(UI.startDive))} ↓</button>`;
   }
-  P.innerHTML = html; P.hidden = false; $("hint").style.opacity = 0; applyOffset();
-  $("panel-x").onclick = () => { if (state.type === "planet") overview(); else if (state.type === "galaxy") galOverview(); else closePanel(); };
+  P.innerHTML = html; P.classList.toggle("collapsed", !!state.collapsed); P.hidden = false; $("hint").style.opacity = 0; applyOffset(); navMoved = true; updateRecenter();
+  $("panel-x").onclick = () => { if (state.type === "dive") closePanel(); else collapsePanel(true); };
+  for (const id of ["pbar-name", "pbar-info"]) { const b = $(id); if (b) b.onclick = () => collapsePanel(false); }
+  const hb = $("pbar-home"); if (hb) hb.onclick = () => { if (state.type === "planet") overview(); else galOverview(); };
   const pm = $("panel-map"); if (pm) pm.onclick = galOverview;
   const pp = $("panel-photo"); if (pp) { const ph = GAL_PHOTOS[state.id]; pp.onclick = () => openPhoto(photoUrl(ph.src + ".webp"), t(ph.cap) + "  ·  " + ph.credit); }
   const cta = $("panel-cta");
   if (cta) cta.onclick = () => { if (state.type === "planet") setView("earth"); else if (state.type === "dive") openDive(state.id); };
   const ov = $("panel-overview"); if (ov) ov.onclick = overview;
 }
-function closePanel() { panelState = null; $("panel").hidden = true; $("hint").style.opacity = 1; applyOffset(); }
+function closePanel() { panelState = null; $("panel").hidden = true; $("panel").classList.remove("collapsed"); $("hint").style.opacity = 1; applyOffset(); updateRecenter(); }
+function collapsePanel(on) {
+  if (!panelState) return;
+  panelState.collapsed = on; const P = $("panel"); P.classList.toggle("collapsed", on); P.scrollTop = 0; applyOffset();
+  const f = $(on ? "pbar-info" : "panel-x"); if (f) f.focus({ preventScroll: true });
+}
 function openExoPanel(e) { openPanel({ type: "exo", id: e.id }); }
 function openHotspot(id, extra) { openPanel({ type: "dive", id, extra }); }
 
@@ -1842,6 +1950,7 @@ const ray = new THREE.Raycaster(); const ndc = new THREE.Vector2(); let down = n
 canvas.addEventListener("pointerdown", (e) => { down = { x: e.clientX, y: e.clientY }; });
 canvas.addEventListener("pointerup", (e) => {
   if (!down) return; const moved = Math.hypot(e.clientX - down.x, e.clientY - down.y); down = null; if (moved > 7) return;
+  const lb = labelAt(e.clientX, e.clientY); if (lb) { lb.onClick(); return; }
   ndc.set(e.clientX / innerWidth * 2 - 1, -(e.clientY / innerHeight) * 2 + 1); ray.setFromCamera(ndc, camera);
   if (VIEW === "solar") { const hit = ray.intersectObjects(solar.pick, false)[0]; if (hit) selectPlanet(hit.object.userData.id); }
   else if (VIEW === "galaxies") { const hit = ray.intersectObjects(gal.pick, false)[0]; if (hit) selectGalaxy(hit.object.userData.id); }
@@ -2064,7 +2173,8 @@ $("open-credits").onclick = () => openPage("credits");
 function renderNav() {
   const order = [["solar", "solar"], ["earth", "earth"], ["galaxies", "galaxies"], ["exo", "exo"]];
   $("nav").innerHTML = order.map(([v]) => `<button type="button" data-v="${v}" ${VIEW === v ? 'aria-current="page"' : ""}>${esc(t(UI.nav[v]))}</button>`).join("");
-  $("nav").querySelectorAll("button").forEach((b) => b.onclick = () => { if (!diveEl.hidden) { diveEl.hidden = true; overlayOpen = null; dive = null; cancelAnimationFrame(moteRaf); } if (b.dataset.v !== VIEW) setView(b.dataset.v); });
+  $("nav").querySelectorAll("button").forEach((b) => b.onclick = () => { if (!diveEl.hidden) { diveEl.hidden = true; overlayOpen = null; dive = null; cancelAnimationFrame(moteRaf); } if (b.dataset.v !== VIEW) setView(b.dataset.v); else resetView(); });
+  $("recenter").innerHTML = `${ZOOM_OUT_SVG}<span>${esc(t(UI.recenter))}</span>`; $("recenter").title = t(UI.overview);
   $("open-lab").textContent = t(UI.lab); $("open-credits").textContent = t(UI.credits);
 }
 let hintT = null;
@@ -2169,7 +2279,7 @@ function resize() {
   const w = innerWidth, h = innerHeight;
   if (!(w > 0 && h > 0)) return;
   lastW = w; lastH = h;
-  renderer.setSize(w, h, false); camera.aspect = innerWidth / innerHeight; applyOffset(); camera.updateProjectionMatrix();
+  renderer.setSize(w, h, false); camera.aspect = innerWidth / innerHeight; camera.updateProjectionMatrix(); applyOffset();
   starMat.uniforms.uPR.value = renderer.getPixelRatio();
   const p = camera.position;
   if (needsFit || !isFinite(p.x + p.y + p.z)) { needsFit = false; fly = null; solar.follow = null; setCamera(VIEW); }
@@ -2181,7 +2291,7 @@ try { new ResizeObserver(() => resize()).observe(document.documentElement); } ca
 const clock = new THREE.Clock();
 function ease(k) { return k < 0.5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2; }
 function loop() {
-  requestAnimationFrame(loop);
+  requestAnimationFrame(loop); loopStarted = true;
   const dt = Math.min(clock.getDelta(), 0.05);
   if (innerWidth !== lastW || innerHeight !== lastH) resize();
   if (overlayOpen || lastW <= 0) return;
@@ -2194,12 +2304,19 @@ function loop() {
   } else if (VIEW === "solar" && solar.follow) {
     const now = solar.worldPos(solar.follow.id, new THREE.Vector3()); const d = now.clone().sub(solar.follow.last);
     camera.position.add(d); controls.target.add(d); solar.follow.last.copy(now);
+    if (solar.follow.center && !interacting) {
+      const c = now.clone().sub(controls.target);
+      if (c.length() < 1e-3) solar.follow.center = false; else { c.multiplyScalar(Math.min(1, dt * 4)); camera.position.add(c); controls.target.add(c); }
+    }
   }
   controls.update();
+  if (VIEW === "solar") keepOutsidePlanets();
+  stepOffset(dt);
   renderer.render(V.scene, camera);
   updateLabels();
 }
 
+if (/[?&]debug\b/.test(location.search)) window.__orbis = { controls, camera, solar, get follow() { return solar.follow && solar.follow.id; }, get panel() { return panelState; } };
 
 /* =========================================================
    INSTALL AS AN APP (PWA build only)
@@ -2211,7 +2328,9 @@ const INS = {
   s2: { it: "Scorri e scegli «Aggiungi alla schermata Home» {add}.", en: "Scroll down and choose “Add to Home Screen” {add}." },
   s3: { it: "Lascia acceso «Apri come app web» e tocca «Aggiungi». Orbis comparirà tra le tue app con la sua icona e si aprirà a tutto schermo.", en: "Keep “Open as Web App” on and tap “Add”. Orbis will appear among your apps with its own icon and open full screen." },
   note: { it: "Dopo la prima apertura funziona anche senza internet.", en: "After the first launch it works offline too." },
-  done: { it: "Fatto! Orbis è nella tua schermata Home.", en: "Done! Orbis is on your Home Screen." }
+  done: { it: "Fatto! Orbis è nella tua schermata Home.", en: "Done! Orbis is on your Home Screen." },
+  upd: { it: "C’è una nuova versione di Orbis", en: "A new version of Orbis is here" },
+  updGo: { it: "Aggiorna", en: "Update" }
 };
 const SVG_SHARE = '<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M8 7l4-4 4 4"/><path d="M6 11H5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-8a1 1 0 0 0-1-1h-1"/></svg>';
 const SVG_ADD = '<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><path d="M12 8v8M8 12h8"/></svg>';
@@ -2223,6 +2342,7 @@ function renderInstall() {
   b.textContent = t(INS.btn);
   b.hidden = isStandalone() || !(installEvt || isIOS);
   if (!$("ios-sheet").hidden) renderIosSheet();
+  $("update-msg").textContent = t(INS.upd); $("update-go").textContent = t(INS.updGo);
 }
 function renderIosSheet() {
   $("ios-card").innerHTML = `<button type="button" class="x" id="ios-x" aria-label="${esc(t(UI.close))}">×</button>
@@ -2242,8 +2362,19 @@ $("install").onclick = async () => {
 };
 window.addEventListener("beforeinstallprompt", (e) => { e.preventDefault(); installEvt = e; renderInstall(); });
 window.addEventListener("appinstalled", () => { installEvt = null; renderInstall(); toast(t(INS.done)); });
+$("update-go").onclick = () => location.reload();
 if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
-  window.addEventListener("load", () => { navigator.serviceWorker.register("./sw.js").catch(() => {}); });
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./sw.js").then((reg) => {
+      // A new version installed while Orbis was already open: offer to reload.
+      reg.addEventListener("updatefound", () => {
+        const nw = reg.installing; if (!nw) return;
+        nw.addEventListener("statechange", () => { if (nw.state === "installed" && navigator.serviceWorker.controller) $("update").hidden = false; });
+      });
+      // Apps left open in the background check again when they come back to the front.
+      document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible") reg.update().catch(() => {}); });
+    }).catch(() => {});
+  });
 }
 
 resize();

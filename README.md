@@ -16,7 +16,15 @@ Idea di Olivia Dinu, costruita con Claude. Versione del 18 ottobre 2026.
 - **Sul telefono:** meglio usare il link dell'app su Claude.
 - **Per metterla online:** la cartella `app/` è la versione installabile, con tutto dentro: grafica 3D, caratteri, icone e foto grandi. Si può pubblicare così com'è su qualsiasi sito statico. Il ramo `gh-pages` ne contiene una copia, ed è quella pubblicata su GitHub Pages: per aggiornare il sito basta caricare lì la nuova versione di `app/`. Le app già installate si aggiornano da sole alla prima apertura con internet.
 
-Comandi: trascina per ruotare, pizzica o usa la rotella per lo zoom, tocca un pianeta, una galassia o un luogo sulla Terra per aprirne la scheda. In alto a destra si passa da italiano a inglese.
+Comandi:
+
+- **Sistema solare e galassie** si esplorano come una mappa. Trascini con un dito o col mouse per spostarti, allarghi le dita o usi la rotella per ingrandire nel punto che vuoi, ruoti con due dita o col tasto destro.
+- Se ti fermi su un pianeta, la vista ci si centra e lo segue mentre gira intorno al Sole.
+- **Terra ed esopianeti** si girano trascinando, e si ingrandiscono allargando le dita o con la rotella.
+- Tocca un pianeta, una galassia o un luogo sulla Terra per aprirne la scheda. La **×** nasconde solo il testo: resti dove sei, con una barretta col nome e il tasto **Scheda** per riaprirlo. La lente con il meno riporta alla vista d'insieme.
+- Se ti perdi, tocca **Vista d'insieme** in alto a destra, oppure di nuovo la sezione in cui sei.
+- In alto a destra si passa da italiano a inglese.
+- Quando c'è una nuova versione e l'app è già aperta, compare **Aggiorna**.
 
 ## Cosa c'è dentro
 
