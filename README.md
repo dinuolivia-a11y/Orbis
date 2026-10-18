@@ -71,7 +71,7 @@ Una zona alla volta, finita prima di passare alla successiva.
 
 ## Cosa manca ancora
 
-1. Le immagini delle 39 creature: per ora c'è una lettera provvisoria al loro posto.
+1. Le immagini delle creature: 6 su 39 sono pronte (Madagascar). Il controllo è in `docs/controllo-immagini.md`; per le altre c'è ancora una lettera provvisoria.
 2. I 13 luoghi segnati come "presto" sul globo, da verificare e aprire uno alla volta.
 3. La foto del giorno della NASA (APOD), quando l'app avrà un suo sito.
 4. Il Laboratorio immagini va tolto prima di pubblicare l'app.

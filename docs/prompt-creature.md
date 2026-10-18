@@ -248,7 +248,7 @@ Photorealistic macro photograph inside an underground chamber of a leafcutter an
 - dove: chioma della foresta pluviale dell’est · dimensioni: 64–72 cm, quasi senza coda
 
 ```
-Photorealistic wildlife photograph of an indri (Indri indri), the largest living lemur, clinging vertically to a tree trunk high in the eastern Madagascar rainforest canopy: thick silky black and white fur in a contrasting pattern, black face with round teddy-bear ears, bright yellow-green eyes, long powerful legs, only a tiny stub of a tail, misty green rainforest in soft morning light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+Photorealistic wildlife photograph of an indri (Indri indri), the largest living lemur, clinging vertically to a tree trunk high in the eastern Madagascar rainforest canopy: its thick silky fur is MOSTLY BLACK (black head, shoulders, back and upper arms) with white or pale grey patches only on the crown, the sides of the neck, the forearms, the legs and the lower back; bare black face, large green eyes, round fluffy black ears, long powerful legs, and almost no tail at all, only a tiny stub hidden in the fur. Misty green rainforest in soft morning light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
 ```
 
 ### Aye-aye · *Daubentonia madagascariensis*
@@ -272,7 +272,7 @@ Photorealistic wildlife photograph of a fossa (Cryptoprocta ferox) climbing head
 - dove: foresta pluviale del nord-est · dimensioni: 28–31 cm
 
 ```
-Photorealistic wildlife photograph of a helmet vanga (Euryceros prevostii) perched on a branch in the north-eastern Madagascar rainforest understory: black head and underparts, rich rufous-chestnut back and tail, and an enormous, deep, arched bright cobalt-blue bill with a dark tip, pale eyes, lush green background. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+Photorealistic wildlife photograph of a helmet vanga (Euryceros prevostii) perched on a branch in the north-eastern Madagascar rainforest understory: its head, throat, breast and belly are entirely BLACK with no white anywhere on the underparts; its back, wings and long tail are rich rufous-chestnut; it has an enormous, deep, arched, bright cobalt-blue bill (the colour is on the bill itself, there is no crest or casque on top of the head) and pale eyes. Lush green background. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
 ```
 
 ### Microcebo di Madame Berthe · *Microcebus berthae*
@@ -296,7 +296,7 @@ Photorealistic night wildlife macro photograph of a Paragehyra gecko (Paragehyra
 - dove: foreste secche del nord e dell’ovest · dimensioni: circa 30 cm
 
 ```
-Photorealistic wildlife photograph of a white-breasted mesite (Mesitornis variegatus) walking on dry leaf litter on the floor of a deciduous forest in western Madagascar: rail-like ground bird, warm chestnut-brown upperparts, white throat and breast with fine dark crescent markings, a pale stripe above the eye, short rounded wings, slender slightly down-curved bill. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+Photorealistic wildlife photograph of a white-breasted mesite (Mesitornis variegatus) walking on dry leaf litter on the floor of a deciduous forest in western Madagascar: a rail-like ground bird about 30 cm long with a small head, a plump body and a fairly long, broad tail; plain rufous-brown upperparts with no spots or streaks; white face with a bold white stripe above the eye and dark stripes below it; white throat; a tawny-orange band across the chest; white belly and flanks barred with black crescent marks; a short, dark, straight bill; short rounded wings. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
 ```
 
 ### Camaleonte nano · *Brookesia nana*
@@ -304,7 +304,7 @@ Photorealistic wildlife photograph of a white-breasted mesite (Mesitornis varieg
 - dove: lettiera della foresta di montagna del nord · dimensioni: maschio 2,2 cm con la coda
 
 ```
-Photorealistic extreme macro photograph of a nano-chameleon (Brookesia nana), one of the smallest reptiles on Earth, about 2 cm long, perched on the tip of a human fingertip in a Madagascar montane rainforest: tiny brown and beige body with a slightly rough texture, small bumps along the back, short tail, large eyes in turret-like sockets, very shallow depth of field with leaf litter blurred behind. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+Photorealistic extreme macro photograph of a male nano-chameleon (Brookesia nana), one of the smallest reptiles on Earth, only about 2 cm long including its tail, so tiny that it covers less than half of a human fingertip it is sitting on: plain brown and beige body with slightly rough skin and small bumps along the back, a short straight tapering tail that does NOT curl, large eyes in turret-like sockets, a small head without a crest. Very shallow depth of field, leaf litter of a Madagascar montane rainforest blurred behind. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
 ```
 
 ### Moriglione del Madagascar · *Aythya innotata*
