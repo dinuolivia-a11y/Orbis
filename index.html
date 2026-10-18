@@ -213,7 +213,8 @@ p{margin:0}
 .creature.flip{grid-template-columns:minmax(0,1fr) minmax(0,340px)}
 .creature.flip figure{order:2}
 .creature figure{margin:0;aspect-ratio:1/1;max-width:100%;border-radius:14px;overflow:hidden;position:relative;background:radial-gradient(circle at 50% 42%,hsl(var(--h) 55% 30%),hsl(var(--h) 45% 9%) 68%,#04060b);display:grid;place-items:center}
-.creature figure img{width:100%;height:100%;object-fit:cover;display:block}
+.creature figure img{width:100%;height:100%;object-fit:cover;display:block;cursor:zoom-in}
+.creature figure .ai{position:absolute;left:10px;bottom:10px;font-family:var(--mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.82);background:rgba(5,7,12,.55);padding:3px 8px;border-radius:999px;pointer-events:none}
 .creature .mono{font-family:var(--display);font-style:italic;font-size:9rem;line-height:1;color:hsl(var(--h) 70% 82%);opacity:.22;user-select:none}
 .creature .soon{position:absolute;left:12px;bottom:12px;font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(238,241,246,.7);background:rgba(3,6,12,.55);padding:5px 9px;border-radius:999px}
 .creature .cb{display:flex;flex-direction:column;gap:10px;padding:6px 6px 6px 0;min-width:0}
@@ -436,6 +437,7 @@ const UI = {
   exploreEarth: { it: "Esplora la Terra", en: "Explore the Earth" },
   overview: { it: "Torna alla vista d’insieme", en: "Back to the overview" },
   showCard: { it: "Scheda", en: "Info" },
+  imgAI: { it: "Illustrazione", en: "Illustration" },
   recenter: { it: "Vista d’insieme", en: "Overview" },
   startDive: { it: "Inizia la discesa", en: "Start the descent" },
   backEarth: { it: "Torna alla Terra", en: "Back to Earth" },
@@ -911,7 +913,7 @@ const DIVES = {
         range: { it: "chioma della foresta pluviale dell’est", en: "eastern rainforest canopy" }, size: { it: "64–72 cm, quasi senza coda", en: "64–72 cm, almost tailless" },
         text: { it: "Il lemure più grande che esista oggi: pesa fino a 9 kg, ha il pelo bianco e nero e una coda così corta che quasi non si vede. Vive in famiglia sugli alberi più alti e si sposta con salti enormi da un tronco all’altro, restando aggrappato in verticale.", en: "The largest living lemur: it weighs up to 9 kg, has black-and-white fur and a tail so short you can barely see it. It lives in family groups in the tallest trees and moves with huge leaps from trunk to trunk, clinging upright." },
         fact: { it: "Gli indri cantano in coro, e nel 2021 uno studio italiano ha scoperto che i loro canti hanno un ritmo simile a quello della musica umana. È il primo mammifero, oltre a noi, in cui è stato trovato.", en: "Indris sing in chorus, and in 2021 an Italian study found that their songs share a rhythm with human music. It is the first mammal besides us in which this has been found." },
-        prompt: "Photorealistic wildlife photograph of an indri (Indri indri), the largest living lemur, clinging vertically to a tree trunk high in the eastern Madagascar rainforest canopy: thick silky black and white fur in a contrasting pattern, black face with round teddy-bear ears, bright yellow-green eyes, long powerful legs, only a tiny stub of a tail, misty green rainforest in soft morning light.", style: "forest" },
+        prompt: "Photorealistic wildlife photograph of an indri (Indri indri), the largest living lemur, clinging vertically to a tree trunk high in the eastern Madagascar rainforest canopy: its thick silky fur is MOSTLY BLACK (black head, shoulders, back and upper arms) with white or pale grey patches only on the crown, the sides of the neck, the forearms, the legs and the lower back; bare black face, large green eyes, round fluffy black ears, long powerful legs, and almost no tail at all, only a tiny stub hidden in the fur. Misty green rainforest in soft morning light.", style: "forest" },
       { id: "ayeaye", d: -21, h: 30, name: { it: "Aye-aye", en: "Aye-aye" }, sci: "Daubentonia madagascariensis",
         range: { it: "chioma, di notte", en: "the canopy, at night" }, size: { it: "corpo 30–37 cm, coda fino a 50 cm", en: "body 30–37 cm, tail up to 50 cm" },
         text: { it: "Il primate notturno più grande del mondo, con occhi enormi, orecchie da pipistrello e un dito medio lunghissimo e sottile. Di notte bussa sui tronchi con quel dito e ascolta l’eco: quando sente il vuoto di una galleria scavata da una larva, rosicchia il legno e la tira fuori.", en: "The world’s largest nocturnal primate, with huge eyes, bat-like ears and a very long, thin middle finger. At night it taps on tree trunks with that finger and listens to the echo: when it hears the hollow of a grub’s tunnel, it gnaws the wood and hooks the grub out." },
@@ -926,7 +928,7 @@ const DIVES = {
         range: { it: "foresta pluviale del nord-est", en: "north-eastern rainforest" }, size: { it: "28–31 cm", en: "28–31 cm" },
         text: { it: "Un uccello nero e rossiccio con un becco enorme, curvo e azzurro brillante, lungo circa 5 cm. Vive solo nelle foreste pluviali del nord-est, dove caccia grossi insetti, piccole lucertole e rane tra i rami del sottobosco.", en: "A black and rufous bird with a huge, hooked, bright-blue bill about 5 cm long. It lives only in the north-eastern rainforests, where it hunts big insects, small lizards and frogs among the understory branches." },
         fact: { it: "Maschio e femmina costruiscono insieme il nido, una coppetta di muschio e fibre a 2–4 metri da terra. Gli ornitologi arrivano da tutto il mondo per vederlo.", en: "Male and female build their nest together, a little cup of moss and fibres 2–4 metres above the ground. Birdwatchers travel from all over the world to see it." },
-        prompt: "Photorealistic wildlife photograph of a helmet vanga (Euryceros prevostii) perched on a branch in the north-eastern Madagascar rainforest understory: black head and underparts, rich rufous-chestnut back and tail, and an enormous, deep, arched bright cobalt-blue bill with a dark tip, pale eyes, lush green background.", style: "forest" },
+        prompt: "Photorealistic wildlife photograph of a helmet vanga (Euryceros prevostii) perched on a branch in the north-eastern Madagascar rainforest understory: its head, throat, breast and belly are entirely BLACK with no white anywhere on the underparts; its back, wings and long tail are rich rufous-chestnut; it has an enormous, deep, arched, bright cobalt-blue bill (the colour is on the bill itself, there is no crest or casque on top of the head) and pale eyes. Lush green background.", style: "forest" },
       { id: "mouselemur", d: -5, h: 35, name: { it: "Microcebo di Madame Berthe", en: "Madame Berthe’s mouse lemur" }, sci: "Microcebus berthae",
         range: { it: "foresta secca dell’ovest (Kirindy)", en: "western dry forest (Kirindy)" }, size: { it: "circa 9 cm, 30 grammi", en: "about 9 cm, 30 grams" },
         text: { it: "Il primate più piccolo del mondo: pesa circa 30 grammi e il suo corpo sta in un palmo. Vive quasi solo nella foresta secca di Kirindy, nell’ovest dell’isola, dove di notte cerca insetti e le gocce dolci prodotte da piccole larve sui rami.", en: "The world’s smallest primate: it weighs about 30 grams and its body fits in your palm. It lives almost only in the Kirindy dry forest in the west of the island, where at night it hunts insects and the sweet droplets made by tiny larvae on the branches." },
@@ -941,12 +943,12 @@ const DIVES = {
         range: { it: "foreste secche del nord e dell’ovest", en: "dry forests of the north and west" }, size: { it: "circa 30 cm", en: "about 30 cm" },
         text: { it: "Un uccello che vive quasi sempre a terra, in piccoli gruppi di 2–4. Cammina lentamente tra le foglie secche e le sposta col becco per trovare scarafaggi, millepiedi, ragni e semi. Ha ali corte e arrotondate e vola solo per pochi metri, quando è spaventato.", en: "A bird that lives almost always on the ground, in small groups of 2–4. It walks slowly through the dry leaves, flicking them aside with its bill to find beetles, centipedes, spiders and seeds. It has short, rounded wings and flies only a few metres when startled." },
         fact: { it: "I mesiti sono una famiglia di uccelli antichissima che esiste solo in Madagascar: in tutto il mondo ce ne sono solo tre specie.", en: "Mesites are an ancient bird family found only in Madagascar: there are just three species in the whole world." },
-        prompt: "Photorealistic wildlife photograph of a white-breasted mesite (Mesitornis variegatus) walking on dry leaf litter on the floor of a deciduous forest in western Madagascar: rail-like ground bird, warm chestnut-brown upperparts, white throat and breast with fine dark crescent markings, a pale stripe above the eye, short rounded wings, slender slightly down-curved bill.", style: "forest" },
+        prompt: "Photorealistic wildlife photograph of a white-breasted mesite (Mesitornis variegatus) walking on dry leaf litter on the floor of a deciduous forest in western Madagascar: a rail-like ground bird about 30 cm long with a small head, a plump body and a fairly long, broad tail; plain rufous-brown upperparts with no spots or streaks; white face with a bold white stripe above the eye and dark stripes below it; white throat; a tawny-orange band across the chest; white belly and flanks barred with black crescent marks; a short, dark, straight bill; short rounded wings.", style: "forest" },
       { id: "brookesia", d: -0.15, h: 95, name: { it: "Camaleonte nano", en: "Nano-chameleon" }, sci: "Brookesia nana",
         range: { it: "lettiera della foresta di montagna del nord", en: "leaf litter of the northern montane forest" }, size: { it: "maschio 2,2 cm con la coda", en: "male 2.2 cm including tail" },
         text: { it: "Forse il rettile più piccolo del mondo: il maschio, coda compresa, è lungo circa 2,2 cm e sta comodamente sulla punta di un dito. È stato scoperto nel 2021 nella foresta del massiccio di Sorata, nel nord del Madagascar. Di giorno cerca minuscoli insetti tra le foglie, di notte dorme su rametti bassi.", en: "Possibly the world’s smallest reptile: the male, tail included, is about 2.2 cm long and fits easily on a fingertip. It was described in 2021 from the forest of the Sorata massif in northern Madagascar. By day it hunts tiny insects in the leaf litter; at night it sleeps on low twigs." },
         fact: { it: "A differenza di molti camaleonti, non cambia colore. E le femmine sono più grandi dei maschi, circa 2,9 cm, per avere spazio per le uova.", en: "Unlike many chameleons, it doesn’t change colour. And females are bigger than males, about 2.9 cm, to make room for their eggs." },
-        prompt: "Photorealistic extreme macro photograph of a nano-chameleon (Brookesia nana), one of the smallest reptiles on Earth, about 2 cm long, perched on the tip of a human fingertip in a Madagascar montane rainforest: tiny brown and beige body with a slightly rough texture, small bumps along the back, short tail, large eyes in turret-like sockets, very shallow depth of field with leaf litter blurred behind.", style: "forest" },
+        prompt: "Photorealistic extreme macro photograph of a male nano-chameleon (Brookesia nana), one of the smallest reptiles on Earth, only about 2 cm long including its tail, so tiny that it covers less than half of a human fingertip it is sitting on: plain brown and beige body with slightly rough skin and small bumps along the back, a short straight tapering tail that does NOT curl, large eyes in turret-like sockets, a small head without a crest. Very shallow depth of field, leaf litter of a Madagascar montane rainforest blurred behind.", style: "forest" },
       { id: "pochard", d: 0.6, h: 30, at: { it: "Sott’acqua, in un lago", en: "Underwater, in a lake" }, name: { it: "Moriglione del Madagascar", en: "Madagascar pochard" }, sci: "Aythya innotata",
         range: { it: "Lago Sofia, nord del Madagascar", en: "Lake Sofia, northern Madagascar" }, size: { it: "circa 45 cm", en: "about 45 cm" },
         text: { it: "Una piccola anatra tuffatrice marrone, con gli occhi bianchi nei maschi. Si immerge sott’acqua per cercare cibo. Nel 2004 era stata dichiarata estinta, ma nel 2006 ne furono ritrovate 25 su un lago remoto del nord: probabilmente quel lago era troppo profondo perché gli anatroccoli riuscissero a nutrirsi.", en: "A small brown diving duck; the males have white eyes. It dives underwater to find food. In 2004 it was declared extinct, but in 2006 a flock of 25 was found on a remote northern lake, probably too deep for the ducklings to feed." },
@@ -1196,7 +1198,7 @@ const CUR_EARTH = [
 ];
 
 /* Images Olivia brings back get listed here: id → file path */
-const IMAGES = {};
+const IMAGES = { ayeaye: "img/ayeaye.webp", fossa: "img/fossa.webp", giantrat: "img/giantrat.webp", mouselemur: "img/mouselemur.webp", paragehyra: "img/paragehyra.webp", pochard: "img/pochard.webp" };
 
 /* =========================================================
    EARTH HOTSPOTS
@@ -1981,7 +1983,9 @@ function toast(msg) { const T = $("toast"); T.textContent = msg; T.hidden = fals
 let dive = null;
 const DIVE_HASH = { ocean: "oceano", amazon: "amazzonia", madagascar: "madagascar" };
 const diveEl = $("dive"), track = $("dive-track"), gauge = $("gauge");
-function imgFor(id) { return IMAGES[id] || null; }
+// Tap a creature's picture to see it full screen.
+track.addEventListener("click", (e) => { const im = e.target.closest(".creature figure img"); if (im) openPhoto(im.src, im.alt); });
+function imgFor(id) { const p = IMAGES[id]; return p ? (window.ORBIS_IMG && window.ORBIS_IMG[p]) || p : null; }
 function zoneOf(cfg, d) { return cfg.zones.find((z) => d >= z.from && d < z.to) || cfg.zones[cfg.zones.length - 1]; }
 function dLabel(kind, d) {
   if (kind === "ocean") return `${fmt(Math.round(d))} m`;
@@ -2013,7 +2017,7 @@ function buildDive(kind) {
       html += `<p class="mark" data-d="${it.d}"><span><b>${esc(dLabel(kind, it.d))}</b> · ${esc(t(it.m.text))}</span></p>`;
     } else {
       const c = it.c, img = imgFor(c.id), z = zoneOf(cfg, c.d);
-      const fig = img ? `<img src="${esc(img)}" alt="${esc(t(c.name))}" loading="lazy">` : `<span class="mono">${esc(t(c.name).replace(/^(Il|La|Lo|The)\s+/, "").charAt(0))}</span><span class="soon">${esc(t(UI.imgSoon))}</span>`;
+      const fig = img ? `<img src="${esc(img)}" alt="${esc(t(c.name))}" loading="lazy"><span class="ai">${esc(t(UI.imgAI))}</span>` : `<span class="mono">${esc(t(c.name).replace(/^(Il|La|Lo|The)\s+/, "").charAt(0))}</span><span class="soon">${esc(t(UI.imgSoon))}</span>`;
       html += `<article class="creature${flip ? " flip" : ""}" data-d="${c.d}" style="--h:${c.h}" id="c-${c.id}">
         <figure>${fig}</figure>
         <div class="cb"><p class="at">${esc(c.at ? t(c.at) : dLabel(kind, c.d))} · ${esc(t(z.name))}</p><h3>${esc(t(c.name))}</h3><p class="sci">${esc(t(c.sci))}</p>

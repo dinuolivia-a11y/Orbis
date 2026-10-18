@@ -1,5 +1,5 @@
 /* Orbis service worker: keeps the app working offline. */
-const CACHE = "orbis-ebcdfde09f";
+const CACHE = "orbis-e9310cb80a";
 const PRECACHE = [
   "./",
   "index.html",
@@ -53,7 +53,13 @@ const PRECACHE = [
   "photos/m87-s.webp",
   "photos/momz14-s.webp",
   "photos/mw-s.webp",
-  "photos/smc-s.webp"
+  "photos/smc-s.webp",
+  "img/ayeaye.webp",
+  "img/fossa.webp",
+  "img/giantrat.webp",
+  "img/mouselemur.webp",
+  "img/paragehyra.webp",
+  "img/pochard.webp"
 ];
 
 self.addEventListener("install", (e) => {
