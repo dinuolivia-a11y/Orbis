@@ -8,9 +8,13 @@ Idea di Olivia Dinu, costruita con Claude. Versione del 18 ottobre 2026.
 
 ## Come aprirla
 
+- **Come app sul telefono:** apri il sito di Orbis e tocca **Installa**, in basso a sinistra.
+  - Android, con Chrome: si apre la finestra per installarla. Se non compare, menu ⋮ → **Installa app**.
+  - iPhone, con Safari: tocca i tre puntini ••• accanto all'indirizzo → **Condividi** → **Aggiungi alla schermata Home**, lascia acceso **Apri come app web** e tocca **Aggiungi**. Sugli iPhone meno recenti il tasto Condividi è già nella barra in basso.
+  - Orbis compare tra le app con la sua icona e si apre a tutto schermo. Dopo la prima apertura funziona anche senza internet. Le foto grandi delle galassie restano sul telefono dopo averle aperte una volta.
 - **Sul computer:** scarica `Orbis.html` e aprilo con un doppio clic. Serve internet, perché la grafica 3D e i caratteri si scaricano all'apertura. In questa versione le foto delle galassie sono in formato ridotto.
 - **Sul telefono:** meglio usare il link dell'app su Claude.
-- **Per metterla online:** la cartella `app/` contiene la pagina con tutte le immagini, anche le foto grandi. Si può pubblicare così com'è su qualsiasi sito statico.
+- **Per metterla online:** la cartella `app/` è la versione installabile, con tutto dentro: grafica 3D, caratteri, icone e foto grandi. Si può pubblicare così com'è su qualsiasi sito statico. Il ramo `gh-pages` ne contiene una copia pronta per GitHub Pages.
 
 Comandi: trascina per ruotare, pizzica o usa la rotella per lo zoom, tocca un pianeta, una galassia o un luogo sulla Terra per aprirne la scheda. In alto a destra si passa da italiano a inglese.
 
@@ -40,7 +44,8 @@ Una zona alla volta, finita prima di passare alla successiva.
 | Percorso | Cosa contiene |
 |---|---|
 | `Orbis.html` | L'app in un solo file, da aprire con doppio clic. |
-| `app/` | L'app divisa in pagina, mappe dei pianeti (`tex/`) e foto delle galassie (`photos/`). |
+| `app/` | La versione installabile: pagina, mappe dei pianeti (`tex/`), foto delle galassie (`photos/`), icone (`icons/`), three.js (`vendor/`), caratteri (`fonts/`), `manifest.webmanifest` e `sw.js` per l'uso senza internet. |
+| `icona/` | Le tre proposte per l'icona dell'app. In uso c'è la 1, la Terra con l'orbita dorata. |
 | `docs/prompt-creature.md` | I 39 prompt per le immagini delle creature. |
 | `docs/verifica-database-grok.md` | La verifica del database di creature preparato con Grok. |
 | `anteprime/` | Schermate dell'app. |
@@ -48,7 +53,9 @@ Una zona alla volta, finita prima di passare alla successiva.
 ## Com'è fatta
 
 - Una sola pagina HTML con CSS e JavaScript, senza server.
-- Grafica 3D con [three.js](https://threejs.org) 0.170, caricato da CDN.
+- Grafica 3D con [three.js](https://threejs.org) 0.170: `Orbis.html` lo carica da CDN, la versione in `app/` lo ha dentro `vendor/`.
+- La versione in `app/` è una PWA: `manifest.webmanifest` dà nome, colori e icone, `sw.js` salva la pagina, le mappe e le foto piccole al primo avvio, così Orbis si apre anche senza internet.
+- L'icona è disegnata con lo stesso motore 3D dell'app e le mappe vere della Terra: giorno e notte con le luci delle città, nuvole, atmosfera e un'orbita dorata.
 - La Terra ha uno shader scritto a mano per giorno, notte e riflessi sull'oceano. Gli esopianeti sono generati con un rumore procedurale.
 - Le galassie sono nuvole di punti generate dal programma: bracci a spirale logaritmica, rigonfiamento centrale, regioni rosa di formazione stellare e polveri scure. Ognuna è orientata con l'inclinazione con cui la vediamo dalla Terra.
 - Tutti i contenuti, in italiano e inglese, sono in oggetti dentro la pagina: `PLANETS`, `GALAXIES`, `GAL3D`, `GAL_PHOTOS`, `EXO`, `DIVES`, `HOTSPOTS`, `CUR_SPACE`, `CUR_EARTH`.
@@ -71,7 +78,7 @@ Una zona alla volta, finita prima di passare alla successiva.
   - [ESO](https://www.eso.org/public/outreach/copyright/): Via Lattea (S. Brunier), Nubi di Magellano (Y. Beletsky; VISTA VMC), Centaurus A.
   - Buco nero di M87: EHT Collaboration.
   - I nomi completi degli autori sono sotto ogni foto nell'app.
-- Grafica 3D: three.js, licenza MIT. Caratteri: Bodoni Moda, Atkinson Hyperlegible e DM Mono, SIL Open Font License.
+- Grafica 3D: three.js, licenza MIT, inclusa in `app/vendor/`. Caratteri: Bodoni Moda, Atkinson Hyperlegible e DM Mono, SIL Open Font License.
 - Dati: [NASA Exoplanet Archive](https://exoplanetarchive.ipac.caltech.edu/), MBARI, NOAA Ocean Exploration, FishBase, IUCN, Università delle Hawaii, Senckenberg, Durrell e WWT, e le pubblicazioni scientifiche citate in `docs/`.
 
 Nel sistema solare distanze e dimensioni non sono in scala. Le galassie in 3D e gli esopianeti sono ricostruzioni: le foto vere sono nelle schede delle galassie.

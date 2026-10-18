@@ -3,14 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<style>body{margin:0}img{max-width:100%}</style>
-</head>
-<body>
 <title>Orbis</title>
-<meta name="claude:viewport-fit-sides" content="cover">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..700&family=DM+Mono:wght@400;500&display=swap">
+<meta name="description" content="Esplora il sistema solare, le galassie, i pianeti di altre stelle e le creature più sconosciute della Terra.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#05070c">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/favicon.ico" sizes="any">
+<link rel="icon" href="icons/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Orbis">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="preload" href="vendor/three.module.min.js" as="script" crossorigin>
+<link rel="stylesheet" href="fonts/fonts.css">
 <style>
 /* Layout: a full-bleed 3D stage; instrument-like glass panels float at its edges; each descent is one long vertical documentary strip read past a fixed depth gauge. */
 :root{
@@ -283,8 +289,26 @@ p{margin:0}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
 }
-</style>
 
+/* ---------- install (PWA build only) ---------- */
+.corner #install{color:var(--sol);border-color:color-mix(in srgb,var(--sol) 55%,transparent)}
+.corner #install::before{content:"\2193  "}
+.loading .appicon{width:104px;height:104px;border-radius:24px;box-shadow:0 14px 50px rgba(241,183,102,.16),0 0 0 1px rgba(255,255,255,.06)}
+.ios-sheet{position:fixed;inset:0;z-index:76;display:grid;align-items:end;justify-items:center;background:rgba(2,3,6,.6);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+.ios-sheet[hidden]{display:none!important}
+.ios-card{position:relative;box-sizing:border-box;width:min(520px,100vw);background:var(--glass-solid);border:1px solid var(--hair);border-bottom:0;border-radius:22px 22px 0 0;padding:26px 22px calc(26px + env(safe-area-inset-bottom,0px));box-shadow:0 -20px 60px rgba(0,0,0,.5)}
+.ios-card .x{position:absolute;top:12px;right:12px}
+.ios-card .top{display:flex;align-items:center;gap:14px;margin-bottom:18px;padding-right:36px}
+.ios-card .top img{width:60px;height:60px;border-radius:14px}
+.ios-card h2{font-family:var(--display);font-weight:500;font-size:1.5rem;line-height:1.15;margin:0}
+.ios-card ol{list-style:none;margin:0;padding:0;display:grid;gap:14px;counter-reset:s}
+.ios-card li{display:grid;grid-template-columns:30px 1fr;gap:12px;align-items:start;counter-increment:s;color:#dfe4ee}
+.ios-card li::before{content:counter(s);display:grid;place-items:center;width:28px;height:28px;border-radius:50%;border:1px solid color-mix(in srgb,var(--sol) 60%,transparent);color:var(--sol);font-family:var(--mono);font-size:.85rem}
+.ios-card .ico{display:inline-block;width:1.25em;height:1.25em;vertical-align:-.25em;margin:0 .15em;color:#5aa9ff}
+.ios-card .note{margin:18px 0 0;color:var(--mist);font-size:.88rem}
+</style>
+</head>
+<body>
 <canvas id="gl" aria-label="Scena 3D"></canvas>
 <div id="labels"></div>
 
@@ -298,7 +322,8 @@ p{margin:0}
 </header>
 
 <p class="hint" id="hint"></p>
-<div class="corner"><button type="button" id="open-lab"></button><button type="button" id="open-credits"></button></div>
+<div class="corner"><button type="button" id="install" hidden></button><button type="button" id="open-lab"></button><button type="button" id="open-credits"></button></div>
+<section class="ios-sheet" id="ios-sheet" hidden role="dialog" aria-modal="true" aria-labelledby="ios-h"><div class="ios-card" id="ios-card"></div></section>
 
 <button type="button" class="cur-chip" id="cur-chip"></button>
 <aside class="panel" id="panel" hidden aria-live="polite"></aside>
@@ -334,6 +359,7 @@ p{margin:0}
 <div class="toast" id="toast" hidden role="status"></div>
 <div class="loading" id="loading">
   <div class="in">
+    <img class="appicon" src="icons/icon-192.png" alt="" width="104" height="104">
     <div class="logo">Orbis</div>
     <div class="track"><div class="fill" id="load-fill"></div></div>
     <p class="msg" id="load-msg">Carico le mappe dei pianeti…</p>
@@ -342,8 +368,8 @@ p{margin:0}
 
 <script type="importmap">
 { "imports": {
-  "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
-  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+  "three": "./vendor/three.module.min.js",
+  "three/addons/": "./vendor/addons/"
 } }
 </script>
 <script type="module">
@@ -2050,7 +2076,7 @@ function setLang(l) {
   $("load-msg").textContent = t(UI.loading);
   $("exo-title").textContent = t(UI.exoTitle); $("exo-tally").innerHTML = t(UI.exoTally); $("exo-search").placeholder = t(UI.exoSearch); $("exo-search").setAttribute("aria-label", t(UI.exoSearch));
   renderNav(); renderHint(); refreshLabelText(); renderExoChips(); if (VIEW === "exo") renderExoList();
-  $("cur-chip").textContent = t(UI.cur.chip); if (!$("cur").hidden) renderCur();
+  $("cur-chip").textContent = t(UI.cur.chip); if (!$("cur").hidden) renderCur(); renderInstall();
   if (panelState) openPanel(panelState);
   if (dive) { const y = diveEl.scrollTop; buildDive(dive.kind); diveEl.scrollTop = y; }
   if (!$("lab").hidden) renderLab(); if (!$("credits").hidden) renderCredits();
@@ -2174,12 +2200,57 @@ function loop() {
   updateLabels();
 }
 
+
+/* =========================================================
+   INSTALL AS AN APP (PWA build only)
+   ========================================================= */
+const INS = {
+  btn: { it: "Installa", en: "Install" },
+  title: { it: "Metti Orbis nella schermata Home", en: "Add Orbis to your Home Screen" },
+  s1: { it: "Tocca i tre puntini ••• accanto all’indirizzo, poi «Condividi» {share}. Sugli iPhone meno recenti il tasto Condividi è già nella barra in basso.", en: "Tap the three dots ••• next to the address, then “Share” {share}. On older iPhones the Share button is already in the bottom bar." },
+  s2: { it: "Scorri e scegli «Aggiungi alla schermata Home» {add}.", en: "Scroll down and choose “Add to Home Screen” {add}." },
+  s3: { it: "Lascia acceso «Apri come app web» e tocca «Aggiungi». Orbis comparirà tra le tue app con la sua icona e si aprirà a tutto schermo.", en: "Keep “Open as Web App” on and tap “Add”. Orbis will appear among your apps with its own icon and open full screen." },
+  note: { it: "Dopo la prima apertura funziona anche senza internet.", en: "After the first launch it works offline too." },
+  done: { it: "Fatto! Orbis è nella tua schermata Home.", en: "Done! Orbis is on your Home Screen." }
+};
+const SVG_SHARE = '<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M8 7l4-4 4 4"/><path d="M6 11H5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-8a1 1 0 0 0-1-1h-1"/></svg>';
+const SVG_ADD = '<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><path d="M12 8v8M8 12h8"/></svg>';
+const isStandalone = () => matchMedia("(display-mode: standalone)").matches || matchMedia("(display-mode: fullscreen)").matches || navigator.standalone === true;
+const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+let installEvt = null;
+function renderInstall() {
+  const b = $("install");
+  b.textContent = t(INS.btn);
+  b.hidden = isStandalone() || !(installEvt || isIOS);
+  if (!$("ios-sheet").hidden) renderIosSheet();
+}
+function renderIosSheet() {
+  $("ios-card").innerHTML = `<button type="button" class="x" id="ios-x" aria-label="${esc(t(UI.close))}">×</button>
+    <div class="top"><img src="icons/icon-192.png" alt=""><h2 id="ios-h">${esc(t(INS.title))}</h2></div>
+    <ol><li><span>${esc(t(INS.s1)).replace("{share}", SVG_SHARE)}</span></li><li><span>${esc(t(INS.s2)).replace("{add}", SVG_ADD)}</span></li><li><span>${esc(t(INS.s3))}</span></li></ol>
+    <p class="note">${esc(t(INS.note))}</p>`;
+  $("ios-x").onclick = () => { $("ios-sheet").hidden = true; };
+}
+$("ios-sheet").addEventListener("click", (e) => { if (e.target === $("ios-sheet")) $("ios-sheet").hidden = true; });
+document.addEventListener("keydown", (e) => { if (e.key === "Escape") $("ios-sheet").hidden = true; });
+$("install").onclick = async () => {
+  if (installEvt) {
+    const ev = installEvt; installEvt = null; ev.prompt();
+    try { await ev.userChoice; } catch (e) {}
+    renderInstall();
+  } else { renderIosSheet(); $("ios-sheet").hidden = false; }
+};
+window.addEventListener("beforeinstallprompt", (e) => { e.preventDefault(); installEvt = e; renderInstall(); });
+window.addEventListener("appinstalled", () => { installEvt = null; renderInstall(); toast(t(INS.done)); });
+if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
+  window.addEventListener("load", () => { navigator.serviceWorker.register("./sw.js").catch(() => {}); });
+}
+
 resize();
 setLang(LANG);
 route();
 loop();
 window.addEventListener("hashchange", () => {});
 </script>
-
 </body>
 </html>
