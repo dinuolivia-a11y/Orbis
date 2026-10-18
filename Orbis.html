@@ -383,9 +383,9 @@ const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&l
 const UI = {
   nav: { solar: { it: "Sistema solare", en: "Solar system" }, earth: { it: "Terra", en: "Earth" }, galaxies: { it: "Galassie", en: "Galaxies" }, exo: { it: "Esopianeti", en: "Exoplanets" } },
   hint: {
-    solar: { it: "Tocca un pianeta per esplorarlo. Trascina per spostarti, allarga le dita o usa la rotella per ingrandire nel punto che vuoi. Se ti fermi su un pianeta, la vista lo segue. Per ruotare usa due dita o il tasto destro.", en: "Tap a planet to explore it. Drag to move around, pinch or scroll to zoom in where you want. Stop on a planet and the view follows it. To rotate, use two fingers or the right mouse button." },
+    solar: { it: "Tocca un pianeta per esplorarlo. Trascina per girare tutto, anche sottosopra. Allarga due dita o usa la rotella per ingrandire nel punto che vuoi; sposta le due dita insieme (o trascina col tasto destro) per muoverti. Se ti fermi su un pianeta, la vista lo segue.", en: "Tap a planet to explore it. Drag to turn everything, even upside down. Pinch or scroll to zoom in where you want; move both fingers together (or drag with the right mouse button) to slide around. Stop on a planet and the view follows it." },
     earth: { it: "Tocca un luogo luminoso, come l’oceano, l’Amazzonia o il Madagascar, per scendere. Gira la Terra per vedere le luci delle città di notte.", en: "Tap a glowing place, like the ocean, the Amazon or Madagascar, to descend. Turn the Earth to see city lights at night." },
-    galaxies: { it: "Tocca una galassia per volarci vicino. Trascina per spostarti, allarga le dita o usa la rotella per ingrandire dove vuoi e arrivare fino alle altre galassie. Per ruotare usa due dita o il tasto destro. Ogni anello è dieci volte più lontano del precedente.", en: "Tap a galaxy to fly up close. Drag to move around, pinch or scroll to zoom in wherever you like and travel to other galaxies. To rotate, use two fingers or the right mouse button. Each ring is ten times farther than the one before." },
+    galaxies: { it: "Tocca una galassia per volarci vicino. Trascina per girare tutto, anche sottosopra. Allarga due dita o usa la rotella per ingrandire dove vuoi; sposta le due dita insieme (o trascina col tasto destro) per muoverti fino alle altre galassie. Ogni anello è dieci volte più lontano del precedente.", en: "Tap a galaxy to fly up close. Drag to turn everything, even upside down. Pinch or scroll to zoom in wherever you like; move both fingers together (or drag with the right mouse button) to travel to other galaxies. Each ring is ten times farther than the one before." },
     exo: { it: "Scegli un pianeta dalla lista o cercalo per nome.", en: "Pick a planet from the list or search by name." }
   },
   lab: { it: "Laboratorio immagini", en: "Image lab" },
@@ -1739,12 +1739,13 @@ function fitPos(v) {
   return c.target.clone().add(dir.normalize().multiplyScalar(Math.min(c.max, Math.max(len, need))));
 }
 function configureControls(v) {
-  // Solar system and galaxies move like a map: drag to travel, zoom where the finger or cursor is.
-  // Earth and exoplanets stay globes: drag to turn them.
-  const map = v === "solar" || v === "galaxies";
-  controls.enablePan = map; controls.screenSpacePanning = false; controls.zoomToCursor = map; controls.panSpeed = 1;
-  controls.mouseButtons = map ? { LEFT: THREE.MOUSE.PAN, MIDDLE: THREE.MOUSE.DOLLY, RIGHT: THREE.MOUSE.ROTATE } : { LEFT: THREE.MOUSE.ROTATE, MIDDLE: THREE.MOUSE.DOLLY, RIGHT: THREE.MOUSE.ROTATE };
-  controls.touches = map ? { ONE: THREE.TOUCH.PAN, TWO: THREE.TOUCH.DOLLY_ROTATE } : { ONE: THREE.TOUCH.ROTATE, TWO: THREE.TOUCH.DOLLY_ROTATE };
+  // One finger (or the left mouse button) always turns the scene freely, upside down included.
+  // In the solar system and among the galaxies, two fingers zoom where they are and, moved together,
+  // slide the view left, right, up and down (right mouse button to slide, wheel to zoom where the cursor is).
+  const free = v === "solar" || v === "galaxies";
+  controls.enablePan = free; controls.screenSpacePanning = true; controls.zoomToCursor = free; controls.panSpeed = 1;
+  controls.mouseButtons = { LEFT: THREE.MOUSE.ROTATE, MIDDLE: THREE.MOUSE.DOLLY, RIGHT: THREE.MOUSE.PAN };
+  controls.touches = { ONE: THREE.TOUCH.ROTATE, TWO: THREE.TOUCH.DOLLY_PAN };
 }
 function setCamera(v) { const c = CAM[v]; configureControls(v); camera.position.copy(fitPos(v)); controls.target.copy(c.target); controls.minDistance = c.min; controls.maxDistance = c.max; controls.update(); }
 const vOff = { x: 0, y: 0, tx: 0, ty: 0 };
@@ -1796,21 +1797,23 @@ function selectPlanet(id) {
 }
 const _sv = new THREE.Vector3(), _sw = new THREE.Vector3();
 // Where the last gesture was aimed: the point under the wheel or between the two fingers. A drag aims at the middle of the view.
-let gestureFocus = null; const _ptrs = new Map();
-canvas.addEventListener("wheel", (e) => { gestureFocus = { x: e.clientX, y: e.clientY }; }, { passive: true });
-canvas.addEventListener("pointerdown", (e) => { _ptrs.set(e.pointerId, e); if (_ptrs.size === 1) gestureFocus = null; });
-canvas.addEventListener("pointermove", (e) => { if (!_ptrs.has(e.pointerId)) return; _ptrs.set(e.pointerId, e); if (_ptrs.size === 2) { const [a, b] = [..._ptrs.values()]; gestureFocus = { x: (a.clientX + b.clientX) / 2, y: (a.clientY + b.clientY) / 2 }; } });
+// gestureMoves is true when the last gesture zoomed or slid the view; a plain turn leaves the view as it is.
+let gestureFocus = null, gestureMoves = false; const _ptrs = new Map();
+canvas.addEventListener("wheel", (e) => { gestureFocus = { x: e.clientX, y: e.clientY }; gestureMoves = true; }, { passive: true });
+canvas.addEventListener("pointerdown", (e) => { _ptrs.set(e.pointerId, e); if (_ptrs.size === 1) { gestureFocus = null; gestureMoves = e.pointerType === "mouse" && e.button !== 0; } });
+canvas.addEventListener("pointermove", (e) => { if (!_ptrs.has(e.pointerId)) return; _ptrs.set(e.pointerId, e); if (_ptrs.size === 2) { const [a, b] = [..._ptrs.values()]; gestureFocus = { x: (a.clientX + b.clientX) / 2, y: (a.clientY + b.clientY) / 2 }; gestureMoves = true; } });
 for (const ev of ["pointerup", "pointercancel"]) canvas.addEventListener(ev, (e) => { _ptrs.delete(e.pointerId); });
 function toScreen(v, out) { const p = _sw.copy(v).project(camera); out.x = (p.x + 1) / 2 * innerWidth; out.y = (1 - p.y) / 2 * innerHeight; out.z = p.z; return out; }
 function snapFollow() {
   // After a drag or a zoom, if a planet sits where you were aiming, glide onto it and keep following it.
-  if (VIEW !== "solar" || fly) return;
+  if (VIEW !== "solar" || fly || !gestureMoves) return;
   const kPx = innerHeight / 2 / Math.tan(THREE.MathUtils.degToRad(camera.fov / 2)), near = 0.14 * Math.min(innerWidth, innerHeight);
   const aim = gestureFocus || toScreen(controls.target, {}), sp = {};
   let best = null, score = 1;
   for (const id in solar.bodies) {
-    const b = solar.bodies[id], wp = solar.worldPos(id, _sv), px = b.p.r / Math.max(1e-3, camera.position.distanceTo(wp)) * kPx;
-    if (px < 4) continue;
+    const b = solar.bodies[id]; if (!b.speed) continue;
+    const wp = solar.worldPos(id, _sv), px = b.p.r / Math.max(1e-3, camera.position.distanceTo(wp)) * kPx;
+    if (px < 8) continue;
     toScreen(wp, sp); if (sp.z > 1) continue;
     const d = Math.hypot(sp.x - aim.x, sp.y - aim.y), lim = Math.max(px * 1.6, near);
     if (d / lim < score) { score = d / lim; best = id; }

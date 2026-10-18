@@ -18,9 +18,9 @@ Idea di Olivia Dinu, costruita con Claude. Versione del 18 ottobre 2026.
 
 Comandi:
 
-- **Sistema solare e galassie** si esplorano come una mappa. Trascini con un dito o col mouse per spostarti, allarghi le dita o usi la rotella per ingrandire nel punto che vuoi, ruoti con due dita o col tasto destro.
-- Se ti fermi su un pianeta, la vista ci si centra e lo segue mentre gira intorno al Sole.
-- **Terra ed esopianeti** si girano trascinando, e si ingrandiscono allargando le dita o con la rotella.
+- **Un dito** (o il mouse) gira tutto liberamente, anche sottosopra e da sotto.
+- **Due dita:** allargandole ingrandisci proprio nel punto che tocchi; spostandole insieme scorri la vista a destra, a sinistra, su e giù. Col mouse: rotella per ingrandire dove punti, tasto destro per scorrere. Vale per il sistema solare e le galassie; Terra ed esopianeti si girano e si ingrandiscono al centro.
+- Se ingrandisci o scorri fino a un pianeta, la vista ci si centra e lo segue mentre gira intorno al Sole.
 - Tocca un pianeta, una galassia o un luogo sulla Terra per aprirne la scheda. La **×** nasconde solo il testo: resti dove sei, con una barretta col nome e il tasto **Scheda** per riaprirlo. La lente con il meno riporta alla vista d'insieme.
 - Se ti perdi, tocca **Vista d'insieme** in alto a destra, oppure di nuovo la sezione in cui sei.
 - In alto a destra si passa da italiano a inglese.
