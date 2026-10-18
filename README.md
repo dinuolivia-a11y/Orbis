@@ -78,7 +78,7 @@ Una zona alla volta, finita prima di passare alla successiva.
 
 ## Cosa manca ancora
 
-1. Le immagini delle creature: 55 su 101 sono pronte. Il controllo è in `docs/controllo-immagini.md`. Le 46 che mancano sono in `docs/per-grok.md`, con i prompt; al loro posto per ora c'è una lettera provvisoria.
+1. Le immagini delle creature: 53 su 101 sono pronte. Il controllo è in `docs/controllo-immagini.md`. Le 48 che mancano sono in `docs/per-grok.md`, con i prompt; al loro posto per ora c'è una lettera provvisoria.
 2. I 7 luoghi ancora segnati come "presto" sul globo: Barriera Corallina, Atacama, Namib, Appalachi, Ghiacciai della Patagonia, Ghati occidentali e Altopiano etiope.
 3. La foto del giorno della NASA (APOD), quando l'app avrà un suo sito.
 4. Il Laboratorio immagini va tolto prima di pubblicare l'app.

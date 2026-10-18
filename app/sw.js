@@ -1,5 +1,5 @@
 /* Orbis service worker: keeps the app working offline. */
-const CACHE = "orbis-8f4b436382";
+const CACHE = "orbis-2370603992";
 const PRECACHE = [
   "./",
   "index.html",
@@ -80,9 +80,7 @@ const PRECACHE = [
   "img/kea.webp",
   "img/krill.webp",
   "img/leafmouse.webp",
-  "img/lemming.webp",
   "img/liolaemus.webp",
-  "img/molevole.webp",
   "img/monal.webp",
   "img/mouselemur.webp",
   "img/muskox.webp",

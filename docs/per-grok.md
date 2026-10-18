@@ -1,6 +1,6 @@
 # Per Grok · immagini per Orbis
 
-Ciao Grok! Queste sono le immagini che servono ancora per l'app Orbis di Olivia: 46 in tutto. I prompt li ha scritti Claude dopo aver verificato ogni specie.
+Ciao Grok! Queste sono le immagini che servono ancora per l'app Orbis di Olivia: 48 in tutto. I prompt li ha scritti Claude dopo aver verificato ogni specie.
 
 ## Come fare
 
@@ -272,7 +272,7 @@ id: **flyingsquirrel** → file `images/orbis/flyingsquirrel.jpg`
 Photorealistic night wildlife photograph of a woolly flying squirrel (Eupetaurus cinereus) clinging to a steep rock face near a cave entrance in the mountains of northern Pakistan: a large squirrel with very thick, soft woolly blue-grey fur, a pale face, a long bushy grey tail, furry soles, the gliding membrane folded along its sides, lit softly by moonlight. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
 ```
 
-## Tundra artica (1)
+## Tundra artica (2)
 
 ### 37. Zigolo delle nevi · *Plectrophenax nivalis*
 id: **snowbunting** → file `images/orbis/snowbunting.jpg`
@@ -281,39 +281,53 @@ id: **snowbunting** → file `images/orbis/snowbunting.jpg`
 Photorealistic wildlife photograph of a male snow bunting (Plectrophenax nivalis) in breeding plumage perched on a lichen-covered rock in the Arctic tundra in spring: a small sparrow-sized bird with an all-white head and underparts with no eye stripe or mask, a solid black back, black wingtips and large white wing panels, a short black conical bill, patches of melting snow around. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
 ```
 
+### 38. Lemming dal collare · *Dicrostonyx groenlandicus*
+id: **lemming** → file `images/orbis/lemming.jpg`
+
+```
+Photorealistic wildlife photograph of a northern collared lemming (Dicrostonyx groenlandicus) in its white winter coat at the entrance of a tunnel in the snow: a small round rodent about 14 cm long with dense pure white fur, tiny ears hidden in the fur, small dark eyes, a very short tail, enlarged forked claws on the front feet. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
 ## Antartide (3)
 
-### 38. Moscerino antartico · *Belgica antarctica*
+### 39. Moscerino antartico · *Belgica antarctica*
 id: **midge** → file `images/orbis/midge.jpg`
 
 ```
 Photorealistic extreme macro photograph of an Antarctic midge (Belgica antarctica), a tiny wingless black fly only a few millimetres long with six slender legs and short antennae, crawling on green moss and orange lichen among rocks on the Antarctic Peninsula, a few snow crystals around. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
 ```
 
-### 39. Foca cancrivora · *Lobodon carcinophaga*
+### 40. Foca cancrivora · *Lobodon carcinophaga*
 id: **crabeater** → file `images/orbis/crabeater.jpg`
 
 ```
 Photorealistic wildlife photograph of a crabeater seal (Lobodon carcinophaga) lying on an Antarctic ice floe: a slender seal with a long, pointed, dog-like snout, silvery to pale blond-brown fur with faint darker blotches on the sides, long parallel scars on its flanks, dark eyes, broken pack ice and dark sea behind. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
 ```
 
-### 40. Pesce ghiaccio · *Chaenocephalus aceratus*
+### 41. Pesce ghiaccio · *Chaenocephalus aceratus*
 id: **icefish** → file `images/orbis/icefish.jpg`
 
 ```
 Photorealistic deep underwater photograph of a blackfin icefish (Chaenocephalus aceratus) resting on the sandy seafloor of the Southern Ocean: a long pale fish with a large flat crocodile-like snout, translucent ghostly white-grey skin with darker bands, big eyes, large dark fins, no red colour anywhere because its blood has no haemoglobin, dim blue light. Shot like a real deep-sea ROV documentary frame: lit by soft white submersible lights against pitch-black water, faint particles of marine snow drifting, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people, no equipment visible.
 ```
 
-## Tian Shan (2)
+## Tian Shan (3)
 
-### 41. Fringuello alpino di Brandt · *Leucosticte brandti*
+### 42. Fringuello alpino di Brandt · *Leucosticte brandti*
 id: **mtnfinch** → file `images/orbis/mtnfinch.jpg`
 
 ```
 Photorealistic wildlife photograph of a Brandt's mountain finch (Leucosticte brandti) perched on a rock beside a melting snowfield at 4,500 m in the Tian Shan: a stocky finch with a sooty blackish face and crown, ash-grey brown body, a rosy-pink flush on the wings and rump, a short conical bill, snowy peaks behind. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
 ```
 
-### 42. Sicista del Tian Shan · *Sicista tianschanica*
+### 43. Talpa-arvicola dell’Alai · *Ellobius alaicus*
+id: **molevole** → file `images/orbis/molevole.jpg`
+
+```
+Photorealistic wildlife photograph of an Alai mole vole (Ellobius alaicus) poking its head out of a burrow in an alpine meadow in Kyrgyzstan: a small cylindrical underground rodent about 12 cm long with soft dense grey-brown fur, no visible external ears, tiny eyes, and long protruding pale yellow front teeth that it digs with, loose soil around. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### 44. Sicista del Tian Shan · *Sicista tianschanica*
 id: **birchmouse** → file `images/orbis/birchmouse.jpg`
 
 ```
@@ -322,7 +336,7 @@ Photorealistic wildlife photograph of a Tien Shan birch mouse (Sicista tianschan
 
 ## Ande (1)
 
-### 43. Rana del Titicaca · *Telmatobius culeus*
+### 45. Rana del Titicaca · *Telmatobius culeus*
 id: **titicacafrog** → file `images/orbis/titicacafrog.jpg`
 
 ```
@@ -331,21 +345,21 @@ Photorealistic underwater photograph of a Titicaca water frog (Telmatobius culeu
 
 ## Sahara (3)
 
-### 44. Vipera cornuta · *Cerastes cerastes*
+### 46. Vipera cornuta · *Cerastes cerastes*
 id: **hornedviper** → file `images/orbis/hornedviper.jpg`
 
 ```
 Photorealistic wildlife photograph of a Saharan horned viper (Cerastes cerastes) partly buried in pale desert sand with only its head and eyes showing: a sandy-beige viper with faint darker blotches, vertical pupils, and a single small pointed horn-like scale rising above each eye, sidewinding tracks in the sand nearby. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
 ```
 
-### 45. Pesce delle sabbie · *Scincus scincus*
+### 47. Pesce delle sabbie · *Scincus scincus*
 id: **sandfish** → file `images/orbis/sandfish.jpg`
 
 ```
 Photorealistic wildlife photograph of a sandfish skink (Scincus scincus) half-buried as it dives head-first into fine golden Saharan sand: a stout lizard about 20 cm long with a wedge-shaped shovel-like snout, very smooth glossy scales, sandy-yellow body with dark brownish crossbands, short legs with fringed toes. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
 ```
 
-### 46. Gerboa egiziano minore · *Jaculus jaculus*
+### 48. Gerboa egiziano minore · *Jaculus jaculus*
 id: **jerboa** → file `images/orbis/jerboa.jpg`
 
 ```
