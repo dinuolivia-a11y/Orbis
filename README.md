@@ -8,13 +8,13 @@ Idea di Olivia Dinu, costruita con Claude. Versione del 18 ottobre 2026.
 
 ## Come aprirla
 
-- **Come app sul telefono:** apri il sito di Orbis e tocca **Installa**, in basso a sinistra.
+- **Come app sul telefono:** apri [dinuolivia-a11y.github.io/Orbis](https://dinuolivia-a11y.github.io/Orbis/) e tocca **Installa**, in basso a sinistra.
   - Android, con Chrome: si apre la finestra per installarla. Se non compare, menu ⋮ → **Installa app**.
   - iPhone, con Safari: tocca i tre puntini ••• accanto all'indirizzo → **Condividi** → **Aggiungi alla schermata Home**, lascia acceso **Apri come app web** e tocca **Aggiungi**. Sugli iPhone meno recenti il tasto Condividi è già nella barra in basso.
   - Orbis compare tra le app con la sua icona e si apre a tutto schermo. Dopo la prima apertura funziona anche senza internet. Le foto grandi delle galassie restano sul telefono dopo averle aperte una volta.
 - **Sul computer:** scarica `Orbis.html` e aprilo con un doppio clic. Serve internet, perché la grafica 3D e i caratteri si scaricano all'apertura. In questa versione le foto delle galassie sono in formato ridotto.
 - **Sul telefono:** meglio usare il link dell'app su Claude.
-- **Per metterla online:** la cartella `app/` è la versione installabile, con tutto dentro: grafica 3D, caratteri, icone e foto grandi. Si può pubblicare così com'è su qualsiasi sito statico. Il ramo `gh-pages` ne contiene una copia pronta per GitHub Pages.
+- **Per metterla online:** la cartella `app/` è la versione installabile, con tutto dentro: grafica 3D, caratteri, icone e foto grandi. Si può pubblicare così com'è su qualsiasi sito statico. Il ramo `gh-pages` ne contiene una copia, ed è quella pubblicata su GitHub Pages: per aggiornare il sito basta caricare lì la nuova versione di `app/`. Le app già installate si aggiornano da sole alla prima apertura con internet.
 
 Comandi: trascina per ruotare, pizzica o usa la rotella per lo zoom, tocca un pianeta, una galassia o un luogo sulla Terra per aprirne la scheda. In alto a destra si passa da italiano a inglese.
 
