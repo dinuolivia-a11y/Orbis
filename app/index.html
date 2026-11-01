@@ -686,7 +686,8 @@ const EXO = [
     stats: [[S.distance, { it: "circa 245 anni luce", en: "about 245 light-years" }], [S.size, { it: "come Saturno", en: "Saturn-sized" }], [S.found, "2011"]],
     kicker: { it: "Il pianeta con due soli", en: "The planet with two suns" },
     text: { it: "Gira intorno a due stelle che a loro volta girano l’una intorno all’altra. Da lì si vedrebbero due tramonti ogni sera, come nei film di fantascienza.", en: "It circles two stars that in turn circle each other. From there you would see two sunsets every evening, just like in science-fiction films." },
-    fact: { it: "È un gigante freddo, grande come Saturno: lì sopra non si potrebbe stare, ma la vista sarebbe incredibile.", en: "It is a cold giant the size of Saturn: you couldn’t stand on it, but the view would be incredible." } }
+    fact: { it: "È un gigante freddo, grande come Saturno: lì sopra non si potrebbe stare, ma la vista sarebbe incredibile.", en: "It is a cold giant the size of Saturn: you couldn’t stand on it, but the view would be incredible." },
+    sysNote: { it: "Qui vedi tutto il sistema. Le distanze sono in proporzione, le grandezze no: stelle e pianeta sono disegnati più grandi per poterli vedere. Le due stelle si girano intorno ogni 41 giorni e il pianeta fa il giro di tutte e due in 229 giorni; qui tutto va molto più veloce.", en: "Here you see the whole system. Distances are to scale, sizes are not: the stars and the planet are drawn bigger so you can see them. The two stars circle each other every 41 days and the planet goes round both in 229 days; here everything runs much faster." } }
 ];
 
 /* =========================================================
@@ -2177,16 +2178,81 @@ exo.scene.add(exo.planet);
 const starGlowTex = glowTexture([[0, "rgba(255,255,255,1)"], [0.1, "rgba(255,255,255,0.85)"], [0.32, "rgba(255,255,255,0.18)"], [1, "rgba(255,255,255,0)"]]);
 exo.star = new THREE.Sprite(new THREE.SpriteMaterial({ map: starGlowTex, blending: THREE.AdditiveBlending, depthWrite: false, transparent: true }));
 exo.star.position.set(-34, 12, -30); exo.star.scale.setScalar(26); exo.scene.add(exo.star);
-exo.star2 = new THREE.Sprite(new THREE.SpriteMaterial({ map: starGlowTex, blending: THREE.AdditiveBlending, depthWrite: false, transparent: true }));
-exo.star2.position.set(-24, 18, -34); exo.star2.scale.setScalar(16); exo.star2.visible = false; exo.scene.add(exo.star2);
 exoMat.uniforms.lightDir.value.copy(exo.star.position).normalize();
+// A planet with two suns (Kepler-16 b) is shown from further out: the two stars circle each other in the middle
+// and the planet goes round both. The distances follow the real orbits (0.22 and 0.70 times the Earth–Sun distance,
+// the bigger star closer to the middle); the stars and the planet are drawn bigger so they can be seen.
+const SYS = { R: 12, a: 0.867, b: 2.953, starTurn: 6, ratio: 228.8 / 41.08, dir: new THREE.Vector3(0.3, 0.52, 1).normalize(), size: 0.36 };
+exo.sys = new THREE.Group(); exo.sys.visible = false; exo.scene.add(exo.sys);
+function sysStar(core, glow, rCore, sGlow) {
+  const g = new THREE.Group();
+  const s = new THREE.Sprite(new THREE.SpriteMaterial({ map: starGlowTex, color: glow, blending: THREE.AdditiveBlending, depthWrite: false, transparent: true }));
+  s.scale.setScalar(sGlow); g.add(s);
+  g.add(new THREE.Mesh(new THREE.SphereGeometry(rCore, 32, 20), new THREE.MeshBasicMaterial({ color: core })));
+  exo.sys.add(g); return g;
+}
+exo.sysA = sysStar("#ffd9a6", "#ffa95c", 0.85, 7.5);
+exo.sysB = sysStar("#ff9566", "#ff6a3d", 0.5, 4.6);
+function sysRing(r, op) {
+  const pts = []; for (let i = 0; i <= 180; i++) { const a = i / 180 * Math.PI * 2; pts.push(new THREE.Vector3(Math.cos(a) * r, 0, Math.sin(a) * r)); }
+  exo.sys.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), new THREE.LineBasicMaterial({ color: "#b9c8e6", transparent: true, opacity: op, depthWrite: false })));
+}
+sysRing(SYS.R, 0.3); sysRing(SYS.b, 0.13); sysRing(SYS.a, 0.13);
+exo.binary = false; let sysT = 0;
+function placeSys(t) {
+  const th = t / SYS.starTurn * Math.PI * 2, ph = th / SYS.ratio + 2.2;
+  exo.sysA.position.set(Math.cos(th) * SYS.a, 0, -Math.sin(th) * SYS.a);
+  exo.sysB.position.set(-Math.cos(th) * SYS.b, 0, Math.sin(th) * SYS.b);
+  exo.planet.position.set(Math.cos(ph) * SYS.R, 0, -Math.sin(ph) * SYS.R);
+  exoMat.uniforms.lightDir.value.copy(exo.sysA.position).sub(exo.planet.position).normalize();
+}
 let exoTime = 0;
-exo.update = (dt) => { exoTime += dt; exoMat.uniforms.time.value = exoTime; if (!REDUCED) exo.planet.rotation.y += dt * 0.08; };
+exo.update = (dt) => {
+  exoTime += dt; exoMat.uniforms.time.value = exoTime; if (!REDUCED) exo.planet.rotation.y += dt * 0.08;
+  if (exo.binary) { if (!REDUCED) sysT += dt; placeSys(sysT); }
+};
 function setExo(e) {
   exo.current = e;
   const u = exoMat.uniforms; u.mode.value = e.mode; u.c1.value.set(e.c[0]); u.c2.value.set(e.c[1]); u.c3.value.set(e.c[2]); u.seed.value = e.seed;
-  exo.star.material.color.set(e.star); exo.star2.visible = !!e.star2; if (e.star2) exo.star2.material.color.set(e.star2);
+  exo.star.material.color.set(e.star);
   u.rimCol.value.set(e.mode === 2 || e.mode === 5 ? "#ff9a60" : e.mode === 1 && e.c[1] === "#2a55c8" ? "#7fa8ff" : "#9fbfff");
+  const bin = !!e.star2;
+  if (bin === exo.binary) return;
+  exo.binary = bin; exo.sys.visible = bin; exo.star.visible = !bin; refreshLabelText();
+  exo.planet.scale.setScalar(bin ? SYS.size : 1);
+  if (bin) placeSys(sysT); else { exo.planet.position.set(0, 0, 0); u.lightDir.value.copy(exo.star.position).normalize(); }
+  if (VIEW === "exo") {
+    // room for the whole trip out (or back in), then the usual limits once the camera is there
+    controls.minDistance = CAM.exo.min; controls.maxDistance = Math.max(CAM.exo.max, sysDist() * 1.6);
+    applyOffset(); flyTo(fitPos("exo"), CAM.exo.target.clone(), 1.5, exoLimits);
+  }
+}
+// The part of the screen the system can use: under the list and above the card on a phone, between them on a computer.
+function sysBand() {
+  const W = innerWidth, H = innerHeight, narrow = W <= 760, P = $("panel"), U = $("exo-ui");
+  const shown = !P.hidden, collapsed = shown && P.classList.contains("collapsed");
+  let x0 = 0, x1 = W, y0 = 78, y1 = H - 60;
+  if (narrow) { y0 = U.offsetTop + U.offsetHeight; y1 = shown ? P.offsetTop : H - 104; }
+  else { x0 = U.offsetLeft + U.offsetWidth; if (shown && !collapsed) x1 = P.offsetLeft; }
+  if (!(x1 - x0 > 80 && y1 - y0 > 80)) { x0 = 0; x1 = W; y0 = 0; y1 = H; }
+  return { x0, x1, y0, y1 };
+}
+// How far back the camera stands so the planet's whole orbit fits in that part of the screen.
+function sysDist() {
+  const W = innerWidth || 1280, H = innerHeight || 800, b = sysBand(), halfT = Math.tan(THREE.MathUtils.degToRad(camera.fov / 2)), k = (H / 2) / halfT;
+  const across = (SYS.R + 2) * k / ((b.x1 - b.x0) / 2 * 0.92), up = (SYS.R * SYS.dir.y + 2.2) * k / ((b.y1 - b.y0) / 2 * 0.9);
+  return Math.max(across, up, 24);
+}
+function exoLimits() {
+  controls.minDistance = exo.binary ? 8 : CAM.exo.min;
+  controls.maxDistance = exo.binary ? Math.max(100, sysDist() * 1.6) : CAM.exo.max;
+}
+// When the card opens or closes, the system grows or shrinks to fit what is left of the screen (the turn stays as it is).
+function sysRefit() {
+  if (VIEW !== "exo" || !exo.binary) return;
+  const dir = camera.position.clone().sub(controls.target).normalize(), d = sysDist();
+  controls.maxDistance = Math.max(controls.maxDistance, d * 1.6);
+  flyTo(controls.target.clone().add(dir.multiplyScalar(d)), controls.target.clone(), 0.7, exoLimits);
 }
 
 /* =========================================================
@@ -2223,6 +2289,11 @@ for (const R of gal.rings) {
     return t(v);
   });
 }
+// Names in the two-suns system: one under the pair of stars, one under the planet.
+const _up = new THREE.Vector3();
+function screenUp() { return _up.set(0, 1, 0).applyQuaternion(camera.quaternion); }
+addLabel("exo", "", () => screenUp().multiplyScalar(-3.9), null, () => t({ it: "Le due stelle", en: "The two stars" }), () => exo.binary);
+addLabel("exo", "", () => exo.planet.position.clone().addScaledVector(screenUp(), -(4 * SYS.size + 0.7)), null, () => exo.current ? exo.current.name : "", () => exo.binary);
 function refreshLabelText() { for (const L of LABELS) L.el.textContent = L.textFn(); }
 const _p = new THREE.Vector3();
 // Labels let every drag and pinch through to the scene; a tap on one is caught here.
@@ -2264,6 +2335,7 @@ const CAM = {
 let needsFit = false;
 const FIT = { solar: 40, earth: 5, galaxies: 60, exo: 4 };
 function fitPos(v) {
+  if (v === "exo" && exo.binary) return CAM.exo.target.clone().add(SYS.dir.clone().multiplyScalar(sysDist()));
   const c = CAM[v], dir = c.pos.clone().sub(c.target), len = dir.length();
   if (v === "solar" && innerWidth / innerHeight < 0.8) dir.set(0, 1, 0.42);
   if (v === "galaxies" && innerWidth / innerHeight < 0.8) dir.set(-0.45, 1, 0.18);
@@ -2283,7 +2355,7 @@ function configureControls(v) {
   controls.mouseButtons = { LEFT: THREE.MOUSE.ROTATE, MIDDLE: THREE.MOUSE.DOLLY, RIGHT: THREE.MOUSE.PAN };
   controls.touches = { ONE: THREE.TOUCH.ROTATE, TWO: THREE.TOUCH.DOLLY_PAN };
 }
-function setCamera(v) { const c = CAM[v]; configureControls(v); camera.position.copy(fitPos(v)); controls.target.copy(c.target); controls.minDistance = c.min; controls.maxDistance = c.max; controls.update(); }
+function setCamera(v) { const c = CAM[v]; configureControls(v); camera.position.copy(fitPos(v)); controls.target.copy(c.target); controls.minDistance = c.min; controls.maxDistance = c.max; if (v === "exo") exoLimits(); controls.update(); }
 const vOff = { x: 0, y: 0, tx: 0, ty: 0 };
 let loopStarted = false;
 function setOff() { const W = innerWidth, H = innerHeight; if (Math.abs(vOff.x) > 0.5 || Math.abs(vOff.y) > 0.5) camera.setViewOffset(W, H, vOff.x, vOff.y, W, H); else camera.clearViewOffset(); }
@@ -2296,7 +2368,8 @@ function stepOffset(dt) {
 function applyOffset() {
   const W = innerWidth, H = innerHeight, narrow = W <= 760, P = $("panel"), collapsed = !P.hidden && P.classList.contains("collapsed"), open = !P.hidden && !collapsed;
   let x = 0, y = 0;
-  if (VIEW === "exo") { if (narrow) y = collapsed ? -H * 0.02 : H * 0.07; else x = 40; }
+  if (VIEW === "exo" && exo.binary) { const b = sysBand(); x = W / 2 - (b.x0 + b.x1) / 2; y = H / 2 - (b.y0 + b.y1) / 2; }
+  else if (VIEW === "exo") { if (narrow) y = collapsed ? -H * 0.02 : H * 0.07; else x = 40; }
   else if (open) { if (narrow) y = H * 0.24; else x = Math.min(200, W * 0.15); }
   vOff.tx = x; vOff.ty = y;
   if (REDUCED || !loopStarted) { vOff.x = x; vOff.y = y; }
@@ -2413,7 +2486,7 @@ function openPanel(state) {
     html = `${X}<p class="kicker">${esc(t(G.kicker))}</p><h2>${esc(t(G.name))}</h2>${photo}${statsHTML(G.stats)}<p class="body">${esc(t(G.text))}</p><p class="fact"><strong>${esc(t(UI.fact))}</strong>${esc(t(G.fact))}</p>${G.note ? `<p class="note">${esc(t(G.note))}</p>` : ""}<button type="button" class="cta ghost" id="panel-map">${esc(t(UI.backMap))}</button>`;
   } else if (state.type === "exo") {
     const e = EXO.find((q) => q.id === state.id);
-    html = `${X}<p class="kicker">${esc(t(e.kicker))}</p><h2>${esc(e.name)}</h2>${statsHTML(e.stats)}<p class="body">${esc(t(e.text))}</p><p class="fact"><strong>${esc(t(UI.fact))}</strong>${esc(t(e.fact))}</p><p class="note">${esc(t(UI.exoArt))}</p>`;
+    html = `${X}<p class="kicker">${esc(t(e.kicker))}</p><h2>${esc(e.name)}</h2>${statsHTML(e.stats)}<p class="body">${esc(t(e.text))}</p><p class="fact"><strong>${esc(t(UI.fact))}</strong>${esc(t(e.fact))}</p>${e.sysNote ? `<p class="note">${esc(t(e.sysNote))}</p>` : ""}<p class="note">${esc(t(UI.exoArt))}</p>`;
   } else if (state.type === "dive") {
     const D = DIVE_PANEL[state.id];
     html = `${X}<p class="kicker">${esc(t(D.kicker))}</p><h2>${esc(t(D.title))}</h2>${state.extra ? `<p class="note">${esc(state.extra)}</p>` : ""}<p class="body">${esc(t(D.text).replace("{n}", DIVES[state.id].creatures.length))}</p><button type="button" class="cta" id="panel-cta">${esc(t(UI.startDive))} ↓</button>`;
@@ -2431,7 +2504,7 @@ function openPanel(state) {
 function closePanel() { panelState = null; $("panel").hidden = true; $("panel").classList.remove("collapsed"); $("hint").style.opacity = 1; applyOffset(); updateRecenter(); }
 function collapsePanel(on) {
   if (!panelState) return;
-  panelState.collapsed = on; const P = $("panel"); P.classList.toggle("collapsed", on); P.scrollTop = 0; applyOffset();
+  panelState.collapsed = on; const P = $("panel"); P.classList.toggle("collapsed", on); P.scrollTop = 0; applyOffset(); sysRefit();
   const f = $(on ? "pbar-info" : "panel-x"); if (f) f.focus({ preventScroll: true });
 }
 function openExoPanel(e) { openPanel({ type: "exo", id: e.id }); }
