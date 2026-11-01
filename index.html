@@ -225,6 +225,8 @@ p{margin:0}
 .creature figure{margin:0;aspect-ratio:1/1;max-width:100%;border-radius:14px;overflow:hidden;position:relative;background:radial-gradient(circle at 50% 42%,hsl(var(--h) 55% 30%),hsl(var(--h) 45% 9%) 68%,#04060b);display:grid;place-items:center}
 .creature figure img{width:100%;height:100%;object-fit:cover;display:block;cursor:zoom-in}
 .creature figure .ai{position:absolute;left:10px;bottom:10px;font-family:var(--mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.82);background:rgba(5,7,12,.55);padding:3px 8px;border-radius:999px;pointer-events:none}
+.creature figure .ai.photo{letter-spacing:.04em;text-transform:none;font-size:.62rem;max-width:calc(100% - 20px);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background:rgba(5,7,12,.62)}
+.lb-cap a{color:var(--accent)}
 .creature .mono{font-family:var(--display);font-style:italic;font-size:9rem;line-height:1;color:hsl(var(--h) 70% 82%);opacity:.22;user-select:none}
 .creature .soon{position:absolute;left:12px;bottom:12px;font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(238,241,246,.7);background:rgba(3,6,12,.55);padding:5px 9px;border-radius:999px}
 .creature .cb{display:flex;flex-direction:column;gap:10px;padding:6px 6px 6px 0;min-width:0}
@@ -313,6 +315,8 @@ p{margin:0}
 .copy:hover{border-color:var(--ink)}
 .credits-list{display:grid;gap:12px;color:#d6dbe5;padding-left:20px;margin:0}
 .credits-list a{color:var(--accent)}
+.photo-credits{list-style:none;padding:0;margin:10px 0 0;display:grid;gap:4px;font-size:.85rem;color:var(--mist)}
+.photo-credits b{color:#d6dbe5;font-weight:600}
 
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
@@ -448,6 +452,8 @@ const UI = {
   overview: { it: "Torna alla vista d’insieme", en: "Back to the overview" },
   showCard: { it: "Scheda", en: "Info" },
   imgAI: { it: "Illustrazione", en: "Illustration" },
+  imgPhoto: { it: "Foto", en: "Photo" }, photoBy: { it: "Foto di", en: "Photo by" }, pd: { it: "pubblico dominio", en: "public domain" },
+  photoShows: { it: "Nella foto", en: "In the photo" }, photoSource: { it: "originale", en: "original" },
   recenter: { it: "Vista d’insieme", en: "Overview" },
   startDive: { it: "Inizia la discesa", en: "Start the descent" },
   backEarth: { it: "Torna alla Terra", en: "Back to Earth" },
@@ -1689,7 +1695,43 @@ const CUR_EARTH = [
 ];
 
 /* Images Olivia brings back get listed here: id → file path */
-const IMAGES = { addax: "img/addax.webp", adelie: "img/adelie.webp", andeancat: "img/andeancat.webp", apollo: "img/apollo.webp", arcticfox: "img/arcticfox.webp", arctichare: "img/arctichare.webp", arcticwolf: "img/arcticwolf.webp", ayeaye: "img/ayeaye.webp", condor: "img/condor.webp", emperor: "img/emperor.webp", fairytern: "img/fairytern.webp", fennec: "img/fennec.webp", fossa: "img/fossa.webp", giantrat: "img/giantrat.webp", groundsquirrel: "img/groundsquirrel.webp", himbear: "img/himbear.webp", hoiho: "img/hoiho.webp", ilipika: "img/ilipika.webp", ivorygull: "img/ivorygull.webp", jumpspider: "img/jumpspider.webp", kaka: "img/kaka.webp", kakapo: "img/kakapo.webp", kaki: "img/kaki.webp", kea: "img/kea.webp", krill: "img/krill.webp", leafmouse: "img/leafmouse.webp", liolaemus: "img/liolaemus.webp", monal: "img/monal.webp", mouselemur: "img/mouselemur.webp", muskox: "img/muskox.webp", paragehyra: "img/paragehyra.webp", pardosa: "img/pardosa.webp", pochard: "img/pochard.webp", ptarmigan: "img/ptarmigan.webp", redpanda: "img/redpanda.webp", roylepika: "img/roylepika.webp", sandcat: "img/sandcat.webp", shorttailbat: "img/shorttailbat.webp", silverant: "img/silverant.webp", silverfish: "img/silverfish.webp", skua: "img/skua.webp", snowcock: "img/snowcock.webp", snowleopard: "img/snowleopard.webp", snowpetrel: "img/snowpetrel.webp", snowyowl: "img/snowyowl.webp", specbear: "img/specbear.webp", tahr: "img/tahr.webp", takahe: "img/takahe.webp", tragopan: "img/tragopan.webp", tsquirrel: "img/tsquirrel.webp", tuatara: "img/tuatara.webp", vicuna: "img/vicuna.webp", weddell: "img/weddell.webp" };
+// Real photos of creatures, all with licences that allow reuse: author, licence and where the original is.
+// lic: CC0 or PD (public domain, e.g. NOAA) need no credit, but we give it anyway; CC BY and CC BY-SA require it.
+const CREATURE_PHOTOS = {
+  brookesia: {"by": "Frank Glaw et al. (Scientific Reports, 2021)", "lic": "CC BY", "url": "https://www.inaturalist.org/photos/172340863"},
+  bulletant: {"by": "Philipp Hoenle", "lic": "CC0", "url": "https://www.inaturalist.org/photos/166002296"},
+  caecilian: {"by": "Vincent A. Vos", "lic": "CC BY", "url": "https://www.inaturalist.org/photos/32026151"},
+  casper: {"by": "NOAA Ocean Exploration, Hohonu Moana 2016", "lic": "PD", "url": "https://oceanexplorer.noaa.gov/multimedia/daily-image/media/20200802.html"},
+  cordyceps: {"by": "Katja Schulz", "lic": "CC BY", "url": "https://www.inaturalist.org/photos/6308930", "shows": "Ophiocordyceps unilateralis"},
+  crabeater: {"by": "Liam Quinn", "lic": "CC BY-SA", "url": "https://www.inaturalist.org/photos/71144"},
+  dumbo: {"by": "NOAA Office of Ocean Exploration and Research, Discovering the Deep 2017", "lic": "PD", "url": "https://oceanexplorer.noaa.gov/wp-content/uploads/2025/04/dumbo-octopus-hires.jpg", "shows": "Grimpoteuthis sp."},
+  flyingsquirrel: {"by": "Masood Lohar", "lic": "CC BY-SA", "url": "https://www.inaturalist.org/photos/79562174"},
+  fulgora: {"by": "Bernard DUPONT", "lic": "CC BY-SA", "url": "https://www.inaturalist.org/photos/24440960"},
+  glassfrog: {"by": "Dan MacNeal", "lic": "CC BY", "url": "https://www.inaturalist.org/photos/60123702", "shows": "Hyalinobatrachium valerioi"},
+  glaucus: {"by": "Sylke Rohrlach", "lic": "CC BY-SA", "url": "https://www.inaturalist.org/photos/12393388"},
+  goliath: {"by": "Kristof Zyskowski", "lic": "CC BY", "url": "https://www.inaturalist.org/photos/262923074"},
+  harpy: {"by": "Sidnei Dantas", "lic": "CC BY-SA", "url": "https://www.inaturalist.org/photos/154445659"},
+  helmetvanga: {"by": "desertnaturalist", "lic": "CC BY", "url": "https://www.inaturalist.org/photos/54158383"},
+  hoatzin: {"by": "Bill Bouton", "lic": "CC BY-SA", "url": "https://www.inaturalist.org/photos/364504337"},
+  hornedviper: {"by": "Julien Renoult", "lic": "CC BY", "url": "https://www.inaturalist.org/photos/12887547"},
+  indri: {"by": "Vijay Barve", "lic": "CC0", "url": "https://www.inaturalist.org/photos/8945066"},
+  jerboa: {"by": "Barry Stewart", "lic": "CC BY", "url": "https://www.inaturalist.org/photos/661019212"},
+  kinkajou: {"by": "Lon Brehmer", "lic": "CC BY", "url": "https://www.inaturalist.org/photos/735532632"},
+  lammergeier: {"by": "Justin Ponder", "lic": "CC BY", "url": "https://www.inaturalist.org/photos/364202172"},
+  leafcutter: {"by": "Jonghyun Park", "lic": "CC BY", "url": "https://www.inaturalist.org/photos/121490781", "shows": "Atta sexdens"},
+  lemming: {"by": "Piotr Lukasik", "lic": "CC BY", "url": "https://www.inaturalist.org/photos/146049571"},
+  mesite: {"by": "Nigel Voaden", "lic": "CC BY", "url": "https://www.inaturalist.org/photos/3414762"},
+  mtnfinch: {"by": "condorr", "lic": "CC BY", "url": "https://www.inaturalist.org/photos/707695573"},
+  sandfox: {"by": "steve b", "lic": "CC0", "url": "https://www.inaturalist.org/photos/520230869"},
+  sapphirina: {"by": "Georgina Jones", "lic": "CC BY-SA", "url": "https://www.inaturalist.org/photos/26377796"},
+  slothmoth: {"by": "Arthur de Jesús Chavarría Pérez", "lic": "CC BY", "url": "https://www.inaturalist.org/photos/60083448"},
+  snowbunting: {"by": "Christoph Moning", "lic": "CC BY", "url": "https://www.inaturalist.org/photos/101706492"},
+  titicacafrog: {"by": "Petr Hamerník", "lic": "CC BY-SA", "url": "https://www.inaturalist.org/photos/111302917"},
+  tripod: {"by": "NOAA Ocean Exploration, 2026 American Samoa ROV + Mapping Exploration", "lic": "PD", "url": "https://oceanexplorer.noaa.gov/wp-content/uploads/2026/08/ex2606-dive03-tripodfish.jpg", "shows": {"it": "un pesce treppiede del genere Bathypterois, specie non indicata", "en": "a tripod fish of the genus Bathypterois, species not given"}},
+  uakari: {"by": "Thiago Bicudo", "lic": "CC BY", "url": "https://www.inaturalist.org/photos/278826311"},
+  xeno: {"by": "NOAA Ocean Exploration, 2026 American Samoa ROV + Mapping Exploration", "lic": "PD", "url": "https://oceanexplorer.noaa.gov/wp-content/uploads/2026/09/ex2606-dive04-xenophyophore.jpg"}
+};
+const IMAGES = { addax: "img/addax.webp", adelie: "img/adelie.webp", andeancat: "img/andeancat.webp", apollo: "img/apollo.webp", arcticfox: "img/arcticfox.webp", arctichare: "img/arctichare.webp", arcticwolf: "img/arcticwolf.webp", ayeaye: "img/ayeaye.webp", brookesia: "img/brookesia.webp", bulletant: "img/bulletant.webp", caecilian: "img/caecilian.webp", casper: "img/casper.webp", condor: "img/condor.webp", cordyceps: "img/cordyceps.webp", crabeater: "img/crabeater.webp", dumbo: "img/dumbo.webp", emperor: "img/emperor.webp", fairytern: "img/fairytern.webp", fennec: "img/fennec.webp", flyingsquirrel: "img/flyingsquirrel.webp", fossa: "img/fossa.webp", fulgora: "img/fulgora.webp", giantrat: "img/giantrat.webp", glassfrog: "img/glassfrog.webp", glaucus: "img/glaucus.webp", goliath: "img/goliath.webp", groundsquirrel: "img/groundsquirrel.webp", harpy: "img/harpy.webp", helmetvanga: "img/helmetvanga.webp", himbear: "img/himbear.webp", hoatzin: "img/hoatzin.webp", hoiho: "img/hoiho.webp", hornedviper: "img/hornedviper.webp", ilipika: "img/ilipika.webp", indri: "img/indri.webp", ivorygull: "img/ivorygull.webp", jerboa: "img/jerboa.webp", jumpspider: "img/jumpspider.webp", kaka: "img/kaka.webp", kakapo: "img/kakapo.webp", kaki: "img/kaki.webp", kea: "img/kea.webp", kinkajou: "img/kinkajou.webp", krill: "img/krill.webp", lammergeier: "img/lammergeier.webp", leafcutter: "img/leafcutter.webp", leafmouse: "img/leafmouse.webp", lemming: "img/lemming.webp", liolaemus: "img/liolaemus.webp", mesite: "img/mesite.webp", monal: "img/monal.webp", mouselemur: "img/mouselemur.webp", mtnfinch: "img/mtnfinch.webp", muskox: "img/muskox.webp", paragehyra: "img/paragehyra.webp", pardosa: "img/pardosa.webp", pochard: "img/pochard.webp", ptarmigan: "img/ptarmigan.webp", redpanda: "img/redpanda.webp", roylepika: "img/roylepika.webp", sandcat: "img/sandcat.webp", sandfox: "img/sandfox.webp", sapphirina: "img/sapphirina.webp", shorttailbat: "img/shorttailbat.webp", silverant: "img/silverant.webp", silverfish: "img/silverfish.webp", skua: "img/skua.webp", slothmoth: "img/slothmoth.webp", snowbunting: "img/snowbunting.webp", snowcock: "img/snowcock.webp", snowleopard: "img/snowleopard.webp", snowpetrel: "img/snowpetrel.webp", snowyowl: "img/snowyowl.webp", specbear: "img/specbear.webp", tahr: "img/tahr.webp", takahe: "img/takahe.webp", titicacafrog: "img/titicacafrog.webp", tragopan: "img/tragopan.webp", tripod: "img/tripod.webp", tsquirrel: "img/tsquirrel.webp", tuatara: "img/tuatara.webp", uakari: "img/uakari.webp", vicuna: "img/vicuna.webp", weddell: "img/weddell.webp", xeno: "img/xeno.webp" };
 
 /* =========================================================
    EARTH HOTSPOTS
@@ -2576,7 +2618,15 @@ let dive = null;
 const DIVE_HASH = { ocean: "oceano", amazon: "amazzonia", madagascar: "madagascar", himalaya: "himalaya", newzealand: "nuova-zelanda", tundra: "tundra", antarctica: "antartide", tianshan: "tian-shan", andes: "ande", sahara: "sahara" };
 const diveEl = $("dive"), track = $("dive-track"), gauge = $("gauge");
 // Tap a creature's picture to see it full screen.
-track.addEventListener("click", (e) => { const im = e.target.closest(".creature figure img"); if (im) openPhoto(im.src, im.alt); });
+track.addEventListener("click", (e) => {
+  const im = e.target.closest(".creature figure img"); if (!im) return;
+  const ph = im.dataset.id && CREATURE_PHOTOS[im.dataset.id];
+  if (!ph) { openPhoto(im.src, im.alt); return; }
+  const shows = ph.shows ? ` · ${t(UI.photoShows)}: ${t(ph.shows)}` : "";
+  openPhoto(im.src, `${im.alt}${shows} · ${t(UI.photoBy)} ${photoCredit(ph)}`, ph.url);
+});
+// "Author · licence" as shown under a real photo
+function photoCredit(ph) { return `${ph.by} · ${ph.lic === "PD" ? t(UI.pd) : ph.lic}`; }
 function imgFor(id) { const p = IMAGES[id]; return p ? (window.ORBIS_IMG && window.ORBIS_IMG[p]) || p : null; }
 function zoneOf(cfg, d) { return cfg.zones.find((z) => d >= z.from && d < z.to) || cfg.zones[cfg.zones.length - 1]; }
 const num = (v) => fmt(v, v < 10 && Math.abs(v - Math.round(v)) > 0.04 ? (v < 1 && Math.abs(v * 10 - Math.round(v * 10)) > 0.04 ? 2 : 1) : 0);
@@ -2626,7 +2676,9 @@ function buildDive(kind) {
       html += `<p class="mark" data-d="${it.d}"><span><b>${esc(dLabel(kind, it.d))}</b> · ${esc(t(it.m.text))}</span></p>`;
     } else {
       const c = it.c, img = imgFor(c.id), z = zoneOf(cfg, c.d);
-      const fig = img ? `<img src="${esc(img)}" alt="${esc(t(c.name))}" loading="lazy"><span class="ai">${esc(t(UI.imgAI))}</span>` : `<span class="mono">${esc(t(c.name).replace(/^(Il|La|Lo|The)\s+/, "").charAt(0))}</span><span class="soon">${esc(t(UI.imgSoon))}</span>`;
+      const ph = CREATURE_PHOTOS[c.id];
+      const fig = img && ph ? `<img src="${esc(img)}" alt="${esc(t(c.name))}" loading="lazy" data-id="${c.id}"><span class="ai photo">${esc(t(UI.imgPhoto))} · ${esc(photoCredit(ph))}</span>`
+        : img ? `<img src="${esc(img)}" alt="${esc(t(c.name))}" loading="lazy"><span class="ai">${esc(t(UI.imgAI))}</span>` : `<span class="mono">${esc(t(c.name).replace(/^(Il|La|Lo|The)\s+/, "").charAt(0))}</span><span class="soon">${esc(t(UI.imgSoon))}</span>`;
       html += `<article class="creature${flip ? " flip" : ""}" data-d="${c.d}" style="--h:${c.h}" id="c-${c.id}">
         <figure>${fig}</figure>
         <div class="cb"><p class="at">${esc(c.at ? t(c.at) : dLabel(kind, c.d))} · ${esc(t(z.name))}</p><h3>${esc(t(c.name))}</h3><p class="sci">${esc(t(c.sci))}</p>
@@ -2752,7 +2804,7 @@ function renderLab() {
     html += `<section class="lab-group"><h2>${esc(t(label))}</h2>`;
     for (const c of DIVES[k].creatures) {
       const full = c.prompt + " " + STYLE_OF[c.style];
-      html += `<div class="lab-item"><div class="hd"><strong>${esc(t(c.name))}</strong><em>${esc(t(c.sci))}</em><span class="state${IMAGES[c.id] ? " ok" : ""}">${esc(t(IMAGES[c.id] ? { it: "pronta", en: "ready" } : { it: "da fare", en: "to do" }))}</span></div><p class="prompt" id="p-${c.id}">${esc(full)}</p><button type="button" class="copy" data-id="${c.id}">${esc(t({ it: "Copia prompt", en: "Copy prompt" }))}</button></div>`;
+      html += `<div class="lab-item"><div class="hd"><strong>${esc(t(c.name))}</strong><em>${esc(t(c.sci))}</em><span class="state${IMAGES[c.id] ? " ok" : ""}">${esc(t(CREATURE_PHOTOS[c.id] ? { it: "foto vera", en: "real photo" } : IMAGES[c.id] ? { it: "pronta", en: "ready" } : { it: "da fare", en: "to do" }))}</span></div><p class="prompt" id="p-${c.id}">${esc(full)}</p><button type="button" class="copy" data-id="${c.id}">${esc(t({ it: "Copia prompt", en: "Copy prompt" }))}</button></div>`;
     }
     html += `</section>`;
   }
@@ -2765,6 +2817,11 @@ function renderLab() {
     setTimeout(() => { b.textContent = t({ it: "Copia prompt", en: "Copy prompt" }); }, 2200);
   });
 }
+function photoCreditList() {
+  const names = {}; for (const k in DIVES) for (const c of DIVES[k].creatures) names[c.id] = c.name;
+  return Object.keys(CREATURE_PHOTOS).filter((id) => names[id]).sort((a, b) => t(names[a]).localeCompare(t(names[b]), LANG))
+    .map((id) => { const ph = CREATURE_PHOTOS[id]; return `<li><b>${esc(t(names[id]))}</b>: ${esc(photoCredit(ph))}${ph.shows ? ` (${esc(t(UI.photoShows).toLowerCase())}: ${esc(t(ph.shows))})` : ""} · <a href="${esc(ph.url)}" target="_blank" rel="noopener">${esc(t(UI.photoSource))}</a></li>`; }).join("");
+}
 function renderCredits() {
   const L = (it, en) => esc(t({ it, en }));
   $("credits-inner").innerHTML = `<div class="top"><h1>${esc(t(UI.credits))}</h1><button type="button" class="cta ghost" id="credits-close">${esc(t(UI.close))}</button></div>
@@ -2776,6 +2833,7 @@ function renderCredits() {
     <li>${L("Foto delle galassie: ESA/Hubble e ESA/Webb (NASA, ESA, CSA, STScI) ed ESO, licenza CC BY 4.0; foto del buco nero di M87: EHT Collaboration. I nomi degli autori sono sotto ogni foto.", "Galaxy photos: ESA/Hubble and ESA/Webb (NASA, ESA, CSA, STScI) and ESO, CC BY 4.0 licence; M87 black hole image: EHT Collaboration. Authors are named under each photo.")} <a href="https://esahubble.org/copyright/" target="_blank" rel="noopener">esahubble.org</a> · <a href="https://www.eso.org/public/outreach/copyright/" target="_blank" rel="noopener">eso.org</a></li>
     <li>${L("Le galassie in 3D e gli esopianeti sono ricostruzioni disegnate dal programma; le foto vere sono nelle schede delle galassie.", "The 3D galaxies and the exoplanets are reconstructions drawn by the program; the real photos are in the galaxy cards.")}</li>
     <li>${L("Creature del Madagascar e nuove creature dell’oceano: dati da IUCN, FishBase, MBARI, Università delle Hawaii, Senckenberg, Durrell e WWT, ZooKeys e Scientific Reports.", "Madagascar creatures and new ocean creatures: data from IUCN, FishBase, MBARI, University of Hawaii, Senckenberg, Durrell and WWT, ZooKeys and Scientific Reports.")}</li>
+    <li>${L("Foto vere delle creature: scattate da naturalisti e ricercatori, ritagliate in formato quadrato. Si possono riusare grazie alle loro licenze: CC0 e pubblico dominio sono libere, CC BY e CC BY-SA chiedono di citare l’autore (e CC BY-SA di condividere la foto con la stessa licenza). Le creature senza foto libera hanno un’illustrazione.", "Real photos of the creatures: taken by naturalists and researchers, cropped to a square. Their licences allow reuse: CC0 and public domain are free, CC BY and CC BY-SA ask for the author to be named (and CC BY-SA for the photo to be shared under the same licence). Creatures without a free photo have an illustration.")} <a href="https://creativecommons.org/licenses/" target="_blank" rel="noopener">creativecommons.org</a><ul class="photo-credits">${photoCreditList()}</ul></li>
     <li>${L("Nel sistema solare distanze e dimensioni non sono in scala: in scala reale i pianeti sarebbero puntini invisibili.", "In the solar system, distances and sizes are not to scale: at true scale the planets would be invisible dots.")}</li>
     <li>${L("Grafica 3D realizzata con three.js.", "3D graphics made with three.js.")}</li>
   </ul>`;
@@ -2822,9 +2880,11 @@ document.addEventListener("keydown", (e) => {
 /* =========================================================
    PHOTOS & DAILY CURIOSITIES
    ========================================================= */
-function openPhoto(src, cap) {
+function openPhoto(src, cap, link) {
   const L = $("lightbox"), img = $("lb-img");
-  L.classList.remove("zoom"); img.src = src; img.alt = cap; $("lb-cap").textContent = cap; L.hidden = false;
+  L.classList.remove("zoom"); img.src = src; img.alt = cap;
+  $("lb-cap").innerHTML = esc(cap) + (link ? ` · <a href="${esc(link)}" target="_blank" rel="noopener">${esc(t(UI.photoSource))} ↗</a>` : "");
+  L.hidden = false;
 }
 function closePhoto() { $("lightbox").hidden = true; $("lb-img").removeAttribute("src"); }
 $("lb-x").onclick = closePhoto;
