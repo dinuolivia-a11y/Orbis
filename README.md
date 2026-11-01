@@ -30,7 +30,7 @@ Comandi:
 
 - **Sistema solare:** Sole, 8 pianeti e la Luna con le mappe reali basate sui dati NASA, e un cielo stellato più vivo.
 - **Galassie:** 12 galassie costruite stella per stella, da 1.400 a 70.000 stelle ciascuna, con bracci, polveri e nebulose. Tocchi una galassia e ci voli vicino, poi zoomi fin dentro. Nella scheda c'è la **foto vera** fatta da Hubble, Webb o dai telescopi ESO, da ingrandire a tutto schermo. Nella Via Lattea un segno mostra dove si trova il Sole.
-- **Esopianeti:** 13 pianeti, comprese le scoperte del 2026, con ricerca e filtri.
+- **Esopianeti:** 13 pianeti, comprese le scoperte del 2026, con ricerca e filtri. Per Kepler-16 b, il pianeta con due soli, si vede tutto il sistema: le due stelle che si girano intorno e il pianeta che fa il giro di entrambe, con le distanze in proporzione.
 - **Terra:** giorno e notte con le luci delle città, nuvole e atmosfera. 10 luoghi esplorabili e 7 segnati come "presto".
 - **Discese:**
   - Oceano: da 0 a 10.935 m, 17 creature.
@@ -44,13 +44,14 @@ Comandi:
   - Ande: dal vulcano Llullaillaco alla foresta delle nuvole, 7 creature.
   - Sahara: dall'aria rovente alle tane sotto la sabbia, con la temperatura, 7 creature.
 - **Curiosità del giorno:** 31 sullo spazio e 30 sulla Terra, ognuna con la spiegazione del perché. Si aprono da sole la prima volta di ogni giorno e da "Lo sapevi?" in basso a destra. "Mostramelo" porta nel punto dell'app di cui parla la curiosità.
-- **Laboratorio immagini:** un prompt per ognuna delle 101 creature, con lo stato «pronta» o «da fare».
+- **Foto vere:** 32 creature hanno una foto vera, scattata da naturalisti e ricercatori, con licenza libera. Sulla scheda c'è scritto "Foto", l'autore e la licenza; ingrandendola c'è il link all'originale.
+- **Laboratorio immagini:** un prompt per ognuna delle 101 creature, con lo stato «foto vera», «pronta» o «da fare».
 
 ## Come lavoriamo
 
 1. Claude sceglie e verifica le creature di ogni zona, con le fonti, e scrive i prompt delle immagini.
-2. Olivia genera le immagini con Grok o ChatGPT usando quei prompt.
-3. Claude controlla ogni immagine e la inserisce nell'app.
+2. Per ogni creatura Claude cerca prima una foto vera con licenza libera (iNaturalist, NOAA Ocean Exploration): se c'è, la verifica e la mette con il nome dell'autore.
+3. Per le creature senza foto libera, Olivia genera l'immagine con ChatGPT o Grok usando quei prompt; Claude la controlla e la inserisce nell'app.
 
 Una zona alla volta, finita prima di passare alla successiva.
 
@@ -63,6 +64,8 @@ Una zona alla volta, finita prima di passare alla successiva.
 | `icona/` | Le tre proposte per l'icona dell'app. In uso c'è la 1, la Terra con l'orbita dorata. |
 | `docs/prompt-creature.md` | I 39 prompt per le immagini delle creature. |
 | `docs/verifica-database-grok.md` | La verifica del database di creature preparato con Grok. |
+| `docs/foto-creature.md` | Le 32 foto vere delle creature: autore, licenza e link all'originale. |
+| `docs/per-link.md` | I prompt per ChatGPT delle 16 creature ancora senza immagine. |
 | `anteprime/` | Schermate dell'app. |
 
 ## Com'è fatta
@@ -74,11 +77,11 @@ Una zona alla volta, finita prima di passare alla successiva.
 - La Terra ha uno shader scritto a mano per giorno, notte e riflessi sull'oceano. Gli esopianeti sono generati con un rumore procedurale.
 - Le galassie sono nuvole di punti generate dal programma: bracci a spirale logaritmica, rigonfiamento centrale, regioni rosa di formazione stellare e polveri scure. Ognuna è orientata con l'inclinazione con cui la vediamo dalla Terra.
 - Tutti i contenuti, in italiano e inglese, sono in oggetti dentro la pagina: `PLANETS`, `GALAXIES`, `GAL3D`, `GAL_PHOTOS`, `EXO`, `DIVES`, `HOTSPOTS`, `CUR_SPACE`, `CUR_EARTH`.
-- Per aggiungere l'immagine di una creatura: metti il file in `app/img/` e aggiungi una riga nell'oggetto `IMAGES`, per esempio `indri: "img/indri.jpg"`.
+- Per aggiungere l'immagine di una creatura: metti il file in `app/img/` e aggiungi una riga nell'oggetto `IMAGES`, per esempio `indri: "img/indri.webp"`. Se è una foto vera, aggiungi anche autore, licenza e link nell'oggetto `CREATURE_PHOTOS`: la scheda mostra "Foto · autore · licenza" e la pagina Crediti la elenca.
 
 ## Cosa manca ancora
 
-1. Le immagini delle creature: 53 su 101 sono pronte. Il controllo è in `docs/controllo-immagini.md`. Le 48 che mancano sono in `docs/per-grok.md`, con i prompt; al loro posto per ora c'è una lettera provvisoria.
+1. Le immagini delle creature: 85 su 101 sono pronte, di cui 32 foto vere e 53 illustrazioni controllate (`docs/controllo-immagini.md`). Le 16 che mancano sono in `docs/per-link.md`, con i prompt per ChatGPT; al loro posto per ora c'è una lettera provvisoria.
 2. I 7 luoghi ancora segnati come "presto" sul globo: Barriera Corallina, Atacama, Namib, Appalachi, Ghiacciai della Patagonia, Ghati occidentali e Altopiano etiope.
 3. La foto del giorno della NASA (APOD), quando l'app avrà un suo sito.
 4. Il Laboratorio immagini va tolto prima di pubblicare l'app.
@@ -93,6 +96,7 @@ Una zona alla volta, finita prima di passare alla successiva.
   - [ESO](https://www.eso.org/public/outreach/copyright/): Via Lattea (S. Brunier), Nubi di Magellano (Y. Beletsky; VISTA VMC), Centaurus A.
   - Buco nero di M87: EHT Collaboration.
   - I nomi completi degli autori sono sotto ogni foto nell'app.
+- Foto delle creature: 28 da [iNaturalist](https://www.inaturalist.org) (CC0, CC BY, CC BY-SA) e 4 da [NOAA Ocean Exploration](https://oceanexplorer.noaa.gov) (pubblico dominio). Autori e link in `docs/foto-creature.md`.
 - Grafica 3D: three.js, licenza MIT, inclusa in `app/vendor/`. Caratteri: Bodoni Moda, Atkinson Hyperlegible e DM Mono, SIL Open Font License.
 - Dati: [NASA Exoplanet Archive](https://exoplanetarchive.ipac.caltech.edu/), MBARI, NOAA Ocean Exploration, FishBase, IUCN, Università delle Hawaii, Senckenberg, Durrell e WWT, e le pubblicazioni scientifiche citate in `docs/`.
 
