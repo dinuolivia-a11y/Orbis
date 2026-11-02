@@ -1,6 +1,8 @@
-# Foto vere delle creature · 1 novembre 2026
+# Foto vere delle creature · 2 novembre 2026
 
-32 creature di Orbis hanno una foto vera al posto dell'illustrazione. Claude le ha cercate su iNaturalist (solo osservazioni verificate dalla comunità, "research grade") e nell'archivio di NOAA Ocean Exploration, e ha tenuto solo le foto con licenze che permettono di riusarle anche se un giorno l'app sarà venduta:
+35 creature di Orbis hanno una foto vera al posto dell'illustrazione. Claude le ha cercate su iNaturalist (solo osservazioni verificate dalla comunità, "research grade") e nell'archivio di NOAA Ocean Exploration. Tre (granchio yeti, pesce delle sabbie e anfipode del fondo) le ha trovate Link su Wikimedia Commons e nella banca immagini di Ifremer, e Claude le ha controllate.
+
+Sono state tenute solo foto con licenze che permettono di riusarle anche se un giorno l'app sarà venduta:
 
 - **CC0** e **pubblico dominio** (le foto di NOAA, un ente pubblico degli Stati Uniti): libere, senza condizioni.
 - **CC BY**: bisogna citare l'autore.
@@ -14,6 +16,7 @@ Nell'app: sulla scheda c'è scritto "Foto · autore · licenza"; toccando la fot
 
 | Creatura | Specie | Autore | Licenza | Originale | Nota |
 |---|---|---|---|---|---|
+| Anfipode del fondo | *Hirondellea gigas* | Daiju Azuma / OpenCage (pulizia: Lycaon) | CC BY-SA | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Hirondellea_gigas.jpg) |  |
 | Aquila arpia | *Harpia harpyja* | Sidnei Dantas | CC BY-SA | [iNaturalist](https://www.inaturalist.org/photos/154445659) |  |
 | Camaleonte nano | *Brookesia nana* | Frank Glaw et al. (Scientific Reports, 2021) | CC BY | [iNaturalist](https://www.inaturalist.org/photos/172340863) |  |
 | Ceciliano anellato | *Siphonops annulatus* | Vincent A. Vos | CC BY | [iNaturalist](https://www.inaturalist.org/photos/32026151) |  |
@@ -26,12 +29,14 @@ Nell'app: sulla scheda c'è scritto "Foto · autore · licenza"; toccando la fot
 | Fungo delle formiche zombie | *Ophiocordyceps* | Katja Schulz | CC BY | [iNaturalist](https://www.inaturalist.org/photos/6308930) | nella foto: Ophiocordyceps unilateralis |
 | Gerboa egiziano minore | *Jaculus jaculus* | Barry Stewart | CC BY | [iNaturalist](https://www.inaturalist.org/photos/661019212) |  |
 | Gipeto | *Gypaetus barbatus* | Justin Ponder | CC BY | [iNaturalist](https://www.inaturalist.org/photos/364202172) |  |
+| Granchio yeti | *Kiwa hirsuta* | Alexis Fifis / Ifremer | CC BY | [Ifremer](https://image.ifremer.fr/data/00569/68091) |  |
 | Hoatzin | *Opisthocomus hoazin* | Bill Bouton | CC BY-SA | [iNaturalist](https://www.inaturalist.org/photos/364504337) |  |
 | Il giardino delle formiche tagliafoglie | *Atta* | Jonghyun Park | CC BY | [iNaturalist](https://www.inaturalist.org/photos/121490781) | nella foto: Atta sexdens |
 | Indri | *Indri indri* | Vijay Barve | CC0 | [iNaturalist](https://www.inaturalist.org/photos/8945066) |  |
 | Kinkajou | *Potos flavus* | Lon Brehmer | CC BY | [iNaturalist](https://www.inaturalist.org/photos/735532632) |  |
 | Lemming dal collare | *Dicrostonyx groenlandicus* | Piotr Lukasik | CC BY | [iNaturalist](https://www.inaturalist.org/photos/146049571) |  |
 | Mesite pettobianco | *Mesitornis variegatus* | Nigel Voaden | CC BY | [iNaturalist](https://www.inaturalist.org/photos/3414762) |  |
+| Pesce delle sabbie | *Scincus scincus* | HTO | CC0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Scincus_scincus_01.JPG) |  |
 | Pesce treppiede | *Bathypterois grallator* | NOAA Ocean Exploration, 2026 American Samoa ROV + Mapping Exploration | pubblico dominio | [NOAA Ocean Exploration](https://oceanexplorer.noaa.gov/wp-content/uploads/2026/08/ex2606-dive03-tripodfish.jpg) | nella foto: un pesce treppiede del genere Bathypterois, specie non indicata |
 | Polpo Dumbo | *Grimpoteuthis* | NOAA Office of Ocean Exploration and Research, Discovering the Deep 2017 | pubblico dominio | [NOAA Ocean Exploration](https://oceanexplorer.noaa.gov/wp-content/uploads/2025/04/dumbo-octopus-hires.jpg) | nella foto: Grimpoteuthis sp. |
 | Polpo fantasma Casper | ** | NOAA Ocean Exploration, Hohonu Moana 2016 | pubblico dominio | [NOAA Ocean Exploration](https://oceanexplorer.noaa.gov/multimedia/daily-image/media/20200802.html) |  |
@@ -47,6 +52,6 @@ Nell'app: sulla scheda c'è scritto "Foto · autore · licenza"; toccando la fot
 | Zaffiro di mare | *Sapphirina* | Georgina Jones | CC BY-SA | [iNaturalist](https://www.inaturalist.org/photos/26377796) |  |
 | Zigolo delle nevi | *Plectrophenax nivalis* | Christoph Moning | CC BY | [iNaturalist](https://www.inaturalist.org/photos/101706492) |  |
 
-## Senza foto libera
+## Le altre creature
 
-Per 16 creature una foto libera non c'è: quasi tutte vivono negli abissi e sono state fotografate solo da istituti che non permettono di riusare le foto, oppure esistono solo foto di esemplari conservati in museo. Per queste servono le illustrazioni: i prompt per ChatGPT sono in `per-link.md`.
+Le 66 creature senza foto libera hanno un'illustrazione creata con l'intelligenza artificiale e controllata da Claude: 53 fatte con Grok (controllo in `controllo-immagini.md`) e 13 fatte con Link, cioè ChatGPT (controllo e riferimenti in `illustrazioni-link.md`). Nell'app hanno la scritta «Illustrazione».

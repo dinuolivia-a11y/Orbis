@@ -44,7 +44,7 @@ Comandi:
   - Ande: dal vulcano Llullaillaco alla foresta delle nuvole, 7 creature.
   - Sahara: dall'aria rovente alle tane sotto la sabbia, con la temperatura, 7 creature.
 - **Curiosità del giorno:** 31 sullo spazio e 30 sulla Terra, ognuna con la spiegazione del perché. Si aprono da sole la prima volta di ogni giorno e da "Lo sapevi?" in basso a destra. "Mostramelo" porta nel punto dell'app di cui parla la curiosità.
-- **Foto vere:** 32 creature hanno una foto vera, scattata da naturalisti e ricercatori, con licenza libera. Sulla scheda c'è scritto "Foto", l'autore e la licenza; ingrandendola c'è il link all'originale.
+- **Foto vere:** 35 creature hanno una foto vera, scattata da naturalisti e ricercatori, con licenza libera. Sulla scheda c'è scritto "Foto", l'autore e la licenza; ingrandendola c'è il link all'originale.
 - **Laboratorio immagini:** un prompt per ognuna delle 101 creature, con lo stato «foto vera», «pronta» o «da fare».
 
 ## Come lavoriamo
@@ -64,8 +64,9 @@ Una zona alla volta, finita prima di passare alla successiva.
 | `icona/` | Le tre proposte per l'icona dell'app. In uso c'è la 1, la Terra con l'orbita dorata. |
 | `docs/prompt-creature.md` | I 39 prompt per le immagini delle creature. |
 | `docs/verifica-database-grok.md` | La verifica del database di creature preparato con Grok. |
-| `docs/foto-creature.md` | Le 32 foto vere delle creature: autore, licenza e link all'originale. |
-| `docs/per-link.md` | I prompt per ChatGPT delle 16 creature ancora senza immagine. |
+| `docs/foto-creature.md` | Le 35 foto vere delle creature: autore, licenza e link all'originale. |
+| `docs/controllo-immagini.md` | Il controllo delle 53 illustrazioni fatte con Grok. |
+| `docs/illustrazioni-link.md` | Il controllo delle 13 illustrazioni fatte con Link (ChatGPT) e delle 3 foto vere trovate tra i suoi riferimenti. |
 | `anteprime/` | Schermate dell'app. |
 
 ## Com'è fatta
@@ -81,10 +82,9 @@ Una zona alla volta, finita prima di passare alla successiva.
 
 ## Cosa manca ancora
 
-1. Le immagini delle creature: 85 su 101 sono pronte, di cui 32 foto vere e 53 illustrazioni controllate (`docs/controllo-immagini.md`). Le 16 che mancano sono in `docs/per-link.md`, con i prompt per ChatGPT; al loro posto per ora c'è una lettera provvisoria.
-2. I 7 luoghi ancora segnati come "presto" sul globo: Barriera Corallina, Atacama, Namib, Appalachi, Ghiacciai della Patagonia, Ghati occidentali e Altopiano etiope.
-3. La foto del giorno della NASA (APOD), quando l'app avrà un suo sito.
-4. Il Laboratorio immagini va tolto prima di pubblicare l'app.
+1. I 7 luoghi ancora segnati come "presto" sul globo: Barriera Corallina, Atacama, Namib, Appalachi, Ghiacciai della Patagonia, Ghati occidentali e Altopiano etiope.
+2. La foto del giorno della NASA (APOD), quando l'app avrà un suo sito.
+3. Il Laboratorio immagini va tolto prima di pubblicare l'app.
 
 ## Crediti
 
@@ -96,7 +96,7 @@ Una zona alla volta, finita prima di passare alla successiva.
   - [ESO](https://www.eso.org/public/outreach/copyright/): Via Lattea (S. Brunier), Nubi di Magellano (Y. Beletsky; VISTA VMC), Centaurus A.
   - Buco nero di M87: EHT Collaboration.
   - I nomi completi degli autori sono sotto ogni foto nell'app.
-- Foto delle creature: 28 da [iNaturalist](https://www.inaturalist.org) (CC0, CC BY, CC BY-SA) e 4 da [NOAA Ocean Exploration](https://oceanexplorer.noaa.gov) (pubblico dominio). Autori e link in `docs/foto-creature.md`.
+- Foto delle creature: 28 da [iNaturalist](https://www.inaturalist.org) (CC0, CC BY, CC BY-SA), 4 da [NOAA Ocean Exploration](https://oceanexplorer.noaa.gov) (pubblico dominio), 2 da Wikimedia Commons (CC0, CC BY-SA) e 1 da [Ifremer](https://image.ifremer.fr) (CC BY). Autori e link in `docs/foto-creature.md`. Le altre 66 creature hanno illustrazioni create con Grok e ChatGPT e controllate da Claude.
 - Grafica 3D: three.js, licenza MIT, inclusa in `app/vendor/`. Caratteri: Bodoni Moda, Atkinson Hyperlegible e DM Mono, SIL Open Font License.
 - Dati: [NASA Exoplanet Archive](https://exoplanetarchive.ipac.caltech.edu/), MBARI, NOAA Ocean Exploration, FishBase, IUCN, Università delle Hawaii, Senckenberg, Durrell e WWT, e le pubblicazioni scientifiche citate in `docs/`.
 
