@@ -44,6 +44,7 @@ Comandi:
   - Ande: dal vulcano Llullaillaco alla foresta delle nuvole, 7 creature.
   - Sahara: dall'aria rovente alle tane sotto la sabbia, con la temperatura, 7 creature.
 - **Curiosità del giorno:** 31 sullo spazio e 30 sulla Terra, ognuna con la spiegazione del perché. Si aprono da sole la prima volta di ogni giorno e da "Lo sapevi?" in basso a destra. "Mostramelo" porta nel punto dell'app di cui parla la curiosità.
+- **Mini lezioni di scienza:** la quinta sezione, «Lezioni». 44 lezioni brevi in sette materie (particelle e quanti, fisica, chimica, vita, spazio, Terra, numeri e idee), ognuna con «Prova tu» e «Lo sapevi?», 9 esperimenti da toccare e 9 disegni. Si filtrano per materia, si cercano, e quelle lette vengono segnate. L’elenco completo è in `docs/lezioni.md`.
 - **Foto vere:** 35 creature hanno una foto vera, scattata da naturalisti e ricercatori, con licenza libera. Sulla scheda c'è scritto "Foto", l'autore e la licenza; ingrandendola c'è il link all'originale.
 - **Laboratorio immagini:** un prompt per ognuna delle 101 creature, con lo stato «foto vera», «pronta» o «da fare».
 
@@ -66,6 +67,8 @@ Una zona alla volta, finita prima di passare alla successiva.
 | `docs/verifica-database-grok.md` | La verifica del database di creature preparato con Grok. |
 | `docs/foto-creature.md` | Le 35 foto vere delle creature: autore, licenza e link all'originale. |
 | `docs/controllo-immagini.md` | Il controllo delle 53 illustrazioni fatte con Grok. |
+| `docs/lezioni.md` | Le mini lezioni di scienza: elenco, esperimenti e come aggiungerne di nuove. |
+| `sorgenti/` | I file da cui si costruisce l’app: la pagina, le lezioni (`lezioni/`) e gli script per costruire la versione installabile e il file unico. |
 | `docs/illustrazioni-link.md` | Il controllo delle 13 illustrazioni fatte con Link (ChatGPT) e delle 3 foto vere trovate tra i suoi riferimenti. |
 | `anteprime/` | Schermate dell'app. |
 
