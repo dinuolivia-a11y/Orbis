@@ -787,7 +787,7 @@ const FOREST_STYLE = "Real wildlife documentary photography, natural colours, sh
 
 const DIVES = {
   ocean: {
-    unit: "m", start: 0, end: 10935, px: 0.2, minGap: 70, maxGap: 620,
+    unit: "m", start: 0, end: 10935, water: true, px: 0.2, minGap: 70, maxGap: 620,
     where: { it: "Oceano Pacifico · Fossa delle Marianne", en: "Pacific Ocean · Mariana Trench" },
     eyebrow: { it: "Oceano Pacifico", en: "Pacific Ocean" },
     title: { it: "Discesa <em>nell’oceano</em>", en: "Down <em>into the ocean</em>" },
@@ -901,6 +901,7 @@ const DIVES = {
     ]
   },
   amazon: {
+    scene: [{ fx: "clouds", from: -95, to: -58, fade: 6 }, { fx: "leaves", from: -80, to: -2, fade: 6, dark: 1 }, { fx: "trunks", from: -45, to: -0.5, fade: 5 }, { fx: "soil", from: 0, to: 9, fade: 0.4, key: "amazon", base: "#3a2716", light: "#7a5a38", dark: "#1a1008", a: 0.7 }],
     unit: "m", start: -90, end: 8, px: 7, minGap: 70, maxGap: 560,
     where: { it: "Amazzonia · Brasile", en: "Amazon rainforest · Brazil" },
     eyebrow: { it: "Foresta amazzonica", en: "Amazon rainforest" },
@@ -986,6 +987,7 @@ const DIVES = {
     ]
   },
   madagascar: {
+    scene: [{ fx: "clouds", from: -36, to: -24, fade: 3 }, { fx: "leaves", from: -31, to: -0.5, fade: 2, dark: 1 }, { fx: "trunks", from: -20, to: -0.3, fade: 2 }, { fx: "soil", from: 0, to: 3, fade: 0.15, key: "madagascar", base: "#6e2a18", light: "#b5603e", dark: "#3a120a", a: 0.65 }],
     unit: "m", start: -32, end: 2.5, px: 13, minGap: 70, maxGap: 520,
     light: { full: 30, canopy: 15, under: 2 },
     where: { it: "Madagascar · l’Isola Rossa", en: "Madagascar · the Red Island" },
@@ -1060,6 +1062,7 @@ const DIVES = {
     ]
   },
   himalaya: {
+    scene: [{ fx: "ridges", from: -8900, to: -4400, fade: 400 }, { fx: "wind", from: -8900, to: -6500, fade: 400, a: 0.5 }, { fx: "clouds", from: -7600, to: -3400, fade: 500, a: 0.7 }, { fx: "mist", from: -4200, to: -2900, fade: 300, a: 0.5 }, { fx: "leaves", from: -3300, to: -1950, fade: 250, dark: 0.6 }, { fx: "trunks", from: -2900, to: -1950, fade: 200 }],
     axis: "altitude", start: -8849, end: -2000, px: 0.075, minGap: 70, maxGap: 480, motes: "snow",
     gauge: [{ l: { it: "Altitudine", en: "Altitude" }, k: "alt" }, { l: { it: "Ossigeno", en: "Oxygen" }, k: "oxy" }, { l: { it: "Fascia", en: "Belt" }, k: "zone" }],
     where: { it: "Himalaya · il tetto del mondo", en: "Himalayas · the roof of the world" },
@@ -1147,6 +1150,7 @@ const DIVES = {
     ]
   },
   newzealand: {
+    scene: [{ fx: "ridges", from: -2550, to: -1150, fade: 200 }, { fx: "clouds", from: -2550, to: -700, fade: 200 }, { fx: "leaves", from: -1250, to: -150, fade: 120, dark: 0.5 }, { fx: "trunks", from: -1100, to: -200, fade: 120 }],
     axis: "altitude", start: -2500, end: 150, px: 0.22, minGap: 70, maxGap: 460,
     gauge: [{ l: { it: "Altitudine", en: "Altitude" }, k: "alt" }, { l: { it: "Ossigeno", en: "Oxygen" }, k: "oxy" }, { l: { it: "Ambiente", en: "Habitat" }, k: "zone" }],
     where: { it: "Nuova Zelanda · Aotearoa", en: "New Zealand · Aotearoa" },
@@ -1214,6 +1218,7 @@ const DIVES = {
     ]
   },
   tundra: {
+    scene: [{ fx: "clouds", from: -32, to: -6, fade: 3, a: 0.6 }, { fx: "sparkle", from: -30, to: 0, fade: 2 }, { fx: "wind", from: -12, to: 0.05, fade: 2, a: 0.5 }, { fx: "soil", from: 0, to: 0.5, fade: 0.05, key: "snow", base: "#cfdce6", light: "#ffffff", dark: "#9fb4c6", a: 0.5 }, { fx: "soil", from: 0.5, to: 1.6, fade: 0.08, key: "permafrost", base: "#3d3a35", light: "#6d675c", dark: "#1f1c19", a: 0.6 }],
     axis: "ground", start: -30, end: 1.5, px: 14, minGap: 70, maxGap: 420, motes: "snow",
     below: { it: "sotto la neve", en: "under the snow" }, zeroLabel: { it: "0 m · neve", en: "0 m · snow" },
     temps: [[-30, -35], [-0.01, -32], [0.05, -22], [0.3, -7], [0.5, -5], [0.6, -9], [1.5, -12]],
@@ -1288,6 +1293,7 @@ const DIVES = {
     ]
   },
   antarctica: {
+    scene: [{ fx: "clouds", from: -52, to: -8, fade: 4, a: 0.55 }, { fx: "sparkle", from: -50, to: 1, fade: 3 }, { fx: "wind", from: -15, to: 0.05, fade: 2 }],
     axis: "ground", start: -50, end: 600, px: 0.9, minGap: 70, maxGap: 460, motes: "snow",
     below: { it: "sotto il mare", en: "below the sea" }, zeroLabel: { it: "0 m · ghiaccio", en: "0 m · ice" },
     gauge: [{ l: { it: "Altezza / profondità", en: "Height / depth" }, k: "height" }, { l: { it: "Sole che arriva", en: "Sunlight" }, k: "ice" }, { l: { it: "Strato", en: "Layer" }, k: "zone" }],
@@ -1364,6 +1370,7 @@ const DIVES = {
     ]
   },
   tianshan: {
+    scene: [{ fx: "ridges", from: -7500, to: -3600, fade: 400 }, { fx: "wind", from: -7500, to: -5600, fade: 400 }, { fx: "clouds", from: -5200, to: -2700, fade: 400 }, { fx: "leaves", from: -2500, to: -1450, fade: 200, dark: 0.7 }, { fx: "trunks", from: -2500, to: -1450, fade: 200, rgb: "24,32,26" }],
     axis: "altitude", start: -7439, end: -1500, px: 0.08, minGap: 70, maxGap: 480, motes: "snow",
     gauge: [{ l: { it: "Altitudine", en: "Altitude" }, k: "alt" }, { l: { it: "Ossigeno", en: "Oxygen" }, k: "oxy" }, { l: { it: "Fascia", en: "Belt" }, k: "zone" }],
     where: { it: "Tian Shan · le Montagne Celesti", en: "Tian Shan · the Celestial Mountains" },
@@ -1421,6 +1428,7 @@ const DIVES = {
     ]
   },
   andes: {
+    scene: [{ fx: "ridges", from: -7000, to: -3900, fade: 400 }, { fx: "wind", from: -7000, to: -5500, fade: 400 }, { fx: "clouds", from: -4800, to: -2300, fade: 400 }, { fx: "mist", from: -2700, to: -1450, fade: 250, a: 0.75 }, { fx: "leaves", from: -2600, to: -1450, fade: 200, dark: 0.6 }],
     axis: "altitude", start: -6961, end: -1500, px: 0.08, minGap: 70, maxGap: 480, motes: "snow",
     gauge: [{ l: { it: "Altitudine", en: "Altitude" }, k: "alt" }, { l: { it: "Ossigeno", en: "Oxygen" }, k: "oxy" }, { l: { it: "Fascia", en: "Belt" }, k: "zone" }],
     where: { it: "Ande · la catena più lunga del mondo", en: "Andes · the longest range in the world" },
@@ -1481,6 +1489,7 @@ const DIVES = {
     ]
   },
   sahara: {
+    scene: [{ fx: "dunes", from: -3, to: 0.02, fade: 0.3 }, { fx: "soil", from: 0, to: 2.5, fade: 0.08, key: "sahara", base: "#a8703a", light: "#e2b27a", dark: "#6b4220", a: 0.55 }],
     axis: "ground", start: -2.5, end: 2, px: 100, minGap: 70, maxGap: 420, motes: "dust",
     below: { it: "sotto la sabbia", en: "under the sand" }, zeroLabel: { it: "0 m · sabbia", en: "0 m · sand" },
     temps: [[-2.5, 45], [-0.3, 50], [-0.01, 62], [0, 70], [0.05, 55], [0.15, 42], [0.4, 33], [1, 30], [2, 28]],
@@ -2973,6 +2982,7 @@ function startMotes() {
     mctx.clearRect(0, 0, innerWidth, innerHeight);
     const kind = dive && dive.kind, d = currentD, water = !!(dive && dive.cfg.water);
     if (water) drawWater(now, d);
+    if (dive && dive.cfg.scene) drawScene(now, d, sc);
     for (const m of moteList) {
       m.y += (REDUCED ? 0 : (water && d >= 0 ? -1.1 : 1) * m.v * dt * (kind !== "ocean" ? 1.4 : 0.6)) - dy * (0.25 + m.s * 0.12);
       m.x += REDUCED ? 0 : Math.sin(now / 1400 + m.ph) * 0.15;
@@ -2995,6 +3005,122 @@ function startMotes() {
     moteRaf = requestAnimationFrame(step);
   };
   moteRaf = requestAnimationFrame(step);
+}
+/* =========================================================
+   LIVING BACKGROUNDS: clouds, swaying leaves, tree trunks, soil, dunes, wind, ice sparkle, ridges, mist.
+   Each descent lists its scene bands in DIVES[kind].scene = [{ fx, from, to, ...options }]; drawn behind the cards.
+   ========================================================= */
+const SC = { cache: {} };
+const sstep = (a, b, x) => { const u = Math.max(0, Math.min(1, (x - a) / (b - a))); return u * u * (3 - 2 * u); };
+function bandW(b, d) { const f = b.fade != null ? b.fade : (b.to - b.from) * 0.12; return sstep(b.from - f, b.from + f, d) * (1 - sstep(b.to - f, b.to + f, d)); }
+function offc(w, h, draw) { const c = document.createElement("canvas"); c.width = w; c.height = h; draw(c.getContext("2d"), w, h); return c; }
+function cloudSprite(seed) {
+  const r = rng(seed);
+  return offc(300, 130, (x, w, h) => { for (let i = 0; i < 9; i++) { const cx = 50 + r() * 200, cy = 55 + (r() - 0.5) * 30, rad = 26 + r() * 34, g = x.createRadialGradient(cx, cy, 0, cx, cy, rad);
+    g.addColorStop(0, "rgba(255,255,255,.95)"); g.addColorStop(0.6, "rgba(255,255,255,.55)"); g.addColorStop(1, "rgba(255,255,255,0)"); x.fillStyle = g; x.fillRect(0, 0, w, h); } });
+}
+function leafPath(x, len, wid) { x.beginPath(); x.moveTo(0, 0); x.quadraticCurveTo(len * 0.5, -wid, len, 0); x.quadraticCurveTo(len * 0.5, wid, 0, 0); x.closePath(); }
+function leafCluster(seed, cols) {
+  const r = rng(seed);
+  return offc(220, 220, (x) => { x.translate(10, 110);
+    for (let i = 0; i < 13; i++) { x.save(); const a = (r() - 0.5) * 2.2, l = 70 + r() * 80; x.rotate(a); x.translate(20 + r() * 40, 0);
+      leafPath(x, l, l * (0.18 + r() * 0.1)); x.fillStyle = cols[Math.floor(r() * cols.length)]; x.fill();
+      x.strokeStyle = "rgba(0,0,0,.18)"; x.lineWidth = 1; x.beginPath(); x.moveTo(2, 0); x.lineTo(l * 0.92, 0); x.stroke(); x.restore(); } });
+}
+function soilTile(key, base, light, dark) {
+  return SC.cache[key] || (SC.cache[key] = offc(256, 256, (x, w, h) => { const r = rng(key.length * 7 + 3);
+    for (let i = 0; i < 1600; i++) { x.fillStyle = r() < 0.5 ? light : dark; x.globalAlpha = 0.25 + r() * 0.5; x.fillRect(r() * w, r() * h, 1 + r() * 1.6, 1 + r() * 1.6); }
+    for (let i = 0; i < 46; i++) { const px = r() * w, py = r() * h, rx = 2 + r() * 6, ry = rx * (0.5 + r() * 0.4); x.globalAlpha = 0.35 + r() * 0.4; x.fillStyle = r() < 0.5 ? light : base;
+      x.beginPath(); x.ellipse(px, py, rx, ry, r() * 3, 0, 6.283); x.fill(); }
+    x.globalAlpha = 0.3; x.strokeStyle = light; x.lineWidth = 1;
+    for (let i = 0; i < 9; i++) { let px = r() * w, py = r() * h; x.beginPath(); x.moveTo(px, py); for (let k = 0; k < 6; k++) { px += (r() - 0.5) * 30; py += 8 + r() * 14; x.lineTo(px, py); } x.stroke(); } }));
+}
+function ridgeProfile(seed, n) { const r = rng(seed), p = []; let v = 0.5; for (let i = 0; i <= n; i++) { v += (r() - 0.5) * 0.35; v = Math.max(0.05, Math.min(0.95, v)); p.push(v); } return p; }
+const SCENE_FX = {
+  clouds(b, w, t, sy, W, H) {
+    const C = SC.clouds || (SC.clouds = [1, 2, 3, 4, 5, 6].map(cloudSprite));
+    for (let i = 0; i < C.length; i++) {
+      const sp = 6 + i * 2.5, x = ((t * sp + i * 377) % (W + 360)) - 300, y = ((i * 211 - sy * (0.12 + i * 0.03)) % (H + 200) + H + 200) % (H + 200) - 120;
+      mctx.globalAlpha = w * (b.a || 0.75) * (0.6 + 0.4 * (i % 3) / 2); mctx.drawImage(C[i], x, y, 300 * (0.8 + (i % 3) * 0.25), 130 * (0.8 + (i % 3) * 0.25));
+    }
+  },
+  leaves(b, w, t, sy, W, H, d) {
+    const L = SC.leaves || (SC.leaves = { lit: [11, 12, 13].map((s) => leafCluster(s, ["#5fae4e", "#4c9a45", "#77bf5c", "#3f8a3f"])), dark: [21, 22, 23].map((s) => leafCluster(s, ["#24563a", "#1d4a30", "#2f6a40", "#173d27"])) });
+    const k = b.dark != null ? sstep(b.from, b.to, d) * b.dark : 0;
+    for (let i = 0; i < 10; i++) {
+      const right = i % 2 === 1, y = ((i * 173 + 60 - sy * 0.45) % (H + 320) + H + 320) % (H + 320) - 160;
+      const sway = REDUCED ? 0 : Math.sin(t * (0.7 + (i % 3) * 0.17) + i * 1.9) * 0.07, s = 0.8 + (i % 4) * 0.15;
+      mctx.save(); mctx.translate(right ? W + 6 : -6, y); mctx.rotate((right ? Math.PI : 0) + sway + (right ? 0.15 : -0.15)); mctx.scale(s, right ? -s : s);
+      mctx.globalAlpha = w * 0.85 * (1 - k); mctx.drawImage(L.lit[i % 3], -10, -110);
+      mctx.globalAlpha = w * 0.85 * k; mctx.drawImage(L.dark[i % 3], -10, -110); mctx.restore();
+    }
+    // a few leaves falling
+    for (let i = 0; i < 7; i++) {
+      const sp = 22 + i * 5, y = ((t * sp + i * 260 - sy * 0.6) % (H + 80) + H + 80) % (H + 80) - 40, x = (i * 151 + 40) % W + Math.sin(t * 0.9 + i) * 26;
+      mctx.save(); mctx.translate(x, y); mctx.rotate(t * (0.8 + i * 0.1) + i); mctx.globalAlpha = w * 0.75; leafPath(mctx, 16, 4.5);
+      mctx.fillStyle = k > 0.5 ? "#3d7a3a" : "#7cbf55"; mctx.fill(); mctx.restore();
+    }
+  },
+  trunks(b, w, t, sy, W, H) {
+    for (let i = 0; i < 4; i++) {
+      const x = W * (0.12 + 0.26 * i) + ((i * 37) % 23), tw = 14 + (i % 3) * 9, g = mctx.createLinearGradient(x - tw, 0, x + tw, 0);
+      g.addColorStop(0, "rgba(20,30,20,0)"); g.addColorStop(0.35, `rgba(${b.rgb || "28,36,24"},.9)`); g.addColorStop(0.65, `rgba(${b.rgb || "28,36,24"},.9)`); g.addColorStop(1, "rgba(20,30,20,0)");
+      mctx.globalAlpha = w * (b.a || 0.35); mctx.fillStyle = g; mctx.fillRect(x - tw, 0, tw * 2, H);
+    }
+  },
+  soil(b, w, t, sy, W, H) {
+    const tile = soilTile(b.key, b.base, b.light, b.dark), p = SC["pat_" + b.key] || (SC["pat_" + b.key] = mctx.createPattern(tile, "repeat"));
+    const oy = ((-sy * 0.9) % 256 + 256) % 256;
+    mctx.save(); mctx.globalAlpha = w * (b.a || 0.6); mctx.translate(0, oy - 256); mctx.fillStyle = p; mctx.fillRect(0, 0, W, H + 512); mctx.restore();
+    // grains trickling down
+    mctx.fillStyle = b.light;
+    for (let i = 0; i < 26; i++) { const x = (i * 97) % W + Math.sin(i * 7.3) * 8, y = ((t * (18 + (i % 5) * 6) + i * 131 - sy * 0.9) % (H + 20) + H + 20) % (H + 20) - 10;
+      mctx.globalAlpha = w * 0.5; mctx.fillRect(x, y, 1.6, 1.6); }
+  },
+  dunes(b, w, t, sy, W, H) {
+    const tm = REDUCED ? 0 : t;
+    [[0.62, 0.035, b.c1 || "#f0c98c", 0.45], [0.74, 0.05, b.c2 || "#e2ad66", 0.6], [0.86, 0.07, b.c3 || "#c98d4a", 0.75]].forEach(([base, amp, col, al], j) => {
+      const yb = H * base + ((-sy * (0.15 + j * 0.1)) % 60);
+      mctx.globalAlpha = w * al; mctx.fillStyle = col; mctx.beginPath(); mctx.moveTo(0, H);
+      for (let x = 0; x <= W + 10; x += 10) { const ph = x / W * 6.283; mctx.lineTo(x, yb - H * amp * (Math.sin(ph * (1.1 + j * 0.4) + tm * (0.05 + j * 0.03) + j * 2) * 0.6 + Math.sin(ph * 2.7 - tm * 0.04 + j) * 0.4)); }
+      mctx.lineTo(W, H); mctx.closePath(); mctx.fill();
+    });
+    SCENE_FX.wind({ rgb: b.sand || "250,226,180", n: 34, a: 0.45 }, w, t, sy, W, H, 0, H * 0.35);
+  },
+  wind(b, w, t, sy, W, H, d, top = 0) {
+    mctx.strokeStyle = `rgba(${b.rgb || "255,255,255"},1)`; mctx.lineWidth = 1;
+    for (let i = 0; i < (b.n || 28); i++) {
+      const sp = 140 + (i % 7) * 40, len = 18 + (i % 5) * 12, x = ((t * sp + i * 213) % (W + 200)) - 100, y = top + ((i * 89 + Math.sin(t * 1.3 + i) * 10 - sy * 0.3) % (H - top) + (H - top)) % (H - top);
+      mctx.globalAlpha = w * (b.a || 0.4) * (0.4 + 0.6 * ((i * 37) % 10) / 10); mctx.beginPath(); mctx.moveTo(x, y); mctx.lineTo(x + len, y + len * (b.slope || 0.12)); mctx.stroke();
+    }
+  },
+  sparkle(b, w, t, sy, W, H) {
+    mctx.fillStyle = "#fff";
+    for (let i = 0; i < 40; i++) { const x = (i * 131.7) % W, y = ((i * 211.3 - sy * 0.2) % H + H) % H, a = Math.pow(Math.max(0, Math.sin(t * (1.5 + (i % 4) * 0.4) + i * 2.1)), 10);
+      if (a < 0.02) continue; mctx.globalAlpha = w * a * (b.a || 0.9); const s = 1.2 + (i % 3);
+      mctx.fillRect(x - s * 2, y - 0.5, s * 4, 1); mctx.fillRect(x - 0.5, y - s * 2, 1, s * 4); }
+  },
+  ridges(b, w, t, sy, W, H) {
+    const P = SC.ridges || (SC.ridges = [ridgeProfile(31, 40), ridgeProfile(37, 40), ridgeProfile(41, 40)]);
+    P.forEach((p, j) => {
+      const yb = H * (0.6 + j * 0.12) - ((sy * (0.05 + j * 0.05)) % (H * 0.3)), hh = H * (0.22 - j * 0.04);
+      mctx.globalAlpha = w * (0.18 + j * 0.1); mctx.fillStyle = `rgba(${b.rgb || "220,232,245"},1)`; mctx.beginPath(); mctx.moveTo(0, H);
+      for (let i = 0; i <= 40; i++) mctx.lineTo(i / 40 * W, yb - p[i] * hh); mctx.lineTo(W, H); mctx.closePath(); mctx.fill();
+    });
+  },
+  mist(b, w, t, sy, W, H) {
+    for (let i = 0; i < 4; i++) {
+      const x = ((t * (8 + i * 3) + i * 300) % (W + 600)) - 300, y = ((i * 260 - sy * (0.2 + i * 0.05)) % (H + 300) + H + 300) % (H + 300) - 150, g = mctx.createRadialGradient(x, y, 0, x, y, 260);
+      g.addColorStop(0, `rgba(${b.rgb || "240,246,250"},.5)`); g.addColorStop(1, `rgba(${b.rgb || "240,246,250"},0)`);
+      mctx.globalAlpha = w * (b.a || 0.6); mctx.fillStyle = g; mctx.save(); mctx.translate(x, y); mctx.scale(2.2, 0.55); mctx.translate(-x, -y); mctx.fillRect(x - 260, y - 260, 520, 520); mctx.restore();
+    }
+  }
+};
+function drawScene(now, d, sy) {
+  const sc = dive.cfg.scene, W = innerWidth, H = innerHeight, t = REDUCED ? 0 : now / 1000;
+  mctx.save();
+  for (const b of sc) { const w = bandW(b, d); if (w > 0.01 && SCENE_FX[b.fx]) { mctx.save(); SCENE_FX[b.fx](b, w, t, sy, W, H, d); mctx.restore(); } }
+  mctx.restore();
 }
 /* =========================================================
    WATER: moving light, rising bubbles and underwater sound (dives with water: true)
