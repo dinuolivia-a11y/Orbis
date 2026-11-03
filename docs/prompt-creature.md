@@ -981,3 +981,134 @@ Photorealistic underwater night photograph of a small school of splitfin flashli
 ```
 Photorealistic deep-sea photograph of a chambered nautilus (Nautilus pompilius) hovering beside a steep reef wall at night: a smooth coiled shell about 18 cm across, creamy white with bold reddish-brown tiger stripes on the top half, a dark hood over the head, a large simple pinhole eye, many thin pale ridged tentacles fanned out in front, its siphon visible. Shot like a real deep-sea ROV documentary frame: lit by soft white submersible lights against pitch-black water, faint particles of marine snow drifting, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people, no equipment visible.
 ```
+
+## Ghati occidentali (14)
+
+Hanno già una foto vera: Tahr dei Nilgiri, Neelakurinji, Sholakili panciabianca, Macaco dalla coda di leone, Scoiattolo gigante di Malabar, Bucero bicorne, Ali d’uccello del sud, Rana volante del Malabar, Drago volante dei Ghati, Vipera di Malabar, Rana viola, Cobra reale dei Ghati, Rana danzante.  
+Da fare con Link: Barbo di Denison.
+
+### Tahr dei Nilgiri · *Nilgiritragus hylocrius*
+- id: `niltahr`
+- dove: praterie delle cime, 1.200–2.600 m · dimensioni: alto circa 1 m alla spalla
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of a Nilgiri tahr (Nilgiritragus hylocrius) standing on a rocky grassy mountain slope in the Western Ghats: a stocky wild goat about 1 m tall at the shoulder with short curved horns, an adult male with dark chocolate-brown almost black coat and a pale greyish saddle patch on its back, rolling green hills with patches of shola forest and misty mountains behind, soft morning light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Neelakurinji · *Strobilanthes kunthiana*
+- id: `kurinji`
+- dove: praterie e colline, 1.300–2.400 m · dimensioni: arbusto alto 30–60 cm
+- foto vera già nell’app
+
+```
+Photorealistic landscape and nature photograph of a mass bloom of Neelakurinji (Strobilanthes kunthiana) covering a rolling hillside in the Western Ghats: dense low shrubs about 50 cm tall covered in small bell-shaped lavender-blue and violet flowers, the whole slope turned purple-blue, green grassland and misty mountains behind, soft light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Sholakili panciabianca · *Sholicola albiventris*
+- id: `sholakili`
+- dove: sottobosco delle shola, sopra i 1.200 m · dimensioni: circa 15 cm
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of a white-bellied sholakili (Sholicola albiventris) perched on a mossy branch in a dim shola forest undergrowth: a small plump songbird about 15 cm long, dark slate-blue upperparts and head, greyish-white belly, a short black bill and strong legs, soft green blurred background. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Macaco dalla coda di leone · *Macaca silenus*
+- id: `liontail`
+- dove: foreste pluviali di montagna · dimensioni: circa 50 cm, più 30 cm di coda
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of a lion-tailed macaque (Macaca silenus) sitting on a tree branch in a dense rainforest: a monkey with glossy black fur, a striking silver-grey mane framing its dark face, brown eyes, its long tail ending in a lion-like tuft hanging down, green leaves around, soft natural light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Scoiattolo gigante di Malabar · *Ratufa indica*
+- id: `giantsquirrel`
+- dove: chiome delle foreste · dimensioni: fino a circa 1 m, coda compresa
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of a Malabar giant squirrel (Ratufa indica) resting along a thick branch high in the rainforest canopy: a huge squirrel about 1 m long including its bushy tail, deep maroon-red and purple-brown back, black shoulders and very long black tail, cream-yellow belly and face, small round ears, green leaves and dappled sunlight. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Bucero bicorne · *Buceros bicornis*
+- id: `hornbill`
+- dove: foreste pluviali, fino a circa 1.500 m · dimensioni: circa 1–1,3 m, ali fino a 1,5 m
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of a great hornbill (Buceros bicornis) perched on a branch at the top of a rainforest tree: a large bird with a massive curved yellow bill topped by a broad yellow and black casque, black face and back, white neck stained yellow, black wings with white bars, white tail with a black band, misty forested hills behind. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Ali d’uccello del sud · *Troides minos*
+- id: `birdwing`
+- dove: foreste e giardini dell’India del sud · dimensioni: ali fino a circa 19 cm
+- foto vera già nell’app
+
+```
+Photorealistic macro wildlife photograph of a southern birdwing butterfly (Troides minos) resting with open wings on a leaf in a tropical forest: a very large butterfly about 18 cm across, velvety black forewings with pale grey streaks along the veins, bright golden-yellow hindwings with black edges and black spots, a red-and-black body, soft green blurred background. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Rana volante del Malabar · *Rhacophorus malabaricus*
+- id: `glidingfrog`
+- dove: foreste pluviali e piantagioni · dimensioni: circa 10 cm
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of a Malabar gliding frog (Rhacophorus malabaricus) gliding through the air between rainforest trees with its legs spread: a bright leaf-green frog about 10 cm long with large eyes, very long toes with wide orange-red webbing stretched like parachutes, pale belly, blurred green forest behind. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Drago volante dei Ghati · *Draco dussumieri*
+- id: `draco`
+- dove: tronchi degli alberi nelle foreste · dimensioni: circa 23 cm, coda compresa
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of a Western Ghats flying lizard (Draco dussumieri) gliding between tree trunks with its wing membranes fully spread: a slender mottled grey-brown lizard about 23 cm long including the tail, wide patagial wings supported by elongated ribs, patterned in brown, orange and black, a yellow throat flap extended, rainforest trunks behind. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Vipera di Malabar · *Craspedocephalus malabaricus*
+- id: `pitviper`
+- dove: foreste pluviali, su rami e rocce vicino ai torrenti · dimensioni: fino a poco più di 1 m
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of a Malabar pit viper (Craspedocephalus malabaricus) coiled on a mossy rock beside a forest stream: a stout snake with a broad triangular head, pale green body with bold dark brown blotches, a visible heat-sensing pit between eye and nostril, vertical pupil, wet rock and ferns around, soft light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Rana viola · *Nasikabatrachus sahyadrensis*
+- id: `purplefrog`
+- dove: sotto terra, a qualche metro di profondità · dimensioni: circa 7 cm
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of a purple frog (Nasikabatrachus sahyadrensis) sitting on wet brown fallen leaves on the forest floor after rain: a plump bloated frog about 7 cm long, smooth dark purple-grey skin, a small pointed pig-like snout, tiny eyes and short stubby legs, a few raindrops, soft overcast light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Cobra reale dei Ghati · *Ophiophagus kaalinga*
+- id: `kaalinga`
+- dove: foreste pluviali dei Ghati occidentali · dimensioni: spesso più di 3 m
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of a Western Ghats king cobra (Ophiophagus kaalinga) raising the front of its body with a narrow hood spread on the rainforest floor: a very long olive-brown snake with pale yellowish crossbands, large smooth head scales, calm dark eyes, ferns and fallen leaves around, dappled green light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Rana danzante · *Micrixalus*
+- id: `dancingfrog`
+- dove: rocce bagnate di torrenti e cascate · dimensioni: pochi centimetri
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of a dancing frog (Micrixalus) on a wet mossy boulder beside a rushing forest stream, foot-flagging: a small brown frog about 3 cm long with a pale throat, one long hind leg stretched out sideways with toes spread, splashing white water behind, damp green moss. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Barbo di Denison · *Sahyadria denisonii*
+- id: `misskerala`
+- dove: fiumi e torrenti del Kerala e del Karnataka · dimensioni: circa 10 cm, al massimo 15
+- **da fare con Link**
+
+```
+Photorealistic underwater photograph of a small group of Denison barbs (Sahyadria denisonii) swimming over smooth pebbles in a clear shallow forest river in Kerala: slender silvery torpedo-shaped fish about 10 cm long with a black horizontal stripe from snout to tail and a bright red stripe above it at the front, a red top of the head, tail fins with yellow and black stripes, sunlight rippling on the stones. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
