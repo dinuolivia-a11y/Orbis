@@ -43,7 +43,7 @@ Comandi:
   - Tian Shan: dalle Montagne Celesti ai boschi di abeti, 7 creature.
   - Ande: dal vulcano Llullaillaco alla foresta delle nuvole, 7 creature.
   - Sahara: dall'aria rovente alle tane sotto la sabbia, con la temperatura, 7 creature.
-  - Grande Barriera Corallina: dal cielo sopra un’isola di corallo a 600 m lungo la parete del Mar dei Coralli, con la luce del sole che si spegne, 16 creature.
+  - Grande Barriera Corallina: dal cielo sopra un’isola di corallo a 600 m lungo la parete del Mar dei Coralli, con la luce del sole che si spegne, 16 creature. Lo sfondo si muove come l’acqua e si sente il mare; il tasto con l’altoparlante spegne il suono.
 - **Curiosità del giorno:** 31 sullo spazio e 30 sulla Terra, ognuna con la spiegazione del perché. Si aprono da sole la prima volta di ogni giorno e da "Lo sapevi?" in basso a destra. "Mostramelo" porta nel punto dell'app di cui parla la curiosità.
 - **Mini lezioni di scienza:** la quinta sezione, «Lezioni». 44 lezioni brevi in sette materie (particelle e quanti, fisica, chimica, vita, spazio, Terra, numeri e idee), ognuna con «Prova tu» e «Lo sapevi?», 9 esperimenti da toccare e 9 disegni. Si filtrano per materia, si cercano, e quelle lette vengono segnate. L’elenco completo è in `docs/lezioni.md`.
 - **Foto vere:** 49 creature hanno una foto vera, scattata da naturalisti e ricercatori, con licenza libera. Sulla scheda c'è scritto "Foto", l'autore e la licenza; ingrandendola c'è il link all'originale.
@@ -77,6 +77,7 @@ Una zona alla volta, finita prima di passare alla successiva.
 ## Com'è fatta
 
 - Una sola pagina HTML con CSS e JavaScript, senza server.
+- Nella Barriera Corallina la luce che danza, i raggi di sole e le bollicine sono disegnati dal programma, e anche il suono è creato al momento con Web Audio, senza file audio: le onde sopra il mare, un rumore ovattato con le bollicine sotto, sempre più cupo man mano che si scende.
 - Grafica 3D con [three.js](https://threejs.org) 0.170: `Orbis.html` lo carica da CDN, la versione in `app/` lo ha dentro `vendor/`.
 - La versione in `app/` è una PWA: `manifest.webmanifest` dà nome, colori e icone, `sw.js` salva la pagina, le mappe e le foto piccole al primo avvio, così Orbis si apre anche senza internet.
 - L'icona è disegnata con lo stesso motore 3D dell'app e le mappe vere della Terra: giorno e notte con le luci delle città, nuvole, atmosfera e un'orbita dorata.
