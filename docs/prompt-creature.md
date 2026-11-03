@@ -1112,3 +1112,152 @@ Photorealistic wildlife photograph of a dancing frog (Micrixalus) on a wet mossy
 ```
 Photorealistic underwater photograph of a small group of Denison barbs (Sahyadria denisonii) swimming over smooth pebbles in a clear shallow forest river in Kerala: slender silvery torpedo-shaped fish about 10 cm long with a black horizontal stripe from snout to tail, a bright red stripe above it running from the snout through the eye to the middle of the body, a red front edge on the dorsal fin, tail lobes each with a yellow and a black stripe, sunlight rippling on the stones. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
 ```
+
+## Namib (16)
+
+Hanno già una foto vera: Welwitschia, Lichene della nebbia, Camaleonte del Namaqua, Scarabeo della nebbia, Ragno ruota dorato, Ragno dama bianca, Lucertola dal muso a pala, Geco dalle dita palmate, Vipera di Péringuey, Talpa dorata di Grant, Iena bruna, Delfino di Heaviside, Otaria orsina del Capo, Medusa del Benguela.  
+Da fare con Link: Ghiozzo barbuto, Perla di zolfo della Namibia.
+
+### Welwitschia · *Welwitschia mirabilis*
+- id: `welwitschia`
+- dove: pianure di ghiaia e letti di fiumi secchi, in Namibia e Angola · dimensioni: foglie lunghe diversi metri
+- foto vera già nell’app
+
+```
+Photorealistic nature photograph of a Welwitschia mirabilis plant on a flat gravel plain in the Namib Desert: two very long, broad, leathery grey-green leaves sprawling on the ground and split into many twisted ribbon-like strips with dry brown curled tips, a low woody centre with clusters of reddish cones, pale stony desert and a hazy sky behind. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Lichene della nebbia · *Teloschistes capensis*
+- id: `foglichen`
+- dove: pianure di ghiaia vicino alla costa, dove arriva la nebbia · dimensioni: cespuglietti alti pochi centimetri
+- foto vera già nell’app
+
+```
+Photorealistic close-up nature photograph of bright orange shrubby fog lichen (Teloschistes capensis) growing in small bushy tufts between pale quartz pebbles and grey lichens on a gravel plain in the Namib Desert, tiny morning fog droplets on its fine branches, soft grey light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Camaleonte del Namaqua · *Chamaeleo namaquensis*
+- id: `namaquacham`
+- dove: pianure di ghiaia e piedi delle dune · dimensioni: fino a circa 25 cm
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of a Namaqua chameleon (Chamaeleo namaquensis) walking on pale sand among sparse dry twigs in the Namib Desert: a stout ground-dwelling chameleon about 20 cm long, grey-brown body with darker blotches and pale spots, a row of knobbly bumps along its back, a short tail, swivelling turret eyes, soft morning light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Scarabeo della nebbia · *Onymacris unguicularis*
+- id: `fogbeetle`
+- dove: creste delle dune vicino al mare · dimensioni: circa 2 cm
+- foto vera già nell’app
+
+```
+Photorealistic macro wildlife photograph of a fog-basking beetle (Onymacris unguicularis) doing a headstand on the crest of a red sand dune at dawn: a glossy black darkling beetle about 2 cm long with very long thin legs, its body tilted head-down with its back raised towards the wind, tiny fog droplets beading on its back and running towards its mouth, misty grey air and rippled sand around. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Ragno ruota dorato · *Carparachne aureoflava*
+- id: `wheelspider`
+- dove: dune della Namib · dimensioni: pochi centimetri
+- foto vera già nell’app
+
+```
+Photorealistic macro wildlife photograph of a golden wheel spider (Carparachne aureoflava) curled into a wheel shape, cartwheeling down the steep slip face of a red Namib sand dune, its golden-yellow legs folded around its body, a faint trail in the sand behind it, warm low sunlight. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Ragno dama bianca · *Leucorchestris arenicola*
+- id: `whitelady`
+- dove: dune della Namib · dimensioni: zampe aperte fino a circa 10 cm
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of a dancing white lady spider (Leucorchestris arenicola) on pale Namib sand at night: a large pale cream huntsman spider with long hairy legs spread up to 10 cm across, small dark eyes, soft moonlit light and fine sand ripples. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Lucertola dal muso a pala · *Meroles anchietae*
+- id: `shovelsnout`
+- dove: fianchi delle dune senza piante · dimensioni: corpo di circa 5 cm, più la coda
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of a shovel-snouted lizard (Meroles anchietae) doing its thermal dance on hot red Namib sand: a small slender sand-coloured lizard with a flat wedge-shaped snout, lifting one front leg and the opposite hind leg off the burning sand, fringed toes, a long thin tail, bright sunlight and sharp shadows. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Geco dalle dita palmate · *Pachydactylus rangei*
+- id: `webfoot`
+- dove: dune della Namib · dimensioni: circa 12 cm, coda compresa
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of a web-footed gecko (Pachydactylus rangei) on a Namib sand dune at night: a slender pinkish, almost translucent gecko about 12 cm long with enormous dark eyes, webbed feet like little paddles, fine fog droplets on its eyes, its tongue licking one eye, soft light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Vipera di Péringuey · *Bitis peringueyi*
+- id: `sidewinder`
+- dove: dune sabbiose della costa, dall’Angola a Lüderitz · dimensioni: circa 30 cm
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of a Péringuey’s adder (Bitis peringueyi) half buried in red Namib sand: a small pale sandy-coloured adder with faint darker spots, only its flat head with eyes on top and a few coils showing above the sand, sidewinding tracks nearby, warm morning light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Talpa dorata di Grant · *Eremitalpa granti*
+- id: `goldenmole`
+- dove: dentro le dune, appena sotto la superficie · dimensioni: circa 8 cm
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of a Grant’s golden mole (Eremitalpa granti) emerging from red Namib sand at night: a small round mole about 8 cm long with silky pale golden fur, no visible eyes or tail, a leathery pointed nose pad, short strong digging claws, fine sand grains on its fur. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Iena bruna · *Parahyaena brunnea*
+- id: `brownhyena`
+- dove: spiagge e dune della costa · dimensioni: circa 75 cm alla spalla
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of a brown hyena (Parahyaena brunnea) walking along a foggy beach of the Namib coast at dusk: a shaggy dark brown hyena with long coarse hair, a pale tan mane over its neck and shoulders, striped legs, pointed ears, waves and wet sand behind. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Delfino di Heaviside · *Cephalorhynchus heavisidii*
+- id: `heaviside`
+- dove: acque fredde della costa, dal Sudafrica all’Angola · dimensioni: circa 1,7 m
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of a Heaviside’s dolphin (Cephalorhynchus heavisidii) leaping out of cold green-grey water off the Namib coast: a small stocky dolphin about 1.7 m long with a blunt head, a triangular dorsal fin, a grey and black body with crisp white patches on the belly and flanks, splashes, misty coast behind. Real underwater wildlife documentary photography in cold natural light, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people, no divers.
+```
+
+### Otaria orsina del Capo · *Arctocephalus pusillus*
+- id: `furseal`
+- dove: coste e mare aperto, fino a 200 m di profondità · dimensioni: maschi fino a circa 2,3 m, femmine circa 1,6 m
+- foto vera già nell’app
+
+```
+Photorealistic underwater wildlife photograph of a Cape fur seal (Arctocephalus pusillus) swimming in cold green water off the Namib coast: a sleek brown fur seal with small external ears, long whiskers, big dark eyes and long front flippers, a few silvery fish and bubbles around, sunlight from above. Real underwater wildlife documentary photography in cold natural light, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people, no divers.
+```
+
+### Medusa del Benguela · *Chrysaora fulgida*
+- id: `benguelajelly`
+- dove: mare davanti alla Namibia · dimensioni: campana larga decine di centimetri
+- foto vera già nell’app
+
+```
+Photorealistic underwater photograph of a Benguela jellyfish (Chrysaora fulgida) drifting in cold green water off Namibia: a large dome-shaped reddish-brown bell with a scalloped edge and darker radiating marks, long trailing frilly oral arms and thin stinging tentacles, soft natural light from above. Real underwater wildlife documentary photography in cold natural light, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people, no divers.
+```
+
+### Ghiozzo barbuto · *Sufflogobius bibarbatus*
+- id: `goby`
+- dove: fondali fangosi senza ossigeno, davanti alla Namibia · dimensioni: fino a circa 17 cm
+- **da fare con Link**
+
+```
+Photorealistic underwater photograph of a bearded goby (Sufflogobius bibarbatus) resting on soft dark olive-grey mud on the seabed off Namibia in dim greenish water: a small slender goby about 10 cm long with a large head, big eyes, a short pair of barbels on the chin, a mottled brown and grey body, a pale jellyfish tentacle drifting above, fine particles floating in the water. Real underwater wildlife documentary photography in cold natural light, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people, no divers.
+```
+
+### Perla di zolfo della Namibia · *Thiomargarita namibiensis*
+- id: `sulfurpearl`
+- dove: fango del fondo davanti a Walvis Bay, a circa 100 m · dimensioni: di solito 0,1–0,3 mm; le più grandi 0,75 mm
+- **da fare con Link**
+
+```
+Photorealistic light-microscope photograph of Thiomargarita namibiensis, the sulfur pearl bacterium: a chain of large round translucent cells, each about 0.2 mm wide, strung together like a pearl necklace inside a clear jelly-like sheath, glistening milky white from tiny sulfur granules inside each cell, a few grains of dark seabed mud around, dark-field lighting. Real light-microscope photograph, natural colours, sharp focus, photorealistic, scientifically accurate structure and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no labels, no scale bar, no watermark.
+```
