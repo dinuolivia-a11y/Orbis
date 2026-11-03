@@ -1410,3 +1410,134 @@ Photorealistic underwater photograph of a small Danakil cichlid (Danakilia franc
 ```
 Photorealistic scientific microscope image of tiny single-celled archaea from the salt crusts of Dallol in Ethiopia: clusters of very small round and slightly irregular cells less than a micrometre across sitting on a cubic salt crystal, seen at very high magnification, soft natural tones with a hint of the yellow and orange colours of the Dallol salts. Real light-microscope photograph, natural colours, sharp focus, photorealistic, scientifically accurate structure and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no labels, no scale bar, no watermark.
 ```
+
+## Appalachi (14)
+
+Hanno già una foto vera: Abete di Fraser, Scoiattolo volante del nord, Salamandra dalle guance rosse, Orso nero, Falena luna, Salmerino di fontana, Wapiti, Scarpetta di Venere rosa, Fungo lanterna, Lucciola sincrona, Tartaruga scatola, Hellbender.  
+Da fare con Link: Ragno del muschio, Pesce gatto delle Smoky.
+
+### Abete di Fraser · *Abies fraseri*
+- id: `fraserfir`
+- dove: vette più alte degli Appalachi del sud · dimensioni: di solito 10–15 m
+- foto vera già nell’app
+
+```
+Photorealistic nature photograph of a high-elevation forest of Fraser firs (Abies fraseri) on a peak of the Great Smoky Mountains: dark green conical firs with short flat needles and upright purple-brown cones, some silver-grey dead fir trunks standing among them, blue misty ridges fading into the distance, soft cool light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Ragno del muschio · *Microhexura montivaga*
+- id: `mossspider`
+- dove: cuscini di muschio sulle rocce, nei boschi di abeti delle vette · dimensioni: circa mezzo centimetro
+- **da fare con Link**
+
+```
+Photorealistic macro wildlife photograph of a spruce-fir moss spider (Microhexura montivaga) at the entrance of its small silk tube in a damp cushion of green moss on a shaded rock in a high-elevation fir forest: a tiny tarantula-like spider about 5 mm long, light yellowish-brown to dark brown body, short stout legs, two long spinnerets at the back, tiny water droplets on the moss. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Scoiattolo volante del nord · *Glaucomys sabrinus*
+- id: `nflyingsquirrel`
+- dove: boschi di abeti e betulle delle vette · dimensioni: circa 25–30 cm, coda compresa
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of a northern flying squirrel (Glaucomys sabrinus) clinging to a mossy branch at night in a spruce-fir forest: a small squirrel with soft grey-brown fur, a creamy white belly, huge dark eyes, a flat furry tail, the loose gliding membrane visible along its sides, soft light from a torch. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Salamandra dalle guance rosse · *Plethodon jordani*
+- id: `redcheek`
+- dove: boschi delle parti alte delle Great Smoky Mountains, e nessun altro posto · dimensioni: circa 12 cm
+- foto vera già nell’app
+
+```
+Photorealistic macro wildlife photograph of a red-cheeked salamander (Plethodon jordani) on bright green moss on the forest floor of the Great Smoky Mountains: a slender glossy black salamander about 12 cm long with a bright red patch on each cheek, large dark eyes, moist skin, soft diffused light after rain. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Orso nero · *Ursus americanus*
+- id: `blackbear`
+- dove: foreste di tutto il parco · dimensioni: maschi spesso più di 100 kg
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of an American black bear (Ursus americanus) standing on a mossy rock in a lush green forest of the Great Smoky Mountains: a stocky bear with thick glossy black fur, a brown muzzle, small round ears, ferns and rhododendrons around, soft green light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Falena luna · *Actias luna*
+- id: `lunamoth`
+- dove: boschi di latifoglie dell’est del Nord America · dimensioni: ali fino a circa 11 cm
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of a luna moth (Actias luna) resting on a leafy twig at night in an Appalachian forest: a large pale lime-green moth with broad wings edged in purple-brown, a small eyespot on each wing, two very long curved tails on the hindwings, a fluffy white body, dark background. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Salmerino di fontana · *Salvelinus fontinalis*
+- id: `brooktrout`
+- dove: torrenti freddi di montagna, soprattutto in alto · dimensioni: di solito 15–20 cm nei torrenti di montagna
+- foto vera già nell’app
+
+```
+Photorealistic underwater photograph of a brook trout (Salvelinus fontinalis) holding in the current of a clear rocky mountain stream in the Great Smoky Mountains: a sleek fish with an olive-green back covered in pale wavy markings, red spots ringed with blue on its sides, orange-red lower fins edged in white and black, smooth colourful pebbles below, sunlight rippling through the water. Real underwater wildlife documentary photography in cold natural light, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people, no divers.
+```
+
+### Wapiti · *Cervus canadensis*
+- id: `elk`
+- dove: prati delle valli, come Cataloochee · dimensioni: maschi circa 1,5 m alla spalla
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of a bull elk (Cervus canadensis) standing in a misty autumn meadow in Cataloochee Valley in the Great Smoky Mountains: a large deer with a pale tan body, a dark brown shaggy neck mane and huge branching antlers, golden grass, a forest with red and orange autumn leaves behind, soft morning light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Scarpetta di Venere rosa · *Cypripedium acaule*
+- id: `ladyslipper`
+- dove: boschi di pini e querce dell’est del Nord America · dimensioni: fino a circa 40 cm
+- foto vera già nell’app
+
+```
+Photorealistic nature photograph of a pink lady’s slipper orchid (Cypripedium acaule) growing on the forest floor of an Appalachian pine and oak wood: two broad ribbed green leaves at the base, a single tall stem with a large pink pouch-shaped flower veined in darker pink, twisted brownish side petals, fallen pine needles and leaves around, soft dappled light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Fungo lanterna · *Omphalotus illudens*
+- id: `jackolantern`
+- dove: ceppi e radici di alberi a foglia larga · dimensioni: cappelli fino a circa 20 cm, in grandi ciuffi
+- foto vera già nell’app
+
+```
+Photorealistic nature photograph of a cluster of jack-o’-lantern mushrooms (Omphalotus illudens) at the base of an oak stump at night in an Appalachian forest: bright orange funnel-shaped caps on curved stems, their gills underneath glowing with a faint eerie green light in the darkness, dark leaf litter around. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Lucciola sincrona · *Photinus carolinus*
+- id: `syncfirefly`
+- dove: boschi umidi delle valli, come a Elkmont · dimensioni: circa 1 cm
+- foto vera già nell’app
+
+```
+Photorealistic nature photograph of synchronous fireflies (Photinus carolinus) flashing together at night in a dark Appalachian forest near Elkmont: hundreds of small yellow-green points of light glowing at the same moment among tall tree trunks and ferns, a deep blue night sky, long exposure. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Tartaruga scatola · *Terrapene carolina*
+- id: `boxturtle`
+- dove: boschi e prati delle valli · dimensioni: guscio di circa 15 cm
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of an eastern box turtle (Terrapene carolina) walking on the damp forest floor of the Great Smoky Mountains: a small land turtle with a high domed dark brown shell patterned with bright yellow and orange blotches, a scaly head with yellow spots and red eyes, green ferns and leaf litter around, soft light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Hellbender · *Cryptobranchus alleganiensis*
+- id: `hellbender`
+- dove: fondo di torrenti limpidi e veloci · dimensioni: fino a circa 70 cm
+- foto vera già nell’app
+
+```
+Photorealistic underwater photograph of an eastern hellbender (Cryptobranchus alleganiensis) resting on the bottom of a clear rocky Appalachian stream: a huge flat salamander about 60 cm long with wrinkled brown mottled skin, loose fleshy folds along its sides, a broad flat head with tiny eyes, a paddle-like tail, smooth stones and algae around, sunlight filtering through the water. Real underwater wildlife documentary photography in cold natural light, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people, no divers.
+```
+
+### Pesce gatto delle Smoky · *Noturus baileyi*
+- id: `smokymadtom`
+- dove: torrenti limpidi ai piedi dei monti: Citico Creek e Abrams Creek · dimensioni: pochi centimetri
+- **da fare con Link**
+
+```
+Photorealistic underwater photograph of a smoky madtom (Noturus baileyi) peeking out from under a flat slab rock on the gravel bed of a clear Appalachian stream: a tiny slender catfish about 6 cm long, mottled brown and tan with darker saddles across its back, four pairs of short whiskers around its mouth, a rounded tail, sunlight on the pebbles. Real underwater wildlife documentary photography in cold natural light, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people, no divers.
+```
