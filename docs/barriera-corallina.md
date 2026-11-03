@@ -35,7 +35,7 @@ Fonte per i coralli più profondi: [Englebert et al. 2017, PLoS ONE](https://www
 
 ### Medusa Irukandji · *Carukia barnesi*
 - id: `irukandji` · dove: acque costiere e della barriera, soprattutto d’estate · dimensioni: campana di circa 2 cm, tentacoli fino a 1 m
-- immagine: **da fare con Link** (prompt in `prompt-creature.md`)
+- immagine: illustrazione di Link (ChatGPT), controllata da Claude: vedi `illustrazioni-link.md`
 - curiosità: Nel 1961 il medico australiano Jack Barnes, per dimostrare che la colpevole era proprio lei, si fece pungere di proposito insieme al figlio di 9 anni e a un bagnino. Finirono tutti e tre in ospedale, ma guarirono, e la medusa porta il suo nome: barnesi.
 - fonti: [Carukia barnesi (Wikipedia, con le fonti)](https://en.wikipedia.org/wiki/Carukia_barnesi); [Australian Geographic: Irukandji](https://www.australiangeographic.com.au/fact-file/irukandji/)
 
@@ -101,7 +101,7 @@ Fonte per i coralli più profondi: [Englebert et al. 2017, PLoS ONE](https://www
 
 ### Pesce torcia · *Anomalops katoptron*
 - id: `flashlight` · dove: pareti e grotte del Mar dei Coralli; di giorno fino a 400 m, di notte quasi in superficie · dimensioni: fino a 35 cm
-- immagine: **da fare con Link** (prompt in `prompt-creature.md`)
+- immagine: illustrazione di Link (ChatGPT), controllata da Claude: vedi `illustrazioni-link.md`
 - curiosità: I batteri brillano sempre e il pesce non può spegnerli: per chiudere la luce ruota la torcia verso il basso, dentro una tasca scura. Così riesce a lampeggiare fino a 90 volte al minuto.
 - fonti: [Australian Faunal Directory: Mar dei Coralli, Osprey Reef](https://biodiversity.org.au/afd/taxa/Anomalops_graeffei); [Hellinger et al. 2017, PLOS ONE: fino a 90 lampi al minuto (ScienceDaily)](https://sciencedaily.com/releases/2017/02/170209095524.htm)
 

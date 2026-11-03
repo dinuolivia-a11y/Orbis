@@ -73,7 +73,7 @@ Una zona alla volta, finita prima di passare alla successiva.
 | `docs/ghati-occidentali.md` | I Ghati occidentali: le 14 creature, le curiosità e le fonti scientifiche. |
 | `docs/lezioni.md` | Le mini lezioni di scienza: elenco, esperimenti e come aggiungerne di nuove. |
 | `sorgenti/` | I file da cui si costruisce l’app: la pagina, le lezioni (`lezioni/`) e gli script per costruire la versione installabile e il file unico. |
-| `docs/illustrazioni-link.md` | Il controllo delle 13 illustrazioni fatte con Link (ChatGPT) e delle 3 foto vere trovate tra i suoi riferimenti. |
+| `docs/illustrazioni-link.md` | Il controllo delle 15 illustrazioni fatte con Link (ChatGPT) e delle 3 foto vere trovate tra i suoi riferimenti. |
 | `anteprime/` | Schermate dell'app. |
 
 ## Com'è fatta
@@ -92,7 +92,7 @@ Una zona alla volta, finita prima di passare alla successiva.
 ## Cosa manca ancora
 
 1. I 5 luoghi ancora segnati come "presto" sul globo: Atacama, Namib, Appalachi, Ghiacciai della Patagonia e Altopiano etiope.
-2. Le immagini di 3 creature, da fare con Link: Medusa Irukandji e Pesce torcia della Barriera Corallina, Barbo di Denison dei Ghati occidentali. I prompt sono in `docs/prompt-creature.md` e nel Laboratorio immagini.
+2. L'immagine del Barbo di Denison (Ghati occidentali), da fare con Link: il prompt è in `docs/prompt-creature.md` e nel Laboratorio immagini.
 3. La foto del giorno della NASA (APOD), quando l'app avrà un suo sito.
 4. Il Laboratorio immagini va tolto prima di pubblicare l'app.
 
@@ -106,7 +106,7 @@ Una zona alla volta, finita prima di passare alla successiva.
   - [ESO](https://www.eso.org/public/outreach/copyright/): Via Lattea (S. Brunier), Nubi di Magellano (Y. Beletsky; VISTA VMC), Centaurus A.
   - Buco nero di M87: EHT Collaboration.
   - I nomi completi degli autori sono sotto ogni foto nell'app.
-- Foto delle creature: 55 da [iNaturalist](https://www.inaturalist.org) (CC0, CC BY, CC BY-SA), 4 da [NOAA Ocean Exploration](https://oceanexplorer.noaa.gov) (pubblico dominio), 2 da Wikimedia Commons (CC0, CC BY-SA) e 1 da [Ifremer](https://image.ifremer.fr) (CC BY). Autori e link in `docs/foto-creature.md`. Le altre 66 creature hanno illustrazioni create con Grok e ChatGPT e controllate da Claude. Tre creature, due della Barriera e una dei Ghati, aspettano ancora la loro immagine.
+- Foto delle creature: 55 da [iNaturalist](https://www.inaturalist.org) (CC0, CC BY, CC BY-SA), 4 da [NOAA Ocean Exploration](https://oceanexplorer.noaa.gov) (pubblico dominio), 2 da Wikimedia Commons (CC0, CC BY-SA) e 1 da [Ifremer](https://image.ifremer.fr) (CC BY). Autori e link in `docs/foto-creature.md`. Le altre 68 creature hanno illustrazioni create con Grok e ChatGPT e controllate da Claude. Il Barbo di Denison dei Ghati aspetta ancora la sua immagine.
 - Grafica 3D: three.js, licenza MIT, inclusa in `app/vendor/`. Caratteri: Bodoni Moda, Atkinson Hyperlegible e DM Mono, SIL Open Font License.
 - Dati: [NASA Exoplanet Archive](https://exoplanetarchive.ipac.caltech.edu/), MBARI, NOAA Ocean Exploration, FishBase, IUCN, Università delle Hawaii, Senckenberg, Durrell e WWT, e le pubblicazioni scientifiche citate in `docs/`.
 

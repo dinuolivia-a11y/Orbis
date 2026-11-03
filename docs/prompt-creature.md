@@ -836,7 +836,7 @@ Photorealistic night wildlife photograph of a lesser Egyptian jerboa (Jaculus ja
 ## Grande Barriera Corallina (16)
 
 Hanno già una foto vera: Fregata minore, Tartaruga verde, Squalo dalle spalline, Corallo Acropora, Verme albero di Natale, Vongola gigante, Pesce perla, Stella corona di spine, Labro pulitore, Pesce pappagallo gigante, Canocchia pavone, Serpente marino oliva, Cavalluccio marino pigmeo, Nautilo.  
-Da fare con Link: Medusa Irukandji, Pesce torcia.
+Illustrazione di Link già nell’app: Medusa Irukandji, Pesce torcia.
 
 ### Fregata minore · *Fregata ariel*
 - id: `frigate`
@@ -868,7 +868,7 @@ Photorealistic underwater photograph of an epaulette shark (Hemiscyllium ocellat
 ### Medusa Irukandji · *Carukia barnesi*
 - id: `irukandji`
 - dove: acque costiere e della barriera, soprattutto d’estate · dimensioni: campana di circa 2 cm, tentacoli fino a 1 m
-- **da fare con Link**
+- illustrazione di Link già nell’app
 
 ```
 Photorealistic underwater macro photograph of an Irukandji jellyfish (Carukia barnesi): a tiny transparent box-shaped bell only about 2 cm tall, almost invisible, dotted with small white clusters of stinging cells, four extremely thin trailing tentacles beaded at regular intervals with small reddish-brown and white bands like a string of pearls, drifting in clear blue-green tropical water against a darker background so its glassy body shows. Real underwater wildlife documentary photography on a tropical coral reef, natural sunlight in clear warm water, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people, no divers.
@@ -967,7 +967,7 @@ Photorealistic underwater macro photograph of a pygmy seahorse (Hippocampus barg
 ### Pesce torcia · *Anomalops katoptron*
 - id: `flashlight`
 - dove: pareti e grotte del Mar dei Coralli; di giorno fino a 400 m, di notte quasi in superficie · dimensioni: fino a 35 cm
-- **da fare con Link**
+- illustrazione di Link già nell’app
 
 ```
 Photorealistic underwater night photograph of a small school of splitfin flashlightfish (Anomalops katoptron) in front of a dark coral reef wall: deep-bodied black-brown fish about 30 cm long with large eyes, each with a big bean-shaped light organ under the eye glowing bright blue-green, some fish showing the light and others with it rotated away, the only light coming from their glowing organs and a faint blue glow in the black water. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.

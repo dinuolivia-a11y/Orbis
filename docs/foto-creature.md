@@ -85,8 +85,8 @@ Nell'app: sulla scheda c'è scritto "Foto · autore · licenza"; toccando la fot
 
 ## Le altre creature
 
-Le 66 creature senza foto libera hanno un'illustrazione creata con l'intelligenza artificiale e controllata da Claude: 53 fatte con Grok (controllo in `controllo-immagini.md`) e 13 fatte con Link, cioè ChatGPT (controllo e riferimenti in `illustrazioni-link.md`). Nell'app hanno la scritta «Illustrazione».
+Le 68 creature senza foto libera hanno un'illustrazione creata con l'intelligenza artificiale e controllata da Claude: 53 fatte con Grok (controllo in `controllo-immagini.md`) e 15 fatte con Link, cioè ChatGPT (controllo e riferimenti in `illustrazioni-link.md`). Nell'app hanno la scritta «Illustrazione».
 
-Della Grande Barriera Corallina 2 creature non hanno ancora una foto libera: Medusa Irukandji, Pesce torcia. Aspettano l’immagine di Link; i prompt sono in `prompt-creature.md`.
+Della Grande Barriera Corallina, la Medusa Irukandji e il Pesce torcia non hanno una foto libera: hanno un’illustrazione di Link, controllata da Claude (`illustrazioni-link.md`).
 
 Dei Ghati occidentali manca solo il Barbo di Denison («Miss Kerala»): l’unica foto libera era presa dall’alto, attraverso l’acqua, con il pesce piccolissimo. Aspetta l’immagine di Link; il prompt è in `prompt-creature.md`.

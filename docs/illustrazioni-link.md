@@ -33,3 +33,14 @@ Claude ha guardato ogni immagine accanto alla descrizione scientifica della spec
 Le foto con diritti riservati (MBARI, Ocean Exploration Trust, British Antarctic Survey e altre) sono servite a Link solo per confrontare l'anatomia: non sono nell'app. Le fonti complete, una per creatura, sono nei file `confronto-e-fonte.json` e `crediti.txt` nella cartella di Link.
 
 Con queste immagini tutte le 101 creature di Orbis hanno un'immagine: 35 foto vere e 66 illustrazioni.
+
+## 3 novembre 2026: Barriera Corallina
+
+Link ha preparato le immagini delle 2 creature della Barriera che non avevano una foto libera, nella cartella `Orbis_immagini` (`irukandji/` e `flashlightfish/`), con il prompt migliorato, le foto di riferimento e i file `crediti.txt` e `confronto-e-fonte.json`. Sono ricostruzioni fotorealistiche, non fotografie. Claude le ha guardate tutte e due: entrano nell'app così come sono.
+
+| Creatura | Cosa è stato controllato | Riferimenti usati da Link |
+|---|---|---|
+| Medusa Irukandji, *Carukia barnesi* | Campana trasparente quasi a forma di cubo, quattro tentacoli sottili, uno per angolo, con i grappoli di cellule urticanti che sembrano perline; niente braccia intorno alla bocca. I tentacoli veri possono allungarsi molto di più: qui sono in parte ritratti. | Ryan et al. 2021, Frontiers in Immunology (foto di Jamie Seymour, CC BY) e Courtney et al. 2015, PLOS ONE (CC BY). |
+| Pesce torcia, *Anomalops katoptron* | Corpo scuro, occhi grandi, l'organo luminoso sotto l'occhio che brilla di azzurro-verde; in due pesci è girato verso il basso, cioè spento, come quando lampeggiano. Coda a forcella e due pinne dorsali, su una parete di corallo di notte. | Hellinger et al. 2017, PLOS ONE (CC BY) e la scheda di Fishes of Australia (Museums Victoria). |
+
+Ora tutte le 16 creature della Barriera Corallina hanno un'immagine: 14 foto vere e 2 illustrazioni.
