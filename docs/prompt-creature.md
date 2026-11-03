@@ -1681,3 +1681,134 @@ Photorealistic wildlife photograph of a Humboldt penguin (Spheniscus humboldti) 
 ```
 Photorealistic wildlife photograph of a marine otter (Lontra felina) resting on wet rocks covered in seaweed on the wave-battered Pacific coast of northern Chile: a small slender otter with dense dark brown fur, a pale throat, long whiskers, small round ears and a thick tapering tail, spray from a breaking wave behind, soft evening light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
 ```
+
+## Ghiacciai della Patagonia (14)
+
+Hanno già una foto vera: Alga della neve rossa, Drago della Patagonia, Lenga, Huemul, Picchio di Magellano, Fungo di Darwin, Parrocchetto australe, Puma, Colibrì dalla corona di fuoco, Calafate, Anatra dei torrenti, Huillín, la lontra del sud, Pinguino di Magellano, Alga gigante.  
+Tutte hanno una foto vera: i prompt servono solo se un giorno si vuole un’illustrazione.
+
+### Alga della neve rossa · *Chlamydomonas nivalis*
+- id: `redsnow`
+- dove: neve dei ghiacciai e delle montagne, d’estate · dimensioni: una sola cellula, invisibile a occhio nudo
+- foto vera già nell’app
+
+```
+Photorealistic nature photograph of watermelon snow on a Patagonian glacier: patches of old summer snow stained pink and deep red by snow algae, footprints showing brighter red in the snow, granite peaks and blue ice behind, bright high-mountain light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Drago della Patagonia · *Andiperla willinki*
+- id: `icedragon`
+- dove: sui ghiacciai della Patagonia, in Cile e in Argentina · dimensioni: circa 1 cm, più le lunghe antenne
+- foto vera già nell’app
+
+```
+Photorealistic macro wildlife photograph of a Patagonian ice dragon (Andiperla willinki) walking on bright blue glacier ice: a small wingless dark brown-black stonefly about 1 cm long with a slender segmented body, long antennae, two tail filaments and long jointed legs, tiny meltwater channels and ice crystals around, cold daylight. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Lenga · *Nothofagus pumilio*
+- id: `lenga`
+- dove: boschi della Patagonia, fino al limite degli alberi · dimensioni: albero alto; vicino ai ghiacci resta un cespuglio
+- foto vera già nell’app
+
+```
+Photorealistic nature photograph of a lenga beech forest (Nothofagus pumilio) in autumn below a glacier in Patagonia: gnarled trees with small toothed leaves turned golden yellow, orange and fiery red, a white glacier tongue and granite peaks behind, low clouds, soft light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Huemul · *Hippocamelus bisulcus*
+- id: `huemul`
+- dove: boschi e pendii delle Ande del sud, in Cile e Argentina · dimensioni: 80–90 cm alla spalla
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of a male huemul (Hippocamelus bisulcus) standing among lenga trees and rocks near a glacier in Patagonia: a stocky deer with thick grey-brown fur, a black face mask curving into a long heart shape between the eyes, large ears and short two-pronged antlers, soft overcast light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Picchio di Magellano · *Campephilus magellanicus*
+- id: `magwoodpecker`
+- dove: boschi di faggi del sud, dal Cile alla Terra del Fuoco · dimensioni: 36–45 cm
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of a male Magellanic woodpecker (Campephilus magellanicus) clinging to a mossy lenga trunk in a Patagonian forest: a large black woodpecker with white wing patches, a curly crest and an entirely bright crimson-red head, a strong grey bill, wood chips flying, soft forest light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Fungo di Darwin · *Cyttaria darwinii*
+- id: `darwinfungus`
+- dove: solo sui faggi del sud della Patagonia e della Terra del Fuoco · dimensioni: palline di 2–5 cm
+- foto vera già nell’app
+
+```
+Photorealistic nature photograph of Darwin’s fungus (Cyttaria darwinii) growing on a southern beech branch in Tierra del Fuego: clusters of round pale yellow to orange golf-ball-like fruiting bodies covered in honeycomb pits, sprouting from a swollen woody gall on a mossy branch, misty forest behind, soft light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Parrocchetto australe · *Enicognathus ferrugineus*
+- id: `austroparakeet`
+- dove: boschi di faggi del sud, fino alla Terra del Fuoco · dimensioni: 28–36 cm
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of an austral parakeet (Enicognathus ferrugineus) perched on a snowy lenga branch in Patagonia: a medium-sized parrot with dark green barred plumage, a dull red patch on its belly and a long reddish-brown tail, a short grey bill, falling snowflakes, soft winter light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Puma · *Puma concolor*
+- id: `puma`
+- dove: dal Canada fino alla punta della Patagonia · dimensioni: fino a circa 2,4 m, coda compresa
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of a female puma (Puma concolor) and her cub resting together on a snowy rocky slope in Torres del Paine, Patagonia: a large tawny cat with a pale muzzle, dark-tipped ears and tail, the cub with faint spots, granite towers and clouds behind, soft winter light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Colibrì dalla corona di fuoco · *Sephanoides sephaniodes*
+- id: `firecrown`
+- dove: Cile e Argentina, fino alla punta del Sud America · dimensioni: 10–10,5 cm
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of a male green-backed firecrown hummingbird (Sephanoides sephaniodes) perched on a thin branch in a Patagonian forest: a tiny bronze-green hummingbird with a speckled pale throat and a shining iridescent red-and-gold crown, a short straight black bill, red flowers blurred behind, soft light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Calafate · *Berberis microphylla*
+- id: `calafate`
+- dove: steppe e margini dei boschi della Patagonia · dimensioni: arbusto spinoso alto di solito 1–1,5 m
+- foto vera già nell’app
+
+```
+Photorealistic nature photograph of a calafate shrub (Berberis microphylla) on the Patagonian steppe: a thorny bush with small leathery leaves, clusters of round dark blue-purple berries with a pale bloom, a few small yellow flowers, a turquoise glacial lake and snowy mountains behind, bright light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Anatra dei torrenti · *Merganetta armata*
+- id: `torrentduck`
+- dove: fiumi impetuosi lungo tutte le Ande, fino alla Patagonia · dimensioni: 43–46 cm
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of a male torrent duck (Merganetta armata) standing on a wet boulder in a foaming glacial river in Patagonia: a slender duck with a bold black-and-white striped head and neck, a bright red bill, dark streaked body, red feet and a long stiff tail, white rapids around, soft light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Huillín, la lontra del sud · *Lontra provocax*
+- id: `huillin`
+- dove: fiumi, laghi e fiordi del sud del Cile e dell’Argentina · dimensioni: fino a circa 1,1 m, coda compresa
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of a southern river otter (Lontra provocax) climbing onto a mossy rock at the edge of a Patagonian fjord: a sleek otter with dense dark brown fur, a paler throat, long whiskers, small ears and a thick tapering tail, cold green water and kelp behind, soft overcast light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Pinguino di Magellano · *Spheniscus magellanicus*
+- id: `magpenguin`
+- dove: coste e fiordi della Patagonia · dimensioni: 61–76 cm
+- foto vera già nell’app
+
+```
+Photorealistic underwater wildlife photograph of a Magellanic penguin (Spheniscus magellanicus) swimming just below the surface of a cold green Patagonian fjord: a penguin with a black back, white front with two black bands across the chest and a white stripe curving from the eye around the face, silver bubbles trailing, light rays from above. Real underwater wildlife documentary photography in cold natural light, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people, no divers.
+```
+
+### Alga gigante · *Macrocystis pyrifera*
+- id: `kelp`
+- dove: acque fredde e limpide, dai fiordi della Patagonia alla California · dimensioni: lunga anche più di 30 m
+- foto vera già nell’app
+
+```
+Photorealistic underwater photograph of a giant kelp forest (Macrocystis pyrifera) in the Beagle Channel near Ushuaia, Patagonia: tall golden-brown kelp fronds with small gas-filled floats rising from the rocky bottom to the surface, sunbeams streaming down through the canopy, a few small fish, cold green-blue water. Real underwater wildlife documentary photography in cold natural light, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people, no divers.
+```

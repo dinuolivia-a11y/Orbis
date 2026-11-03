@@ -1,6 +1,6 @@
 # Foto vere delle creature · 3 novembre 2026
 
-115 creature di Orbis hanno una foto vera al posto dell'illustrazione. Claude le ha cercate su iNaturalist (solo osservazioni verificate dalla comunità, "research grade") e nell'archivio di NOAA Ocean Exploration. Tre (granchio yeti, pesce delle sabbie e anfipode del fondo) le ha trovate Link su Wikimedia Commons e nella banca immagini di Ifremer, e Claude le ha controllate.
+129 creature di Orbis hanno una foto vera al posto dell'illustrazione. Claude le ha cercate su iNaturalist (solo osservazioni verificate dalla comunità, "research grade") e nell'archivio di NOAA Ocean Exploration. Tre (granchio yeti, pesce delle sabbie e anfipode del fondo) le ha trovate Link su Wikimedia Commons e nella banca immagini di Ifremer, e Claude le ha controllate.
 
 Per la Grande Barriera Corallina (novembre 2026) Claude ha trovato 14 foto su 16: 14 su iNaturalist, molte scattate proprio sulla Barriera. La foto del nautilo è stata fatta in un acquario, perché quelle libere scattate in natura mostrano solo conchiglie vuote.
 
@@ -13,6 +13,8 @@ Per l’Altopiano etiope (novembre 2026) Claude ha trovato 13 foto su 16, tutte 
 Per gli Appalachi (novembre 2026) Claude ha trovato 12 foto su 14, tutte su iNaturalist, comprese la lucciola sincrona e il fungo lanterna fotografati mentre brillano al buio.
 
 Per l’Atacama (novembre 2026) Claude ha trovato 14 foto su 15, tutte su iNaturalist e tutte scattate in Cile, dal fenicottero di James dell’altipiano alla lontra marina della costa.
+
+Per i Ghiacciai della Patagonia (novembre 2026) Claude ha trovato 14 foto su 14, tutte su iNaturalist: undici scattate in Patagonia, dal drago della Patagonia, fotografato vicino alla laguna San Rafael, alle alghe giganti di Ushuaia, e tre in altri posti, come dice la nota.
 
 Sono state tenute solo foto con licenze che permettono di riusarle anche se un giorno l'app sarà venduta:
 
@@ -29,21 +31,27 @@ Nell'app: sulla scheda c'è scritto "Foto · autore · licenza"; toccando la fot
 | Creatura | Specie | Autore | Licenza | Originale | Nota |
 |---|---|---|---|---|---|
 | Abete di Fraser | *Abies fraseri* | Brandon Corder | CC BY | [iNaturalist](https://www.inaturalist.org/photos/194308575) |  |
+| Alga della neve rossa | *Chlamydomonas nivalis* | John G. Phillips | CC BY | [iNaturalist](https://www.inaturalist.org/photos/48749439) | nella foto: neve rossa fotografata nel Montana, negli Stati Uniti |
+| Alga gigante | *Macrocystis pyrifera* | Gonzalo Bravo | CC BY | [iNaturalist](https://www.inaturalist.org/photos/671118844) |  |
 | Ali d’uccello del sud | *Troides minos* | Srivatsan Ramkumar | CC BY | [iNaturalist](https://www.inaturalist.org/photos/706036556) |  |
+| Anatra dei torrenti | *Merganetta armata* | Nicolas Olejnik | CC BY | [iNaturalist](https://www.inaturalist.org/photos/30749577) | nella foto: un maschio della sottospecie del nord dell’Argentina, fotografato a Jujuy |
 | Anfipode del fondo | *Hirondellea gigas* | Daiju Azuma / OpenCage (pulizia: Lycaon) | CC BY-SA | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Hirondellea_gigas.jpg) |  |
 | Aquila arpia | *Harpia harpyja* | Sidnei Dantas | CC BY-SA | [iNaturalist](https://www.inaturalist.org/photos/154445659) |  |
 | Bucero bicorne | *Buceros bicornis* | Rohit Naniwadekar | CC BY | [iNaturalist](https://www.inaturalist.org/photos/325966215) |  |
+| Calafate | *Berberis microphylla* | María Regina Silva | CC BY | [iNaturalist](https://www.inaturalist.org/photos/164469317) |  |
 | Camaleonte del Namaqua | *Chamaeleo namaquensis* | Ryan van Huyssteen | CC BY | [iNaturalist](https://www.inaturalist.org/photos/344999718) |  |
 | Camaleonte nano | *Brookesia nana* | Frank Glaw et al. (Scientific Reports, 2021) | CC BY | [iNaturalist](https://www.inaturalist.org/photos/172340863) |  |
 | Canocchia pavone | *Odontodactylus scyllarus* | Kai Squires | CC BY | [iNaturalist](https://www.inaturalist.org/photos/60094688) |  |
 | Cavalluccio marino pigmeo | *Hippocampus bargibanti* | Pierre Pericard | CC BY | [iNaturalist](https://www.inaturalist.org/photos/513917156) |  |
 | Ceciliano anellato | *Siphonops annulatus* | Vincent A. Vos | CC BY | [iNaturalist](https://www.inaturalist.org/photos/32026151) |  |
 | Cobra reale dei Ghati | *Ophiophagus kaalinga* | Ahirbudhnyan M | CC BY | [iNaturalist](https://www.inaturalist.org/photos/661427551) |  |
+| Colibrì dalla corona di fuoco | *Sephanoides sephaniodes* | Julia Ariadna | CC0 | [iNaturalist](https://www.inaturalist.org/photos/488843197) |  |
 | Copiapoa | *Copiapoa cinerea* | Nicolás Villaseca Merino | CC BY-SA | [iNaturalist](https://www.inaturalist.org/photos/254202619) | nella foto: la varietà columna-alba |
 | Corallo Acropora | *Acropora* | Luke Lythgoe | CC BY | [iNaturalist](https://www.inaturalist.org/photos/603769835) | nella foto: Acropora gemmifera |
 | Corvo dal becco grosso | *Corvus crassirostris* | stephen | CC BY | [iNaturalist](https://www.inaturalist.org/photos/62985491) |  |
 | Delfino di Heaviside | *Cephalorhynchus heavisidii* | Stefan Haag | CC BY | [iNaturalist](https://www.inaturalist.org/photos/108288063) |  |
 | Drago blu | *Glaucus atlanticus* | Sylke Rohrlach | CC BY-SA | [iNaturalist](https://www.inaturalist.org/photos/12393388) |  |
+| Drago della Patagonia | *Andiperla willinki* | Constanza Vargas Villegas | CC BY | [iNaturalist](https://www.inaturalist.org/photos/354019787) |  |
 | Drago volante dei Ghati | *Draco dussumieri* | Harshjeet Singh Bal | CC BY | [iNaturalist](https://www.inaturalist.org/photos/5417850) |  |
 | Falena del bradipo | *Cryptoses choloepi* | Arthur de Jesús Chavarría Pérez | CC BY | [iNaturalist](https://www.inaturalist.org/photos/60083448) |  |
 | Falena luna | *Actias luna* | Will Kuhn | CC BY | [iNaturalist](https://www.inaturalist.org/photos/305052571) |  |
@@ -55,6 +63,7 @@ Nell'app: sulla scheda c'è scritto "Foto · autore · licenza"; toccando la fot
 | Fringuello alpino di Brandt | *Leucosticte brandti* | condorr | CC BY | [iNaturalist](https://www.inaturalist.org/photos/707695573) |  |
 | Fulgora testa d’arachide | *Fulgora laternaria* | Bernard DUPONT | CC BY-SA | [iNaturalist](https://www.inaturalist.org/photos/24440960) |  |
 | Fungo delle formiche zombie | *Ophiocordyceps* | Katja Schulz | CC BY | [iNaturalist](https://www.inaturalist.org/photos/6308930) | nella foto: Ophiocordyceps unilateralis |
+| Fungo di Darwin | *Cyttaria darwinii* | Santiago Martín-Bravo | CC BY | [iNaturalist](https://www.inaturalist.org/photos/181840131) |  |
 | Fungo lanterna | *Omphalotus illudens* | Joey M | CC BY | [iNaturalist](https://www.inaturalist.org/photos/715371253) |  |
 | Garra de león | *Bomarea ovallei* | Elías Acosta Quiroz | CC BY | [iNaturalist](https://www.inaturalist.org/photos/748935182) |  |
 | Geco dalle dita palmate | *Pachydactylus rangei* | Marius Burger | CC0 | [iNaturalist](https://www.inaturalist.org/photos/88090938) |  |
@@ -64,6 +73,8 @@ Nell'app: sulla scheda c'è scritto "Foto · autore · licenza"; toccando la fot
 | Granchio yeti | *Kiwa hirsuta* | Alexis Fifis / Ifremer | CC BY | [Ifremer](https://image.ifremer.fr/data/00569/68091) |  |
 | Hellbender | *Cryptobranchus alleganiensis* | sunny tyson | CC0 | [iNaturalist](https://www.inaturalist.org/photos/431751509) |  |
 | Hoatzin | *Opisthocomus hoazin* | Bill Bouton | CC BY-SA | [iNaturalist](https://www.inaturalist.org/photos/364504337) |  |
+| Huemul | *Hippocamelus bisulcus* | Philipp Pavelka | CC BY | [iNaturalist](https://www.inaturalist.org/photos/27595081) |  |
+| Huillín, la lontra del sud | *Lontra provocax* | Henrik Kibak | CC BY | [iNaturalist](https://www.inaturalist.org/photos/73250025) |  |
 | Iena bruna | *Parahyaena brunnea* | Peter Archdale | CC BY | [iNaturalist](https://www.inaturalist.org/photos/434370033) |  |
 | Il giardino delle formiche tagliafoglie | *Atta* | Jonghyun Park | CC BY | [iNaturalist](https://www.inaturalist.org/photos/121490781) | nella foto: Atta sexdens |
 | Indri | *Indri indri* | Vijay Barve | CC0 | [iNaturalist](https://www.inaturalist.org/photos/8945066) |  |
@@ -71,6 +82,7 @@ Nell'app: sulla scheda c'è scritto "Foto · autore · licenza"; toccando la fot
 | Kosso | *Hagenia abyssinica* | Philip Precey | CC0 | [iNaturalist](https://www.inaturalist.org/photos/450635583) |  |
 | Labro pulitore | *Labroides dimidiatus* | Oscar Dove | CC BY | [iNaturalist](https://www.inaturalist.org/photos/384979155) |  |
 | Lemming dal collare | *Dicrostonyx groenlandicus* | Piotr Lukasik | CC BY | [iNaturalist](https://www.inaturalist.org/photos/146049571) |  |
+| Lenga | *Nothofagus pumilio* | Darío De la Fuente | CC BY | [iNaturalist](https://www.inaturalist.org/photos/210735761) |  |
 | Lichene della nebbia | *Teloschistes capensis* | Jean Jacques Godon | CC BY | [iNaturalist](https://www.inaturalist.org/photos/425494316) |  |
 | Llareta | *Azorella compacta* | Matt Berger | CC BY | [iNaturalist](https://www.inaturalist.org/photos/57479998) |  |
 | Lobelia gigante | *Lobelia rhynchopetalum* | Manuel Schwarz | CC BY | [iNaturalist](https://www.inaturalist.org/photos/111857573) |  |
@@ -87,14 +99,18 @@ Nell'app: sulla scheda c'è scritto "Foto · autore · licenza"; toccando la fot
 | Oca dalle ali blu | *Cyanochen cyanoptera* | Oleg Kosterin | CC BY | [iNaturalist](https://www.inaturalist.org/photos/105098591) |  |
 | Orso nero | *Ursus americanus* | Edwin Wilke | CC0 | [iNaturalist](https://www.inaturalist.org/photos/389270169) |  |
 | Otaria orsina del Capo | *Arctocephalus pusillus* | François Dunoyer | CC BY | [iNaturalist](https://www.inaturalist.org/photos/595769149) |  |
+| Parrocchetto australe | *Enicognathus ferrugineus* | Frank Dietze | CC BY | [iNaturalist](https://www.inaturalist.org/photos/479162576) |  |
 | Pata de guanaco | *Cistanthe longiscapa* | Cesar Ormazabal | CC BY | [iNaturalist](https://www.inaturalist.org/photos/591131811) |  |
 | Pesce delle sabbie | *Scincus scincus* | HTO | CC0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Scincus_scincus_01.JPG) |  |
 | Pesce pappagallo gigante | *Bolbometopon muricatum* | Jean-Paul Boerekamps | CC0 | [iNaturalist](https://www.inaturalist.org/photos/537381329) |  |
 | Pesce perla | *Carapus* | Julien Renoult | CC BY | [iNaturalist](https://www.inaturalist.org/photos/560524586) | nella foto: Carapus acus, il fierasfer del Mediterraneo |
 | Pesce treppiede | *Bathypterois grallator* | NOAA Ocean Exploration, 2026 American Samoa ROV + Mapping Exploration | pubblico dominio | [NOAA Ocean Exploration](https://oceanexplorer.noaa.gov/wp-content/uploads/2026/08/ex2606-dive03-tripodfish.jpg) | nella foto: un pesce treppiede del genere Bathypterois, specie non indicata |
+| Picchio di Magellano | *Campephilus magellanicus* | Pablo | CC BY | [iNaturalist](https://www.inaturalist.org/photos/129232580) |  |
 | Pinguino di Humboldt | *Spheniscus humboldti* | DiegoH | CC BY | [iNaturalist](https://www.inaturalist.org/photos/241680765) |  |
+| Pinguino di Magellano | *Spheniscus magellanicus* | Charlotte Kirchner | CC BY | [iNaturalist](https://www.inaturalist.org/photos/594752600) | nella foto: un pinguino di Magellano fotografato nelle isole Falkland |
 | Polpo Dumbo | *Grimpoteuthis* | NOAA Office of Ocean Exploration and Research, Discovering the Deep 2017 | pubblico dominio | [NOAA Ocean Exploration](https://oceanexplorer.noaa.gov/wp-content/uploads/2025/04/dumbo-octopus-hires.jpg) | nella foto: Grimpoteuthis sp. |
 | Polpo fantasma Casper | ** | NOAA Ocean Exploration, Hohonu Moana 2016 | pubblico dominio | [NOAA Ocean Exploration](https://oceanexplorer.noaa.gov/multimedia/daily-image/media/20200802.html) |  |
+| Puma | *Puma concolor* | Darío De la Fuente | CC BY | [iNaturalist](https://www.inaturalist.org/photos/210735004) |  |
 | Ragno dama bianca | *Leucorchestris arenicola* | mariaec | CC0 | [iNaturalist](https://www.inaturalist.org/photos/363452289) |  |
 | Ragno ruota dorato | *Carparachne aureoflava* | Nogga_Eugene | CC0 | [iNaturalist](https://www.inaturalist.org/photos/340331066) |  |
 | Rana danzante | *Micrixalus* | Swarochi Tathagath | CC BY | [iNaturalist](https://www.inaturalist.org/photos/280355496) | nella foto: Micrixalus kottigeharensis |
