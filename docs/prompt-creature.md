@@ -1541,3 +1541,143 @@ Photorealistic underwater photograph of an eastern hellbender (Cryptobranchus al
 ```
 Photorealistic underwater photograph of a smoky madtom (Noturus baileyi) peeking out from under a flat slab rock on the gravel bed of a clear Appalachian stream: a tiny slender catfish about 6 cm long, mottled brown and tan with darker saddles across its back, four pairs of short whiskers around its mouth, a rounded tail, sunlight on the pebbles. Real underwater wildlife documentary photography in cold natural light, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people, no divers.
 ```
+
+## Atacama (15)
+
+Hanno già una foto vera: Fenicottero di James, Folaga cornuta, Llareta, Suri, il nandù delle Ande, Viscaccia di montagna, Volpe culpeo, Tamarugo, Tillandsia della nebbia, Rospo dell’Atacama, Pata de guanaco, Copiapoa, Garra de león, Pinguino di Humboldt, Lontra marina.  
+Da fare con Link: Cianobatteri del sale.
+
+### Fenicottero di James · *Phoenicoparrus jamesi*
+- id: `jamesflamingo`
+- dove: lagune salate dell’altipiano, sopra i 4.000 m · dimensioni: circa 90 cm
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of a James’s flamingo (Phoenicoparrus jamesi) wading in a shallow turquoise salt lagoon on the Andean altiplano in northern Chile: a small pale pink flamingo with brighter crimson streaks on its back, a short bright yellow bill with a black tip, long brick-red legs, white salt crusts and a volcano behind, crisp high-altitude light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Folaga cornuta · *Fulica cornuta*
+- id: `hornedcoot`
+- dove: laghi d’alta quota di Cile, Bolivia e Argentina · dimensioni: circa 50 cm
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of a horned coot (Fulica cornuta) standing on its nest, a small island of piled pebbles topped with green algae, in a cold Andean lake in northern Chile: a large black coot with a dark bill and a distinctive dark proboscis-like tuft of feathers on its forehead, rippling blue water and snowy volcanoes behind. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Llareta · *Azorella compacta*
+- id: `llareta`
+- dove: pendii rocciosi dell’altipiano · dimensioni: cuscini larghi anche 3–4 metri
+- foto vera già nell’app
+
+```
+Photorealistic nature photograph of llareta (Azorella compacta) cushion plants on a rocky volcanic slope of the Andean altiplano: large rounded bright green cushions, dense and hard like moss-covered boulders, made of thousands of tiny tightly packed rosettes, reddish stones and a volcano under a deep blue sky behind. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Suri, il nandù delle Ande · *Rhea pennata*
+- id: `suri`
+- dove: altipiani e pianure sopra i 3.000 m · dimensioni: alto circa 90–100 cm
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of a puna rhea (Rhea pennata tarapacensis) walking across golden bunch grass on the Andean altiplano in northern Chile: a large flightless bird with grey-brown plumage dotted with white spots, a long neck, a small head with dark eyes, strong grey legs, hazy mountains behind, bright dry light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Viscaccia di montagna · *Lagidium viscacia*
+- id: `viscacha`
+- dove: rocce e dirupi delle Ande · dimensioni: circa 40 cm, più la coda
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of a mountain viscacha (Lagidium viscacia) sunbathing on a reddish rock ledge in the Andes of northern Chile: a rabbit-like rodent with long ears, soft thick grey and cream fur, long whiskers, a long curled bushy tail with a dark tip, warm early morning light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Volpe culpeo · *Lycalopex culpaeus*
+- id: `culpeo`
+- dove: dalle Ande al deserto e alla costa · dimensioni: circa 1,2 m, coda compresa
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of a culpeo (Lycalopex culpaeus) standing on a dry slope in the Atacama region of northern Chile: a large slender fox with a reddish-tawny head and legs, a pale throat, grey back, large pointed ears, amber eyes and a long bushy tail with a black tip, stony desert ground, soft golden light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Cianobatteri del sale · *Chroococcidiopsis*
+- id: `saltbacteria`
+- dove: dentro le rocce di sale del deserto, vicino a Yungay · dimensioni: pochi millesimi di millimetro
+- **da fare con Link**
+
+```
+Photorealistic close-up scientific photograph of a broken salt rock (halite) from the hyperarid Atacama Desert showing a thin bright green band of cyanobacteria (Chroococcidiopsis) living a few millimetres under its white crystalline surface, with an inset-like sharp macro detail of the tiny round green cells clustered between salt crystals, neutral light. Real light-microscope photograph, natural colours, sharp focus, photorealistic, scientifically accurate structure and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no labels, no scale bar, no watermark.
+```
+
+### Tamarugo · *Prosopis tamarugo*
+- id: `tamarugo`
+- dove: Pampa del Tamarugal, circa 1.000 m · dimensioni: un albero spinoso
+- foto vera già nell’app
+
+```
+Photorealistic nature photograph of a tamarugo tree (Prosopis tamarugo) standing alone on the flat salty plain of the Pampa del Tamarugal in the Atacama Desert: a broad thorny tree with a rounded canopy of small grey-green feathery leaves and twisted dark branches, white salt crust and dry sand around, the Andes faint on the horizon, harsh bright sunlight. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Tillandsia della nebbia · *Tillandsia landbeckii*
+- id: `tillandsia`
+- dove: dune delle colline costiere, nella fascia della nebbia · dimensioni: ciuffi di pochi centimetri, in file lunghe metri
+- foto vera già nell’app
+
+```
+Photorealistic nature photograph of rows of fog tillandsia (Tillandsia landbeckii) on a sandy coastal hill in the Atacama Desert near Iquique: long grey-brown stripes of rootless air plants with thin silvery curled leaves lying on the sand, arranged in parallel bands across the slope, a bank of sea fog rolling in behind, soft grey light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Rospo dell’Atacama · *Rhinella atacamensis*
+- id: `atacamatoad`
+- dove: oasi, torrenti e pozze del deserto, dal mare fino a 2.500 m · dimensioni: un rospo di qualche centimetro
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of an Atacama toad (Rhinella atacamensis) sitting at the edge of a small desert stream in northern Chile: a stout toad with warty olive and cream skin patterned with dark brown blotches, a pale stripe down its back, golden eyes, wet stones and green algae around, soft light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Pata de guanaco · *Cistanthe longiscapa*
+- id: `patadeguanaco`
+- dove: colline e pianure del sud dell’Atacama · dimensioni: pianta bassa con fiori fucsia
+- foto vera già nell’app
+
+```
+Photorealistic landscape photograph of the flowering desert (desierto florido) in the southern Atacama Desert of Chile: a vast plain carpeted with fuchsia-purple pata de guanaco flowers (Cistanthe longiscapa), each with five glossy petals and a yellow centre, low succulent grey-green leaves, bare brown mountains and a clear blue sky behind. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Copiapoa · *Copiapoa cinerea*
+- id: `copiapoa`
+- dove: colline vicino al mare, tra Antofagasta e Chañaral · dimensioni: un cactus a colonna, spesso in gruppi
+- foto vera già nell’app
+
+```
+Photorealistic nature photograph of a clump of Copiapoa cinerea cacti on a sandy slope near the Pacific coast in the Atacama Desert: thick columnar cacti with a chalky whitish-grey waxy skin, ribbed stems with short black spines and woolly golden crowns, leaning towards the north, sea fog over the hills behind, soft light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Garra de león · *Bomarea ovallei*
+- id: `garraleon`
+- dove: solo sulla costa dell’Atacama, tra Copiapó e Huasco, fino a 100 m · dimensioni: steli bassi con grappoli di grandi fiori rossi
+- foto vera già nell’app
+
+```
+Photorealistic nature photograph of a lion’s claw plant (Bomarea ovallei, also called Leontochir ovallei) flowering among rocks on the coastal desert of the Atacama in Chile: a dense rounded cluster of large bright scarlet-red trumpet-shaped flowers with yellow throats on short stems, fleshy green leaves spreading on the stony ground, soft light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Pinguino di Humboldt · *Spheniscus humboldti*
+- id: `humboldtpenguin`
+- dove: coste e isole di Cile e Perù · dimensioni: circa 65–70 cm
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of a Humboldt penguin (Spheniscus humboldti) standing on a sunlit rock on the desert coast of northern Chile: a medium-sized penguin with a black back, white front, a single black horseshoe band across the chest, pink bare skin around the base of its black bill, waves breaking on dark rocks behind. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Lontra marina · *Lontra felina*
+- id: `marineotter`
+- dove: coste rocciose del Pacifico, dal Perù alla punta del Cile · dimensioni: circa 1 m, coda compresa; pesa circa 5 kg
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of a marine otter (Lontra felina) resting on wet rocks covered in seaweed on the wave-battered Pacific coast of northern Chile: a small slender otter with dense dark brown fur, a pale throat, long whiskers, small round ears and a thick tapering tail, spray from a breaking wave behind, soft evening light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
