@@ -832,3 +832,152 @@ Photorealistic wildlife photograph of a sandfish skink (Scincus scincus) half-bu
 ```
 Photorealistic night wildlife photograph of a lesser Egyptian jerboa (Jaculus jaculus) leaping across moonlit desert sand: a small sandy-coloured rodent with a white belly, very long kangaroo-like hind legs, tiny front paws, big dark eyes, large ears, and a very long tail ending in a black-and-white tuft. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
 ```
+
+## Grande Barriera Corallina (16)
+
+Hanno già una foto vera: Fregata minore, Tartaruga verde, Squalo dalle spalline, Corallo Acropora, Verme albero di Natale, Vongola gigante, Pesce perla, Stella corona di spine, Labro pulitore, Pesce pappagallo gigante, Canocchia pavone, Serpente marino oliva, Cavalluccio marino pigmeo, Nautilo.  
+Da fare con Link: Medusa Irukandji, Pesce torcia.
+
+### Fregata minore · *Fregata ariel*
+- id: `frigate`
+- dove: cielo sopra le isole; nidifica sull’isola di Raine · dimensioni: 70–80 cm, ali fino a 1,9 m
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of a lesser frigatebird (Fregata ariel) soaring over a turquoise coral reef and a small white sand cay: a slender black seabird with very long narrow angular wings and a deeply forked scissor-like tail, a long grey hooked bill, an adult male with a bright red throat pouch partly inflated and a small white patch on each flank, seen from slightly below against a clear blue tropical sky. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Tartaruga verde · *Chelonia mydas*
+- id: `greenturtle`
+- dove: spiagge delle isole e praterie di alghe · dimensioni: fino a circa 1,2 m; appena nata, 5 cm
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of a green sea turtle hatchling (Chelonia mydas) crawling across white coral sand towards the sea on a tropical island beach at dawn: a tiny turtle about 5 cm long, dark grey-black shell with a thin pale edge, white underside, flippers edged in white, sand grains sticking to it, the turquoise sea blurred in the background, soft warm morning light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Squalo dalle spalline · *Hemiscyllium ocellatum*
+- id: `epaulette`
+- dove: piana della barriera e pozze di bassa marea · dimensioni: fino a circa 1 m
+- foto vera già nell’app
+
+```
+Photorealistic underwater photograph of an epaulette shark (Hemiscyllium ocellatum) walking on its paddle-like pectoral and pelvic fins across a shallow coral reef flat at low tide: a slender pale beige-tan shark about 80 cm long covered in scattered small dark spots, a large black spot ringed in white just behind each pectoral fin like an epaulette, a long thick tail, small eyes, crystal-clear shallow water over coral and sand. Real underwater wildlife documentary photography on a tropical coral reef, natural sunlight in clear warm water, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people, no divers.
+```
+
+### Medusa Irukandji · *Carukia barnesi*
+- id: `irukandji`
+- dove: acque costiere e della barriera, soprattutto d’estate · dimensioni: campana di circa 2 cm, tentacoli fino a 1 m
+- **da fare con Link**
+
+```
+Photorealistic underwater macro photograph of an Irukandji jellyfish (Carukia barnesi): a tiny transparent box-shaped bell only about 2 cm tall, almost invisible, dotted with small white clusters of stinging cells, four extremely thin trailing tentacles beaded at regular intervals with small reddish-brown and white bands like a string of pearls, drifting in clear blue-green tropical water against a darker background so its glassy body shows. Real underwater wildlife documentary photography on a tropical coral reef, natural sunlight in clear warm water, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people, no divers.
+```
+
+### Corallo Acropora · *Acropora*
+- id: `acropora`
+- dove: barriera poco profonda, soprattutto nei primi 20 m · dimensioni: polipi di pochi millimetri, colonie larghe metri
+- foto vera già nell’app
+
+```
+Photorealistic underwater photograph of a branching Acropora coral colony on a shallow sunlit reef: dense clusters of short finger-like branches covered in tiny polyps, cream and golden-brown with pale lilac tips, small blue-green chromis fish hovering above, sunbeams and rippling light patterns from the surface. Real underwater wildlife documentary photography on a tropical coral reef, natural sunlight in clear warm water, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people, no divers.
+```
+
+### Verme albero di Natale · *Spirobranchus*
+- id: `xmastree`
+- dove: su coralli massicci, 3–30 m · dimensioni: pennacchi di circa 4 cm
+- foto vera già nell’app
+
+```
+Photorealistic underwater macro photograph of a pair of Christmas tree worms (Spirobranchus) emerging from a massive brain coral: two small spiral plumes about 4 cm high shaped like little Christmas trees, made of fine feathery radioles in vivid royal blue with white rings, a small spiny operculum beside them, the textured coral surface all around, natural sunlight. Real underwater wildlife documentary photography on a tropical coral reef, natural sunlight in clear warm water, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people, no divers.
+```
+
+### Vongola gigante · *Tridacna gigas*
+- id: `giantclam`
+- dove: barriera poco profonda, fino a 20 m · dimensioni: fino a 1,2 m e oltre 200 kg
+- foto vera già nell’app
+
+```
+Photorealistic underwater photograph of a giant clam (Tridacna gigas) resting in the sand among corals on a shallow sunlit reef, seen from above at an angle: a huge heavy shell about 1 m wide with deep wavy folds, wide open, its thick fleshy mantle spilling over the edges in dark olive-brown and teal with iridescent blue-green spots, a large siphon opening visible, sunlight dappling the scene. Real underwater wildlife documentary photography on a tropical coral reef, natural sunlight in clear warm water, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people, no divers.
+```
+
+### Pesce perla · *Carapus*
+- id: `pearlfish`
+- dove: dentro i cetrioli di mare e le stelle marine · dimensioni: 10–20 cm
+- foto vera già nell’app
+
+```
+Photorealistic underwater night photograph of a pearlfish (Carapus) halfway out of the rear opening of a large leopard sea cucumber (Bohadschia argus) lying on reef sand: a slender eel-like translucent fish about 15 cm long with no scales, pale pinkish-silver body with tiny dark speckles and a big eye, its long tapering tail still inside the sea cucumber, the sea cucumber’s cream skin with dark ringed spots, lit by a diver’s torch against dark water. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Stella corona di spine · *Acanthaster solaris*
+- id: `cots`
+- dove: su tutta la barriera · dimensioni: di solito 25–35 cm
+- foto vera già nell’app
+
+```
+Photorealistic underwater photograph of a crown-of-thorns starfish (Acanthaster solaris) feeding on a table coral on a sunlit reef: a large spiny starfish about 35 cm across with around 16 thick arms, its whole upper surface covered in long sharp spines, purplish-grey and reddish-brown, the part of the coral it has already eaten bleached bright white, healthy colourful corals around. Real underwater wildlife documentary photography on a tropical coral reef, natural sunlight in clear warm water, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people, no divers.
+```
+
+### Labro pulitore · *Labroides dimidiatus*
+- id: `cleaner`
+- dove: stazioni di pulizia sulla barriera, 1–40 m · dimensioni: circa 10 cm
+- foto vera già nell’app
+
+```
+Photorealistic underwater photograph of a bluestreak cleaner wrasse (Labroides dimidiatus) cleaning a larger reef fish at a cleaning station: a slender little fish about 10 cm long with a bold black stripe from snout to tail that widens towards the tail, bordered by bright electric blue and white, picking parasites near the gills of a calm golden damselfish holding still with its fins spread, coral reef background. Real underwater wildlife documentary photography on a tropical coral reef, natural sunlight in clear warm water, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people, no divers.
+```
+
+### Pesce pappagallo gigante · *Bolbometopon muricatum*
+- id: `bumphead`
+- dove: barriera esterna e lagune, 1–30 m · dimensioni: fino a 1,3 m e oltre 45 kg
+- foto vera già nell’app
+
+```
+Photorealistic underwater photograph of a bumphead parrotfish (Bolbometopon muricatum) swimming towards the camera over a coral reef: a huge bulky greenish-grey fish about 1.2 m long with a large rounded bump on its forehead, a pale pinkish face and a big white beak of fused teeth, a school of other bumpheads fading into the blue behind it, natural sunlight. Real underwater wildlife documentary photography on a tropical coral reef, natural sunlight in clear warm water, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people, no divers.
+```
+
+### Canocchia pavone · *Odontodactylus scyllarus*
+- id: `mantis`
+- dove: tane nella sabbia e nei detriti, 3–40 m · dimensioni: fino a circa 18 cm
+- foto vera già nell’app
+
+```
+Photorealistic underwater macro photograph of a peacock mantis shrimp (Odontodactylus scyllarus) at the entrance of its burrow in coral rubble, facing the camera: a stocky colourful crustacean about 15 cm long with a bright emerald-green body, red legs, a leopard-spotted orange-red front, two raptorial club arms folded under its head, two large stalked eyes like pink-and-green orbs with a band across the middle, natural reef light. Real underwater wildlife documentary photography on a tropical coral reef, natural sunlight in clear warm water, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people, no divers.
+```
+
+### Serpente marino oliva · *Aipysurus laevis*
+- id: `seasnake`
+- dove: barriere coralline del nord dell’Australia, fino a 45 m · dimensioni: di solito 1–2 m
+- foto vera già nell’app
+
+```
+Photorealistic underwater photograph of an olive sea snake (Aipysurus laevis) swimming over a coral reef: a thick muscular sea snake about 1.5 m long with smooth olive-brown to creamy-tan skin, a flattened paddle-shaped tail and a small head with a dark eye, its body curving gracefully above corals and sand in clear blue-green water. Real underwater wildlife documentary photography on a tropical coral reef, natural sunlight in clear warm water, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people, no divers.
+```
+
+### Cavalluccio marino pigmeo · *Hippocampus bargibanti*
+- id: `pygmyseahorse`
+- dove: sulle gorgonie Muricella, 10–40 m · dimensioni: meno di 2,5 cm
+- foto vera già nell’app
+
+```
+Photorealistic underwater macro photograph of a pygmy seahorse (Hippocampus bargibanti) gripping a branch of a pink Muricella sea fan with its tail: a tiny seahorse about 2 cm tall, its body covered in round pink-red bumpy tubercles that exactly match the sea fan’s polyps, pale pink skin, a short snout and a small dark eye, perfectly camouflaged among the knobbly branches, dark blue background, crisp macro detail. Real underwater wildlife documentary photography on a tropical coral reef, natural sunlight in clear warm water, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people, no divers.
+```
+
+### Pesce torcia · *Anomalops katoptron*
+- id: `flashlight`
+- dove: pareti e grotte del Mar dei Coralli; di giorno fino a 400 m, di notte quasi in superficie · dimensioni: fino a 35 cm
+- **da fare con Link**
+
+```
+Photorealistic underwater night photograph of a small school of splitfin flashlightfish (Anomalops katoptron) in front of a dark coral reef wall: deep-bodied black-brown fish about 30 cm long with large eyes, each with a big bean-shaped light organ under the eye glowing bright blue-green, some fish showing the light and others with it rotated away, the only light coming from their glowing organs and a faint blue glow in the black water. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Nautilo · *Nautilus pompilius*
+- id: `nautilus`
+- dove: pareti esterne nel Mar dei Coralli, 150–700 m · dimensioni: conchiglia di 15–20 cm
+- foto vera già nell’app
+
+```
+Photorealistic deep-sea photograph of a chambered nautilus (Nautilus pompilius) hovering beside a steep reef wall at night: a smooth coiled shell about 18 cm across, creamy white with bold reddish-brown tiger stripes on the top half, a dark hood over the head, a large simple pinhole eye, many thin pale ridged tentacles fanned out in front, its siphon visible. Shot like a real deep-sea ROV documentary frame: lit by soft white submersible lights against pitch-black water, faint particles of marine snow drifting, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people, no equipment visible.
+```
