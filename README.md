@@ -77,6 +77,7 @@ Una zona alla volta, finita prima di passare alla successiva.
 ## Com'è fatta
 
 - Una sola pagina HTML con CSS e JavaScript, senza server.
+- Sfondi vivi in ogni discesa, disegnati dal programma dietro le schede: nuvole che passano, foglie che ondeggiano e cadono, tronchi, terriccio con sassolini e radici sotto terra, dune e sabbia al vento nel Sahara, neve al vento e scintillii di ghiaccio, creste e nebbia in montagna. L’oceano ha l’acqua viva e il suono della Barriera.
 - Nella Barriera Corallina la luce che danza, i raggi di sole e le bollicine sono disegnati dal programma, e anche il suono è creato al momento con Web Audio, senza file audio: le onde sopra il mare, un rumore ovattato con le bollicine sotto, sempre più cupo man mano che si scende.
 - Grafica 3D con [three.js](https://threejs.org) 0.170: `Orbis.html` lo carica da CDN, la versione in `app/` lo ha dentro `vendor/`.
 - La versione in `app/` è una PWA: `manifest.webmanifest` dà nome, colori e icone, `sw.js` salva la pagina, le mappe e le foto piccole al primo avvio, così Orbis si apre anche senza internet.
