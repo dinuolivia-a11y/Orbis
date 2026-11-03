@@ -1,12 +1,14 @@
 # Foto vere delle creature · 3 novembre 2026
 
-76 creature di Orbis hanno una foto vera al posto dell'illustrazione. Claude le ha cercate su iNaturalist (solo osservazioni verificate dalla comunità, "research grade") e nell'archivio di NOAA Ocean Exploration. Tre (granchio yeti, pesce delle sabbie e anfipode del fondo) le ha trovate Link su Wikimedia Commons e nella banca immagini di Ifremer, e Claude le ha controllate.
+89 creature di Orbis hanno una foto vera al posto dell'illustrazione. Claude le ha cercate su iNaturalist (solo osservazioni verificate dalla comunità, "research grade") e nell'archivio di NOAA Ocean Exploration. Tre (granchio yeti, pesce delle sabbie e anfipode del fondo) le ha trovate Link su Wikimedia Commons e nella banca immagini di Ifremer, e Claude le ha controllate.
 
 Per la Grande Barriera Corallina (novembre 2026) Claude ha trovato 14 foto su 16: 14 su iNaturalist, molte scattate proprio sulla Barriera. La foto del nautilo è stata fatta in un acquario, perché quelle libere scattate in natura mostrano solo conchiglie vuote.
 
 Per i Ghati occidentali (novembre 2026) Claude ha trovato 13 foto su 14, tutte su iNaturalist e tutte scattate nei Ghati. La rana danzante della foto è *Micrixalus kottigeharensis*, una delle tante specie di rane danzanti.
 
 Per la Namib (novembre 2026) Claude ha trovato 14 foto su 16, tutte su iNaturalist e tutte scattate in Namibia, compresa una rara foto della talpa dorata di Grant.
+
+Per l’Altopiano etiope (novembre 2026) Claude ha trovato 13 foto su 16, tutte su iNaturalist e tutte scattate in Etiopia, dal lupo etiope del Bale allo stambecco walia del Simien.
 
 Sono state tenute solo foto con licenze che permettono di riusarle anche se un giorno l'app sarà venduta:
 
@@ -33,6 +35,7 @@ Nell'app: sulla scheda c'è scritto "Foto · autore · licenza"; toccando la fot
 | Ceciliano anellato | *Siphonops annulatus* | Vincent A. Vos | CC BY | [iNaturalist](https://www.inaturalist.org/photos/32026151) |  |
 | Cobra reale dei Ghati | *Ophiophagus kaalinga* | Ahirbudhnyan M | CC BY | [iNaturalist](https://www.inaturalist.org/photos/661427551) |  |
 | Corallo Acropora | *Acropora* | Luke Lythgoe | CC BY | [iNaturalist](https://www.inaturalist.org/photos/603769835) | nella foto: Acropora gemmifera |
+| Corvo dal becco grosso | *Corvus crassirostris* | stephen | CC BY | [iNaturalist](https://www.inaturalist.org/photos/62985491) |  |
 | Delfino di Heaviside | *Cephalorhynchus heavisidii* | Stefan Haag | CC BY | [iNaturalist](https://www.inaturalist.org/photos/108288063) |  |
 | Drago blu | *Glaucus atlanticus* | Sylke Rohrlach | CC BY-SA | [iNaturalist](https://www.inaturalist.org/photos/12393388) |  |
 | Drago volante dei Ghati | *Draco dussumieri* | Harshjeet Singh Bal | CC BY | [iNaturalist](https://www.inaturalist.org/photos/5417850) |  |
@@ -44,6 +47,7 @@ Nell'app: sulla scheda c'è scritto "Foto · autore · licenza"; toccando la fot
 | Fulgora testa d’arachide | *Fulgora laternaria* | Bernard DUPONT | CC BY-SA | [iNaturalist](https://www.inaturalist.org/photos/24440960) |  |
 | Fungo delle formiche zombie | *Ophiocordyceps* | Katja Schulz | CC BY | [iNaturalist](https://www.inaturalist.org/photos/6308930) | nella foto: Ophiocordyceps unilateralis |
 | Geco dalle dita palmate | *Pachydactylus rangei* | Marius Burger | CC0 | [iNaturalist](https://www.inaturalist.org/photos/88090938) |  |
+| Gelada | *Theropithecus gelada* | Scott Edmunds | CC0 | [iNaturalist](https://www.inaturalist.org/photos/52773829) |  |
 | Gerboa egiziano minore | *Jaculus jaculus* | Barry Stewart | CC BY | [iNaturalist](https://www.inaturalist.org/photos/661019212) |  |
 | Gipeto | *Gypaetus barbatus* | Justin Ponder | CC BY | [iNaturalist](https://www.inaturalist.org/photos/364202172) |  |
 | Granchio yeti | *Kiwa hirsuta* | Alexis Fifis / Ifremer | CC BY | [Ifremer](https://image.ifremer.fr/data/00569/68091) |  |
@@ -52,15 +56,20 @@ Nell'app: sulla scheda c'è scritto "Foto · autore · licenza"; toccando la fot
 | Il giardino delle formiche tagliafoglie | *Atta* | Jonghyun Park | CC BY | [iNaturalist](https://www.inaturalist.org/photos/121490781) | nella foto: Atta sexdens |
 | Indri | *Indri indri* | Vijay Barve | CC0 | [iNaturalist](https://www.inaturalist.org/photos/8945066) |  |
 | Kinkajou | *Potos flavus* | Lon Brehmer | CC BY | [iNaturalist](https://www.inaturalist.org/photos/735532632) |  |
+| Kosso | *Hagenia abyssinica* | Philip Precey | CC0 | [iNaturalist](https://www.inaturalist.org/photos/450635583) |  |
 | Labro pulitore | *Labroides dimidiatus* | Oscar Dove | CC BY | [iNaturalist](https://www.inaturalist.org/photos/384979155) |  |
 | Lemming dal collare | *Dicrostonyx groenlandicus* | Piotr Lukasik | CC BY | [iNaturalist](https://www.inaturalist.org/photos/146049571) |  |
 | Lichene della nebbia | *Teloschistes capensis* | Jean Jacques Godon | CC BY | [iNaturalist](https://www.inaturalist.org/photos/425494316) |  |
+| Lobelia gigante | *Lobelia rhynchopetalum* | Manuel Schwarz | CC BY | [iNaturalist](https://www.inaturalist.org/photos/111857573) |  |
 | Lucertola dal muso a pala | *Meroles anchietae* | Ryan van Huyssteen | CC BY | [iNaturalist](https://www.inaturalist.org/photos/344978596) |  |
+| Lupo etiope | *Canis simensis* | Forest Botial-Jarvis | CC BY | [iNaturalist](https://www.inaturalist.org/photos/50013188) |  |
 | Macaco dalla coda di leone | *Macaca silenus* | rajesh rocky | CC BY | [iNaturalist](https://www.inaturalist.org/photos/670755183) |  |
 | Medusa del Benguela | *Chrysaora fulgida* | desertnaturalist | CC BY | [iNaturalist](https://www.inaturalist.org/photos/69316036) |  |
 | Mesite pettobianco | *Mesitornis variegatus* | Nigel Voaden | CC BY | [iNaturalist](https://www.inaturalist.org/photos/3414762) |  |
 | Nautilo | *Nautilus pompilius* | Karim Haddad | CC BY | [iNaturalist](https://www.inaturalist.org/photos/30247026) | nella foto: un nautilo in acquario |
 | Neelakurinji | *Strobilanthes kunthiana* | Morten Ross | CC BY | [iNaturalist](https://www.inaturalist.org/photos/225638888) |  |
+| Nyala di montagna | *Tragelaphus buxtoni* | Manuel Schwarz | CC BY | [iNaturalist](https://www.inaturalist.org/photos/206761802) |  |
+| Oca dalle ali blu | *Cyanochen cyanoptera* | Oleg Kosterin | CC BY | [iNaturalist](https://www.inaturalist.org/photos/105098591) |  |
 | Otaria orsina del Capo | *Arctocephalus pusillus* | François Dunoyer | CC BY | [iNaturalist](https://www.inaturalist.org/photos/595769149) |  |
 | Pesce delle sabbie | *Scincus scincus* | HTO | CC0 | [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Scincus_scincus_01.JPG) |  |
 | Pesce pappagallo gigante | *Bolbometopon muricatum* | Jean-Paul Boerekamps | CC0 | [iNaturalist](https://www.inaturalist.org/photos/537381329) |  |
@@ -75,17 +84,23 @@ Nell'app: sulla scheda c'è scritto "Foto · autore · licenza"; toccando la fot
 | Rana di vetro | *Hyalinobatrachium* | Dan MacNeal | CC BY | [iNaturalist](https://www.inaturalist.org/photos/60123702) | nella foto: Hyalinobatrachium valerioi |
 | Rana viola | *Nasikabatrachus sahyadrensis* | kalyanvarma | CC BY | [iNaturalist](https://www.inaturalist.org/photos/348800079) |  |
 | Rana volante del Malabar | *Rhacophorus malabaricus* | Seema Merchant | CC BY | [iNaturalist](https://www.inaturalist.org/photos/461414809) |  |
+| Ratto talpa gigante | *Tachyoryctes macrocephalus* | Forest Botial-Jarvis | CC BY | [iNaturalist](https://www.inaturalist.org/photos/49812470) |  |
+| Rosa del deserto | *Adenium obesum* | Rafael Medina | CC BY | [iNaturalist](https://www.inaturalist.org/photos/2071899) |  |
 | Scarabeo della nebbia | *Onymacris unguicularis* | Kristopher Brand | CC0 | [iNaturalist](https://www.inaturalist.org/photos/377561445) |  |
+| Scimmia del Bale | *Chlorocebus djamdjamensis* | Dennis Vollmar | CC BY | [iNaturalist](https://www.inaturalist.org/photos/620416254) |  |
 | Scoiattolo gigante di Malabar | *Ratufa indica* | Subhadra Devi | CC BY | [iNaturalist](https://www.inaturalist.org/photos/47413512) |  |
 | Scoiattolo volante lanoso | *Eupetaurus cinereus* | Masood Lohar | CC BY-SA | [iNaturalist](https://www.inaturalist.org/photos/79562174) |  |
 | Serpente marino oliva | *Aipysurus laevis* | Kai Squires | CC BY | [iNaturalist](https://www.inaturalist.org/photos/66402036) |  |
 | Sholakili panciabianca | *Sholicola albiventris* | sunnyjosef | CC BY | [iNaturalist](https://www.inaturalist.org/photos/382428224) |  |
 | Squalo dalle spalline | *Hemiscyllium ocellatum* | Daniel Eisenhauer | CC BY | [iNaturalist](https://www.inaturalist.org/photos/578763985) |  |
+| Stambecco walia | *Capra walie* | Marius Burger | CC0 | [iNaturalist](https://www.inaturalist.org/photos/87176348) |  |
 | Stella corona di spine | *Acanthaster solaris* | Ryan McMinds | CC BY | [iNaturalist](https://www.inaturalist.org/photos/4481100) |  |
+| Struzzo somalo | *Struthio molybdophanes* | Rob Williams | CC BY | [iNaturalist](https://www.inaturalist.org/photos/459859258) |  |
 | Tahr dei Nilgiri | *Nilgiritragus hylocrius* | Ramesh Shenai | CC BY | [iNaturalist](https://www.inaturalist.org/photos/250570998) |  |
 | Talpa dorata di Grant | *Eremitalpa granti* | dune_ninja | CC0 | [iNaturalist](https://www.inaturalist.org/photos/403109382) |  |
 | Tarantola Golia | *Theraphosa blondi* | Kristof Zyskowski | CC BY | [iNaturalist](https://www.inaturalist.org/photos/262923074) |  |
 | Tartaruga verde | *Chelonia mydas* | Thomas Mesaglio | CC BY | [iNaturalist](https://www.inaturalist.org/photos/60532996) |  |
+| Turaco di Ruspoli | *Menelikornis ruspolii* | avocat | CC BY | [iNaturalist](https://www.inaturalist.org/photos/611727418) |  |
 | Uakari calvo | *Cacajao calvus* | Thiago Bicudo | CC BY | [iNaturalist](https://www.inaturalist.org/photos/278826311) |  |
 | Vanga elmo | *Euryceros prevostii* | desertnaturalist | CC BY | [iNaturalist](https://www.inaturalist.org/photos/54158383) |  |
 | Verme albero di Natale | *Spirobranchus* | Jean-Paul Boerekamps | CC0 | [iNaturalist](https://www.inaturalist.org/photos/536914241) | nella foto: Spirobranchus corniculatus |
@@ -108,3 +123,5 @@ Della Grande Barriera Corallina, la Medusa Irukandji e il Pesce torcia non hanno
 Dei Ghati occidentali manca solo il Barbo di Denison («Miss Kerala»): l’unica foto libera era presa dall’alto, attraverso l’acqua, con il pesce piccolissimo. Aspetta l’immagine di Link; il prompt è in `prompt-creature.md`.
 
 Della Namib mancano il Ghiozzo barbuto e la Perla di zolfo della Namibia: il primo vive nel fango in fondo al mare, la seconda si vede bene solo al microscopio. Aspettano l’immagine di Link; i prompt sono in `prompt-creature.md`.
+
+Dell’Altopiano etiope mancano l’Asino selvatico africano, il Ciclide della Dancalia e gli Archei di Dallol: aspettano l’immagine di Link; i prompt sono in `prompt-creature.md`.

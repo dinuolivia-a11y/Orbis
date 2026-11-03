@@ -1261,3 +1261,152 @@ Photorealistic underwater photograph of a bearded goby (Sufflogobius bibarbatus)
 ```
 Photorealistic light-microscope photograph of Thiomargarita namibiensis, the sulfur pearl bacterium: a chain of large round translucent cells, each about 0.2 mm wide, strung together like a pearl necklace inside a clear jelly-like sheath, glistening milky white from tiny sulfur granules inside each cell, a few grains of dark seabed mud around, dark-field lighting. Real light-microscope photograph, natural colours, sharp focus, photorealistic, scientifically accurate structure and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no labels, no scale bar, no watermark.
 ```
+
+## Altopiano etiope (16)
+
+Hanno già una foto vera: Lobelia gigante, Lupo etiope, Ratto talpa gigante, Corvo dal becco grosso, Gelada, Stambecco walia, Oca dalle ali blu, Nyala di montagna, Kosso, Scimmia del Bale, Turaco di Ruspoli, Struzzo somalo, Rosa del deserto.  
+Da fare con Link: Asino selvatico africano, Ciclide della Dancalia, Archei di Dallol.
+
+### Lobelia gigante · *Lobelia rhynchopetalum*
+- id: `giantlobelia`
+- dove: praterie d’alta quota del Simien e del Bale · dimensioni: fino a circa 6 m con la spiga dei fiori
+- foto vera già nell’app
+
+```
+Photorealistic nature photograph of a giant lobelia (Lobelia rhynchopetalum) on a high Afroalpine grassland in the Simien Mountains of Ethiopia: a palm-like plant with a dense rosette of long narrow pointed grey-green leaves on a short trunk, a tall flowering spike up to 6 m high covered in thousands of small pale blue-grey flowers, dramatic cliffs and clouds behind, crisp mountain light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Lupo etiope · *Canis simensis*
+- id: `ethwolf`
+- dove: praterie sopra i 3.000 m, soprattutto sui monti del Bale · dimensioni: circa 60 cm alla spalla
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of an Ethiopian wolf (Canis simensis) standing alert on an Afroalpine grassland in the Bale Mountains: a slender long-legged wolf with a bright rusty-red coat, white throat, chest and underparts, a long narrow muzzle and pointed ears, a bushy tail with a dark tip, low grey heather and lobelias around, soft morning light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Ratto talpa gigante · *Tachyoryctes macrocephalus*
+- id: `rootrat`
+- dove: praterie del Bale, tra 3.000 e 4.150 m · dimensioni: pesa fino a quasi 1 kg
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of a giant root-rat (Tachyoryctes macrocephalus) peeking out of its burrow in a short Afroalpine meadow in the Bale Mountains: a plump rodent with thick russet-brown fur, a very large head with small eyes, big orange incisors, short ears, fresh earth around the hole, soft daylight. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Corvo dal becco grosso · *Corvus crassirostris*
+- id: `thickraven`
+- dove: altopiani dell’Etiopia e dell’Eritrea · dimensioni: circa 64 cm
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of a thick-billed raven (Corvus crassirostris) standing on a rocky ledge in the Ethiopian highlands: a huge glossy black raven with an enormous deep arched black bill with a pale tip, a white patch on the back of the neck, shaggy throat feathers, misty mountains behind. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Gelada · *Theropithecus gelada*
+- id: `gelada`
+- dove: praterie e dirupi degli altopiani etiopi · dimensioni: maschi circa 75 cm, più la coda
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of an adult male gelada (Theropithecus gelada) sitting on a grassy cliff edge in the Simien Mountains: a big brown monkey with a long thick golden-brown cape of hair over its shoulders, a dark face with small eyes, a bright red hourglass-shaped patch of bare skin on its chest, plucking grass with its fingers, a deep misty valley behind. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Stambecco walia · *Capra walie*
+- id: `walia`
+- dove: dirupi del Simien, tra 2.200 e 4.400 m · dimensioni: simile a uno stambecco delle Alpi
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of a male walia ibex (Capra walie) standing on a rocky ledge in the Simien Mountains: a sturdy chestnut-brown wild goat with pale belly and legs with dark markings, enormous ridged horns curving back over its body, a short beard, giant lobelias and a sheer misty escarpment behind. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Oca dalle ali blu · *Cyanochen cyanoptera*
+- id: `bluegoose`
+- dove: prati umidi degli altopiani etiopi · dimensioni: circa 60–70 cm
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of a blue-winged goose (Cyanochen cyanoptera) walking on a wet green highland meadow in Ethiopia: a compact goose with soft fluffy grey-brown plumage, a short black bill, a pale grey head, a patch of pale blue showing on the folded wing, black legs, misty hills behind. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Nyala di montagna · *Tragelaphus buxtoni*
+- id: `mtnyala`
+- dove: praterie e boschi di montagna a est della Rift Valley · dimensioni: maschi circa 1,3 m alla spalla
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of a male mountain nyala (Tragelaphus buxtoni) standing in a highland meadow with Hagenia trees in the Bale Mountains: a large antelope with a shaggy grey-brown coat, faint white spots on the flanks, a white chevron between the eyes, white throat patches, long gently spiralling horns with pale tips, soft overcast light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Kosso · *Hagenia abyssinica*
+- id: `kosso`
+- dove: foreste di montagna tra 2.000 e 3.300 m · dimensioni: albero alto fino a circa 20 m
+- foto vera già nell’app
+
+```
+Photorealistic nature photograph of a female kosso tree (Hagenia abyssinica) in a misty Ethiopian mountain forest: a broad tree with a short thick trunk draped in pale lichens, large feathery compound leaves, and long drooping clusters of rusty-red flowers hanging from the branches, soft grey light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Scimmia del Bale · *Chlorocebus djamdjamensis*
+- id: `balemonkey`
+- dove: foreste di bambù dei monti Bale e del Sidamo · dimensioni: circa 50 cm, più la coda
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of a Bale monkey (Chlorocebus djamdjamensis) sitting among the green stems and leaves of a highland bamboo forest in Ethiopia, chewing a young bamboo shoot: a small monkey with thick dark grey-olive fur, a black face framed by a pale fringe, a long tail, soft green light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Turaco di Ruspoli · *Menelikornis ruspolii*
+- id: `ruspoli`
+- dove: boschi di ginepro del sud dell’Etiopia · dimensioni: circa 40 cm
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of a Prince Ruspoli’s turaco (Menelikornis ruspolii) perched on a gnarled juniper branch in southern Ethiopia: a slender bird about 40 cm long with bright green body plumage, a soft white-and-pink crest on its head, a red eye-ring, a short orange-red bill, a long dark blue-green tail, crimson flight feathers just showing at the edge of the wing, blue sky behind. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Struzzo somalo · *Struthio molybdophanes*
+- id: `somaliostrich`
+- dove: pianure secche del Corno d’Africa, dall’Afar alla Somalia · dimensioni: alto fino a circa 2,5 m
+- foto vera già nell’app
+
+```
+Photorealistic wildlife photograph of a male Somali ostrich (Struthio molybdophanes) walking across a dry acacia plain in the Afar lowlands of Ethiopia: a huge flightless bird with black body feathers, white wing and tail plumes, a long bare blue-grey neck and blue-grey legs, hot hazy light and dusty ground. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Rosa del deserto · *Adenium obesum*
+- id: `desertrose`
+- dove: terre basse e secche dell’Africa orientale e dell’Arabia · dimensioni: arbusto alto 1–3 m
+- foto vera già nell’app
+
+```
+Photorealistic nature photograph of a desert rose (Adenium obesum) growing among rocks in the hot dry Afar lowlands of Ethiopia: a small succulent tree with a fat swollen grey bottle-shaped trunk, a few thick branches with clusters of large trumpet-shaped pink flowers with darker pink edges, few leaves, bright harsh sunlight and a pale stony landscape. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Asino selvatico africano · *Equus africanus*
+- id: `wildass`
+- dove: pianure sassose della Dancalia, tra Etiopia ed Eritrea · dimensioni: circa 1,25 m alla spalla
+- **da fare con Link**
+
+```
+Photorealistic wildlife photograph of an African wild ass (Equus africanus somaliensis) standing on a stony volcanic plain in the Danakil desert: a slender pale grey wild ass with a white belly and muzzle, a short upright dark mane, long ears, and bold black horizontal zebra-like stripes on its legs, shimmering heat haze and dark lava rocks behind. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
+```
+
+### Ciclide della Dancalia · *Danakilia franchettii*
+- id: `afreracichlid`
+- dove: lago Afrera e le sue sorgenti calde, 112 m sotto il livello del mare · dimensioni: un pesce piccolo
+- **da fare con Link**
+
+```
+Photorealistic underwater photograph of a small Danakil cichlid (Danakilia franchettii) swimming in the clear warm shallow water of a hot spring at the edge of Lake Afrera in Ethiopia: a small deep-bodied fish about 8 cm long, silvery grey-olive with faint dark vertical bars and a pale belly, a dark spot at the back of the dorsal fin, white salt crusts and dark volcanic pebbles on the bottom, bright sunlight. Real underwater wildlife documentary photography in cold natural light, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people, no divers.
+```
+
+### Archei di Dallol · *Archaea*
+- id: `dallolarchaea`
+- dove: croste di sale intorno alle sorgenti di Dallol · dimensioni: meno di un millesimo di millimetro
+- **da fare con Link**
+
+```
+Photorealistic scientific microscope image of tiny single-celled archaea from the salt crusts of Dallol in Ethiopia: clusters of very small round and slightly irregular cells less than a micrometre across sitting on a cubic salt crystal, seen at very high magnification, soft natural tones with a hint of the yellow and orange colours of the Dallol salts. Real light-microscope photograph, natural colours, sharp focus, photorealistic, scientifically accurate structure and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no labels, no scale bar, no watermark.
+```
