@@ -11,13 +11,14 @@ const SUBJ = {
   vita: { it: "Vita", en: "Life", c: "#86dc93" },
   spazio: { it: "Spazio", en: "Space", c: "#ffd479" },
   terra: { it: "Terra", en: "Earth", c: "#5fd3c6" },
-  numeri: { it: "Numeri e idee", en: "Numbers & ideas", c: "#ff92b4" }
+  numeri: { it: "Numeri e idee", en: "Numbers & ideas", c: "#ff92b4" },
+  fanta: { it: "E se fosse vero?", en: "What if it were real?", c: "#ff7a6b" }
 };
 const LESSONS_LAUNCH = "2026-11-02";
 const LUI = {
   eyebrow: { it: "Orbis · Lezioni", en: "Orbis · Lessons" },
   title: { it: "Mini lezioni di scienza", en: "Science mini-lessons" },
-  lead: { it: "Lezioni brevi ma vere, per curiosi di tutte le età: dai quanti alle stelle, dalle cellule all’infinito. Molte hanno un disegno o un esperimento da toccare.", en: "Short but real lessons for the curious of every age: from quanta to stars, from cells to infinity. Many come with a drawing or an experiment to touch." },
+  lead: { it: "Lezioni brevi ma vere, per curiosi di tutte le età: dai quanti alle stelle, dalle cellule all’infinito, fino ai poteri dei personaggi più famosi. Molte hanno un disegno o un esperimento da toccare.", en: "Short but real lessons for the curious of every age: from quanta to stars, from cells to infinity, all the way to the powers of famous characters. Many come with a drawing or an experiment to touch." },
   all: { it: "Tutte", en: "All" }, newOnes: { it: "Nuove", en: "New" }, isNew: { it: "Nuova", en: "New" },
   search: { it: "Cerca una lezione…", en: "Search the lessons…" }, none: { it: "Nessuna lezione trovata.", en: "No lessons found." },
   min: { it: "min", en: "min" }, read: { it: "letta", en: "read" }, exp: { it: "esperimento", en: "experiment" }, fig: { it: "disegno", en: "drawing" },
@@ -243,6 +244,21 @@ const LFIG = {
       ${earth(90, L("giugno: estate al nord", "June: northern summer"), L("il polo nord guarda il Sole", "north pole leans to the Sun"), false)}
       ${earth(550, L("dicembre: inverno al nord", "December: northern winter"), L("il polo nord guarda lontano", "north pole leans away"), true)}
       ${svgT(320, 26, L("l’asse punta sempre nella stessa direzione dello spazio", "the axis always points the same way in space"), { size: 12, fill: "#d6dbe5" })}</svg>`;
+  },
+  bombardier() {
+    const L = (it, en) => t({ it, en });
+    let drops = ""; for (let i = 0; i < 24; i++) { const a = (i / 23 - 0.5) * 0.7, d = 18 + (i * 37) % 132; drops += `<circle cx="${(254 + Math.cos(a) * d).toFixed(1)}" cy="${(150 + Math.sin(a) * d).toFixed(1)}" r="${(2 + (i % 3) * 0.9).toFixed(1)}" fill="${i % 2 ? "#ffd479" : "#ff8a3d"}" opacity="${(0.95 - d / 200).toFixed(2)}"/>`; }
+    const legs = ["M130 115 L118 88", "M170 109 L170 82", "M210 113 L226 88", "M130 185 L118 212", "M170 191 L170 218", "M210 187 L226 212"].map((d) => `<path d="${d}" stroke="#5d6b85" stroke-width="4" stroke-linecap="round"/>`).join("");
+    return `<svg viewBox="0 0 420 300" role="img" aria-label="${esc(L("Come spara il coleottero bombardiere", "How the bombardier beetle fires"))}">${legs}
+      <path d="M50 141 L20 112 M50 159 L20 188" stroke="#5d6b85" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="60" cy="150" r="16" fill="#2b3446"/><ellipse cx="92" cy="150" rx="18" ry="24" fill="#2b3446"/>
+      <ellipse cx="172" cy="150" rx="80" ry="42" fill="#2b3446" stroke="#5d6b85" stroke-width="2"/>
+      <ellipse cx="185" cy="150" rx="33" ry="17" fill="#4a7fd6" fill-opacity=".85"/><rect x="221" y="146" width="7" height="8" fill="#a3acbd"/><circle cx="240" cy="150" r="11" fill="#ff8a3d"/>${drops}
+      <path d="M185 133 L185 62" stroke="#9fc3ff" stroke-width="1"/>
+      ${svgT(185, 32, L("serbatoio", "reservoir"), { size: 18, fill: "#9fc3ff" })}${svgT(185, 52, L("idrochinoni + acqua ossigenata", "hydroquinones + hydrogen peroxide"), { size: 14, fill: "#a3acbd" })}
+      <path d="M243 161 L250 244" stroke="#ffb07a" stroke-width="1"/>
+      ${svgT(250, 264, L("camera di reazione", "reaction chamber"), { size: 18, fill: "#ffb07a" })}${svgT(250, 284, L("con gli enzimi: qui esplode", "with enzymes: it explodes here"), { size: 14, fill: "#a3acbd" })}
+      ${svgT(345, 80, "100 °C", { size: 22, fill: "#ffd479", weight: 700 })}${svgT(345, 224, L("centinaia di spruzzi", "hundreds of bursts"), { size: 14, fill: "#a3acbd" })}${svgT(345, 242, L("al secondo", "every second"), { size: 14, fill: "#a3acbd" })}</svg>`;
   }
 };
 
@@ -464,6 +480,119 @@ const LWIDGET = {
       for (let e = -15; e <= 27; e++) { ctx.fillStyle = e === 0 ? "#ffd479" : "rgba(238,241,246,.35)"; ctx.fillRect(X(e), e % 5 ? 26 : 22, 1, e % 5 ? 8 : 16); }
       ctx.fillStyle = "#ff92b4"; ctx.beginPath(); ctx.arc(X(Math.log10(v)), 30, 6, 0, 6.283); ctx.fill();
       ctx.fillStyle = "#6c7486"; ctx.font = "10px Atkinson Hyperlegible, system-ui"; ctx.textAlign = "left"; ctx.fillText("10⁻¹⁵ m", x0, 56); ctx.textAlign = "center"; ctx.fillText("1 m", X(0), 56); ctx.textAlign = "right"; ctx.fillText("10²⁷ m", x1, 56); };
+    r.oninput = show; show(); return null;
+  },
+  spark(el) {
+    // How far a spark jumps in dry air: about 3,000 volts for every millimetre, from an electric eel to Pikachu's "100,000 volts".
+    const PR = [[860 / 3000, L2("Anguilla", "Eel")], [5, L2("Maniglia", "Door handle")], [100000 / 3000, "Pikachu"], [1000, L2("1 metro", "1 metre")]];
+    el.innerHTML = `<div class="w-row">${PR.map((p, i) => wBtn("p" + i, p[1], i !== 2)).join("")}</div><input type="range" class="w-slider" min="0" max="1000" id="sp-r" aria-label="${esc(L2("Lunghezza della scintilla", "Length of the spark"))}"><p class="w-big"></p><p class="w-note"></p>`;
+    const { ctx, W } = wCanvas(el, 118), H = 118, r = el.querySelector("#sp-r"), lo = -1, hi = 3, x0 = 26, x1 = W - 26;
+    const mmOf = (v) => Math.pow(10, lo + (hi - lo) * v / 1000), posOf = (mm) => Math.round((Math.log10(mm) - lo) / (hi - lo) * 1000), X = (mm) => x0 + (Math.log10(mm) - lo) / (hi - lo) * (x1 - x0);
+    const sig = (v) => { const p = Math.pow(10, Math.floor(Math.log10(v)) - 1); return Math.round(v / p) * p; };
+    const len = (mm) => mm < 1 ? `${fmt(mm, 2)} mm` : mm < 10 ? `${fmt(mm, 1)} mm` : mm < 999.5 ? `${fmt(mm / 10, mm < 100 ? 1 : 0)} cm` : L2("1 metro", "1 metre");
+    let mm = 100000 / 3000, seed = 7, acc = 0;
+    const draw = () => {
+      ctx.fillStyle = "#070a12"; ctx.fillRect(0, 0, W, H);
+      const xa = x0, xb = Math.max(x0 + 8, X(mm)), y = 42; let s = seed; const rnd = () => (s = (s * 9301 + 49297) % 233280) / 233280;
+      ctx.strokeStyle = "#fff6c2"; ctx.lineWidth = 2; ctx.shadowColor = "#ffd479"; ctx.shadowBlur = 10; ctx.beginPath(); ctx.moveTo(xa, y);
+      const n = Math.max(2, Math.round((xb - xa) / 14)); for (let i = 1; i < n; i++) ctx.lineTo(xa + (xb - xa) * i / n, y + (rnd() - 0.5) * 22);
+      ctx.lineTo(xb, y); ctx.stroke(); ctx.shadowBlur = 0;
+      ctx.fillStyle = "#a3acbd"; [xa, xb].forEach((x) => { ctx.beginPath(); ctx.arc(x, y, 7, 0, 6.283); ctx.fill(); });
+      ctx.strokeStyle = "rgba(238,241,246,.3)"; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(x0, 86); ctx.lineTo(x1, 86); ctx.stroke();
+      ctx.font = "10px Atkinson Hyperlegible, system-ui"; ctx.textAlign = "center";
+      [[0.1, "0,1 mm"], [1, "1 mm"], [10, "1 cm"], [100, "10 cm"], [1000, "1 m"]].forEach(([v, lab]) => { const x = X(v); ctx.fillStyle = "rgba(238,241,246,.45)"; ctx.fillRect(x, 80, 1, 12); ctx.fillStyle = "#6c7486"; ctx.fillText(LANG === "it" ? lab : lab.replace(",", "."), x, 108); });
+      [[860 / 3000, "#7cbcff"], [100000 / 3000, "#ffd479"]].forEach(([v, c]) => { ctx.fillStyle = c; ctx.beginPath(); ctx.arc(X(v), 86, 4, 0, 6.283); ctx.fill(); });
+    };
+    const show = () => {
+      const V = mm * 3000, eels = V / 860;
+      el.querySelector(".w-big").textContent = L2(`Scintilla di ${len(mm)}: circa ${fmt(sig(V))} volt`, `A ${len(mm)} spark: about ${fmt(sig(V))} volts`);
+      el.querySelector(".w-note").textContent = (eels <= 1.001 ? L2("Un’anguilla elettrica, con i suoi 860 volt, ce la fa da sola.", "An electric eel, with its 860 volts, can do it alone.") : L2(`Servono circa ${fmt(Math.ceil(eels))} anguille elettriche messe in fila.`, `You need about ${fmt(Math.ceil(eels))} electric eels lined up.`)) + " " +
+        (V < 99000 ? L2("Il «Fulmine» di Pikachu, 100.000 volt, salterebbe circa 3 cm.", "Pikachu’s Thunderbolt, 100,000 volts, would jump about 3 cm.") : V <= 101000 ? L2("Questo è il «Fulmine» di Pikachu: «100.000 volt».", "This is Pikachu’s Thunderbolt: “100,000 volts”.") : L2("Più dei 100.000 volt del «Fulmine» di Pikachu.", "More than the 100,000 volts of Pikachu’s Thunderbolt."));
+      draw();
+    };
+    r.value = posOf(mm); r.oninput = () => { mm = mmOf(+r.value); show(); };
+    PR.forEach((p, i) => { el.querySelector(`[data-a="p${i}"]`).onclick = () => { mm = p[0]; r.value = posOf(mm); show(); }; });
+    show();
+    return REDUCED ? null : wLoop((dt) => { acc += dt; if (acc > 0.09) { acc = 0; seed = (seed * 9301 + 49297) % 233280; draw(); } });
+  },
+  zeno(el) {
+    // Achilles (steady speed: each half takes half the time, 2 s in all) against Gojo's Infinity (the speed halves too: every half takes 0.8 s, for ever).
+    el.innerHTML = `<div class="w-row">${wBtn("a", L2("Achille: velocità costante", "Achilles: steady speed"))}${wBtn("g", L2("Gojo: la velocità si dimezza", "Gojo: the speed halves"))}${wBtn("reset", t(LUI.reset), true)}</div><p class="w-big"></p><p class="w-note"></p>`;
+    const { ctx, W } = wCanvas(el, 92), H = 92, x0 = 22, x1 = W - 40, TA = 2, TG = 0.8;
+    let mode = null, tt = 0, done = false;
+    const state = () => {
+      if (!mode) return { d: 1, n: 0 };
+      if (mode === "a") { const d = Math.max(0, 1 - tt / TA); return { d, n: d > 0 ? Math.floor(-Math.log2(d) + 1e-9) : Infinity }; }
+      const n = Math.floor(tt / TG), f = tt / TG - n; return { d: Math.pow(2, -n) * (1 - f / 2), n };
+    };
+    const dist = (d) => d >= 0.01 ? `${fmt(d * 100, 1)} cm` : d >= 1e-3 ? `${fmt(d * 1000, 2)} mm` : d >= 1e-6 ? L2(`${fmt(d * 1e6, 1)} millesimi di millimetro`, `${fmt(d * 1e6, 1)} thousandths of a millimetre`) :
+      d >= 1e-9 ? L2(`${fmt(d * 1e9, 1)} milionesimi di millimetro`, `${fmt(d * 1e9, 1)} millionths of a millimetre`) : L2("meno di un milionesimo di millimetro", "less than a millionth of a millimetre");
+    const draw = () => {
+      const { d } = state(); ctx.fillStyle = "#070a12"; ctx.fillRect(0, 0, W, H);
+      ctx.strokeStyle = "rgba(238,241,246,.3)"; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(x0, 46); ctx.lineTo(x1, 46); ctx.stroke();
+      for (let k = 1; k <= 12; k++) { const x = x0 + (1 - Math.pow(2, -k)) * (x1 - x0); ctx.fillStyle = "rgba(238,241,246,.35)"; ctx.fillRect(x, 40, 1, 12); }
+      ctx.fillStyle = "#ff7a6b"; ctx.fillRect(x1, 18, 4, 56);
+      ctx.font = "10px Atkinson Hyperlegible, system-ui"; ctx.textAlign = "center"; ctx.fillStyle = "#a3acbd"; ctx.fillText("Gojo", x1 + 2, 86); ctx.fillText("1 m", x0, 86);
+      ctx.fillStyle = mode === "g" ? "#ff92b4" : "#7cbcff"; ctx.beginPath(); ctx.arc(x0 + (1 - d) * (x1 - x0), 46, 7, 0, 6.283); ctx.fill();
+    };
+    const text = () => {
+      const { d, n } = state(), big = el.querySelector(".w-big"), note = el.querySelector(".w-note");
+      if (!mode) { big.textContent = L2("Scegli chi corre verso Gojo.", "Choose who runs towards Gojo."); note.textContent = L2("Ogni tacca è una metà della strada che resta: sono sempre più fitte, e sono infinite.", "Each tick is half of the road that is left: they get closer and closer, and there are infinitely many."); return; }
+      const steps = n === Infinity ? L2("infiniti", "infinitely many") : fmt(Math.min(n, 9999));
+      big.textContent = L2(`Pezzi di strada: ${steps} · tempo: ${fmt(tt, 1)} s`, `Pieces of road: ${steps} · time: ${fmt(tt, 1)} s`);
+      if (mode === "a") note.textContent = done ? L2("Arrivato in 2 secondi! Infiniti pezzi, ma sempre più brevi: anche il tempo totale è finito.", "Arrived in 2 seconds! Infinitely many pieces, but shorter and shorter: the total time is finite too.") : L2(`Distanza rimasta: ${dist(d)}. Ogni pezzo dura la metà del precedente.`, `Distance left: ${dist(d)}. Each piece takes half as long as the one before.`);
+      else note.textContent = L2(`Distanza rimasta: ${dist(d)}. Ogni pezzo dura sempre 0,8 secondi: non arriverà mai.`, `Distance left: ${dist(d)}. Every piece always takes 0.8 seconds: it will never arrive.`) + (d < 1e-10 ? " " + L2("Ormai la distanza è più piccola di un atomo, ma non è zero.", "The distance is now smaller than an atom, but it isn’t zero.") : "");
+    };
+    const go = (m) => { mode = m; tt = 0; done = false; draw(); text(); };
+    el.querySelector('[data-a="a"]').onclick = () => go("a"); el.querySelector('[data-a="g"]').onclick = () => go("g"); el.querySelector('[data-a="reset"]').onclick = () => go(null);
+    go(null);
+    let acc = 0;
+    return wLoop((dt) => { if (!mode || done) return; tt += dt; if (mode === "a" && tt >= TA) { tt = TA; done = true; } draw(); acc += dt; if (acc > 0.1 || done) { acc = 0; text(); } });
+  },
+  squarecube(el) {
+    // Scale up a 1.7 m person: height ×k, bone strength (cross-section) ×k², weight (volume) ×k³, so each bone carries ×k more load.
+    const PR = [[1.7, L2("Tu", "You")], [5, L2("Gigante di 5 m", "5 m giant")], [60, L2("Titano Colossale", "Colossal Titan")], [120, "Godzilla 2019"]];
+    el.innerHTML = `<div class="w-row">${PR.map((p, i) => wBtn("p" + i, p[1], i !== 2)).join("")}</div><input type="range" class="w-slider" min="0" max="1000" id="sq-r" aria-label="${esc(L2("Altezza", "Height"))}"><p class="w-big"></p><p class="w-note"></p>`;
+    const { ctx, W } = wCanvas(el, 136), H = 136, r = el.querySelector("#sq-r"), lo = Math.log10(1.7), hi = Math.log10(120);
+    const posOf = (m) => Math.round((Math.log10(m) - lo) / (hi - lo) * 1000), hOf = (v) => Math.pow(10, lo + (hi - lo) * v / 1000);
+    const num = (v) => { if (v < 10) return fmt(v, 1); if (v < 1000) return fmt(v, 0); const p = Math.pow(10, Math.floor(Math.log10(v)) - 2); return fmt(Math.round(v / p) * p); };
+    let h = 60;
+    const show = () => {
+      const k = h / 1.7, rows = [[L2("altezza", "height"), k, "#7cbcff"], [L2("forza delle ossa", "bone strength"), k * k, "#86dc93"], [L2("peso", "weight"), k * k * k, "#ff7a6b"]];
+      el.querySelector(".w-big").textContent = k < 1.05 ? L2("Alto 1,7 m: sei tu", "1.7 m tall: that’s you") : L2(`Alto ${fmt(h, h < 10 ? 1 : 0)} m: ${num(k)} volte te`, `${fmt(h, h < 10 ? 1 : 0)} m tall: ${num(k)} times you`);
+      el.querySelector(".w-note").textContent = k < 1.05 ? L2("Sei tu, alto 1,7 m: le tue ossa reggono bene il tuo peso.", "This is you, 1.7 m tall: your bones carry your weight well.") :
+        L2(`Il peso cresce ${num(k * k * k)} volte, la forza delle ossa solo ${num(k * k)}: ogni osso deve reggere ${num(k)} volte più carico di oggi.`, `Weight grows ${num(k * k * k)} times, bone strength only ${num(k * k)}: each bone has to carry ${num(k)} times more load than now.`);
+      ctx.fillStyle = "#070a12"; ctx.fillRect(0, 0, W, H);
+      const max = 3 * Math.log10(120 / 1.7), bx0 = 118, bx1 = W - 12;
+      ctx.font = "12px Atkinson Hyperlegible, system-ui";
+      rows.forEach(([lab, v, c], i) => {
+        const y = 16 + i * 36, w = Math.max(3, Math.log10(v) / max * (bx1 - bx0)), label = "× " + num(v);
+        ctx.textAlign = "left"; ctx.fillStyle = "#a3acbd"; ctx.fillText(lab, 10, y + 13);
+        ctx.fillStyle = "rgba(238,241,246,.08)"; ctx.fillRect(bx0, y, bx1 - bx0, 18); ctx.fillStyle = c; ctx.fillRect(bx0, y, w, 18);
+        if (bx0 + w + 74 > bx1) { ctx.textAlign = "right"; ctx.fillStyle = "#070a12"; ctx.fillText(label, bx0 + w - 6, y + 13); } else { ctx.textAlign = "left"; ctx.fillStyle = "#eef1f6"; ctx.fillText(label, bx0 + w + 6, y + 13); }
+      });
+      ctx.font = "10px Atkinson Hyperlegible, system-ui"; ctx.textAlign = "right"; ctx.fillStyle = "#6c7486"; ctx.fillText(L2("scala logaritmica", "log scale"), bx1, H - 8);
+    };
+    r.value = posOf(h); r.oninput = () => { h = hOf(+r.value); show(); };
+    PR.forEach((p, i) => { el.querySelector(`[data-a="p${i}"]`).onclick = () => { h = p[0]; r.value = posOf(h); show(); }; });
+    show(); return null;
+  },
+  lightspeed(el) {
+    // Time dilation, gamma = 1 / sqrt(1 - v²/c²). The slider goes from standing still to 99.999% of the speed of light.
+    el.innerHTML = `<input type="range" class="w-slider" min="0" max="1000" value="400" id="ls-r" aria-label="${esc(L2("Velocità", "Speed"))}"><p class="w-big"></p><p class="w-note"></p>`;
+    const { ctx, W } = wCanvas(el, 96), H = 96, r = el.querySelector("#ls-r");
+    const beta = (v) => 1 - Math.pow(10, -v / 200), lap = (sec) => sec < 1 ? L2(`${fmt(sec, 2)} secondi`, `${fmt(sec, 2)} seconds`) : fmtDur(sec);
+    const earth = (g) => g < 1.0005 ? L2("sulla Terra passa quasi esattamente un anno", "almost exactly one year passes on Earth") : g < 2 ? L2(`sulla Terra passano 1 anno e ${fmt(Math.round((g - 1) * 365))} giorni`, `1 year and ${fmt(Math.round((g - 1) * 365))} days pass on Earth`) : L2(`sulla Terra passano ${fmt(g, g < 10 ? 1 : 0)} anni`, `${fmt(g, g < 10 ? 1 : 0)} years pass on Earth`);
+    const show = () => {
+      const b = beta(+r.value), g = 1 / Math.sqrt(1 - b * b), dec = b < 0.9 ? 0 : Math.min(3, Math.round(-Math.log10(1 - b)) - 1);
+      el.querySelector(".w-big").textContent = L2(`Velocità: ${fmt(b * 100, dec)}% della luce`, `Speed: ${fmt(b * 100, dec)}% of light`);
+      el.querySelector(".w-note").textContent = b < 1e-6 ? L2("Fermo: per Flash e per la Terra il tempo scorre uguale.", "Standing still: time flows the same for the Flash and for the Earth.") :
+        L2(`${fmt(b * 299792, 0)} km al secondo: il giro della Terra in ${lap(40075 / (b * 299792))}. Mentre per Flash passa un anno, ${earth(g)}.`, `${fmt(b * 299792, 0)} km per second: once around the Earth in ${lap(40075 / (b * 299792))}. While one year passes for the Flash, ${earth(g)}.`);
+      ctx.fillStyle = "#070a12"; ctx.fillRect(0, 0, W, H); const bx0 = 74, bx1 = W - 12, full = bx1 - bx0;
+      ctx.font = "12px Atkinson Hyperlegible, system-ui"; ctx.textAlign = "left";
+      [["Flash", 1 / g, "#ff7a6b"], [L2("Terra", "Earth"), 1, "#7cbcff"]].forEach(([lab, f, c], i) => { const y = 14 + i * 34; ctx.fillStyle = "#a3acbd"; ctx.fillText(lab, 10, y + 13); ctx.fillStyle = "rgba(238,241,246,.08)"; ctx.fillRect(bx0, y, full, 18); ctx.fillStyle = c; ctx.fillRect(bx0, y, Math.max(2, f * full), 18); });
+      ctx.font = "10px Atkinson Hyperlegible, system-ui"; ctx.textAlign = "right"; ctx.fillStyle = "#6c7486"; ctx.fillText(L2("tempo che passa per ognuno", "time that passes for each"), bx1, H - 8);
+    };
     r.oninput = show; show(); return null;
   }
 };
