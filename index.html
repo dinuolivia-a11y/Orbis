@@ -5449,7 +5449,7 @@ const LWIDGET = {
   spark(el) {
     // How far a spark jumps in dry air: about 3,000 volts for every millimetre, from an electric eel to Pikachu's "100,000 volts".
     const PR = [[860 / 3000, L2("Anguilla", "Eel")], [5, L2("Maniglia", "Door handle")], [100000 / 3000, "Pikachu"], [1000, L2("1 metro", "1 metre")]];
-    el.innerHTML = `<div class="w-row">${PR.map((p, i) => wBtn("p" + i, p[1], i !== 2)).join("")}</div><input type="range" class="w-slider" min="0" max="1000" id="sp-r" aria-label="${esc(L2("Lunghezza della scintilla", "Length of the spark"))}"><p class="w-big"></p><p class="w-note"></p>`;
+    el.innerHTML = `<div class="w-row">${PR.map((p, i) => wBtn("p" + i, p[1], true)).join("")}</div><input type="range" class="w-slider" min="0" max="1000" id="sp-r" aria-label="${esc(L2("Lunghezza della scintilla", "Length of the spark"))}"><p class="w-big"></p><p class="w-note"></p>`;
     const { ctx, W } = wCanvas(el, 118), H = 118, r = el.querySelector("#sp-r"), lo = -1, hi = 3, x0 = 26, x1 = W - 26;
     const mmOf = (v) => Math.pow(10, lo + (hi - lo) * v / 1000), posOf = (mm) => Math.round((Math.log10(mm) - lo) / (hi - lo) * 1000), X = (mm) => x0 + (Math.log10(mm) - lo) / (hi - lo) * (x1 - x0);
     const sig = (v) => { const p = Math.pow(10, Math.floor(Math.log10(v)) - 1); return Math.round(v / p) * p; };
@@ -5472,6 +5472,7 @@ const LWIDGET = {
       el.querySelector(".w-big").textContent = L2(`Scintilla di ${len(mm)}: circa ${fmt(sig(V))} volt`, `A ${len(mm)} spark: about ${fmt(sig(V))} volts`);
       el.querySelector(".w-note").textContent = (eels <= 1.001 ? L2("Un’anguilla elettrica, con i suoi 860 volt, ce la fa da sola.", "An electric eel, with its 860 volts, can do it alone.") : L2(`Servono circa ${fmt(Math.ceil(eels))} anguille elettriche messe in fila.`, `You need about ${fmt(Math.ceil(eels))} electric eels lined up.`)) + " " +
         (V < 99000 ? L2("Il «Fulmine» di Pikachu, 100.000 volt, salterebbe circa 3 cm.", "Pikachu’s Thunderbolt, 100,000 volts, would jump about 3 cm.") : V <= 101000 ? L2("Questo è il «Fulmine» di Pikachu: «100.000 volt».", "This is Pikachu’s Thunderbolt: “100,000 volts”.") : L2("Più dei 100.000 volt del «Fulmine» di Pikachu.", "More than the 100,000 volts of Pikachu’s Thunderbolt."));
+      PR.forEach((p, i) => el.querySelector(`[data-a="p${i}"]`).classList.toggle("ghost", Math.abs(Math.log10(mm / p[0])) > 0.004));
       draw();
     };
     r.value = posOf(mm); r.oninput = () => { mm = mmOf(+r.value); show(); };
@@ -5516,12 +5517,13 @@ const LWIDGET = {
   squarecube(el) {
     // Scale up a 1.7 m person: height ×k, bone strength (cross-section) ×k², weight (volume) ×k³, so each bone carries ×k more load.
     const PR = [[1.7, L2("Tu", "You")], [5, L2("Gigante di 5 m", "5 m giant")], [60, L2("Titano Colossale", "Colossal Titan")], [120, "Godzilla 2019"]];
-    el.innerHTML = `<div class="w-row">${PR.map((p, i) => wBtn("p" + i, p[1], i !== 2)).join("")}</div><input type="range" class="w-slider" min="0" max="1000" id="sq-r" aria-label="${esc(L2("Altezza", "Height"))}"><p class="w-big"></p><p class="w-note"></p>`;
+    el.innerHTML = `<div class="w-row">${PR.map((p, i) => wBtn("p" + i, p[1], true)).join("")}</div><input type="range" class="w-slider" min="0" max="1000" id="sq-r" aria-label="${esc(L2("Altezza", "Height"))}"><p class="w-big"></p><p class="w-note"></p>`;
     const { ctx, W } = wCanvas(el, 136), H = 136, r = el.querySelector("#sq-r"), lo = Math.log10(1.7), hi = Math.log10(120);
     const posOf = (m) => Math.round((Math.log10(m) - lo) / (hi - lo) * 1000), hOf = (v) => Math.pow(10, lo + (hi - lo) * v / 1000);
     const num = (v) => { if (v < 10) return fmt(v, 1); if (v < 1000) return fmt(v, 0); const p = Math.pow(10, Math.floor(Math.log10(v)) - 2); return fmt(Math.round(v / p) * p); };
     let h = 60;
     const show = () => {
+      PR.forEach((p, i) => el.querySelector(`[data-a="p${i}"]`).classList.toggle("ghost", Math.abs(Math.log10(h / p[0])) > 0.004));
       const k = h / 1.7, rows = [[L2("altezza", "height"), k, "#7cbcff"], [L2("forza delle ossa", "bone strength"), k * k, "#86dc93"], [L2("peso", "weight"), k * k * k, "#ff7a6b"]];
       el.querySelector(".w-big").textContent = k < 1.05 ? L2("Alto 1,7 m: sei tu", "1.7 m tall: that’s you") : L2(`Alto ${fmt(h, h < 10 ? 1 : 0)} m: ${num(k)} volte te`, `${fmt(h, h < 10 ? 1 : 0)} m tall: ${num(k)} times you`);
       el.querySelector(".w-note").textContent = k < 1.05 ? L2("Sei tu, alto 1,7 m: le tue ossa reggono bene il tuo peso.", "This is you, 1.7 m tall: your bones carry your weight well.") :
