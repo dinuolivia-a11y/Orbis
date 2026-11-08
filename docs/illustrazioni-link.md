@@ -44,3 +44,34 @@ Link ha preparato le immagini delle 2 creature della Barriera che non avevano un
 | Pesce torcia, *Anomalops katoptron* | Corpo scuro, occhi grandi, l'organo luminoso sotto l'occhio che brilla di azzurro-verde; in due pesci è girato verso il basso, cioè spento, come quando lampeggiano. Coda a forcella e due pinne dorsali, su una parete di corallo di notte. | Hellinger et al. 2017, PLOS ONE (CC BY) e la scheda di Fishes of Australia (Museums Victoria). |
 
 Ora tutte le 16 creature della Barriera Corallina hanno un'immagine: 14 foto vere e 2 illustrazioni.
+
+## 8 novembre 2026: le ultime 9 creature
+
+Link ha preparato le immagini delle ultime 9 creature senza foto libera, una cartella per creatura in `Orbis_immagini`, con il foglio `LEGGIMI_ultime_9_per_Claude.txt`. In ogni cartella ci sono l'immagine, il prompt migliorato (`prompt-affinato.txt`), le foto di riferimento, `crediti.txt` e `confronto-e-fonte.json`. Sono ricostruzioni fatte con ChatGPT, non fotografie: lo dicono anche i dati dentro i file. Claude le ha guardate tutte, una per una e nei dettagli, accanto ai riferimenti di Link: entrano nell'app così come sono.
+
+| Creatura | Cosa è stato controllato | Riferimenti usati da Link |
+|---|---|---|
+| Barbo di Denison, *Sahyadria denisonii* | Corpo affusolato argentato, fascia nera dal muso alla coda, rosso nella metà davanti, pinna dorsale con il bordo rosso, coda con una macchia gialla e una nera su ogni lobo. Tre pesci in un torrente limpido con i sassi. | Foto di Vengolis 2017, Wikimedia Commons (CC BY 4.0). |
+| Ghiozzo barbuto, *Sufflogobius bibarbatus* | Testa larga, occhi grandi in alto, due piccoli barbigli sotto il mento, due pinne dorsali, fermo sul fango in acqua verde e scura. In alto, lontana, una medusa: di notte mangia tra le meduse. | Foto di Hege Vestheim in Moloney 2010, South African Journal of Science. |
+| Perla di zolfo della Namibia, *Thiomargarita namibiensis* | Catena di cellule rotonde dentro una guaina trasparente, piene di granelli bianchi di zolfo, come al microscopio su fondo scuro. | Foto di Heide Schulz-Vogt, Max-Planck-Institut für marine Mikrobiologie, 2011. |
+| Asino selvatico africano, *Equus africanus* | Mantello grigio, pancia, zampe e muso chiari, orecchie lunghe, criniera dritta e scura, strisce nere sulle zampe, ciuffo nero in fondo alla coda. Su una piana di sassi vulcanici come in Dancalia. | Foto di C. Smeenk 1980, Wikimedia Commons (CC BY 3.0): un asino della razza somala, nato in Eritrea. |
+| Ciclide della Dancalia, *Danakilia franchettii* | Un maschio con i colori del corteggiamento, come il maschio filmato nelle sorgenti del lago Afrera: fronte a gobba arancione, fasce chiare e scure sui fianchi, pinne a puntini azzurri. Le femmine e i piccoli sono diversi, e ora lo dice anche la scheda. | Tesi di dottorato di Giorgio Chiozzi 2018, Università di Pavia, figura 2A. |
+| Archei di Dallol | Cellule rotonde, alcune a due a due mentre si dividono, accanto a cubetti di sale, come al microscopio elettronico, con i colori aggiunti. Nessuna specie precisa. | Belilla et al. 2019, Nature Ecology & Evolution, figura 4. |
+| Ragno del muschio, *Microhexura montivaga* | Parente minuscolo delle tarantole: otto zampe, cefalotorace bruno-rossiccio, addome chiaro e peloso, due filiere lunghe dietro. All'entrata di un tubo di seta, tra muschio e roccia bagnata. | Foto di Gary Peeples, USFWS 2018 (CC BY 2.0), e scheda dei parchi della Carolina del Nord. |
+| Pesce gatto delle Smoky, *Noturus baileyi* | Corpo marrone oliva con quattro selle giallo chiaro sul dorso, quattro paia di barbigli, pinna adiposa bassa unita alla coda con una piccola tacca, coda con il bordo dritto. Link ha corretto il prompt di Claude, che diceva selle scure e coda arrotondata: aveva ragione Link, lo conferma la scheda del Florida Museum. | Foto di B. H. Bauer, Citico Creek 1981, Florida Museum. |
+| Cianobatteri del sale | Un sasso di sale rotto, con la sottile riga verde dei cianobatteri sotto la crosta; nel riquadro, come appaiono le loro cellule al microscopio. Le due parti non sono nella stessa scala. | Azua-Bustos et al. 2022, Frontiers in Astronomy and Space Sciences (CC BY), per il sasso di Yungay; foto di Burkhard Büdel per la forma delle cellule. |
+
+Le foto di riferimento sono servite a Link solo per confrontare l'anatomia: non sono nell'app.
+
+### Cosa è cambiato nelle schede
+
+Link ha segnato nel suo foglio alcuni punti da controllare. Claude li ha verificati e ha cambiato le schede così:
+
+- Ghiozzo barbuto: «fondali fangosi senza ossigeno» è diventato «poveri di ossigeno». Di giorno sta nel fango dove l'ossigeno è pochissimo, di notte sale verso l'alto: non vive sempre senza ossigeno.
+- Cianobatteri del sale: il nome scientifico è diventato *Halothece*. Nel 2006 erano stati riconosciuti dall'aspetto come *Chroococcidiopsis*, ma il loro DNA li avvicina a *Halothece* (de los Ríos et al. 2010; Orellana et al. 2020). La scheda ora spiega anche il riquadro dell'immagine.
+- Ciclide della Dancalia: la scheda dice che nell'immagine c'è un maschio con i colori del corteggiamento.
+- Archei di Dallol: la scheda dice che l'immagine è come al microscopio elettronico, con i colori aggiunti. Diceva già che nelle pozze più calde e acide di Dallol non vive niente.
+- Ragno del muschio: le dimensioni sono diventate «meno di 4 millimetri» (gli adulti misurano da 2,5 a 3,8 mm, secondo lo U.S. Fish and Wildlife Service).
+- Pesce gatto delle Smoky: nel Laboratorio immagini il prompt ora dice selle chiare e coda dritta.
+
+Ora tutte le 206 creature di Orbis hanno un'immagine: 129 foto vere e 77 illustrazioni.

@@ -162,16 +162,16 @@ Nell'app: sulla scheda c'è scritto "Foto · autore · licenza"; toccando la fot
 
 ## Le altre creature
 
-Le 68 creature senza foto libera hanno un'illustrazione creata con l'intelligenza artificiale e controllata da Claude: 53 fatte con Grok (controllo in `controllo-immagini.md`) e 15 fatte con Link, cioè ChatGPT (controllo e riferimenti in `illustrazioni-link.md`). Nell'app hanno la scritta «Illustrazione».
+Le 77 creature senza foto libera hanno un'illustrazione creata con l'intelligenza artificiale e controllata da Claude: 53 fatte con Grok (controllo in `controllo-immagini.md`) e 24 fatte con Link, cioè ChatGPT (controllo e riferimenti in `illustrazioni-link.md`). Nell'app hanno la scritta «Illustrazione».
 
 Della Grande Barriera Corallina, la Medusa Irukandji e il Pesce torcia non hanno una foto libera: hanno un’illustrazione di Link, controllata da Claude (`illustrazioni-link.md`).
 
-Dei Ghati occidentali manca solo il Barbo di Denison («Miss Kerala»): l’unica foto libera era presa dall’alto, attraverso l’acqua, con il pesce piccolissimo. Aspetta l’immagine di Link; il prompt è in `prompt-creature.md`.
+Dei Ghati occidentali, il Barbo di Denison («Miss Kerala») non ha una foto libera adatta: l’unica era presa dall’alto, attraverso l’acqua, con il pesce piccolissimo. Ha un’illustrazione di Link, controllata da Claude (`illustrazioni-link.md`).
 
-Della Namib mancano il Ghiozzo barbuto e la Perla di zolfo della Namibia: il primo vive nel fango in fondo al mare, la seconda si vede bene solo al microscopio. Aspettano l’immagine di Link; i prompt sono in `prompt-creature.md`.
+Della Namib, il Ghiozzo barbuto e la Perla di zolfo della Namibia non hanno foto libere: il primo vive nel fango in fondo al mare, la seconda si vede bene solo al microscopio. Hanno un’illustrazione di Link, controllata da Claude (`illustrazioni-link.md`).
 
-Dell’Altopiano etiope mancano l’Asino selvatico africano, il Ciclide della Dancalia e gli Archei di Dallol: aspettano l’immagine di Link; i prompt sono in `prompt-creature.md`.
+Dell’Altopiano etiope, l’Asino selvatico africano, il Ciclide della Dancalia e gli Archei di Dallol hanno un’illustrazione di Link, controllata da Claude (`illustrazioni-link.md`).
 
-Degli Appalachi mancano il Ragno del muschio e il Pesce gatto delle Smoky: aspettano l’immagine di Link; i prompt sono in `prompt-creature.md`.
+Degli Appalachi, il Ragno del muschio e il Pesce gatto delle Smoky hanno un’illustrazione di Link, controllata da Claude (`illustrazioni-link.md`).
 
-Dell’Atacama mancano i Cianobatteri del sale: aspettano l’immagine di Link; il prompt è in `prompt-creature.md`.
+Dell’Atacama, i Cianobatteri del sale hanno un’illustrazione di Link, controllata da Claude (`illustrazioni-link.md`).

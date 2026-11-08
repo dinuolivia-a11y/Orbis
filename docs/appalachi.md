@@ -22,8 +22,8 @@ Fonti generali: [UNESCO, Great Smoky Mountains National Park, Patrimonio dell’
 - fonti: [Abies fraseri (Wikipedia, con le fonti)](https://en.wikipedia.org/wiki/Abies_fraseri); [L’adelgide lanoso nell’abete di Fraser, trovato nel 1957 sul Monte Mitchell (Extension)](https://climate-woodlands.extension.org/balsam-woolly-adelgid-in-fraser-fir)
 
 ### Ragno del muschio · *Microhexura montivaga*
-- id: `mossspider` · dove: cuscini di muschio sulle rocce, nei boschi di abeti delle vette · dimensioni: circa mezzo centimetro
-- immagine: **da fare con Link** (prompt in `prompt-creature.md`)
+- id: `mossspider` · dove: cuscini di muschio sulle rocce, nei boschi di abeti delle vette · dimensioni: meno di 4 millimetri
+- immagine: illustrazione di Link (ChatGPT), controllata da Claude: vedi `illustrazioni-link.md`
 - curiosità: È una delle tarantole più piccole del mondo: grande come una gomma da matita. È in pericolo perché, dove muoiono gli abeti, il muschio si secca, e lui ha bisogno di un’umidità sempre altissima.
 - fonti: [U.S. Fish and Wildlife Service, 1995: il ragno del muschio è specie in pericolo](https://www.fws.gov/species-publication-action/etwp-spurce-fir-moss-spider-determined-be-endangered); [NPCA: una delle tarantole più piccole del mondo](https://esa.npca.org/spruce-fir-moss-spider)
 
@@ -95,10 +95,10 @@ Fonti generali: [UNESCO, Great Smoky Mountains National Park, Patrimonio dell’
 
 ### Pesce gatto delle Smoky · *Noturus baileyi*
 - id: `smokymadtom` · dove: torrenti limpidi ai piedi dei monti: Citico Creek e Abrams Creek · dimensioni: pochi centimetri
-- immagine: **da fare con Link** (prompt in `prompt-creature.md`)
+- immagine: illustrazione di Link (ChatGPT), controllata da Claude: vedi `illustrazioni-link.md`
 - curiosità: Nel 1957 il torrente Abrams Creek fu avvelenato apposta, per fare posto alle trote da pescare. Gli scienziati descrissero la specie nel 1969 proprio dai pesci morti allora, e la credettero estinta. Nel 1980 la ritrovarono viva in un altro torrente, e dal 1986 è stata riportata anche in Abrams Creek.
 - fonti: [Smoky madtom (Wikipedia, con le fonti)](https://en.wikipedia.org/wiki/Smoky_madtom); [Shute et al. 2005: il ritorno del pesce gatto in Abrams Creek (Conservation Fisheries)](https://www.conservationfisheries.org/s/Shuteetal2005AbramsCreekreintroduction.pdf)
 
 ## Le foto
 
-12 creature su 14 hanno una foto vera, tutte da iNaturalist (osservazioni verificate, «research grade»), quasi tutte scattate negli Appalachi. Lo scoiattolo volante della foto è stato fotografato in Canada: è la stessa specie, ma non la rara razza degli Appalachi. Il ragno del muschio e il pesce gatto delle Smoky sono minuscoli e quasi sempre nascosti: le loro immagini le farà Link.
+12 creature su 14 hanno una foto vera, tutte da iNaturalist (osservazioni verificate, «research grade»), quasi tutte scattate negli Appalachi. Lo scoiattolo volante della foto è stato fotografato in Canada: è la stessa specie, ma non la rara razza degli Appalachi. Il ragno del muschio e il pesce gatto delle Smoky sono minuscoli e quasi sempre nascosti: hanno un’illustrazione di Link, controllata da Claude.

@@ -53,11 +53,12 @@ Fonti generali: [ESO: l’altopiano di Chajnantor, casa di ALMA](https://eso.org
 - curiosità: È il secondo canide più grande del Sud America, dopo il lupo dalla criniera. I pastori delle Ande lo conoscono bene, perché a volte attacca gli agnelli.
 - fonti: [Culpeo (Wikipedia, con le fonti)](https://en.wikipedia.org/wiki/Culpeo)
 
-### Cianobatteri del sale · *Chroococcidiopsis*
+### Cianobatteri del sale · *Halothece*
 - id: `saltbacteria` · dove: dentro le rocce di sale del deserto, vicino a Yungay · dimensioni: pochi millesimi di millimetro
-- immagine: **da fare con Link** (prompt in `prompt-creature.md`)
+- immagine: illustrazione di Link (ChatGPT), controllata da Claude: vedi `illustrazioni-link.md`
 - curiosità: Il sale ha un potere speciale: quando l’aria è un po’ umida ne assorbe il vapore, e dentro la roccia si formano goccioline d’acqua. Così questi batteri bevono anche dove non piove mai. Gli scienziati li studiano per capire come la vita potrebbe resistere su Marte.
-- fonti: [Davila et al. 2008, Journal of Geophysical Research: il sale beve il vapore dell’aria](https://doi.org/10.1029/2007JG000561); [Biogeosciences 2012: i microbi nel sale del Salar Grande](https://bg.copernicus.org/articles/9/2275/2012/bg-9-2275-2012.pdf)
+- nome: nel 2006 erano stati riconosciuti dall’aspetto come *Chroococcidiopsis*; lo studio del loro DNA li avvicina invece a *Halothece*, e oggi i cianobatteri dei noduli di sale dell’Atacama si chiamano così. Nell’app c’è *Halothece* dall’8 novembre 2026.
+- fonti: [de los Ríos et al. 2010, International Microbiology: al microscopio sembrano *Chroococcidiopsis*, ma il DNA li avvicina a *Halothece*](https://doi.org/10.2436/20.1501.01.113); [Orellana et al. 2020, Microorganisms: nei noduli di sale dominano i cianobatteri *Halothece*](https://doi.org/10.3390/microorganisms8111690); [Davila et al. 2008, Journal of Geophysical Research: il sale beve il vapore dell’aria](https://doi.org/10.1029/2007JG000561); [Biogeosciences 2012: i microbi nel sale del Salar Grande](https://bg.copernicus.org/articles/9/2275/2012/bg-9-2275-2012.pdf)
 
 ### Tamarugo · *Prosopis tamarugo*
 - id: `tamarugo` · dove: Pampa del Tamarugal, circa 1.000 m · dimensioni: un albero spinoso
@@ -109,4 +110,4 @@ Fonti generali: [ESO: l’altopiano di Chajnantor, casa di ALMA](https://eso.org
 
 ## Le foto
 
-14 creature su 15 hanno una foto vera, tutte da iNaturalist (osservazioni verificate, «research grade») e tutte scattate in Cile. Per il nandù è stata scelta una foto della razza dell’altipiano, il suri. I cianobatteri del sale vivono dentro le rocce e si vedono solo al microscopio: la loro immagine la farà Link.
+14 creature su 15 hanno una foto vera, tutte da iNaturalist (osservazioni verificate, «research grade») e tutte scattate in Cile. Per il nandù è stata scelta una foto della razza dell’altipiano, il suri. I cianobatteri del sale vivono dentro le rocce e si vedono solo al microscopio: hanno un’illustrazione di Link, controllata da Claude.

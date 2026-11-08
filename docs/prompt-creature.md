@@ -985,7 +985,7 @@ Photorealistic deep-sea photograph of a chambered nautilus (Nautilus pompilius) 
 ## Ghati occidentali (14)
 
 Hanno già una foto vera: Tahr dei Nilgiri, Neelakurinji, Sholakili panciabianca, Macaco dalla coda di leone, Scoiattolo gigante di Malabar, Bucero bicorne, Ali d’uccello del sud, Rana volante del Malabar, Drago volante dei Ghati, Vipera di Malabar, Rana viola, Cobra reale dei Ghati, Rana danzante.  
-Da fare con Link: Barbo di Denison.
+Illustrazione di Link già nell’app: Barbo di Denison.
 
 ### Tahr dei Nilgiri · *Nilgiritragus hylocrius*
 - id: `niltahr`
@@ -1107,7 +1107,7 @@ Photorealistic wildlife photograph of a dancing frog (Micrixalus) on a wet mossy
 ### Barbo di Denison · *Sahyadria denisonii*
 - id: `misskerala`
 - dove: fiumi e torrenti del Kerala e del Karnataka · dimensioni: circa 10 cm, al massimo 15
-- **da fare con Link**
+- illustrazione di Link già nell’app
 
 ```
 Photorealistic underwater photograph of a small group of Denison barbs (Sahyadria denisonii) swimming over smooth pebbles in a clear shallow forest river in Kerala: slender silvery torpedo-shaped fish about 10 cm long with a black horizontal stripe from snout to tail, a bright red stripe above it running from the snout through the eye to the middle of the body, a red front edge on the dorsal fin, tail lobes each with a yellow and a black stripe, sunlight rippling on the stones. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
@@ -1116,7 +1116,7 @@ Photorealistic underwater photograph of a small group of Denison barbs (Sahyadri
 ## Namib (16)
 
 Hanno già una foto vera: Welwitschia, Lichene della nebbia, Camaleonte del Namaqua, Scarabeo della nebbia, Ragno ruota dorato, Ragno dama bianca, Lucertola dal muso a pala, Geco dalle dita palmate, Vipera di Péringuey, Talpa dorata di Grant, Iena bruna, Delfino di Heaviside, Otaria orsina del Capo, Medusa del Benguela.  
-Da fare con Link: Ghiozzo barbuto, Perla di zolfo della Namibia.
+Illustrazione di Link già nell’app: Ghiozzo barbuto, Perla di zolfo della Namibia.
 
 ### Welwitschia · *Welwitschia mirabilis*
 - id: `welwitschia`
@@ -1247,7 +1247,7 @@ Photorealistic underwater photograph of a Benguela jellyfish (Chrysaora fulgida)
 ### Ghiozzo barbuto · *Sufflogobius bibarbatus*
 - id: `goby`
 - dove: fondali fangosi senza ossigeno, davanti alla Namibia · dimensioni: fino a circa 17 cm
-- **da fare con Link**
+- illustrazione di Link già nell’app
 
 ```
 Photorealistic underwater photograph of a bearded goby (Sufflogobius bibarbatus) resting on soft dark olive-grey mud on the seabed off Namibia in dim greenish water: a small slender goby about 10 cm long with a large head, big eyes, a short pair of barbels on the chin, a mottled brown and grey body, a pale jellyfish tentacle drifting above, fine particles floating in the water. Real underwater wildlife documentary photography in cold natural light, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people, no divers.
@@ -1256,7 +1256,7 @@ Photorealistic underwater photograph of a bearded goby (Sufflogobius bibarbatus)
 ### Perla di zolfo della Namibia · *Thiomargarita namibiensis*
 - id: `sulfurpearl`
 - dove: fango del fondo davanti a Walvis Bay, a circa 100 m · dimensioni: di solito 0,1–0,3 mm; le più grandi 0,75 mm
-- **da fare con Link**
+- illustrazione di Link già nell’app
 
 ```
 Photorealistic light-microscope photograph of Thiomargarita namibiensis, the sulfur pearl bacterium: a chain of large round translucent cells, each about 0.2 mm wide, strung together like a pearl necklace inside a clear jelly-like sheath, glistening milky white from tiny sulfur granules inside each cell, a few grains of dark seabed mud around, dark-field lighting. Real light-microscope photograph, natural colours, sharp focus, photorealistic, scientifically accurate structure and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no labels, no scale bar, no watermark.
@@ -1265,7 +1265,7 @@ Photorealistic light-microscope photograph of Thiomargarita namibiensis, the sul
 ## Altopiano etiope (16)
 
 Hanno già una foto vera: Lobelia gigante, Lupo etiope, Ratto talpa gigante, Corvo dal becco grosso, Gelada, Stambecco walia, Oca dalle ali blu, Nyala di montagna, Kosso, Scimmia del Bale, Turaco di Ruspoli, Struzzo somalo, Rosa del deserto.  
-Da fare con Link: Asino selvatico africano, Ciclide della Dancalia, Archei di Dallol.
+Illustrazione di Link già nell’app: Asino selvatico africano, Ciclide della Dancalia, Archei di Dallol.
 
 ### Lobelia gigante · *Lobelia rhynchopetalum*
 - id: `giantlobelia`
@@ -1387,7 +1387,7 @@ Photorealistic nature photograph of a desert rose (Adenium obesum) growing among
 ### Asino selvatico africano · *Equus africanus*
 - id: `wildass`
 - dove: pianure sassose della Dancalia, tra Etiopia ed Eritrea · dimensioni: circa 1,25 m alla spalla
-- **da fare con Link**
+- illustrazione di Link già nell’app
 
 ```
 Photorealistic wildlife photograph of an African wild ass (Equus africanus somaliensis) standing on a stony volcanic plain in the Danakil desert: a slender pale grey wild ass with a white belly and muzzle, a short upright dark mane, long ears, and bold black horizontal zebra-like stripes on its legs, shimmering heat haze and dark lava rocks behind. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
@@ -1396,7 +1396,7 @@ Photorealistic wildlife photograph of an African wild ass (Equus africanus somal
 ### Ciclide della Dancalia · *Danakilia franchettii*
 - id: `afreracichlid`
 - dove: lago Afrera e le sue sorgenti calde, 112 m sotto il livello del mare · dimensioni: un pesce piccolo
-- **da fare con Link**
+- illustrazione di Link già nell’app
 
 ```
 Photorealistic underwater photograph of a small Danakil cichlid (Danakilia franchettii) swimming in the clear warm shallow water of a hot spring at the edge of Lake Afrera in Ethiopia: a small deep-bodied fish about 8 cm long, silvery grey-olive with faint dark vertical bars and a pale belly, a dark spot at the back of the dorsal fin, white salt crusts and dark volcanic pebbles on the bottom, bright sunlight. Real underwater wildlife documentary photography in cold natural light, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people, no divers.
@@ -1405,7 +1405,7 @@ Photorealistic underwater photograph of a small Danakil cichlid (Danakilia franc
 ### Archei di Dallol · *Archaea*
 - id: `dallolarchaea`
 - dove: croste di sale intorno alle sorgenti di Dallol · dimensioni: meno di un millesimo di millimetro
-- **da fare con Link**
+- illustrazione di Link già nell’app
 
 ```
 Photorealistic scientific microscope image of tiny single-celled archaea from the salt crusts of Dallol in Ethiopia: clusters of very small round and slightly irregular cells less than a micrometre across sitting on a cubic salt crystal, seen at very high magnification, soft natural tones with a hint of the yellow and orange colours of the Dallol salts. Real light-microscope photograph, natural colours, sharp focus, photorealistic, scientifically accurate structure and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no labels, no scale bar, no watermark.
@@ -1414,7 +1414,7 @@ Photorealistic scientific microscope image of tiny single-celled archaea from th
 ## Appalachi (14)
 
 Hanno già una foto vera: Abete di Fraser, Scoiattolo volante del nord, Salamandra dalle guance rosse, Orso nero, Falena luna, Salmerino di fontana, Wapiti, Scarpetta di Venere rosa, Fungo lanterna, Lucciola sincrona, Tartaruga scatola, Hellbender.  
-Da fare con Link: Ragno del muschio, Pesce gatto delle Smoky.
+Illustrazione di Link già nell’app: Ragno del muschio, Pesce gatto delle Smoky.
 
 ### Abete di Fraser · *Abies fraseri*
 - id: `fraserfir`
@@ -1428,7 +1428,7 @@ Photorealistic nature photograph of a high-elevation forest of Fraser firs (Abie
 ### Ragno del muschio · *Microhexura montivaga*
 - id: `mossspider`
 - dove: cuscini di muschio sulle rocce, nei boschi di abeti delle vette · dimensioni: circa mezzo centimetro
-- **da fare con Link**
+- illustrazione di Link già nell’app
 
 ```
 Photorealistic macro wildlife photograph of a spruce-fir moss spider (Microhexura montivaga) at the entrance of its small silk tube in a damp cushion of green moss on a shaded rock in a high-elevation fir forest: a tiny tarantula-like spider about 5 mm long, light yellowish-brown to dark brown body, short stout legs, two long spinnerets at the back, tiny water droplets on the moss. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
@@ -1536,16 +1536,16 @@ Photorealistic underwater photograph of an eastern hellbender (Cryptobranchus al
 ### Pesce gatto delle Smoky · *Noturus baileyi*
 - id: `smokymadtom`
 - dove: torrenti limpidi ai piedi dei monti: Citico Creek e Abrams Creek · dimensioni: pochi centimetri
-- **da fare con Link**
+- illustrazione di Link già nell’app
 
 ```
-Photorealistic underwater photograph of a smoky madtom (Noturus baileyi) peeking out from under a flat slab rock on the gravel bed of a clear Appalachian stream: a tiny slender catfish about 6 cm long, mottled brown and tan with darker saddles across its back, four pairs of short whiskers around its mouth, a rounded tail, sunlight on the pebbles. Real underwater wildlife documentary photography in cold natural light, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people, no divers.
+Photorealistic underwater photograph of a smoky madtom (Noturus baileyi) peeking out from under a flat slab rock on the gravel bed of a clear Appalachian stream: a tiny slender catfish about 6 cm long, olive-brown with four pale yellow saddles along the middle of its back, four pairs of short whiskers around its mouth, a low fleshy adipose fin joined to a straight-edged tail by a shallow notch, sunlight on the pebbles. Real underwater wildlife documentary photography in cold natural light, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people, no divers.
 ```
 
 ## Atacama (15)
 
 Hanno già una foto vera: Fenicottero di James, Folaga cornuta, Llareta, Suri, il nandù delle Ande, Viscaccia di montagna, Volpe culpeo, Tamarugo, Tillandsia della nebbia, Rospo dell’Atacama, Pata de guanaco, Copiapoa, Garra de león, Pinguino di Humboldt, Lontra marina.  
-Da fare con Link: Cianobatteri del sale.
+Illustrazione di Link già nell’app: Cianobatteri del sale.
 
 ### Fenicottero di James · *Phoenicoparrus jamesi*
 - id: `jamesflamingo`
@@ -1601,10 +1601,10 @@ Photorealistic wildlife photograph of a mountain viscacha (Lagidium viscacia) su
 Photorealistic wildlife photograph of a culpeo (Lycalopex culpaeus) standing on a dry slope in the Atacama region of northern Chile: a large slender fox with a reddish-tawny head and legs, a pale throat, grey back, large pointed ears, amber eyes and a long bushy tail with a black tip, stony desert ground, soft golden light. Real wildlife documentary photography, natural colours, sharp focus, photorealistic, scientifically accurate anatomy and proportions. Square 1:1 format, subject centred and fully visible with some space around it. No text, no watermark, no people.
 ```
 
-### Cianobatteri del sale · *Chroococcidiopsis*
+### Cianobatteri del sale · *Halothece*
 - id: `saltbacteria`
 - dove: dentro le rocce di sale del deserto, vicino a Yungay · dimensioni: pochi millesimi di millimetro
-- **da fare con Link**
+- illustrazione di Link già nell’app
 
 ```
 Photorealistic close-up scientific photograph of a broken salt rock (halite) from the hyperarid Atacama Desert showing a thin bright green band of cyanobacteria (Chroococcidiopsis) living a few millimetres under its white crystalline surface, with an inset-like sharp macro detail of the tiny round green cells clustered between salt crystals, neutral light. Real light-microscope photograph, natural colours, sharp focus, photorealistic, scientifically accurate structure and scale. Square 1:1 format, subject centred and fully visible with some space around it. No text, no labels, no scale bar, no watermark.

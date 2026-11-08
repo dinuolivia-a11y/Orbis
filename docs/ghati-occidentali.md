@@ -97,10 +97,10 @@ Fonti generali: [UNESCO, Ghati occidentali, Patrimonio dell’Umanità dal 2012]
 
 ### Barbo di Denison · *Sahyadria denisonii*
 - id: `misskerala` · dove: fiumi e torrenti del Kerala e del Karnataka · dimensioni: circa 10 cm, al massimo 15
-- immagine: **da fare con Link** (prompt in `prompt-creature.md`)
+- immagine: illustrazione di Link (ChatGPT), controllata da Claude: vedi `illustrazioni-link.md`
 - curiosità: Proprio per la sua bellezza è stato pescato a migliaia per gli acquari di tutto il mondo, e oggi è in pericolo. Adesso si cerca di allevarlo in vasca invece di prenderlo dai fiumi.
 - fonti: [Raghavan et al. 2013, Journal of Threatened Taxa: il nuovo genere Sahyadria](https://threatenedtaxa.org/index.php/JoTT/article/download/1522/2790?inline=1); [Denison barb (Wikipedia, con le fonti; lo chiama Dawkinsia denisonii)](https://en.wikipedia.org/wiki/Denison_barb)
 
 ## Le foto
 
-13 creature su 14 hanno una foto vera, tutte da iNaturalist (osservazioni verificate, «research grade») e tutte scattate nei Ghati occidentali. La foto della rana danzante mostra *Micrixalus kottigeharensis*, una delle tante specie di rane danzanti. Per il Barbo di Denison l’unica foto libera era presa dall’alto, attraverso l’acqua, con il pesce piccolissimo: la sua immagine la farà Link.
+13 creature su 14 hanno una foto vera, tutte da iNaturalist (osservazioni verificate, «research grade») e tutte scattate nei Ghati occidentali. La foto della rana danzante mostra *Micrixalus kottigeharensis*, una delle tante specie di rane danzanti. Per il Barbo di Denison l’unica foto libera era presa dall’alto, attraverso l’acqua, con il pesce piccolissimo: ha un’illustrazione di Link, controllata da Claude.

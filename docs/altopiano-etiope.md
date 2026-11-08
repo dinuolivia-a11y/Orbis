@@ -96,22 +96,22 @@ Fonti generali: [UNESCO, Parco nazionale del Simien, Patrimonio dell’Umanità 
 
 ### Asino selvatico africano · *Equus africanus*
 - id: `wildass` · dove: pianure sassose della Dancalia, tra Etiopia ed Eritrea · dimensioni: circa 1,25 m alla spalla
-- immagine: **da fare con Link** (prompt in `prompt-creature.md`)
+- immagine: illustrazione di Link (ChatGPT), controllata da Claude: vedi `illustrazioni-link.md`
 - curiosità: È l’antenato degli asini di casa. Oggi è tra i mammiferi più minacciati del mondo: in natura ne restano forse solo 200 adulti.
 - fonti: [Lista Rossa IUCN 2015: Equus africanus, forse 200 adulti (documento CMS)](https://www.cms.int/flamingos/sites/default/files/document/Inf_2_Red%20List%20Assessment%202015_Equus%20africanus.en-1map.pdf); [African wild ass (Wikipedia)](https://en.wikipedia.org/wiki/African_wild_ass)
 
 ### Ciclide della Dancalia · *Danakilia franchettii*
 - id: `afreracichlid` · dove: lago Afrera e le sue sorgenti calde, 112 m sotto il livello del mare · dimensioni: un pesce piccolo
-- immagine: **da fare con Link** (prompt in `prompt-creature.md`)
+- immagine: illustrazione di Link (ChatGPT), controllata da Claude: vedi `illustrazioni-link.md`
 - curiosità: L’acqua del lago è circa quattro volte più salata del mare, e il lago si trova 112 metri sotto il livello del mare. È in pericolo, perché l’acqua delle sorgenti viene usata per estrarre il sale.
 - fonti: [Danakilia franchettii (Wikipedia, con le fonti)](https://en.wikipedia.org/wiki/Danakilia_franchettii); [Frontiers in Earth Science 2021: il lago Afrera, 112 m sotto il livello del mare](https://www.frontiersin.org/articles/10.3389/feart.2021.706643)
 
 ### Archei di Dallol · *Archaea*
 - id: `dallolarchaea` · dove: croste di sale intorno alle sorgenti di Dallol · dimensioni: meno di un millesimo di millimetro
-- immagine: **da fare con Link** (prompt in `prompt-creature.md`)
+- immagine: illustrazione di Link (ChatGPT), controllata da Claude: vedi `illustrazioni-link.md`
 - curiosità: Nel 2019 gli scienziati hanno scoperto che nelle pozze più calde, acide e salate di Dallol non vive niente, nemmeno loro: è uno dei pochi posti sulla superficie della Terra dove c’è acqua ma non c’è vita.
 - fonti: [Belilla et al. 2019, Nature Ecology & Evolution: archei ai limiti della vita a Dallol](https://pmc.ncbi.nlm.nih.gov/articles/PMC6837875)
 
 ## Le foto
 
-13 creature su 16 hanno una foto vera, tutte da iNaturalist (osservazioni verificate, «research grade») e tutte scattate in Etiopia. L’asino selvatico africano non ha foto libere: su iNaturalist ci sono quasi solo asini domestici. Il ciclide della Dancalia vive in un solo lago remoto, e gli archei di Dallol si vedono solo al microscopio. Le loro immagini le farà Link.
+13 creature su 16 hanno una foto vera, tutte da iNaturalist (osservazioni verificate, «research grade») e tutte scattate in Etiopia. L’asino selvatico africano non ha foto libere: su iNaturalist ci sono quasi solo asini domestici. Il ciclide della Dancalia vive in un solo lago remoto, e gli archei di Dallol si vedono solo al microscopio. Hanno un’illustrazione di Link, controllata da Claude.

@@ -103,17 +103,17 @@ Fonti generali: [Namib (Wikipedia, con le fonti): deserto arido da 55–80 milio
 - fonti: [Lynam et al. 2006, Current Biology: più meduse che pesci nel Benguela (ScienceDaily)](https://www.sciencedaily.com/releases/2006/07/060711091411.htm)
 
 ### Ghiozzo barbuto · *Sufflogobius bibarbatus*
-- id: `goby` · dove: fondali fangosi senza ossigeno, davanti alla Namibia · dimensioni: fino a circa 17 cm
-- immagine: **da fare con Link** (prompt in `prompt-creature.md`)
+- id: `goby` · dove: fondali fangosi poveri di ossigeno, davanti alla Namibia · dimensioni: fino a circa 17 cm
+- immagine: illustrazione di Link (ChatGPT), controllata da Claude: vedi `illustrazioni-link.md`
 - curiosità: Di notte sale verso l’alto e si mette a mangiare tra le meduse, senza paura dei loro tentacoli: si appoggia persino sulla loro campana. Così oggi è diventato il cibo principale di molti pesci, uccelli e otarie.
 - fonti: [Utne-Palm et al. 2010, Science: il ghiozzo che mangia meduse (Scientific American)](https://www.scientificamerican.com/article/bearded-goby-fish-eats-jellyfish-and-survives-without-oxygen); [Salvanes et al. 2011, Marine Ecology Progress Series: resiste senza ossigeno e con l’acido solfidrico](https://int-res.com/abstracts/meps/v425/p193-202); [FishBase: Sufflogobius bibarbatus, fino a 17 cm](https://fishbase.se/summary/10195)
 
 ### Perla di zolfo della Namibia · *Thiomargarita namibiensis*
 - id: `sulfurpearl` · dove: fango del fondo davanti a Walvis Bay, a circa 100 m · dimensioni: di solito 0,1–0,3 mm; le più grandi 0,75 mm
-- immagine: **da fare con Link** (prompt in `prompt-creature.md`)
+- immagine: illustrazione di Link (ChatGPT), controllata da Claude: vedi `illustrazioni-link.md`
 - curiosità: È stata scoperta nel 1997 nel fango davanti a Walvis Bay, quasi per caso: gli scienziati cercavano altri batteri. Per più di vent’anni è stata il batterio più grande conosciuto; nel 2022 ne è stato trovato uno ancora più grande, un suo parente nei Caraibi.
 - fonti: [Woods Hole, 1999: scoperti i batteri giganti dello zolfo davanti a Walvis Bay](https://www.whoi.edu/press-room/news-release/giant-sulfur-bacteria-discovered-off-african-coast); [Volland et al. 2022, Science: il batterio ancora più grande dei Caraibi](https://doi.org/10.1126/science.abb3634)
 
 ## Le foto
 
-14 creature su 16 hanno una foto vera, tutte da iNaturalist (osservazioni verificate, «research grade») e tutte scattate in Namibia. Il ghiozzo barbuto e la perla di zolfo non hanno foto libere: il primo vive nel fango in fondo al mare, la seconda si vede bene solo al microscopio. Le loro immagini le farà Link.
+14 creature su 16 hanno una foto vera, tutte da iNaturalist (osservazioni verificate, «research grade») e tutte scattate in Namibia. Il ghiozzo barbuto e la perla di zolfo non hanno foto libere: il primo vive nel fango in fondo al mare, la seconda si vede bene solo al microscopio. Hanno un’illustrazione di Link, controllata da Claude.
