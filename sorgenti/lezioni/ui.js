@@ -25,8 +25,11 @@ const LUI = {
   progress: { it: "Ne hai lette {r} su {n}.", en: "You have read {r} of {n}." }, progress0: { it: "{n} lezioni da scoprire.", en: "{n} lessons to discover." },
   back: { it: "Tutte le lezioni", en: "All lessons" }, tryIt: { it: "Prova tu", en: "Try it" }, experiment: { it: "Esperimento", en: "Experiment" },
   goOrbis: { it: "Guardalo in Orbis", en: "See it in Orbis" }, prev: { it: "Precedente", en: "Previous" }, next: { it: "Successiva", en: "Next" },
-  reset: { it: "Ricomincia", en: "Start again" }
+  reset: { it: "Ricomincia", en: "Start again" },
+  more: { it: "Vuoi saperne di più?", en: "Want to know more?" }
 };
+// The deeper-dive questions of a lesson (09-approfondimenti.js), or its own `more` if it has one.
+const lessonMore = (l) => l.more || (typeof LESSON_MORE !== "undefined" && LESSON_MORE[l.id]) || [];
 let lessonFilter = "all", lessonQuery = "", lessonOpen = null, lessonStop = null, lessonListScroll = 0, lessonsPushed = false;
 const lessonColor = (l) => SUBJ[l.s].c;
 function lessonsRead() { try { return new Set(JSON.parse(localStorage.getItem("orbis-lessons-read") || "[]")); } catch (e) { return new Set(); } }
@@ -45,7 +48,7 @@ function lessonMinutes(l) {
 function lessonsShown() {
   const q = lessonQuery.trim().toLowerCase();
   return LESSONS.filter((l) => (lessonFilter === "all" || (lessonFilter === "new" ? lessonIsNew(l) : l.s === lessonFilter)) &&
-    (!q || [t(l.t), t(l.k), t(SUBJ[l.s])].join(" ").toLowerCase().includes(q)))
+    (!q || [t(l.t), t(l.k), t(SUBJ[l.s]), ...lessonMore(l).map((m) => t(m.q))].join(" ").toLowerCase().includes(q)))
     .map((l, i, arr) => ({ l, k: arr.slice(0, i).filter((x) => x.s === l.s).length * 10 + Object.keys(SUBJ).indexOf(l.s) }))
     .sort((a, b) => (lessonIsNew(b.l) - lessonIsNew(a.l)) || (lessonFilter === "all" && !q ? a.k - b.k : 0)).map((x) => x.l);
 }
@@ -104,12 +107,14 @@ function renderLesson(id) {
   const body = l.b.map((b) => `<h2>${esc(t(b.h))}</h2><p>${esc(t(b.p))}</p>`).join("");
   const widget = l.w && LWIDGET[l.w] ? `<section class="l-widget" aria-label="${esc(t(LUI.experiment))}"><p class="l-wlabel">${esc(t(LUI.experiment))}</p><div id="l-w"></div></section>` : "";
   const go = l.go ? `<button type="button" class="cta" id="l-go">${esc(t(LUI.goOrbis))} →</button>` : "";
+  const more = lessonMore(l);
+  const deep = more.length ? `<details class="l-more"><summary><span class="l-more-k">${esc(t(LUI.more))}</span><span class="l-more-qs">${more.map((m) => `<span>${esc(t(m.q))}</span>`).join("")}</span><span class="l-more-ic" aria-hidden="true">+</span></summary><div class="l-more-body">${more.map((m) => `<h3>${esc(t(m.q))}</h3><p>${esc(t(m.a))}</p>`).join("")}</div></details>` : "";
   const pn = `<nav class="l-pn">${prev ? `<button type="button" data-id="${prev.id}"><small>← ${esc(t(LUI.prev))}</small><span>${esc(t(prev.t))}</span></button>` : "<span></span>"}${next ? `<button type="button" class="nx" data-id="${next.id}"><small>${esc(t(LUI.next))} →</small><span>${esc(t(next.t))}</span></button>` : ""}</nav>`;
   $("lessons-inner").innerHTML = `<div class="l-backrow"><button type="button" class="l-back" id="l-back">← ${esc(t(LUI.back))}</button></div>
     <article class="l-article" style="--sc:${lessonColor(l)}"><p class="l-subj">${esc(t(SUBJ[l.s]))} · ${lessonMinutes(l)} ${esc(t(LUI.min))}</p>
     <h1>${esc(t(l.t))}</h1><p class="lead">${esc(t(l.k))}</p>${fig}${body}${widget}
     <aside class="l-box l-try"><strong>${esc(t(LUI.tryIt))}</strong><p>${esc(t(l.try))}</p></aside>
-    <aside class="l-box l-fact" id="l-fact"><strong>${esc(t(UI.fact))}</strong><p>${esc(t(l.fact))}</p></aside>${go}${pn}</article>`;
+    <aside class="l-box l-fact" id="l-fact"><strong>${esc(t(UI.fact))}</strong><p>${esc(t(l.fact))}</p></aside>${deep}${go}${pn}</article>`;
   $("lessons").scrollTop = 0;
   $("l-back").onclick = () => { if (lessonsPushed) { try { history.back(); return; } catch (e) {} } renderLessonList(); setHash("lezioni"); };
   $("lessons-inner").querySelectorAll(".l-pn button").forEach((b) => b.onclick = () => openLessons(b.dataset.id, false));
