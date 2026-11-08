@@ -1,5 +1,5 @@
 /* Orbis service worker: keeps the app working offline. */
-const CACHE = "orbis-dccbb6a3d7";
+const CACHE = "orbis-a1253e08b2";
 const PRECACHE = [
   "./",
   "index.html",
@@ -57,6 +57,7 @@ const PRECACHE = [
   "img/acropora.webp",
   "img/addax.webp",
   "img/adelie.webp",
+  "img/afreracichlid.webp",
   "img/andeancat.webp",
   "img/apollo.webp",
   "img/arcticfox.webp",
@@ -90,6 +91,7 @@ const PRECACHE = [
   "img/cots.webp",
   "img/crabeater.webp",
   "img/culpeo.webp",
+  "img/dallolarchaea.webp",
   "img/dancingfrog.webp",
   "img/darwinfungus.webp",
   "img/desertrose.webp",
@@ -121,6 +123,7 @@ const PRECACHE = [
   "img/glassfrog.webp",
   "img/glaucus.webp",
   "img/glidingfrog.webp",
+  "img/goby.webp",
   "img/goldenmole.webp",
   "img/goliath.webp",
   "img/greenturtle.webp",
@@ -175,8 +178,10 @@ const PRECACHE = [
   "img/marineotter.webp",
   "img/mesite.webp",
   "img/midge.webp",
+  "img/misskerala.webp",
   "img/molevole.webp",
   "img/monal.webp",
+  "img/mossspider.webp",
   "img/mouselemur.webp",
   "img/mtnfinch.webp",
   "img/mtnyala.webp",
@@ -203,6 +208,7 @@ const PRECACHE = [
   "img/rootrat.webp",
   "img/roylepika.webp",
   "img/ruspoli.webp",
+  "img/saltbacteria.webp",
   "img/sandcat.webp",
   "img/sandfish.webp",
   "img/sandfox.webp",
@@ -217,6 +223,7 @@ const PRECACHE = [
   "img/silverfish.webp",
   "img/skua.webp",
   "img/slothmoth.webp",
+  "img/smokymadtom.webp",
   "img/snailfish.webp",
   "img/snowbunting.webp",
   "img/snowcock.webp",
@@ -225,6 +232,7 @@ const PRECACHE = [
   "img/snowyowl.webp",
   "img/somaliostrich.webp",
   "img/specbear.webp",
+  "img/sulfurpearl.webp",
   "img/suri.webp",
   "img/syncfirefly.webp",
   "img/tahr.webp",
@@ -248,6 +256,7 @@ const PRECACHE = [
   "img/welwitschia.webp",
   "img/wheelspider.webp",
   "img/whitelady.webp",
+  "img/wildass.webp",
   "img/xeno.webp",
   "img/xmastree.webp",
   "img/yeti.webp"
