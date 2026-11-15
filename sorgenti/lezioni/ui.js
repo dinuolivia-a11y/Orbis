@@ -63,6 +63,7 @@ function openLessons(id, push) {
   renderNav();
 }
 function closeLessons() {
+  if (typeof closeGame === "function") closeGame();
   if ($("lessons").hidden) return;
   stopLessonWidget(); $("lessons").hidden = true; document.body.classList.remove("lessons-open"); lessonOpen = null; lessonsPushed = false;
   overlayOpen = diveEl.hidden ? null : "dive";
@@ -87,9 +88,11 @@ function renderLessonList() {
   const chips = keys.map((k) => `<button type="button" class="chip" data-k="${k}" aria-pressed="${lessonFilter === k}"${SUBJ[k] ? ` style="--sc:${SUBJ[k].c}"` : ""}>${esc(k === "all" ? t(LUI.all) : k === "new" ? t(LUI.newOnes) : t(SUBJ[k]))}</button>`).join("");
   $("lessons-inner").innerHTML = `<header class="l-head"><p class="l-eyebrow">${esc(t(LUI.eyebrow))}</p><h1>${esc(t(LUI.title))}</h1>
     <p class="lead">${esc(t(LUI.lead))}</p><p class="l-progress">${esc(t(r ? LUI.progress : LUI.progress0).replace("{r}", r).replace("{n}", n))}</p></header>
+    ${typeof gameBanner === "function" ? gameBanner() : ""}
     <div class="l-tools"><input type="search" id="l-search" placeholder="${esc(t(LUI.search))}" aria-label="${esc(t(LUI.search))}" value="${esc(lessonQuery)}"><div class="chips l-chips">${chips}</div></div>
     <div class="l-grid" id="l-grid"></div>`;
   renderLessonGrid();
+  if ($("g-banner")) $("g-banner").onclick = () => { lessonListScroll = $("lessons").scrollTop; openGame(null, true); };
   $("lessons-inner").querySelectorAll(".l-chips .chip").forEach((b) => b.onclick = () => { lessonFilter = b.dataset.k; $("lessons-inner").querySelectorAll(".l-chips .chip").forEach((c) => c.setAttribute("aria-pressed", c === b)); renderLessonGrid(); });
   $("l-search").addEventListener("input", (e) => { lessonQuery = e.target.value; renderLessonGrid(); });
   requestAnimationFrame(() => { $("lessons").scrollTop = lessonListScroll; });

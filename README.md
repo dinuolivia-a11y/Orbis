@@ -52,6 +52,7 @@ Comandi:
   - Ghiacciai della Patagonia: dalla vetta del Fitz Roy sul grande campo di ghiaccio, tra i boschi di lenga e i laghi turchesi, fino a 25 m sotto un fiordo del Pacifico, con l’ossigeno che cambia, 14 creature. In cima cade la neve; il mare si sente solo vicino alla riva.
 - **Curiosità del giorno:** 31 sullo spazio e 30 sulla Terra, ognuna con la spiegazione del perché. Si aprono da sole la prima volta di ogni giorno e da "Lo sapevi?" in basso a destra. "Mostramelo" porta nel punto dell'app di cui parla la curiosità.
 - **Mini lezioni di scienza:** la quinta sezione, «Lezioni». 52 lezioni brevi in otto materie (particelle e quanti, fisica, chimica, vita, spazio, Terra, numeri e idee, e «E se fosse vero?», che parte dai poteri di personaggi famosi come Pikachu, Gojo o Spider-Man), ognuna con «Prova tu» e «Lo sapevi?», 13 esperimenti da toccare e 10 disegni. Si filtrano per materia, si cercano, e quelle lette vengono segnate. L’elenco completo è in `docs/lezioni.md`.
+- **Il Laboratorio (il gioco):** dentro «Lezioni». Con il professor Edward, lo scienziato distratto, si fanno esperimenti (prima scommetti, poi provi, poi scopri perché) e si risolvono enigmi le cui risposte sono nascoste nelle lezioni, tra i pianeti e tra le creature. A ogni passo il laboratorio si riaccende. Prima stanza: chimica, 3 esperimenti e 2 enigmi. Dettagli in `docs/laboratorio.md`.
 - **Foto vere:** 129 creature hanno una foto vera, scattata da naturalisti e ricercatori, con licenza libera. Sulla scheda c'è scritto "Foto", l'autore e la licenza; ingrandendola c'è il link all'originale.
 - **Laboratorio immagini:** un prompt per ognuna delle 206 creature, con lo stato «foto vera», «pronta» o «da fare».
 
@@ -81,6 +82,7 @@ Una zona alla volta, finita prima di passare alla successiva.
 | `docs/appalachi.md` | Gli Appalachi: le 14 creature, le curiosità e le fonti scientifiche. |
 | `docs/atacama.md` | L’Atacama: le 15 creature, le curiosità e le fonti scientifiche. |
 | `docs/ghiacciai.md` | I Ghiacciai della Patagonia: le 14 creature, le curiosità e le fonti scientifiche. |
+| `docs/laboratorio.md` | Il gioco: come funziona, la prima stanza, come aggiungere passi e stanze. |
 | `docs/lezioni.md` | Le mini lezioni di scienza: elenco, esperimenti e come aggiungerne di nuove. |
 | `sorgenti/` | I file da cui si costruisce l’app: la pagina, le lezioni (`lezioni/`) e gli script per costruire la versione installabile e il file unico. |
 | `docs/illustrazioni-link.md` | Il controllo delle 24 illustrazioni fatte con Link (ChatGPT) e delle 3 foto vere trovate tra i suoi riferimenti. |
