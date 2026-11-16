@@ -66,3 +66,18 @@
 .nav .ns{display:none}
 @media (max-width:760px){.nav{gap:0}.nav button{padding:7px 7px;font-size:.8rem}}
 @media (max-width:380px){.nav .nl{display:none}.nav .ns{display:inline}}
+/* going deeper: the box at the end of a lesson that opens with a tap */
+.l-more{border-radius:var(--r);border:1px solid color-mix(in srgb,var(--sc) 40%,transparent);background:linear-gradient(160deg,color-mix(in srgb,var(--sc) 9%,transparent),transparent 70%)}
+.l-more summary{list-style:none;cursor:pointer;position:relative;display:grid;gap:8px;padding:16px 58px 16px 18px;border-radius:var(--r)}
+.l-more summary::-webkit-details-marker{display:none}
+.l-more summary:focus-visible{outline:2px solid var(--sc);outline-offset:2px}
+.l-more-k{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sc)}
+.l-more-qs{display:grid;gap:6px}
+.l-more-qs span{font-family:var(--display);font-size:1.12rem;line-height:1.3;color:var(--ink)}
+.l-more-ic{position:absolute;right:16px;top:50%;width:32px;height:32px;margin-top:-16px;border-radius:50%;border:1px solid color-mix(in srgb,var(--sc) 60%,transparent);display:grid;place-items:center;color:var(--sc);font-size:1.3rem;line-height:1;transition:transform .25s}
+.l-more summary:hover .l-more-ic{background:color-mix(in srgb,var(--sc) 15%,transparent)}
+.l-more[open] .l-more-ic{transform:rotate(45deg)}
+.l-more[open] .l-more-qs{display:none}
+.l-more-body{display:grid;gap:8px;padding:0 18px 18px}
+.l-article .l-more-body h3{font-family:var(--display);font-weight:500;font-size:1.3rem;line-height:1.2;color:var(--sc);margin-top:8px}
+@media (prefers-reduced-motion:reduce){.l-more-ic{transition:none}}
