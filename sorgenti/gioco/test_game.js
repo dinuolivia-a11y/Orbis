@@ -19,7 +19,7 @@ server.listen(0, '127.0.0.1', async () => {
   const launch = process.env.HTTPS_PROXY ? { proxy: { server: process.env.HTTPS_PROXY, bypass: 'localhost,127.0.0.1' } } : {};
   if (process.env.ORBIS_CHROME_CHANNEL) launch.channel = process.env.ORBIS_CHROME_CHANNEL;
   const browser = await chromium.launch(launch);
-  const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true, serviceWorkers: 'block' });
+  const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true, serviceWorkers: preview ? 'block' : 'allow' });
   // skip the curiosity of the day, which would open over the page
   await ctx.addInitScript((l) => { try { localStorage.setItem('orbis-lang', l); localStorage.setItem('orbis-cur-day', String(Math.floor((Date.now() - new Date().getTimezoneOffset() * 60000) / 86400000))); } catch (e) {} }, LANG);
   const pg = await ctx.newPage(), errs = [], fails = [];
