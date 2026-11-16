@@ -1,5 +1,5 @@
 /* Orbis service worker: keeps the app working offline. */
-const CACHE = "orbis-bb9a663a1f";
+const CACHE = "orbis-79bdcf9193";
 const PRECACHE = [
   "./",
   "index.html",
@@ -21,6 +21,8 @@ const PRECACHE = [
   "fonts/DMMono-normal-latin-7e5f82.woff2",
   "fonts/DMMono-normal-latin-ext-1cb063.woff2",
   "fonts/DMMono-normal-latin-ext-5eb3b9.woff2",
+  "fonts/Grandstander-normal-latin-9200b7.woff2",
+  "fonts/Grandstander-normal-latin-ext-b50101.woff2",
   "icons/apple-touch-icon.png",
   "icons/favicon-32.png",
   "icons/favicon.ico",
