@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Put the Laboratory (the game) into Orbis (site/index.html).
 
-Sources: game/game.js (rooms, steps, experiments, riddles) and game/style.css.
+Sources: game/game.js (steps, experiments, riddles, drawings) and game/style.css.
 Run it AFTER inject_lessons.py. Running it again replaces the previous copy.
 """
 SITE = "/home/claude/cosmo/site/index.html"; SRC = "/home/claude/cosmo/game"
@@ -29,6 +29,8 @@ hooks = [
  ('''  $("cur-chip").textContent = t(UI.cur.chip); if (!$("cur").hidden) renderCur();''',
   '''  $("cur-chip").textContent = t(UI.cur.chip); if (!$("cur").hidden) renderCur();
   if (!$("game").hidden) renderGame();'''),
+ # the game has its own display typeface (the installable build has it in fonts/, see fonts.css)
+ ("&family=DM+Mono:wght@400;500&display=swap", "&family=DM+Mono:wght@400;500&family=Grandstander:wght@500..800&display=swap"),
 ]
 for a, b in hooks:
     if b in s: continue
