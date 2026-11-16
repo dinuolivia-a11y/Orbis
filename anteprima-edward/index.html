@@ -696,7 +696,7 @@ p{margin:0}
 .ios-card .ico{display:inline-block;width:1.25em;height:1.25em;vertical-align:-.25em;margin:0 .15em;color:#5aa9ff}
 .ios-card .note{margin:18px 0 0;color:var(--mist);font-size:.88rem}
 </style>
-<link rel="stylesheet" href="room.css?v=69dd9c27f26b">
+<link rel="stylesheet" href="room.css?v=6f352254b10e">
 <link rel="stylesheet" href="volcano.css?v=a36c264a69b5">
 <link rel="stylesheet" href="chemistry.css?v=de3a300dfea9">
 <script>
@@ -6905,24 +6905,33 @@ window.addEventListener("popstate", () => {
         <button type="button" class="w-btn ghost" id="ed-prev">${esc(L2("Indietro", "Previous"))}</button>
         <button type="button" class="w-btn" id="ed-next">${esc(L2("Avanti", "Next"))}</button></div></footer></section>`;
       const scene = modal.querySelector(".ed-review-scene"), status = modal.querySelector("[role=status]");
-      const prev = $("ed-prev"), next = $("ed-next"), exit = $("g-modal-x");
+      const prev = $("ed-prev"), next = $("ed-next");
       frameRoom(scene);
       roomObserver.observe(scene);
       let current = 0;
       const display = step => {
+        const focused = document.activeElement;
         current = step;
         scene.querySelector("svg").setAttribute("class", "g-room s" + step);
         status.textContent = `${step} / ${earned} · ${step ? t(gifts[step - 1].title) : L2("Stanza iniziale", "Starting room")}`;
         prev.disabled = step === 0;
         next.disabled = step === earned;
+        if (next.disabled && focused === next) prev.focus();
+        if (prev.disabled && focused === prev) next.focus();
       };
       display(0);
       prev.onclick = () => display(current - 1);
       next.onclick = () => display(current + 1);
-      exit.onclick = () => {
+      // Escape and clicks on the close button both use the original modal's
+      // dismissal path. Return keyboard focus after that dialog leaves the stage.
+      const dismiss = new MutationObserver(() => {
+        if (modal.isConnected) return;
+        dismiss.disconnect();
         roomObserver.unobserve(scene);
-        $("g-rooms").focus({preventScroll:true});
-      };
+        const opener = $("g-rooms");
+        if (opener && !$("game").hidden) opener.focus({preventScroll:true});
+      });
+      dismiss.observe(modal.parentNode, {childList:true});
       next.focus({preventScroll:true});
       modal.onkeydown = e => {
         if (e.key !== "Tab") return;
