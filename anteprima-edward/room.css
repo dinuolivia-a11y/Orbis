@@ -11,18 +11,44 @@
   --ed-floor: #112b2b;
   background-color:#102323; isolation:isolate;
 }
-#game .g-home .g-scene { bottom:clamp(70px,11%,112px); background:#38271c; }
+#game .g-home .g-scene {
+  top:calc(46px + env(safe-area-inset-top,0px));
+  bottom:calc(clamp(130px,18%,162px) + env(safe-area-inset-bottom,0px));
+}
+#game :is(.g-home .g-scene,.ed-review-scene) {
+  background:#282922; isolation:isolate; overflow:hidden;
+}
+#game :is(.g-home .g-scene,.ed-review-scene)::before {
+  content:""; position:absolute; z-index:-1; inset:-32px; pointer-events:none;
+  background:linear-gradient(#11212550,#261d1880),url("./assets/ed-room-empty.webp") center/cover;
+  filter:blur(26px);
+}
+#game :is(.g-home .g-scene,.ed-review-scene)>.g-room {overflow:visible;}
 #game .g-scene::after {
   content:""; position:absolute; inset:0; pointer-events:none;
   background:linear-gradient(180deg,#0a151d44,transparent 14%,transparent 79%,#1a1b18a6 100%);
 }
 #game .g-home {background:linear-gradient(0deg,#192823,#443522 26%,#0d211f 64%);}
-#game .g-room .ed-lit {transition:opacity 1.1s ease-out;}
-#game .g-scene.pop .s1 .ed-lit {animation:none;}
-#game .g-room .ed-prize {filter:drop-shadow(0 4px 3px #2816068c);}
-#game .g-scene.pop .ed-prize {transition:opacity .65s ease-out;}
-#game .g-scene.pop .s2 .r2,#game .g-scene.pop .s3 .r3,
-#game .g-scene.pop .s4 .r4,#game .g-scene.pop .s5 .r5 {animation:none;}
+#game .ed-review .ed-prize,#game .g-scene.pop .ed-prize {transition:opacity .65s ease-out;}
+#game .g-scene.pop .g-room .ed-prize {animation:none;}
+#game .ed-review { padding:0; background:#172a29; }
+#game .ed-review-panel {
+  width:100%; height:100%; min-height:0; display:grid; grid-template-rows:auto minmax(0,1fr) auto;
+  color:#fff2d8; font-family:var(--g-font);
+}
+#game .ed-review-panel header,#game .ed-review-panel footer {
+  display:flex; align-items:center; justify-content:space-between; gap:10px; padding:10px 14px;
+  background:linear-gradient(135deg,#263f3a,#182b2a);
+}
+#game .ed-review-panel header {padding-top:calc(9px + env(safe-area-inset-top,0px)); border-bottom:1px solid #865f38;}
+#game .ed-review-panel header h2 {font:600 clamp(1.06rem,4vw,1.4rem)/1.2 var(--ed-heading);margin:0;}
+#game .ed-review-panel footer {border-top:1px solid #865f38;padding-bottom:calc(12px + env(safe-area-inset-bottom,0px));}
+#game .ed-review-panel footer p {margin:0;font-weight:650;font-size:.9rem;}
+#game .ed-review-panel footer div {display:flex;gap:6px;}
+#game .ed-review-panel footer button {min-height:44px;}
+#game .ed-review-panel footer button:disabled {opacity:.48;}
+#game .ed-review-scene {position:relative;min-height:0;}
+#game .ed-review-panel #g-modal-x {font: 1.6rem/1 var(--ed-heading);}
 #game .g-home .g-hud {align-items:center;gap:7px;}
 #game .g-round {
   width:44px;height:44px; border:1px solid #e5c58e;
@@ -179,12 +205,29 @@
   #game .g-lock {min-height:278px;}
 }
 @media(orientation:landscape) and (max-height:520px) {
-  #game .g-home .g-scene {inset:0 35% 0 0;}
-  #game .g-home .g-dock {left:53%;right:9px;}
+  #game .g-home {max-width:900px;}
+  #game .g-home .g-scene {inset:0 45% 0 0;}
+  #game .g-home .g-hud,#game .g-home .g-talk {left:55%;}
+  #game .g-home .g-hud {gap:4px;padding-inline:6px;}
+  #game .g-home .ed-nameplate {font-size:.82rem;white-space:normal;}
+  #game .g-home .g-dock {left:calc(55% + 5px);right:9px;}
   #game .g-home .g-mission {align-items:flex-start;flex-wrap:wrap;}
   #game .g-home .g-step button {width:34px;height:34px;}
   #game .g-home .g-step .g-ico {width:20px;height:20px;}
   #game .g-home .g-step::before {top:17px;}
+}
+@media(orientation:landscape) and (max-height:360px) {
+  #game .g-home .g-dock {
+    top:calc(59px + env(safe-area-inset-top,0px)); bottom:calc(5px + env(safe-area-inset-bottom,0px));
+    display:flex; flex-direction:column; gap:5px; overflow-y:auto; padding-bottom:4px;
+  }
+  #game .g-home .g-peek {position:static; margin-top:auto; align-self:flex-start; flex:none; min-height:38px;}
+  #game .g-home .g-card {flex:none; padding:7px 9px 8px; gap:8px;}
+  #game .g-home .g-mission {display:grid; grid-template-columns:minmax(0,1fr) auto; gap:4px 6px; align-items:center;}
+  #game .g-home .g-m-txt {display:contents;}
+  #game .g-home .g-m-txt :is(small,strong) {grid-column:1/-1;}
+  #game .g-home .g-m-txt strong {font-size:1.03rem;line-height:1.1;}
+  #game .g-home .g-mission .g-btn {padding:6px 12px;min-height:40px;font-size:1rem;}
 }
 @media(prefers-reduced-motion:reduce) { #game .g-room * {transition:none!important;animation:none!important;} }
 

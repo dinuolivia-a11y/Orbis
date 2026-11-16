@@ -696,7 +696,7 @@ p{margin:0}
 .ios-card .ico{display:inline-block;width:1.25em;height:1.25em;vertical-align:-.25em;margin:0 .15em;color:#5aa9ff}
 .ios-card .note{margin:18px 0 0;color:var(--mist);font-size:.88rem}
 </style>
-<link rel="stylesheet" href="room.css?v=63d3ae4f3597">
+<link rel="stylesheet" href="room.css?v=69dd9c27f26b">
 <link rel="stylesheet" href="volcano.css?v=a36c264a69b5">
 <link rel="stylesheet" href="chemistry.css?v=de3a300dfea9">
 <script>
@@ -6849,29 +6849,89 @@ window.addEventListener("popstate", () => {
   const assets = new URL("./assets/", location.href);
   const tex = new URL("../tex/", location.href);
   const art = name => new URL(name, assets).href;
+  // Each piece is a registered part of the same finished painting, including its
+  // contact shadows and reflections on the furniture already in the empty room.
   const gifts = [
-    { cx: 351, cy: 272 },
-    { cx: 535, cy: 459, x: 455, y: 374, w: 160, h: 160, frame: [0, 0] },
-    { cx: 206, cy: 323, x: 118, y: 235, w: 176, h: 176, frame: [1, 0] },
-    { cx: 802, cy: 534, x: 662, y: 378, w: 283, h: 283, frame: [0, 1] },
-    { cx: 368, cy: 1035, x: 291, y: 960, w: 154, h: 154, frame: [1, 1] }
+    { file: "ed-lamp", x: 0, y: 0, w: 1024, h: 1536, cx: 312, cy: 338, title: {it:"Lampada accesa", en:"Lamp switched on"} },
+    { file: "ed-glass", x: 401, y: 595, w: 291, h: 229, cx: 546, cy: 737, title: {it:"Ampolle sullo scaffale", en:"Flasks on the shelf"} },
+    { file: "ed-table", x: 355, y: 108, w: 365, h: 420, cx: 574, cy: 313, title: {it:"Tavola periodica e pianta", en:"Periodic table and plant"} },
+    { file: "ed-scope", x: 760, y: 460, w: 260, h: 194, cx: 894, cy: 559, title: {it:"Telescopio alla finestra", en:"Telescope at the window"} },
+    { file: "ed-medal", x: 550, y: 976, w: 171, h: 141, cx: 635, cy: 1050, title: {it:"Distintivo di Piccolo Chimico", en:"Little Chemist badge"} }
   ];
-  function prizeInRoom(g, i) {
-    if (!g.frame) return "";
-    // Clip in room coordinates. Orbis intentionally gives *all* svg elements visible
-    // overflow, so a nested svg viewport on its own would leak the other three sprites.
-    const clip = "ed-crop-" + i;
-    return `<defs><clipPath id="${clip}" clipPathUnits="userSpaceOnUse"><rect x="${g.x}" y="${g.y}" width="${g.w}" height="${g.h}"/></clipPath></defs>
-      <g class="r${i + 1} ed-prize"><g clip-path="url(#${clip})"><image href="${esc(art("reward-art.webp"))}"
-      x="${g.x - g.frame[0]*g.w}" y="${g.y - g.frame[1]*g.h}" width="${2*g.w}" height="${2*g.h}" preserveAspectRatio="none"/></g></g>`;
-  }
-  gameRoomSvg = function paintedLaboratory(stage) {
-    return `<svg class="g-room s${stage}" viewBox="0 0 1024 1536" preserveAspectRatio="xMidYMid slice" role="img" aria-label="${esc(t(GUI.room1))}">
-      <image href="${esc(art("room.webp"))}" width="1024" height="1536"/>
-      <image class="r1 ed-lit" href="${esc(art("room-lit.webp"))}" width="1024" height="1536"/>
-      ${gifts.map(prizeInRoom).join("")}
-      ${gifts.map((g, i) => `<circle id="g-f${i + 1}" cx="${g.cx}" cy="${g.cy}" r="2" fill="none"/>`).join("")}
+  function paintedRoom(stage, withFocusMarkers) {
+    return `<svg class="g-room s${stage}" viewBox="0 0 1024 1536" preserveAspectRatio="xMidYMid meet" role="img" aria-label="${esc(t(GUI.room1))}">
+      <image href="${esc(art("ed-room-empty.webp"))}" width="1024" height="1536"/>
+      ${gifts.map((g, i) => `<image class="r${i + 1} ed-prize" href="${esc(art(g.file + ".webp"))}" x="${g.x}" y="${g.y}" width="${g.w}" height="${g.h}"/>`).join("")}
+      ${withFocusMarkers ? gifts.map((g, i) => `<circle id="g-f${i + 1}" cx="${g.cx}" cy="${g.cy}" r="2" fill="none"/>`).join("") : ""}
     </svg>`;
+  }
+  gameRoomSvg = stage => paintedRoom(stage, true);
+
+  function frameRoom(scene) {
+    const {clientWidth:width, clientHeight:height} = scene;
+    if (!width || !height) return;
+    // On wide screens crop excess ceiling and foreground first. Never crop the
+    // telescope at the right edge, the wall hook, or the case on the desk.
+    const viewHeight = Math.max(1200, Math.min(1536, 1024 * height / width));
+    const top = (1536 - viewHeight) * .16;
+    scene.querySelector(".g-room").setAttribute("viewBox", `0 ${top} 1024 ${viewHeight}`);
+  }
+  const roomObserver = new ResizeObserver(entries => {
+    for (const entry of entries) {
+      if (entry.target.isConnected) frameRoom(entry.target);
+      else roomObserver.unobserve(entry.target);
+    }
+  });
+
+  const originalRooms = gameRooms;
+  gameRooms = function roomsWithRestoration() {
+    originalRooms();
+    const earned = gameStage(gameState());
+    if (!earned) return;
+    const close = $("g-modal-x"), modal = close.closest(".g-modal");
+    const start = document.createElement("button");
+    start.type = "button";
+    start.className = "g-btn";
+    start.id = "ed-replay";
+    start.textContent = L2("Rivedi i premi", "Revisit your rewards");
+    close.before(start);
+    start.onclick = () => {
+      modal.classList.add("ed-review");
+      modal.innerHTML = `<section class="ed-review-panel" role="dialog" aria-modal="true" aria-labelledby="ed-review-title">
+        <header><h2 id="ed-review-title">${esc(start.textContent)}</h2>
+        <button type="button" class="g-round" id="g-modal-x" aria-label="${esc(L2("Chiudi", "Close"))}">×</button></header>
+        <div class="ed-review-scene">${paintedRoom(0, false)}</div>
+        <footer><p role="status" aria-live="polite" aria-atomic="true"></p><div>
+        <button type="button" class="w-btn ghost" id="ed-prev">${esc(L2("Indietro", "Previous"))}</button>
+        <button type="button" class="w-btn" id="ed-next">${esc(L2("Avanti", "Next"))}</button></div></footer></section>`;
+      const scene = modal.querySelector(".ed-review-scene"), status = modal.querySelector("[role=status]");
+      const prev = $("ed-prev"), next = $("ed-next"), exit = $("g-modal-x");
+      frameRoom(scene);
+      roomObserver.observe(scene);
+      let current = 0;
+      const display = step => {
+        current = step;
+        scene.querySelector("svg").setAttribute("class", "g-room s" + step);
+        status.textContent = `${step} / ${earned} · ${step ? t(gifts[step - 1].title) : L2("Stanza iniziale", "Starting room")}`;
+        prev.disabled = step === 0;
+        next.disabled = step === earned;
+      };
+      display(0);
+      prev.onclick = () => display(current - 1);
+      next.onclick = () => display(current + 1);
+      exit.onclick = () => {
+        roomObserver.unobserve(scene);
+        $("g-rooms").focus({preventScroll:true});
+      };
+      next.focus({preventScroll:true});
+      modal.onkeydown = e => {
+        if (e.key !== "Tab") return;
+        const buttons = [...modal.querySelectorAll("button:enabled")];
+        const last = buttons[buttons.length - 1];
+        if (e.shiftKey && document.activeElement === buttons[0]) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); buttons[0].focus(); }
+      };
+    };
   };
 
   const originalHome = renderGameHome;
@@ -6879,6 +6939,10 @@ window.addEventListener("popstate", () => {
     originalHome(opt);
     const stage = $("g-stage");
     if (!stage || !stage.classList.contains("g-home")) return;
+    roomObserver.disconnect();
+    const scene = $("g-scene");
+    frameRoom(scene);
+    roomObserver.observe(scene);
     const bar = stage.querySelector(".g-hud .sp");
     bar.textContent = t(GUI.title);
     bar.classList.add("ed-nameplate");
