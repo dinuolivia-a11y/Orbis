@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#102027">
+  <meta name="description" content="Entra nella stanza delle ampolle del professor Edward e risolvi il primo esperimento di Orbis.">
+  <title>La stanza delle ampolle · Orbis</title>
+  <link rel="preload" href="assets/room.webp" as="image">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./game.js" defer></script>
+</head>
+<body>
+  <main id="game" data-scene="room" data-phase="intro" data-lit="false" data-fx="idle">
+    <div class="world" aria-hidden="true">
+      <div class="artboard">
+        <img class="art room" src="assets/room.webp" alt="" fetchpriority="high">
+        <img class="art room-lit" src="assets/room-lit.webp" alt="" decoding="async">
+        <img class="art bench" src="assets/bench.webp" alt="" decoding="async">
+        <img class="art bench-foam" src="assets/bench-foam.webp" alt="" decoding="async">
+        <div class="experiment-fx">
+          <div id="flask-mouth"></div>
+          <div id="liquid-fx"></div>
+          <div id="foam-fx"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
+      </div>
+    </div>
+    <header class="hud">
+      <a class="orbis" href="https://dinuolivia-a11y.github.io/Orbis/#gioco" aria-label="Torna a Orbis">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="m14 6-6 6 6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Orbis
+      </a>
+      <div class="lamp-status">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 2v4m-3 0h6l4.5 7H4.5L9 6Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M9 14a3 3 0 0 0 6 0M12 20v2m6-5 2 2M6 17l-2 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <span class="off">Lampada spenta</span><span class="on">Lampada accesa</span>
+      </div>
+    </header>
+    <section class="dialogue" aria-labelledby="title">
+      <div class="speech">
+        <div id="speaker" class="speaker">Professor Edward</div>
+        <h1 id="title" tabindex="-1">La stanza delle ampolle</h1>
+        <p id="copy">La lampada è spenta. Aiutami con il primo esperimento!</p>
+      </div>
+      <div id="inventory" role="group" aria-label="Ingredienti del banco">
+        <button type="button" class="ingredient" data-ingredient="water" aria-pressed="false">
+          <img src="assets/water.webp" alt="" decoding="async"><span>Acqua</span>
+        </button>
+        <button type="button" class="ingredient" data-ingredient="vinegar" aria-pressed="false">
+          <img src="assets/vinegar.webp" alt="" decoding="async"><span>Aceto</span>
+        </button>
+        <button type="button" class="ingredient" data-ingredient="salt" aria-pressed="false">
+          <img src="assets/salt.webp" alt="" decoding="async"><span>Sale</span>
+        </button>
+        <button type="button" class="ingredient" data-ingredient="bicarbonate" aria-pressed="false">
+          <img src="assets/bicarbonate.webp" alt="" decoding="async"><span>Bicarbonato</span>
+        </button>
+      </div>
+      <div id="selection" aria-label="Ingredienti scelti">
+        <span data-slot="0">Primo ingrediente</span><b aria-hidden="true">+</b><span data-slot="1">Secondo ingrediente</span>
+      </div>
+      <div class="actions">
+        <button type="button" id="action">Vai al banco</button>
+        <button type="button" id="replay-light" hidden>Rivedi l’accensione</button>
+      </div>
+      <noscript>Attiva JavaScript per entrare nel laboratorio.</noscript>
+    </section>
+    <div id="announce" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+  </main>
+</body>
+</html>

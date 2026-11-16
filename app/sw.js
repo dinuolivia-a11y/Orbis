@@ -286,6 +286,7 @@ self.addEventListener("fetch", (e) => {
   if (req.method !== "GET") return;
   const url = new URL(req.url);
   if (url.origin !== self.location.origin) return;
+  if (url.href.startsWith(new URL("./anteprima-edward/", self.registration.scope).href)) return;
   if (req.mode === "navigate") {
     // Fresh page when online (so updates arrive), cached page when offline or slow.
     const net = fromNetwork(req, "./");
