@@ -27,6 +27,21 @@ server.listen(0, '127.0.0.1', async () => {
   let n = 0; const shot = async (name) => { if (OUT) await pg.screenshot({ path: path.join(OUT, `${String(++n).padStart(2, '0')}_${name}.png`) }); };
   const w = (ms) => pg.waitForTimeout(ms);
   const check = async (name, js, arg) => { const ok = await pg.evaluate(js, arg); if (!ok) fails.push(name); console.log((ok ? 'PASS ' : 'FAIL ') + name); };
+  const reviewRewards = async earned => {
+    const saved = await pg.evaluate(key => localStorage.getItem(key), progressKey);
+    await pg.click('#g-rooms');
+    await pg.click('#ed-replay');
+    await check('review opens on the empty room', () =>
+      !!document.querySelector('.ed-review-scene .g-room.s0') && document.getElementById('ed-prev').disabled);
+    for (let i = 0; i < earned; i++) await pg.click('#ed-next');
+    await check('review stops at the last earned reward', step =>
+      !!document.querySelector('.ed-review-scene .g-room.s' + step) && document.getElementById('ed-next').disabled, earned);
+    await pg.click('#ed-prev');
+    await pg.click('#g-modal-x');
+    await check('returning to the room preserves the award and saved stars', ([key, initial, step]) =>
+      !document.querySelector('.ed-review') && !!document.querySelector('#g-scene .g-room.s' + step)
+      && localStorage.getItem(key) === initial, [progressKey, saved, earned]);
+  };
   const stars = async (id, want) => { const got = await pg.evaluate(([x, key]) => (JSON.parse(localStorage.getItem(key) || '{}').done || {})[x], [id, progressKey]); if (got !== want) fails.push(`${id}: ${got} stars, wanted ${want}`); console.log((got === want ? 'PASS ' : 'FAIL ') + `${id}: ${got} stars`); };
   // back in the room: wait for the title or the cutscene to end, listen to the professor, close the bubble
   const settle = async (name) => {
@@ -47,6 +62,7 @@ server.listen(0, '127.0.0.1', async () => {
   await check('the professor has said hello once', key => JSON.parse(localStorage.getItem(key)).said === 0 && document.getElementById('g-talk').hidden, progressKey);
   await pg.click('#g-rooms'); await w(500); await shot('rooms');
   await check('rooms: one open, three coming', () => document.querySelectorAll('.g-rooms li').length === 4 && document.querySelectorAll('.g-rooms li.lock').length === 3);
+  if (preview) await check('rewards appear after the first win', () => !document.getElementById('ed-replay'));
   await pg.click('#g-modal-x'); await w(200);
   // 1 the foam volcano
   await pg.click('#g-play'); await w(400); await shot('bet');
@@ -65,6 +81,7 @@ server.listen(0, '127.0.0.1', async () => {
   await pg.click('#g-next'); await w(2300); await shot('cutscene_lamp');
   await check('cutscene: the lamp is on', () => document.querySelector('.g-room').classList.contains('s1'));
   await settle('professor_1'); await shot('room_1');
+  if (preview) await reviewRewards(1);
   // 2 the lock, with a trip to a lesson and back
   await pg.click('#g-play'); await w(400);
   await pg.click('[data-where="0"]'); await w(200); await shot('lock');
@@ -101,6 +118,7 @@ server.listen(0, '127.0.0.1', async () => {
   await pg.click('#g-learn'); await w(600); await stars('torre', 2);
   await pg.click('#g-next'); await w(2500); await shot('cutscene_badge'); await settle('professor_5'); await shot('room_5');
   await check('room complete: 10 stars, nothing left to play', () => document.querySelector('#g-count b').textContent === '10' && !document.getElementById('g-play') && document.querySelector('.g-room').classList.contains('s5'));
+  if (preview) await reviewRewards(5);
   // leave, come back: the room again, and the professor does not repeat himself
   await pg.click('#g-back'); await w(600); await check('back in the lessons', () => document.getElementById('game').hidden && location.hash === '#lezioni');
   await pg.click('#g-banner'); await settle(); await check('second visit: no speech again', () => document.getElementById('g-talk').hidden && !document.getElementById('game').hidden);
