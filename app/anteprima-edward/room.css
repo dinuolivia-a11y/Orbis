@@ -1,0 +1,190 @@
+/* Edward's cabinet: brass, bottle green and illuminated paper. All controls,
+   star scales, dialogue and clues are those of the original Orbis game. */
+.page.game {
+  background: radial-gradient(ellipse at 50% 40%,#26413e,#0b1a20 68%,#081318);
+}
+#game .g-stage {
+  --g-ink:#30271f; --g-cream:#fff2d6; --g-gold:#f6c16a; --g-gold2:#df902b;
+  --g-go:#58c8a4; --g-go2:#247e67; --g-pink:#aa4561;
+  --ed-gold:#e1b77c; --ed-brass:#966536; --ed-paper:#f9e7be;
+  --ed-heading: Georgia, "Times New Roman", serif;
+  --ed-floor: #112b2b;
+  background-color:#102323; isolation:isolate;
+}
+#game .g-home .g-scene { bottom:clamp(70px,11%,112px); background:#38271c; }
+#game .g-scene::after {
+  content:""; position:absolute; inset:0; pointer-events:none;
+  background:linear-gradient(180deg,#0a151d44,transparent 14%,transparent 79%,#1a1b18a6 100%);
+}
+#game .g-home {background:linear-gradient(0deg,#192823,#443522 26%,#0d211f 64%);}
+#game .g-room .ed-lit {transition:opacity 1.1s ease-out;}
+#game .g-scene.pop .s1 .ed-lit {animation:none;}
+#game .g-room .ed-prize {filter:drop-shadow(0 4px 3px #2816068c);}
+#game .g-scene.pop .ed-prize {transition:opacity .65s ease-out;}
+#game .g-scene.pop .s2 .r2,#game .g-scene.pop .s3 .r3,
+#game .g-scene.pop .s4 .r4,#game .g-scene.pop .s5 .r5 {animation:none;}
+#game .g-home .g-hud {align-items:center;gap:7px;}
+#game .g-round {
+  width:44px;height:44px; border:1px solid #e5c58e;
+  background:linear-gradient(150deg,#fff0c9,#dca566);
+  box-shadow:inset 0 1px 1px #fff,0 2px 0 #744a27,0 4px 10px #160e1299;
+}
+#game .g-pill {border:1px solid #bd9862; background:#183333f2; color:#fff2d8; height:36px; box-shadow:inset 0 1px #fff3,0 2px 7px #0004; }
+#game .ed-nameplate {
+  align-self:center; text-align:start; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+  font-family:var(--ed-heading); font-size:clamp(1.02rem,3.6vw,1.4rem); color:#fff7df;
+  text-shadow:0 1px 4px #0c131d,0 1px 8px #000; letter-spacing:.015em;
+}
+#game .g-home .g-hud {background:linear-gradient(#07151de0,#101d2152 82%,transparent);}
+#game .g-home .g-dock {left:clamp(8px,3%,18px);right:clamp(8px,3%,18px); bottom:calc(10px + env(safe-area-inset-bottom,0px));}
+#game .g-card {
+  background:linear-gradient(160deg,#294341,#172e2a 52%,#182b25); border:1px solid #e2bc7e;
+  padding:13px 13px 14px; gap:14px; border-radius:17px;
+  color:#fff0ce; box-shadow:0 3px 0 #734a29,0 7px 20px #0d110fd4,inset 0 0 0 3px #524833;
+}
+#game .g-step button {
+  width:44px;height:44px; border:1px solid #f6d393; background:linear-gradient(150deg,#fff2ce,#d4ae7c);
+  box-shadow:inset 0 1px 0 #fffc,0 3px 0 #76512e,0 4px 7px #10171499;
+}
+#game .g-step.lock button {border-color:#97896a;background:linear-gradient(140deg,#b9ab88,#81775e);box-shadow:0 2px 0 #443e31;}
+#game .g-step.lock .g-ico {opacity:.72;}
+#game .g-step.done button {background:linear-gradient(145deg,#efffb5,#79b98a);border-color:#d9e9a3;}
+#game .g-step.now button {background:linear-gradient(145deg,#fff0a8,#f6bd5a 65%,#d68b39);}
+#game .g-step::before {height:2px;top:22px;background:repeating-linear-gradient(90deg,#ac9a6f 0 4px,transparent 4px 8px);}
+#game .g-step.now::before,#game .g-step.done::before {background:linear-gradient(90deg,#90cdaa,#e4bd6e);}
+#game .g-step .g-ico {width:25px;height:25px;}
+#game .g-m-txt strong {font-family:var(--ed-heading);font-size:clamp(1.05rem,4.5vw,1.47rem);color:#fff4d7;}
+#game .g-m-txt small {text-transform:uppercase;font-size:.67rem;letter-spacing:.09em;color:#b6e3d6;}
+#game .g-m-txt em {color:#ffdc9a;font-size:.78rem;}
+#game .g-mission {gap:9px;}
+#game .g-home .g-peek {
+  bottom:calc(100% + 6px);left:4px;width:auto;min-height:40px;display:inline-flex;align-items:center;gap:7px;
+  border:1px solid #d8ae72;background:#133633ed;color:#fff2cd;padding:5px 11px 5px 6px;border-radius:20px;
+  font:600 .85rem var(--g-font);box-shadow:0 2px 6px #0e181990;
+}
+#game .ed-chat-mark {display:grid;place-items:center;width:26px;height:22px;background:#f2d092;color:#374033;border-radius:9px 9px 9px 3px;letter-spacing:.1em;font:bold 17px/1 Georgia;}
+#game .g-talk .g-prof {display:none;}
+#game .g-talk {padding:40px 13px calc(14px + env(safe-area-inset-bottom,0px));background:linear-gradient(0deg,#152222ef,transparent);}
+#game .g-bubble {
+  color:#35291d; background:linear-gradient(145deg,#fff5d9,#f6dfb2); border:1px solid #b08a53;
+  border-radius:16px 16px 16px 4px;box-shadow:inset 0 0 0 3px #fff3d69c,0 4px 10px #19170e4d;
+}
+#game .g-bubble b {color:#764421;font-size:.86rem;}
+#game .g-bubble .g-tap {color:#695037;animation:none;}
+#game .g-splash {background:linear-gradient(180deg,#0c1e279e,transparent 22%,#111c1d8c 56%,#071619d6);}
+#game .g-logo {font-family:var(--ed-heading);color:#ffe4a7;text-shadow:0 2px 0 #83502e,0 4px 18px #130d0a;}
+#game .g-logo-sub {color:#ffeac2;}
+
+#game .g-stepv {background:radial-gradient(100% 60% at 80% -10%,#476767 0%,transparent 85%),linear-gradient(140deg,#20433f,#102928 56%,#112223 100%);}
+#game .g-stepv .g-hud {gap:9px;background:#0d2222b3; border-bottom:1px solid #a887563b;}
+#game .g-stage .g-title {font-family:var(--ed-heading);font-weight:700;color:#fff1d1;text-shadow:0 2px 1px #182720;}
+#game .g-scroll {padding-top:12px;scroll-padding:12px;}
+#game .g-say {align-items:flex-start;gap:8px;}
+#game .g-say>.g-prof {display:none;}
+#game .g-say::before {
+  content:"";flex:0 0 60px;width:60px;height:67px; border:2px solid #c6a168;border-radius:45% 45% 36% 36%;
+  background:#553b23 url("./assets/room-lit.webp") 27.8% 29%/340% auto no-repeat;
+  box-shadow:0 2px 5px #0e1c1bd9,inset 0 0 0 2px #ffe9b754;
+}
+#game .g-stage .g-btn,#game .g-stage .w-btn {
+  border:1px solid #cc9e61; background:linear-gradient(#fff1c6,#ebc381);
+  color:#332a20;box-shadow:inset 0 1px #fff9,0 3px 0 #80582f,0 4px 9px #1716164a;
+  border-radius:12px;
+}
+#game .g-stage .g-btn.go {
+  background:linear-gradient(#5bc19c,#348e70 52%,#277a60);border-color:#bce4a8;
+  color:#fff9e6;text-shadow:0 1px 1px #184b35;box-shadow:inset 0 1px #ccffd697,0 3px 0 #0b4a42,0 5px 7px #19261a70;
+}
+#game .g-stage .w-btn.ghost,#game .g-stage .g-btn.alt {background:linear-gradient(#fff5da,#ead5ac);}
+#game .g-stage :is(.g-opt,.g-btn,.w-btn,.g-dial button,.g-round,.g-step button):active {transform:translateY(2px);}
+#game .g-stage :focus-visible {outline:3px solid #6ae4f3;outline-offset:3px;}
+#game .g-phases li {background:#1d3838;color:#e5ebd7;border:1px solid #799084;border-radius:9px;}
+#game .g-phases li[aria-current] {background:#efd09a;color:#392e21;border-color:#ffe5a6;box-shadow:0 2px 0 #8d6b39;}
+#game .g-phases li.ok {background:#c6e2c5;color:#1e5244;}
+#game .g-phases li[aria-current] i {background:#57432e;color:#ffe7ba;}
+#game .ed-bet-scene {
+  height:clamp(90px,17svh,155px);flex:none;border-radius:15px;border:1px solid #b6925f;
+  background:#412b23 url("./assets/bench.webp") 50% 49%/cover no-repeat;
+  box-shadow:inset 0 0 0 3px #2e302635,0 3px 9px #0d1a165c;
+}
+#game .g-opts {gap:9px;}
+#game .g-opt,#game .g-clues li,#game .g-quote,#game .g-hintbox,#game .g-status:not(.g-bench .g-status){
+  background:linear-gradient(150deg,#fff4d7,#f1ddb3);border:1px solid #bb9965; color:#352c22;
+  border-radius:14px;box-shadow:inset 0 1px #fff9,0 3px 0 #80613b;
+}
+#game .g-opt i,#game .g-num {
+  background:linear-gradient(140deg,#297f71,#2a5b52);border:1px solid #618c75;color:#fff5d4;box-shadow:inset 0 1px #ffe9ae7d;
+}
+#game .g-opt.pick {background:linear-gradient(#ffe3a0,#f6ca77);border-color:#ffe4a4;}
+#game .g-opt:disabled:not(.pick){opacity:.72;}
+#game .g-doneline,.g-award {border:1px solid #bc985c;}
+#game .g-award {color:#fff4d0;background:radial-gradient(ellipse at 50% 110%,#44826a,transparent),#1c4842;}
+#game .g-giftline,#game .g-rooms li:not(.lock) {background:linear-gradient(140deg,#fff1c4,#edca89);border:1px solid #a88047;}
+#game .g-paper {border:1px solid #c19b62;background:linear-gradient(145deg,#fff7e1,#f2dfbe);}
+#game .g-sticky {border:1px solid #b88d48;background:linear-gradient(150deg,#ffebb5,#f7d68d);}
+#game .g-sheet {border:1px solid #cfab72;background:linear-gradient(#fff2cf,#f3ddbb);}
+#game .g-sheet h2,#game .g-paper h2 {font-family:var(--ed-heading);color:#3c3327;}
+#game .g-sheet>p,#game .g-clues .g-hint {color:#5f4e37;}
+
+#game .g-lock {
+  grid-template-columns:1fr;align-content:end;gap:9px;position:relative;isolation:isolate;overflow:hidden;
+  min-height:clamp(310px,53svh,470px);padding:16px 10px 13px;border:1px solid #c29861;border-radius:19px;
+  background:#4a3426 url("./assets/lock.webp") 50% 82%/cover no-repeat;
+  box-shadow:inset 0 0 0 3px #6c4e2b87,0 4px 0 #523d28,0 6px 14px #07141175;
+}
+#game .g-lock::before {content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,#251a12ad,transparent 54%);}
+#game .g-dials {gap:8px;padding:6px 9px;background:linear-gradient(130deg,#624427ee,#48361ef5);border:1px solid #c9a970;box-shadow:inset 0 0 0 2px #d1b16d5c,0 3px 6px #22190fb3;border-radius:14px;}
+#game .g-dial {gap:2px;}
+#game .g-dial button {
+  width:44px;height:44px;border:1px solid #987641;border-radius:8px;background:linear-gradient(#f0dba7,#b18f55);
+  color:#35281a;box-shadow:inset 0 1px #fff3cd,0 1px 2px #32291f;
+}
+#game .g-dial output {
+  height:42px;width:44px;border:1px solid #dcc593;border-radius:5px;
+  background:linear-gradient(0deg,#ac8b54,#fff0c2 40%,#f6dfab 58%,#a3824b);color:#2b251a;
+  box-shadow:inset 0 -1px 0 #fff4; font:700 2.0rem/1 Georgia,serif; font-variant-numeric:tabular-nums;
+}
+#game .g-lock #g-open {min-height:42px;padding:8px 16px;font-size:1.04rem;}
+#game .g-clues .g-num {background:var(--ic);color:#31272c;border-color:#856c52;}
+#game .g-quote {font-family:var(--ed-heading);margin-top:10px;}
+#game .g-quote small {background:#275f56;border:1px solid #bda16a;color:#fff2cd;}
+#game .g-tiles {gap:9px;}
+#game .g-tile {
+  border:1px solid #b09361;border-radius:15px;background:linear-gradient(145deg,#203d42,#11282e);
+  padding:7px 7px 10px;color:#fff1d4;box-shadow:inset 0 0 0 2px #72827627,0 3px 0 #665136;overflow:hidden;
+}
+#game .g-tile:has(.ed-globe) {background-image:linear-gradient(145deg,#254043d9,#0e2433e6),url("../tex/milkyway.webp");background-size:cover;}
+#game .ed-globe {
+  position:relative; width:clamp(62px,18vw,94px);height:auto;aspect-ratio:1;
+  border:none;background:radial-gradient(circle at 30% 25%,transparent 25%,#081820b8 83%),var(--ed-texture) center/200% 100%;
+  box-shadow:0 2px 12px #0009;overflow:hidden;
+}
+#game .ed-globe.rendered {background:none;}
+#game .g-tile .ed-globe img {width:100%;height:100%;border:none;object-fit:contain;border-radius:50%;}
+#game .g-tile>img {border:0;border-radius:9px;}
+#game .g-tile.yes,#game .g-tile:has(.ed-globe).yes {border:2px solid #a4e9b5;background:#285747;}
+#game .g-tile.no,#game .g-tile.was {border-color:#cd8b62;background-color:#713a35;}
+#game .g-tile:disabled {opacity:.65;}
+#game .g-tile.yes:disabled {opacity:1;}
+@media(max-width:380px) {
+  #game .ed-nameplate {white-space:normal;line-height:1.05;font-size:.88rem;}
+  #game .g-mission {padding-left:0;gap:6px;}
+  #game .g-mission .g-btn {padding:8px 12px;min-height:44px;font-size:1.04rem;}
+  #game .g-say::before {flex-basis:48px;width:48px;height:56px;}
+  #game .g-stepv .g-hud {padding-left:8px;padding-right:8px;}
+}
+@media(max-height:650px) {
+  #game .ed-bet-scene {height:74px;}
+  #game .g-home .g-card {padding:9px 11px 10px;gap:10px;}
+  #game .g-lock {min-height:278px;}
+}
+@media(orientation:landscape) and (max-height:520px) {
+  #game .g-home .g-scene {inset:0 35% 0 0;}
+  #game .g-home .g-dock {left:53%;right:9px;}
+  #game .g-home .g-mission {align-items:flex-start;flex-wrap:wrap;}
+  #game .g-home .g-step button {width:34px;height:34px;}
+  #game .g-home .g-step .g-ico {width:20px;height:20px;}
+  #game .g-home .g-step::before {top:17px;}
+}
+@media(prefers-reduced-motion:reduce) { #game .g-room * {transition:none!important;animation:none!important;} }
+

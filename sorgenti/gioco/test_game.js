@@ -1,9 +1,12 @@
 // The whole game, played from start to finish on a phone, in the built app (the app/ folder).
 // Run: node sorgenti/gioco/test_game.js [folder for screenshots] [it|en]
+// Set ORBIS_EDWARD_PREVIEW=1 for the illustrated edition, ORBIS_TEST_URL to test a live copy.
 // It needs Playwright for Node. It prints PASS or FAIL for each check and ends with an error if one fails.
 const http = require('http'), fs = require('fs'), path = require('path');
 const { chromium } = require('playwright');
 const ROOT = path.join(__dirname, '..', '..', 'app'), OUT = process.argv[2] || '', LANG = process.argv[3] || 'it';
+const preview = process.env.ORBIS_EDWARD_PREVIEW === '1';
+const progressKey = preview ? 'orbis-game-edward-preview-v2' : 'orbis-game';
 const MIME = { html: 'text/html; charset=utf-8', js: 'text/javascript', css: 'text/css', json: 'application/json', webmanifest: 'application/manifest+json', webp: 'image/webp', png: 'image/png', jpg: 'image/jpeg', svg: 'image/svg+xml', ico: 'image/x-icon', woff2: 'font/woff2' };
 const server = http.createServer((req, res) => {
   const f = path.join(ROOT, decodeURIComponent(req.url.split('?')[0]).replace(/\/$/, '/index.html'));
@@ -11,8 +14,11 @@ const server = http.createServer((req, res) => {
   res.writeHead(200, { 'Content-Type': MIME[f.split('.').pop()] || 'application/octet-stream' }); fs.createReadStream(f).pipe(res);
 });
 server.listen(0, '127.0.0.1', async () => {
-  const BASE = `http://localhost:${server.address().port}/index.html`;
-  const browser = await chromium.launch(process.env.HTTPS_PROXY ? { proxy: { server: process.env.HTTPS_PROXY, bypass: 'localhost,127.0.0.1' } } : {});
+  const entry = preview ? 'anteprima-edward/index.html' : 'index.html';
+  const BASE = process.env.ORBIS_TEST_URL || `http://localhost:${server.address().port}/${entry}`;
+  const launch = process.env.HTTPS_PROXY ? { proxy: { server: process.env.HTTPS_PROXY, bypass: 'localhost,127.0.0.1' } } : {};
+  if (process.env.ORBIS_CHROME_CHANNEL) launch.channel = process.env.ORBIS_CHROME_CHANNEL;
+  const browser = await chromium.launch(launch);
   const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true, serviceWorkers: 'block' });
   // skip the curiosity of the day, which would open over the page
   await ctx.addInitScript((l) => { try { localStorage.setItem('orbis-lang', l); localStorage.setItem('orbis-cur-day', String(Math.floor((Date.now() - new Date().getTimezoneOffset() * 60000) / 86400000))); } catch (e) {} }, LANG);
@@ -20,8 +26,8 @@ server.listen(0, '127.0.0.1', async () => {
   pg.on('pageerror', (e) => errs.push('PAGEERROR ' + e.message)); pg.on('console', (m) => { if (m.type() === 'error') errs.push(m.text()); });
   let n = 0; const shot = async (name) => { if (OUT) await pg.screenshot({ path: path.join(OUT, `${String(++n).padStart(2, '0')}_${name}.png`) }); };
   const w = (ms) => pg.waitForTimeout(ms);
-  const check = async (name, js) => { const ok = await pg.evaluate(js); if (!ok) fails.push(name); console.log((ok ? 'PASS ' : 'FAIL ') + name); };
-  const stars = async (id, want) => { const got = await pg.evaluate((x) => (JSON.parse(localStorage.getItem('orbis-game') || '{}').done || {})[x], id); if (got !== want) fails.push(`${id}: ${got} stars, wanted ${want}`); console.log((got === want ? 'PASS ' : 'FAIL ') + `${id}: ${got} stars`); };
+  const check = async (name, js, arg) => { const ok = await pg.evaluate(js, arg); if (!ok) fails.push(name); console.log((ok ? 'PASS ' : 'FAIL ') + name); };
+  const stars = async (id, want) => { const got = await pg.evaluate(([x, key]) => (JSON.parse(localStorage.getItem(key) || '{}').done || {})[x], [id, progressKey]); if (got !== want) fails.push(`${id}: ${got} stars, wanted ${want}`); console.log((got === want ? 'PASS ' : 'FAIL ') + `${id}: ${got} stars`); };
   // back in the room: wait for the title or the cutscene to end, listen to the professor, close the bubble
   const settle = async (name) => {
     await pg.waitForFunction(() => { const s = document.getElementById('g-stage'); return s && !s.classList.contains('cine') && !s.classList.contains('g-intro'); }, null, { timeout: 15000 });
@@ -38,7 +44,7 @@ server.listen(0, '127.0.0.1', async () => {
   await check('the game opens over the whole screen', () => !document.getElementById('game').hidden && location.hash === '#gioco' && !!document.querySelector('.g-stage.g-home'));
   await settle('professor'); await shot('room_0');
   await check('5 steps, 4 locked', () => document.querySelectorAll('.g-step').length === 5 && document.querySelectorAll('.g-step.lock').length === 4);
-  await check('the professor has said hello once', () => JSON.parse(localStorage.getItem('orbis-game')).said === 0 && document.getElementById('g-talk').hidden);
+  await check('the professor has said hello once', key => JSON.parse(localStorage.getItem(key)).said === 0 && document.getElementById('g-talk').hidden, progressKey);
   await pg.click('#g-rooms'); await w(500); await shot('rooms');
   await check('rooms: one open, three coming', () => document.querySelectorAll('.g-rooms li').length === 4 && document.querySelectorAll('.g-rooms li.lock').length === 3);
   await pg.click('#g-modal-x'); await w(200);
@@ -49,6 +55,11 @@ server.listen(0, '127.0.0.1', async () => {
   await check('water + salt: no reaction', () => document.getElementById('g-doneline').hidden);
   await pg.click('#g-empty'); await pg.click('.g-in[data-k="bicarbonato"]'); await w(1000); await shot('bench');
   await pg.click('.g-in[data-k="aceto"]'); await w(2300); await shot('foam'); await w(1500);
+  if (preview) {
+    await shot('foam_rising');
+    await pg.waitForSelector('#g-doneline:visible', {timeout: 20000});
+    await shot('foam_overflow');
+  }
   await check('volcano: mission accomplished', () => !document.getElementById('g-doneline').hidden);
   await pg.click('#g-learn'); await w(1300); await shot('find_out'); await stars('vulcano', 2);
   await pg.click('#g-next'); await w(2300); await shot('cutscene_lamp');
@@ -68,6 +79,7 @@ server.listen(0, '127.0.0.1', async () => {
   // 3 the colour-changing juice (wrong bet on purpose: one star)
   await pg.click('#g-play'); await w(400); await pg.click('.g-opt[data-i="0"]'); await pg.click('#g-go'); await w(500);
   await pg.click('.g-in[data-k="limone"]'); await w(1800); await shot('juice_pink');
+  if (preview) await check('cabbage: the photographed flask is visible behind the liquid', visibleGlass);
   await pg.click('#g-empty'); await pg.click('.g-in[data-k="bicarbonato"]'); await w(1800); await pg.click('.g-in[data-k="sapone"]'); await w(3600);
   await check('juice: four colours found', () => !document.getElementById('g-doneline').hidden);
   await pg.click('#g-learn'); await w(600); await stars('cavolo', 1);
@@ -84,6 +96,7 @@ server.listen(0, '127.0.0.1', async () => {
   for (const k of ['olio', 'acqua', 'miele']) { await pg.click(`.g-in[data-k="${k}"]`); await w(1300); }
   for (const k of ['moneta', 'uva', 'tappo']) { await pg.click(`.g-in[data-k="${k}"]`); await w(500); }
   await w(1700); await shot('tower'); await w(1300);
+  if (preview) await check('density tower: the photographed glass is visible behind the layers', visibleGlass);
   await check('tower: mission accomplished', () => !document.getElementById('g-doneline').hidden);
   await pg.click('#g-learn'); await w(600); await stars('torre', 2);
   await pg.click('#g-next'); await w(2500); await shot('cutscene_badge'); await settle('professor_5'); await shot('room_5');
@@ -92,6 +105,22 @@ server.listen(0, '127.0.0.1', async () => {
   await pg.click('#g-back'); await w(600); await check('back in the lessons', () => document.getElementById('game').hidden && location.hash === '#lezioni');
   await pg.click('#g-banner'); await settle(); await check('second visit: no speech again', () => document.getElementById('g-talk').hidden && !document.getElementById('game').hidden);
   await pg.click('.g-step button[data-id="vulcano"]'); await w(400); await check('a finished step can be played again', () => !!document.querySelector('.g-opt'));
+  if (preview) {
+    await pg.goto(BASE.split('#')[0]);
+    await pg.waitForSelector('.g-room.s5');
+    await check('direct preview link opens the saved room and leaves regular game progress alone', () =>
+      location.hash === '#gioco' && document.querySelector('#g-count b').textContent === '10' && !localStorage.getItem('orbis-game'));
+  }
   console.log(`${fails.length ? 'FAILED: ' + fails.join('; ') : 'ALL PASSED'} | page errors: ${errs.length ? errs.join('\n') : 'none'}`);
   await browser.close(); server.close(); process.exit(fails.length || errs.length ? 1 : 0);
 });
+
+// A canvas can render every ingredient correctly and still hide the entire photograph.
+function visibleGlass() {
+  const scene = document.querySelector('#g-bench .ec-table');
+  const photo = scene && scene.querySelector('img');
+  const canvas = scene && scene.querySelector('canvas');
+  if (!photo || !photo.naturalWidth || !canvas) return false;
+  const style = getComputedStyle(canvas);
+  return style.backgroundImage === 'none' && style.backgroundColor === 'rgba(0, 0, 0, 0)';
+}
