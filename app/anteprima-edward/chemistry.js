@@ -1,7 +1,7 @@
 /* Painted workbenches for Edward's two other experiments. Loaded after Orbis' game.js. */
 (() => {
   'use strict';
-  const base = new URL('assets/', document.currentScript?.src || document.baseURI);
+  const base = new URL('assets/', edwardSceneRoot);
   const art = name => new URL(name + '.webp', base).href;
   const sprites=new Map();
   function sprite(name) {

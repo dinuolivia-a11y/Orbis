@@ -1,5 +1,5 @@
 /* Orbis service worker: keeps the app working offline. */
-const CACHE = "orbis-79bdcf9193";
+const CACHE = "orbis-8e5d4a8af087";
 const PRECACHE = [
   "./",
   "index.html",
@@ -261,39 +261,93 @@ const PRECACHE = [
   "img/wildass.webp",
   "img/xeno.webp",
   "img/xmastree.webp",
-  "img/yeti.webp"
+  "img/yeti.webp",
+  "anteprima-edward/room.css",
+  "anteprima-edward/volcano.css",
+  "anteprima-edward/chemistry.css",
+  "anteprima-edward/assets/bench-foam.webp",
+  "anteprima-edward/assets/bench.webp",
+  "anteprima-edward/assets/bicarbonate.webp",
+  "anteprima-edward/assets/cabbage.webp",
+  "anteprima-edward/assets/coin.webp",
+  "anteprima-edward/assets/cork.webp",
+  "anteprima-edward/assets/ed-glass.webp",
+  "anteprima-edward/assets/ed-lamp.webp",
+  "anteprima-edward/assets/ed-medal.webp",
+  "anteprima-edward/assets/ed-room-empty.webp",
+  "anteprima-edward/assets/ed-scope.webp",
+  "anteprima-edward/assets/ed-table.webp",
+  "anteprima-edward/assets/grape.webp",
+  "anteprima-edward/assets/honey.webp",
+  "anteprima-edward/assets/lemon.webp",
+  "anteprima-edward/assets/lock.webp",
+  "anteprima-edward/assets/oil.webp",
+  "anteprima-edward/assets/pour-bicarbonate.webp",
+  "anteprima-edward/assets/pour-salt.webp",
+  "anteprima-edward/assets/pour-vinegar.webp",
+  "anteprima-edward/assets/pour-water.webp",
+  "anteprima-edward/assets/reward-art.webp",
+  "anteprima-edward/assets/room-lit.webp",
+  "anteprima-edward/assets/room.webp",
+  "anteprima-edward/assets/salt.webp",
+  "anteprima-edward/assets/soap.webp",
+  "anteprima-edward/assets/tower.webp",
+  "anteprima-edward/assets/vinegar.webp",
+  "anteprima-edward/assets/water.webp"
 ];
+const scope = new URL(self.registration.scope);
+const preview = new URL("anteprima-edward/", scope).pathname;
+const listed = new Set(PRECACHE.map(path => new URL(path, scope).pathname));
 
-self.addEventListener("install", (e) => {
-  e.waitUntil(caches.open(CACHE).then((c) => c.addAll(PRECACHE)).then(() => self.skipWaiting()));
+self.addEventListener("install", event => {
+  // Fetch the release instead of reusing an older entry in the HTTP cache.
+  const requests = PRECACHE.map(path => new Request(new URL(path, scope), { cache: "reload" }));
+  event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(requests)).then(() => self.skipWaiting()));
 });
 
-self.addEventListener("activate", (e) => {
-  e.waitUntil(caches.keys()
-    .then((keys) => Promise.all(keys.filter((k) => k.startsWith("orbis-") && k !== CACHE).map((k) => caches.delete(k))))
+self.addEventListener("activate", event => {
+  event.waitUntil(caches.keys()
+    .then(keys => Promise.all(keys.filter(key => key.startsWith("orbis-") && key !== CACHE).map(key => caches.delete(key))))
     .then(() => self.clients.claim()));
 });
 
-function fromNetwork(req, key) {
-  return fetch(req).then((res) => {
-    if (res && res.ok && res.type === "basic") { const copy = res.clone(); caches.open(CACHE).then((c) => c.put(key || req, copy)); }
-    return res;
-  });
-}
-
-self.addEventListener("fetch", (e) => {
-  const req = e.request;
+self.addEventListener("fetch", event => {
+  const req = event.request;
   if (req.method !== "GET") return;
   const url = new URL(req.url);
-  if (url.origin !== self.location.origin) return;
-  if (url.href.startsWith(new URL("./anteprima-edward/", self.registration.scope).href)) return;
+  if (url.origin !== scope.origin) return;
+  // The independent preview has its own page. Only its shared production assets
+  // belong to this release's cache, including the CSS URLs with version queries.
+  const sharedWithPreview = url.pathname.startsWith(preview);
+  if (sharedWithPreview && !listed.has(url.pathname)) return;
   if (req.mode === "navigate") {
-    // Fresh page when online (so updates arrive), cached page when offline or slow.
-    const net = fromNetwork(req, "./");
-    const cached = caches.match("./");
-    const slow = new Promise((r) => setTimeout(r, 3500)).then(() => cached);
-    e.respondWith(Promise.race([net, slow]).then((res) => res || net).catch(() => cached.then((c) => c || Response.error())));
+    if (url.pathname !== scope.pathname && url.pathname !== new URL("index.html", scope).pathname) return;
+    event.respondWith(caches.open(CACHE).then(async cache => await cache.match("index.html") || fetch(req)));
     return;
   }
-  e.respondWith(caches.match(req, { ignoreSearch: true }).then((hit) => hit || fromNetwork(req)));
+  event.respondWith(caches.open(CACHE).then(async cache => {
+    if (sharedWithPreview && event.clientId) {
+      const client = await self.clients.get(event.clientId);
+      if (client && new URL(client.url).pathname.startsWith(preview)) {
+        // Preview edits may be newer than the installed edition. Do not put them
+        // in its cache. When offline both editions can use the released artwork.
+        try {
+          const fresh = await fetch(req, { cache: "no-cache" });
+          if (fresh.ok) return fresh;
+          return await cache.match(req, { ignoreSearch: true }) || fresh;
+        } catch (error) {
+          const offline = await cache.match(req, { ignoreSearch: true });
+          if (offline) return offline;
+          throw error;
+        }
+      }
+    }
+    const hit = await cache.match(req, { ignoreSearch: true });
+    if (hit) return hit;
+    const response = await fetch(req);
+    if (response.ok && response.type === "basic") {
+      event.waitUntil(cache.put(req, response.clone()).catch(() => {}));
+    }
+    return response;
+  }));
 });

@@ -1,7 +1,7 @@
 /* Edward's workbench. Coordinates are pixels in the original 1024 × 1536 painting. */
 (() => {
   "use strict";
-  const artBase = new URL('assets/', document.currentScript?.src || location.href);
+  const artBase = new URL('assets/', edwardSceneRoot);
   const art = name => new URL(name + '.webp', artBase).href;
   const ing = {
     acqua: {file:'water', label:['Acqua','Water'], liquid:true, rgb:[65,176,221], tip:[.99,.54]},

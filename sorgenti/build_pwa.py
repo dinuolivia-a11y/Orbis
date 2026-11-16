@@ -1,15 +1,23 @@
 #!/usr/bin/env python3
-"""Build the installable (PWA) version of Orbis from site/index.html into pwa/.
+"""Build the installable (PWA) version of Orbis from the checked-in site and assets.
 
 The artifact build (site/) keeps loading three.js and fonts from CDNs; this build
 serves everything locally so it works offline once installed.
 """
-import hashlib, json, os, re, shutil
+import argparse
+import json
+from pathlib import Path
+import shutil
 
-ROOT = "/home/claude/cosmo"
-SITE, OUT = f"{ROOT}/site", f"{ROOT}/pwa"
+from build_worker import build_worker
+from gioco.build_edward_preview import decorate_app
 
-src = open(f"{SITE}/index.html", encoding="utf-8").read()
+SOURCE = Path(__file__).resolve().parent
+APP = SOURCE.parent / "app"
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument("--output", type=Path, default=APP, help="PWA output directory")
+OUT = parser.parse_args().output.resolve()
+src = (SOURCE / "sito-index.html").read_text(encoding="utf-8")
 
 
 def sub1(old, new, s):
@@ -48,7 +56,7 @@ INSTALL_CSS = """
 /* ---------- install (PWA build only) ---------- */
 .corner #install{color:var(--sol);border-color:color-mix(in srgb,var(--sol) 55%,transparent)}
 .corner #install::before{content:"\\2193  "}
-.update{position:fixed;z-index:72;left:50%;top:calc(var(--bar-h) + 8px + env(safe-area-inset-top,0px));transform:translateX(-50%);display:flex;align-items:center;gap:12px;padding:8px 8px 8px 16px;border-radius:999px;background:var(--glass-solid);border:1px solid color-mix(in srgb,var(--sol) 55%,transparent);box-shadow:0 10px 30px rgba(0,0,0,.45);font-size:.9rem;white-space:nowrap;animation:rise .35s ease-out}
+.update{position:fixed;z-index:79;left:50%;top:calc(var(--bar-h) + 8px + env(safe-area-inset-top,0px));transform:translateX(-50%);display:flex;align-items:center;gap:12px;padding:8px 8px 8px 16px;border-radius:999px;background:var(--glass-solid);border:1px solid color-mix(in srgb,var(--sol) 55%,transparent);box-shadow:0 10px 30px rgba(0,0,0,.45);font-size:.9rem;white-space:nowrap;animation:rise .35s ease-out}
 .update[hidden]{display:none!important}
 .update::before{content:"\\2726";color:var(--sol)}
 .update button{padding:7px 14px;border-radius:999px;background:var(--sol);color:var(--void);font-weight:700;font-size:.85rem}
@@ -125,21 +133,8 @@ $("install").onclick = async () => {
 };
 window.addEventListener("beforeinstallprompt", (e) => { e.preventDefault(); installEvt = e; renderInstall(); });
 window.addEventListener("appinstalled", () => { installEvt = null; renderInstall(); toast(t(INS.done)); });
-$("update-go").onclick = () => location.reload();
-if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
-  window.addEventListener("load", () => {
-    navigator.serviceWorker.register("./sw.js").then((reg) => {
-      // A new version installed while Orbis was already open: offer to reload.
-      reg.addEventListener("updatefound", () => {
-        const nw = reg.installing; if (!nw) return;
-        nw.addEventListener("statechange", () => { if (nw.state === "installed" && navigator.serviceWorker.controller) $("update").hidden = false; });
-      });
-      // Apps left open in the background check again when they come back to the front.
-      document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible") reg.update().catch(() => {}); });
-    }).catch(() => {});
-  });
-}
 '''
+INSTALL_JS += (SOURCE / "pwa-update.js").read_text(encoding="utf-8")
 body = sub1("\nresize();\nsetLang(LANG);\nroute();\nloop();", "\n" + INSTALL_JS + "\nresize();\nsetLang(LANG);\nroute();\nloop();", body)
 
 html = HEAD + style + "\n</head>\n<body>\n" + body.lstrip("\n")
@@ -147,12 +142,17 @@ if not html.rstrip().endswith("</html>"):
     html = html.rstrip() + "\n</body>\n</html>\n"
 assert "cdn.jsdelivr" not in html and "fonts.googleapis" not in html
 
-# ---------- copy assets ----------
-for d in ("tex", "photos", "img"):
-    if os.path.isdir(f"{SITE}/{d}"):
-        shutil.rmtree(f"{OUT}/{d}", ignore_errors=True)  # keep the build in step with the site (removed images go too)
-        shutil.copytree(f"{SITE}/{d}", f"{OUT}/{d}")
-open(f"{OUT}/index.html", "w", encoding="utf-8").write(html)
+# The repository ships its local fonts, textures and game artwork in app/.
+# A separate build directory receives the same files for testing or publication.
+if OUT != APP:
+    if APP in OUT.parents:
+        raise ValueError("Choose app itself or an output directory outside app")
+    OUT.mkdir(parents=True, exist_ok=True)
+    for d in ("fonts", "icons", "img", "photos", "screens", "tex", "vendor", "anteprima-edward"):
+        shutil.copytree(APP / d, OUT / d, dirs_exist_ok=True)
+    shutil.copyfile(APP / ".nojekyll", OUT / ".nojekyll")
+html = decorate_app(html, OUT / "anteprima-edward")
+(OUT / "index.html").write_bytes(html.encode("utf-8"))
 
 # ---------- manifest ----------
 manifest = {
@@ -176,7 +176,7 @@ manifest = {
         {"src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"},
     ],
 }
-shots = sorted(f for f in os.listdir(f"{OUT}/screens") if f.endswith(".webp")) if os.path.isdir(f"{OUT}/screens") else []
+shots = sorted(p.name for p in (OUT / "screens").glob("*.webp"))
 if shots:
     from PIL import Image
     manifest["screenshots"] = []
@@ -186,56 +186,5 @@ if shots:
 json.dump(manifest, open(f"{OUT}/manifest.webmanifest", "w", encoding="utf-8"), ensure_ascii=False, indent=2)
 
 # ---------- service worker ----------
-pre = ["./", "index.html", "manifest.webmanifest", "fonts/fonts.css", "vendor/three.module.min.js", "vendor/addons/controls/OrbitControls.js"]
-pre += [f"fonts/{f}" for f in sorted(os.listdir(f"{OUT}/fonts")) if f.endswith(".woff2")]
-pre += [f"icons/{f}" for f in sorted(os.listdir(f"{OUT}/icons"))]
-pre += [f"tex/{f}" for f in sorted(os.listdir(f"{OUT}/tex"))]
-pre += [f"photos/{f}" for f in sorted(os.listdir(f"{OUT}/photos")) if f.endswith("-s.webp")]
-if os.path.isdir(f"{OUT}/img"):
-    pre += [f"img/{f}" for f in sorted(os.listdir(f"{OUT}/img")) if f.endswith(".webp")]
-h = hashlib.sha256()
-for p in pre[1:]:
-    h.update(p.encode()); h.update(open(f"{OUT}/{p}", "rb").read())
-version = h.hexdigest()[:10]
-
-SW = """/* Orbis service worker: keeps the app working offline. */
-const CACHE = "orbis-%s";
-const PRECACHE = %s;
-
-self.addEventListener("install", (e) => {
-  e.waitUntil(caches.open(CACHE).then((c) => c.addAll(PRECACHE)).then(() => self.skipWaiting()));
-});
-
-self.addEventListener("activate", (e) => {
-  e.waitUntil(caches.keys()
-    .then((keys) => Promise.all(keys.filter((k) => k.startsWith("orbis-") && k !== CACHE).map((k) => caches.delete(k))))
-    .then(() => self.clients.claim()));
-});
-
-function fromNetwork(req, key) {
-  return fetch(req).then((res) => {
-    if (res && res.ok && res.type === "basic") { const copy = res.clone(); caches.open(CACHE).then((c) => c.put(key || req, copy)); }
-    return res;
-  });
-}
-
-self.addEventListener("fetch", (e) => {
-  const req = e.request;
-  if (req.method !== "GET") return;
-  const url = new URL(req.url);
-  if (url.origin !== self.location.origin) return;
-  if (url.href.startsWith(new URL("./anteprima-edward/", self.registration.scope).href)) return;
-  if (req.mode === "navigate") {
-    // Fresh page when online (so updates arrive), cached page when offline or slow.
-    const net = fromNetwork(req, "./");
-    const cached = caches.match("./");
-    const slow = new Promise((r) => setTimeout(r, 3500)).then(() => cached);
-    e.respondWith(Promise.race([net, slow]).then((res) => res || net).catch(() => cached.then((c) => c || Response.error())));
-    return;
-  }
-  e.respondWith(caches.match(req, { ignoreSearch: true }).then((hit) => hit || fromNetwork(req)));
-});
-""" % (version, json.dumps(pre, indent=2))
-open(f"{OUT}/sw.js", "w", encoding="utf-8").write(SW)
-size = sum(os.path.getsize(f"{OUT}/{p}") for p in pre[1:])
-print(f"built pwa: index {len(html)//1024} KB, precache {len(pre)} files {size/1e6:.1f} MB, version {version}")
+version, count, size = build_worker(OUT)
+print(f"built pwa: index {len(html)//1024} KB, precache {count} files {size/1e6:.1f} MB, version {version}")

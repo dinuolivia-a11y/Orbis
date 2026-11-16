@@ -1,6 +1,6 @@
 // The whole game, played from start to finish on a phone, in the built app (the app/ folder).
 // Run: node sorgenti/gioco/test_game.js [folder for screenshots] [it|en]
-// Set ORBIS_EDWARD_PREVIEW=1 for the illustrated edition, ORBIS_TEST_URL to test a live copy.
+// Set ORBIS_EDWARD_PREVIEW=1 for the separate preview, ORBIS_TEST_URL to test a live copy.
 // It needs Playwright for Node. It prints PASS or FAIL for each check and ends with an error if one fails.
 const http = require('http'), fs = require('fs'), path = require('path');
 const { chromium } = require('playwright');
@@ -62,7 +62,7 @@ server.listen(0, '127.0.0.1', async () => {
   await check('the professor has said hello once', key => JSON.parse(localStorage.getItem(key)).said === 0 && document.getElementById('g-talk').hidden, progressKey);
   await pg.click('#g-rooms'); await w(500); await shot('rooms');
   await check('rooms: one open, three coming', () => document.querySelectorAll('.g-rooms li').length === 4 && document.querySelectorAll('.g-rooms li.lock').length === 3);
-  if (preview) await check('rewards appear after the first win', () => !document.getElementById('ed-replay'));
+  await check('rewards appear after the first win', () => !document.getElementById('ed-replay'));
   await pg.click('#g-modal-x'); await w(200);
   // 1 the foam volcano
   await pg.click('#g-play'); await w(400); await shot('bet');
@@ -71,17 +71,15 @@ server.listen(0, '127.0.0.1', async () => {
   await check('water + salt: no reaction', () => document.getElementById('g-doneline').hidden);
   await pg.click('#g-empty'); await pg.click('.g-in[data-k="bicarbonato"]'); await w(1000); await shot('bench');
   await pg.click('.g-in[data-k="aceto"]'); await w(2300); await shot('foam'); await w(1500);
-  if (preview) {
-    await shot('foam_rising');
-    await pg.waitForSelector('#g-doneline:visible', {timeout: 20000});
-    await shot('foam_overflow');
-  }
+  await shot('foam_rising');
+  await pg.waitForSelector('#g-doneline:visible', {timeout: 20000});
+  await shot('foam_overflow');
   await check('volcano: mission accomplished', () => !document.getElementById('g-doneline').hidden);
   await pg.click('#g-learn'); await w(1300); await shot('find_out'); await stars('vulcano', 2);
   await pg.click('#g-next'); await w(2300); await shot('cutscene_lamp');
   await check('cutscene: the lamp is on', () => document.querySelector('.g-room').classList.contains('s1'));
   await settle('professor_1'); await shot('room_1');
-  if (preview) await reviewRewards(1);
+  await reviewRewards(1);
   // 2 the lock, with a trip to a lesson and back
   await pg.click('#g-play'); await w(400);
   await pg.click('[data-where="0"]'); await w(200); await shot('lock');
@@ -96,7 +94,7 @@ server.listen(0, '127.0.0.1', async () => {
   // 3 the colour-changing juice (wrong bet on purpose: one star)
   await pg.click('#g-play'); await w(400); await pg.click('.g-opt[data-i="0"]'); await pg.click('#g-go'); await w(500);
   await pg.click('.g-in[data-k="limone"]'); await w(1800); await shot('juice_pink');
-  if (preview) await check('cabbage: the photographed flask is visible behind the liquid', visibleGlass);
+  await check('cabbage: the photographed flask is visible behind the liquid', visibleGlass);
   await pg.click('#g-empty'); await pg.click('.g-in[data-k="bicarbonato"]'); await w(1800); await pg.click('.g-in[data-k="sapone"]'); await w(3600);
   await check('juice: four colours found', () => !document.getElementById('g-doneline').hidden);
   await pg.click('#g-learn'); await w(600); await stars('cavolo', 1);
@@ -113,22 +111,23 @@ server.listen(0, '127.0.0.1', async () => {
   for (const k of ['olio', 'acqua', 'miele']) { await pg.click(`.g-in[data-k="${k}"]`); await w(1300); }
   for (const k of ['moneta', 'uva', 'tappo']) { await pg.click(`.g-in[data-k="${k}"]`); await w(500); }
   await w(1700); await shot('tower'); await w(1300);
-  if (preview) await check('density tower: the photographed glass is visible behind the layers', visibleGlass);
+  await check('density tower: the photographed glass is visible behind the layers', visibleGlass);
   await check('tower: mission accomplished', () => !document.getElementById('g-doneline').hidden);
   await pg.click('#g-learn'); await w(600); await stars('torre', 2);
   await pg.click('#g-next'); await w(2500); await shot('cutscene_badge'); await settle('professor_5'); await shot('room_5');
   await check('room complete: 10 stars, nothing left to play', () => document.querySelector('#g-count b').textContent === '10' && !document.getElementById('g-play') && document.querySelector('.g-room').classList.contains('s5'));
-  if (preview) await reviewRewards(5);
+  await reviewRewards(5);
   // leave, come back: the room again, and the professor does not repeat himself
   await pg.click('#g-back'); await w(600); await check('back in the lessons', () => document.getElementById('game').hidden && location.hash === '#lezioni');
   await pg.click('#g-banner'); await settle(); await check('second visit: no speech again', () => document.getElementById('g-talk').hidden && !document.getElementById('game').hidden);
   await pg.click('.g-step button[data-id="vulcano"]'); await w(400); await check('a finished step can be played again', () => !!document.querySelector('.g-opt'));
-  if (preview) {
-    await pg.goto(BASE.split('#')[0]);
-    await pg.waitForSelector('.g-room.s5');
-    await check('direct preview link opens the saved room and leaves regular game progress alone', () =>
-      location.hash === '#gioco' && document.querySelector('#g-count b').textContent === '10' && !localStorage.getItem('orbis-game'));
-  }
+  const directRoom = BASE.split('#')[0] + (preview ? '' : '#gioco');
+  await pg.goto('about:blank');
+  await pg.goto(directRoom);
+  await pg.waitForSelector('.g-room.s5');
+  const otherKey = preview ? 'orbis-game' : 'orbis-game-edward-preview-v2';
+  await check('direct room link restores the score and keeps editions separate', key =>
+    location.hash === '#gioco' && document.querySelector('#g-count b').textContent === '10' && !localStorage.getItem(key), otherKey);
   console.log(`${fails.length ? 'FAILED: ' + fails.join('; ') : 'ALL PASSED'} | page errors: ${errs.length ? errs.join('\n') : 'none'}`);
   await browser.close(); server.close(); process.exit(fails.length || errs.length ? 1 : 0);
 });

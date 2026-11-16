@@ -1,8 +1,8 @@
 /* Stage dressing for Edward’s laboratory. The original game owns every decision,
    score, clue, navigation event and save; the artwork follows those decisions. */
 (() => {
-  const assets = new URL("./assets/", location.href);
-  const tex = new URL("../tex/", location.href);
+  const assets = new URL("assets/", edwardSceneRoot);
+  const tex = new URL("../tex/", edwardSceneRoot);
   const art = name => new URL(name, assets).href;
   // Each piece is a registered part of the same finished painting, including its
   // contact shadows and reflections on the furniture already in the empty room.
