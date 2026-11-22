@@ -684,6 +684,7 @@ p{margin:0}
 .pay-code button{padding:10px 16px;border-radius:12px;border:1px solid var(--hair);font-weight:700}
 .pay-msg{min-height:1.2em;font-size:.88rem;color:var(--mist)}
 .pay-msg.bad{color:#ff9b8f}
+.pay-thecode{font-family:var(--mono);font-size:1.6rem;letter-spacing:.12em;text-align:center;color:var(--sol);padding:14px;border:1px dashed color-mix(in srgb,var(--sol) 55%,transparent);border-radius:14px;user-select:all}
 .pay-legal{font-size:.78rem;color:var(--mist);line-height:1.45}
 .pay-legal a{color:var(--mist)}
 .l-card.locked .l-title,.l-card.locked .l-hook{opacity:.7}
@@ -4483,6 +4484,11 @@ const PUI = {
   codeBad: { it: "Questo codice non funziona. Controlla l’email della ricevuta.", en: "This code does not work. Check your receipt email." },
   codeOff: { it: "Serve internet per controllare il codice.", en: "You need the internet to check the code." },
   done: { it: "Orbis completo è sbloccato. Buon viaggio!", en: "Orbis complete is unlocked. Enjoy the journey!" },
+  thanks: { it: "Grazie! Orbis completo è aperto", en: "Thank you! Orbis complete is open" },
+  thanksText: { it: "Su questo dispositivo non devi fare niente: è già tutto sbloccato. Per aprire Orbis completo anche su un altro telefono, tablet o computer della famiglia, usa questo codice. Lo trovi anche nell’email della ricevuta.", en: "On this device there is nothing to do: everything is already unlocked. To open Orbis complete on another phone, tablet or computer in the family, use this code. It is also in your receipt email." },
+  copy: { it: "Copia il codice", en: "Copy the code" },
+  copied: { it: "Copiato ✓", en: "Copied ✓" },
+  explore: { it: "Inizia a esplorare", en: "Start exploring" },
   legal: { it: "Il pagamento è gestito da Stripe. Con l’acquisto accetti le <a href=\"condizioni.html\" target=\"_blank\" rel=\"noopener\">condizioni</a>; leggi l’<a href=\"privacy.html\" target=\"_blank\" rel=\"noopener\">informativa privacy</a>.", en: "Payment is handled by Stripe. By buying you accept the <a href=\"condizioni.html\" target=\"_blank\" rel=\"noopener\">terms</a>; read the <a href=\"privacy.html\" target=\"_blank\" rel=\"noopener\">privacy notice</a>." },
   invite: { it: "Le lezioni con il lucchetto si aprono con <b>Orbis completo</b>.", en: "Lessons with a lock open with <b>Orbis complete</b>." },
   inviteGo: { it: "Scopri", en: "Find out" },
@@ -4542,9 +4548,21 @@ async function payRedeem(code, quiet) {
   } catch (e) { if (!quiet) payMsg(t(PUI.codeOff), true); }
   return false;
 }
-function payUnlocked() {
-  closePay(); toast(t(PUI.done)); renderOwner();
+function payUnlocked(code) {
+  renderOwner();
+  if (code) { payThanks(code); } else { closePay(); toast(t(PUI.done)); }
   if (!$("lessons").hidden) { if (lessonOpen) renderLesson(lessonOpen); else renderLessonList(); }
+}
+function payThanks(code) {
+  $("pay-card").innerHTML = `<button type="button" class="x" id="pay-x" aria-label="${esc(t(UI.close))}">×</button>
+    <p class="pay-eyebrow">${esc(t(PUI.eyebrow))}</p><h2 id="pay-h">${esc(t(PUI.thanks))}</h2>
+    <p class="pay-why">${esc(t(PUI.thanksText))}</p>
+    <p class="pay-thecode" id="pay-thecode">${esc(code)}</p>
+    <button type="button" class="cta ghost" id="pay-copy">${esc(t(PUI.copy))}</button>
+    <button type="button" class="cta" id="pay-go">${esc(t(PUI.explore))}</button>`;
+  $("pay").hidden = false;
+  $("pay-x").onclick = closePay; $("pay-go").onclick = closePay;
+  $("pay-copy").onclick = async () => { try { await navigator.clipboard.writeText(code); $("pay-copy").textContent = t(PUI.copied); } catch (e) {} };
 }
 function renderOwner() { $("open-lab").hidden = !PAY.owner(); }
 /* Back from Stripe: orbis/?sessione=cs_… — the server turns the paid session into a pass. */
@@ -4554,7 +4572,7 @@ function renderOwner() { $("open-lab").hidden = !PAY.owner(); }
   try { history.replaceState(null, "", location.pathname + location.hash); } catch (e) {}
   if (code) { payRedeem(code, true); return; }
   fetch("api/unlock", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ session: sid }) })
-    .then((r) => r.ok ? r.json() : null).then((j) => { if (j && j.pass) { PAY.save(j.pass); payUnlocked(); } }).catch(() => {});
+    .then((r) => r.ok ? r.json() : null).then((j) => { if (j && j.pass) { PAY.save(j.pass); payUnlocked(j.code); } }).catch(() => {});
 })();
 renderOwner();
 

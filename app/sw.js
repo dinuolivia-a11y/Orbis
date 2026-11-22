@@ -1,5 +1,5 @@
 /* Orbis service worker: keeps the app working offline. */
-const CACHE = "orbis-082ecbbacd28";
+const CACHE = "orbis-e938524786f9";
 const PRECACHE = [
   "./",
   "index.html",

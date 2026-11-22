@@ -5,6 +5,12 @@ const { chromium } = require('playwright');
 const ROOT = path.join(__dirname, '..', 'app'), OUT = process.argv[2] || '';
 const MIME = { html: 'text/html; charset=utf-8', js: 'text/javascript', css: 'text/css', json: 'application/json', webmanifest: 'application/manifest+json', webp: 'image/webp', png: 'image/png', jpg: 'image/jpeg', svg: 'image/svg+xml', ico: 'image/x-icon', woff2: 'font/woff2' };
 const server = http.createServer((req, res) => {
+  if (req.method === 'POST' && req.url === '/api/unlock') {   // a pretend server: the paid session cs_paid
+    let b = ''; req.on('data', (c) => b += c); req.on('end', () => {
+      const q = JSON.parse(b || '{}'), ok = q.session === 'cs_paid';
+      res.writeHead(ok ? 200 : 404, { 'Content-Type': 'application/json' }); res.end(JSON.stringify(ok ? { pass: { t: 'x.y', code: 'ORB-7KQ4-M2XD' }, code: 'ORB-7KQ4-M2XD' } : { error: 'no' }));
+    }); return;
+  }
   const f = path.join(ROOT, decodeURIComponent(req.url.split('?')[0]).replace(/\/$/, '/index.html'));
   if (!f.startsWith(ROOT) || !fs.existsSync(f) || fs.statSync(f).isDirectory()) { res.writeHead(404); res.end(); return; }
   res.writeHead(200, { 'Content-Type': MIME[f.split('.').pop()] || 'application/octet-stream' }); fs.createReadStream(f).pipe(res);
@@ -44,7 +50,10 @@ server.listen(0, '127.0.0.1', async () => {
   await open('#gioco');
   await check('the first room of the game is free', () => !document.getElementById('game').hidden && document.getElementById('pay').hidden);
 
-  await pg.evaluate(() => localStorage.setItem('orbis-pass', JSON.stringify({ t: 'test' })));
+  await pg.goto('about:blank'); await pg.goto(BASE.replace('index.html', '') + '?sessione=cs_paid#sistema'); await pg.waitForTimeout(2500);
+  await check('back from Stripe it unlocks by itself and shows the code', () => !document.getElementById('pay').hidden && document.getElementById('pay-thecode').textContent === 'ORB-7KQ4-M2XD' && !location.search && !!localStorage.getItem('orbis-pass'));
+  await shot('grazie');
+  await pg.click('#pay-go');
   await open('#lezioni');
   await check('with Orbis completo nothing is locked', () => !document.querySelector('.l-card.locked') && !document.getElementById('l-invite'));
   await open('#oceano');
