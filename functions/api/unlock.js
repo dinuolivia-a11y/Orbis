@@ -1,34 +1,28 @@
-// POST /api/unlock with
-//   { session: "cs_…" }  coming back from Stripe: unlocks at once if the payment went through;
-//   { code: "ORB-…" }    on another device: the buyer's code, or the owner's code.
-// Answers { pass, code, owner } or 404.
-import { json, stripe, cleanCode, makePass, configured } from "../../server/orbis.js";
+// POST /api/unlock
+//   { session: "cs_…" }  coming back from Stripe: unlocks at once, only the first time
+//                        (the payment is then marked as claimed, so the link is useless to others);
+//   { idToken }          signing in with Google on any device: unlocks if that account paid.
+import { json, stripe, googleUser, isOwner, paidPayment, makePass, configured } from "../../server/orbis.js";
 
 export async function onRequestPost({ request, env }) {
   if (!configured(env)) return json({ error: "not ready" }, 503);
   let body = {};
   try { body = await request.json(); } catch (e) {}
-
-  if (env.OWNER_CODE && typeof body.code === "string" && body.code.trim().toUpperCase() === env.OWNER_CODE.trim().toUpperCase()) {
-    return json({ pass: { t: await makePass(env, "owner"), owner: true }, owner: true });
-  }
-
   try {
-    if (typeof body.session === "string" && /^cs_[A-Za-z0-9_]+$/.test(body.session)) {
-      const s = await stripe(env, "GET", "checkout/sessions/" + body.session);
-      if (s.payment_status === "paid" && s.metadata && s.metadata.orbis_code) {
-        const code = s.metadata.orbis_code;
-        return json({ pass: { t: await makePass(env, code), code }, code });
-      }
-      return json({ error: "not paid" }, 404);
+    if (typeof body.session === "string" && /^cs_[A-Za-z0-9_]{10,200}$/.test(body.session)) {
+      const s = await stripe(env, "GET", "checkout/sessions/" + body.session, { "expand[]": "payment_intent" });
+      const pi = s.payment_intent, sub = s.metadata && s.metadata.orbis_sub;
+      if (s.payment_status !== "paid" || !pi || !sub) return json({ error: "not paid" }, 404);
+      if (pi.metadata && pi.metadata.orbis_claimed) return json({ error: "sign in" }, 409);
+      await stripe(env, "POST", "payment_intents/" + pi.id, { "metadata[orbis_claimed]": new Date().toISOString() });
+      return json({ pass: await makePass(env, sub) });
     }
-    const code = cleanCode(body.code);
-    if (code) {
-      const r = await stripe(env, "GET", "payment_intents/search", { query: `metadata['orbis_code']:'${code}' AND status:'succeeded'`, limit: "1" });
-      if (r.data && r.data.length) return json({ pass: { t: await makePass(env, code), code }, code });
-    }
+    const user = await googleUser(env, body.idToken);
+    if (!user) return json({ error: "sign in" }, 401);
+    if (isOwner(env, user)) return json({ pass: await makePass(env, user.sub, true) });
+    if (await paidPayment(env, user.sub)) return json({ pass: await makePass(env, user.sub) });
+    return json({ error: "not paid" }, 404);
   } catch (e) {
     return json({ error: "stripe" }, 502);
   }
-  return json({ error: "unknown code" }, 404);
 }

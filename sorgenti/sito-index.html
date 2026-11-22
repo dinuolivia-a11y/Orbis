@@ -676,15 +676,11 @@ p{margin:0}
 .pay-price s{color:var(--mist)}
 .pay-price span{color:var(--mist);font-size:.88rem;flex-basis:100%}
 .pay-card .cta{align-self:stretch;justify-content:center;padding:14px 18px;font-size:1.02rem}
-.pay-card .cta[disabled]{opacity:.6;cursor:wait}
-.pay-code{border-top:1px solid var(--hair);padding-top:12px;display:flex;flex-direction:column;gap:8px}
-.pay-code summary{cursor:pointer;color:var(--mist);font-size:.92rem}
-.pay-code form{display:flex;gap:8px;margin-top:8px}
-.pay-code input{flex:1;min-width:0;font:inherit;font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink);background:rgba(255,255,255,.05);border:1px solid var(--hair);border-radius:12px;padding:10px 12px}
-.pay-code button{padding:10px 16px;border-radius:12px;border:1px solid var(--hair);font-weight:700}
-.pay-msg{min-height:1.2em;font-size:.88rem;color:var(--mist)}
+.pay-how{color:#c4cad6;font-size:.92rem;line-height:1.45}
+.pay-google{min-height:44px;display:flex;justify-content:center;align-items:center}
+.pay-wait{color:var(--mist);font-size:.9rem}
+.pay-msg{min-height:1.2em;font-size:.88rem;color:var(--mist);text-align:center}
 .pay-msg.bad{color:#ff9b8f}
-.pay-thecode{font-family:var(--mono);font-size:1.6rem;letter-spacing:.12em;text-align:center;color:var(--sol);padding:14px;border:1px dashed color-mix(in srgb,var(--sol) 55%,transparent);border-radius:14px;user-select:all}
 .pay-legal{font-size:.78rem;color:var(--mist);line-height:1.45}
 .pay-legal a{color:var(--mist)}
 .l-card.locked .l-title,.l-card.locked .l-hook{opacity:.7}
@@ -4457,7 +4453,9 @@ function route() {
    Free for everyone: the solar system, the Earth seen from space, the galaxies, the exoplanets,
    the curiosities, the first room of the game and the lessons that room needs.
    One payment unlocks the rest: every descent on Earth, every lesson, the next rooms.
-   The unlock is a signed pass from the server, kept on the device (orbis-pass).
+   Orbis completo belongs to a Google account: sign in with it on any device and it opens.
+   The server (functions/api) checks the account with Google and the payment with Stripe and
+   answers with a signed pass, kept on the device (orbis-pass). No codes to pass around.
    ========================================================= */
 const PAY_PRICE = { now: "4,99 €", was: "6,99 €" };
 const LOCK_SVG = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2" fill="currentColor"/><path d="M8 11V8a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="2"/></svg>';
@@ -4474,20 +4472,15 @@ const PUI = {
     it: (d, c, l) => [`<b>${d} discese sulla Terra</b>: abissi, foreste, deserti e montagne, con ${c} creature vere`, `<b>Tutte le ${l} lezioni di scienza</b>, con esperimenti e approfondimenti`, `<b>Tutte le stanze del gioco</b> «Il Laboratorio», man mano che arrivano`, `<b>Le novità future</b> comprese nel prezzo`],
     en: (d, c, l) => [`<b>${d} descents on Earth</b>: abysses, forests, deserts and mountains, with ${c} real creatures`, `<b>All ${l} science lessons</b>, with experiments and deep dives`, `<b>Every room of the game</b> “The Laboratory”, as they arrive`, `<b>Future additions</b> included in the price`]
   },
-  launch: { it: "Prezzo di lancio. Si paga una volta sola: niente abbonamenti. Vale per tutta la famiglia.", en: "Launch price. Pay once: no subscription. For the whole family." },
-  buy: { it: "Sblocca Orbis completo", en: "Unlock Orbis complete" },
+  launch: { it: "Prezzo di lancio. Si paga una volta sola: niente abbonamenti.", en: "Launch price. Pay once: no subscription." },
+  how: { it: "Accedi con il tuo account Google. Se hai già Orbis completo si apre subito, altrimenti passi al pagamento. Sarà tuo su tutti i dispositivi dove usi lo stesso account.", en: "Sign in with your Google account. If you already have Orbis complete it opens at once, otherwise you go on to payment. It will be yours on every device where you use the same account." },
   wait: { it: "Un momento…", en: "One moment…" },
   soon: { it: "Gli acquisti apriranno a breve. Torna a trovarci!", en: "Purchases open soon. Come back and see us!" },
-  have: { it: "Hai già acquistato? Inserisci il codice", en: "Already bought it? Enter your code" },
-  codePh: { it: "Il tuo codice", en: "Your code" },
-  codeGo: { it: "Sblocca", en: "Unlock" },
-  codeBad: { it: "Questo codice non funziona. Controlla l’email della ricevuta.", en: "This code does not work. Check your receipt email." },
-  codeOff: { it: "Serve internet per controllare il codice.", en: "You need the internet to check the code." },
-  done: { it: "Orbis completo è sbloccato. Buon viaggio!", en: "Orbis complete is unlocked. Enjoy the journey!" },
+  offline: { it: "Serve internet per accedere e acquistare.", en: "You need the internet to sign in and buy." },
+  failed: { it: "Qualcosa non ha funzionato. Riprova tra poco.", en: "Something went wrong. Please try again shortly." },
+  done: { it: "Orbis completo è aperto. Buon viaggio!", en: "Orbis complete is open. Enjoy the journey!" },
   thanks: { it: "Grazie! Orbis completo è aperto", en: "Thank you! Orbis complete is open" },
-  thanksText: { it: "Su questo dispositivo non devi fare niente: è già tutto sbloccato. Per aprire Orbis completo anche su un altro telefono, tablet o computer della famiglia, usa questo codice. Lo trovi anche nell’email della ricevuta.", en: "On this device there is nothing to do: everything is already unlocked. To open Orbis complete on another phone, tablet or computer in the family, use this code. It is also in your receipt email." },
-  copy: { it: "Copia il codice", en: "Copy the code" },
-  copied: { it: "Copiato ✓", en: "Copied ✓" },
+  thanksText: { it: "Su questo dispositivo è già tutto sbloccato. Sugli altri tuoi dispositivi basta accedere con lo stesso account Google.", en: "Everything is already unlocked on this device. On your other devices just sign in with the same Google account." },
   explore: { it: "Inizia a esplorare", en: "Start exploring" },
   legal: { it: "Il pagamento è gestito da Stripe. Con l’acquisto accetti le <a href=\"condizioni.html\" target=\"_blank\" rel=\"noopener\">condizioni</a>; leggi l’<a href=\"privacy.html\" target=\"_blank\" rel=\"noopener\">informativa privacy</a>.", en: "Payment is handled by Stripe. By buying you accept the <a href=\"condizioni.html\" target=\"_blank\" rel=\"noopener\">terms</a>; read the <a href=\"privacy.html\" target=\"_blank\" rel=\"noopener\">privacy notice</a>." },
   invite: { it: "Le lezioni con il lucchetto si aprono con <b>Orbis completo</b>.", en: "Lessons with a lock open with <b>Orbis complete</b>." },
@@ -4500,12 +4493,22 @@ const PAY = {
   owner() { const p = PAY.pass(); return !!(p && p.owner); },
   save(p) { try { localStorage.setItem("orbis-pass", JSON.stringify(p)); } catch (e) {} }
 };
-let payWhy = "info";
+let payWhy = "info", payCfg = null, gsiLoading = null;
 let gameLessons = null;   // the lessons the free room of the game sends you to stay free
 function lessonFree(id) { if (PAY.full()) return true; if (!gameLessons) gameLessons = JSON.stringify(GAME_STEPS); return gameLessons.includes(`"lesson":"${id}"`); }
 function payCounts() {
   const d = Object.keys(DIVES).length, c = Object.values(DIVES).reduce((n, x) => n + x.creatures.length, 0);
   return [d, c, LESSONS.length];
+}
+async function payConfig() {
+  if (payCfg && payCfg.ready) return payCfg;
+  try { const r = await fetch("api/config", { cache: "no-store" }); payCfg = r.ok ? await r.json() : { ready: false }; } catch (e) { payCfg = { ready: false, offline: true }; }
+  return payCfg;
+}
+function loadGsi() {   // Google's «Sign in with Google» script, only when someone wants to buy
+  if (window.google && google.accounts && google.accounts.id) return Promise.resolve();
+  if (!gsiLoading) gsiLoading = new Promise((ok, ko) => { const s = document.createElement("script"); s.src = "https://accounts.google.com/gsi/client"; s.async = true; s.onload = ok; s.onerror = () => { gsiLoading = null; ko(new Error("gsi")); }; document.head.appendChild(s); });
+  return gsiLoading;
 }
 function renderPay() {
   const gets = PUI.gets[LANG](...payCounts());
@@ -4514,65 +4517,59 @@ function renderPay() {
     <p class="pay-why">${esc(t(PUI.why[payWhy] || PUI.why.info))}</p>
     <ul class="pay-list">${gets.map((g) => `<li><span>${g}</span></li>`).join("")}</ul>
     <div class="pay-price"><strong>${PAY_PRICE.now}</strong><s>${PAY_PRICE.was}</s><span>${esc(t(PUI.launch))}</span></div>
-    <button type="button" class="cta" id="pay-buy">${esc(t(PUI.buy))}</button>
+    <p class="pay-how">${esc(t(PUI.how))}</p>
+    <div class="pay-google" id="pay-google" aria-live="polite"><span class="pay-wait">${esc(t(PUI.wait))}</span></div>
     <p class="pay-msg" id="pay-msg" role="status"></p>
-    <details class="pay-code"><summary>${esc(t(PUI.have))}</summary>
-      <form id="pay-form"><input id="pay-in" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="${esc(t(PUI.codePh))}" aria-label="${esc(t(PUI.codePh))}"><button type="submit">${esc(t(PUI.codeGo))}</button></form></details>
     <p class="pay-legal">${t(PUI.legal)}</p>`;
   $("pay-x").onclick = closePay;
-  $("pay-buy").onclick = payBuy;
-  $("pay-form").onsubmit = (e) => { e.preventDefault(); payRedeem($("pay-in").value); };
+  payButton();
 }
-function showPay(why) { payWhy = why || "info"; renderPay(); $("pay").hidden = false; $("pay-buy").focus({ preventScroll: true }); }
+async function payButton() {
+  const box = $("pay-google"), cfg = await payConfig();
+  if (!box || !box.isConnected) return;
+  if (!cfg.ready) { box.innerHTML = ""; payMsg(t(cfg.offline && navigator.onLine === false ? PUI.offline : PUI.soon)); return; }
+  try { await loadGsi(); } catch (e) { box.innerHTML = ""; payMsg(t(PUI.offline)); return; }
+  if (!box.isConnected) return;
+  google.accounts.id.initialize({ client_id: cfg.google, callback: (r) => paySignedIn(r.credential), ux_mode: "popup", context: "signin", itp_support: true });
+  box.innerHTML = "";
+  google.accounts.id.renderButton(box, { type: "standard", theme: "filled_black", size: "large", shape: "pill", text: "continue_with", width: Math.min(320, box.clientWidth || 300), locale: LANG });
+}
+async function paySignedIn(idToken) {
+  payMsg(t(PUI.wait));
+  try {
+    const r = await fetch("api/checkout", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ idToken, lang: LANG }) });
+    const j = r.ok ? await r.json() : null;
+    if (j && j.pass) { PAY.save(j.pass); payUnlocked(false); return; }
+    if (j && j.url) { location.href = j.url; return; }
+    payMsg(t(PUI.failed), true);
+  } catch (e) { payMsg(t(navigator.onLine === false ? PUI.offline : PUI.failed), true); }
+}
+function showPay(why) { payWhy = why || "info"; renderPay(); $("pay").hidden = false; $("pay-x").focus({ preventScroll: true }); }
 function closePay() { $("pay").hidden = true; }
 $("pay").addEventListener("click", (e) => { if (e.target === $("pay")) closePay(); });
 document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !$("pay").hidden) closePay(); });
 function payMsg(txt, bad) { const m = $("pay-msg"); if (m) { m.textContent = txt; m.classList.toggle("bad", !!bad); } }
-async function payBuy() {
-  const b = $("pay-buy"); b.disabled = true; b.textContent = t(PUI.wait); payMsg("");
-  try {
-    const r = await fetch("api/checkout", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ lang: LANG }) });
-    const j = r.ok ? await r.json() : null;
-    if (j && j.url) { location.href = j.url; return; }
-    payMsg(t(PUI.soon));
-  } catch (e) { payMsg(t(navigator.onLine === false ? PUI.codeOff : PUI.soon)); }
-  b.disabled = false; b.textContent = t(PUI.buy);
-}
-async function payRedeem(code, quiet) {
-  code = String(code || "").trim(); if (!code) return false;
-  try {
-    const r = await fetch("api/unlock", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ code }) });
-    const j = r.ok ? await r.json() : null;
-    if (j && j.pass) { PAY.save(j.pass); payUnlocked(); return true; }
-    if (!quiet) payMsg(t(PUI.codeBad), true);
-  } catch (e) { if (!quiet) payMsg(t(PUI.codeOff), true); }
-  return false;
-}
-function payUnlocked(code) {
+function payUnlocked(justBought) {
   renderOwner();
-  if (code) { payThanks(code); } else { closePay(); toast(t(PUI.done)); }
+  if (justBought) payThanks(); else { closePay(); toast(t(PUI.done)); }
   if (!$("lessons").hidden) { if (lessonOpen) renderLesson(lessonOpen); else renderLessonList(); }
 }
-function payThanks(code) {
+function payThanks() {
   $("pay-card").innerHTML = `<button type="button" class="x" id="pay-x" aria-label="${esc(t(UI.close))}">×</button>
     <p class="pay-eyebrow">${esc(t(PUI.eyebrow))}</p><h2 id="pay-h">${esc(t(PUI.thanks))}</h2>
     <p class="pay-why">${esc(t(PUI.thanksText))}</p>
-    <p class="pay-thecode" id="pay-thecode">${esc(code)}</p>
-    <button type="button" class="cta ghost" id="pay-copy">${esc(t(PUI.copy))}</button>
     <button type="button" class="cta" id="pay-go">${esc(t(PUI.explore))}</button>`;
   $("pay").hidden = false;
   $("pay-x").onclick = closePay; $("pay-go").onclick = closePay;
-  $("pay-copy").onclick = async () => { try { await navigator.clipboard.writeText(code); $("pay-copy").textContent = t(PUI.copied); } catch (e) {} };
 }
 function renderOwner() { $("open-lab").hidden = !PAY.owner(); }
-/* Back from Stripe: orbis/?sessione=cs_… — the server turns the paid session into a pass. */
+/* Back from Stripe: orbis/?sessione=cs_… — the server opens Orbis completo at once, the first time only. */
 (function payReturn() {
-  const q = new URLSearchParams(location.search), sid = q.get("sessione"), code = q.get("codice");
-  if (!sid && !code) return;
+  const sid = new URLSearchParams(location.search).get("sessione");
+  if (!sid) return;
   try { history.replaceState(null, "", location.pathname + location.hash); } catch (e) {}
-  if (code) { payRedeem(code, true); return; }
   fetch("api/unlock", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ session: sid }) })
-    .then((r) => r.ok ? r.json() : null).then((j) => { if (j && j.pass) { PAY.save(j.pass); payUnlocked(j.code); } }).catch(() => {});
+    .then((r) => r.ok ? r.json() : null).then((j) => { if (j && j.pass) { PAY.save(j.pass); payUnlocked(true); } else if (!PAY.full()) showPay("info"); }).catch(() => {});
 })();
 renderOwner();
 
